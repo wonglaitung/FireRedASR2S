@@ -1,0 +1,25 @@
+[project]
+name = "firered-poc"
+version = "0.1.0"
+description = "FireRedASR2S POC: sentence-level speech-to-text"
+requires-python = ">=3.10"
+dependencies = [
+    "sherpa-onnx>=2.0.0",
+    "numpy>=1.24",
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+    "websockets>=12",
+    "PyYAML>=6",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

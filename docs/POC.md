@@ -1,8 +1,8 @@
 # FireRedASR2S POC 设计与 MVP 范围
 
-> 版本：v1.0
+> 版本：v1.1
 > 目标：用最小闭环验证 **音频 → 句级文字**，并明确 MVP 要实现的功能、技术选型与验收标准。
-> 状态：**方案已定，尚未实现代码**。
+> 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2-CTC）。
 
 ---
 
@@ -193,6 +193,20 @@ asr:
 4. **质量门禁**：`ruff check .` 与 `pytest` 实际通过；报告存 `/tmp/opencode/reports/`，不入库。
 5. **可复现**：README/POC 文档给出一条可复制的转写命令与输出样例。
 
+### 9.1 实测结果（本地 CPU，2026-11-26）
+
+| 样例 | 内容 | 结果 | 耗时 |
+| --- | --- | --- | --- |
+| `test_wavs/0.wav`（中英混说） | 整段 | `昨天是 MOAY TOAY IS礼拜八二 THE DAYAY AFTER TOMORROW是星期三` | 1.7~3.5s |
+| `test_wavs/1.wav`（普通话） | 整段 | `这是第一种第二种叫呃与 ALWAYSISE ALWAYS什么意思啊` | 0.90s |
+| `test_wavs/3-sichuan.wav`（四川话） | 整段 | `自己就是在那个在那个就是在情节里面就是感觉是演的特别好就是好像很真实一样你知道吧` | 1.33s |
+| `yue.wav`（粤语） | 整段 | `呢几个字都表达唔到我想讲嘅意思` | 0.89s |
+| `hello_en.wav`（英文） | 整段 | `HELLO SPEECH` | 0.41s |
+| `test_wavs/0.wav`（WS 流式） | 5 段 | 5 条 `final`，句级时间戳正常 | 端到端约 2s |
+
+> 质量门禁：`ruff check .` PASS；`pytest` 14 passed（含真实模型冒烟测试）。
+> 结论：三语与混说均可出字；CTC 在英文与部分数字上仍有错字（如 `MONDAY TODAY`），属 POC 可接受范围。能量 VAD 会把自然停顿切成多段，后续可换 Silero VAD 或 FireRedVAD。
+
 ---
 
 ## 10. 里程碑
@@ -224,3 +238,45 @@ asr:
 2. 入口顺序：**先 WAV CLI，再 WebSocket**。
 3. VAD：**能量 VAD 起步**，预留 Silero 替换。
 4. 失败策略：**单引擎重试一次 → error**，不引入 FunASR。
+
+---
+
+## 13. 运行方式（已验证）
+
+安装依赖并下载模型：
+
+```bash
+python3 -m pip install --user -r requirements.txt
+./scripts/download_model.sh
+```
+
+WAV 文件转写：
+
+```bash
+PYTHONPATH=src python3 -m firered_poc.cli transcribe \
+  --audio models/sherpa-onnx-fire-red-asr2-ctc-zh_en-int8-2026-02-25/test_wavs/0.wav \
+  --config configs/app.yaml --json
+```
+
+需要按句切分时加 `--vad`：
+
+```bash
+PYTHONPATH=src python3 -m firered_poc.cli transcribe \
+  --audio /path/to/long.wav --config configs/app.yaml --vad --json
+```
+
+启动 WebSocket 服务：
+
+```bash
+PYTHONPATH=src python3 -m firered_poc.server --config configs/app.yaml
+```
+
+健康检查：`GET /health`；串流端点：`ws://127.0.0.1:8000/ws`。
+发送 `start` → 二进制 20ms PCM → `stop`，接收 `final`。
+
+质量门禁：
+
+```bash
+ruff check .
+python3 -m pytest
+```

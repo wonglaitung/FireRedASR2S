@@ -1,0 +1,25 @@
+server:
+  host: 0.0.0.0
+  port: 8000
+
+audio:
+  sample_rate: 16000
+  frame_ms: 20
+
+vad:
+  backend: energy
+  energy_threshold: 0.02
+  pre_roll_ms: 300
+  post_roll_ms: 300
+  max_end_silence_ms: 450
+  min_speech_ms: 250
+  hard_max_segment_ms: 15000
+
+asr:
+  backend: firered_ctc
+  model: models/sherpa-onnx-fire-red-asr2-ctc-zh_en-int8-2026-02-25/model.int8.onnx
+  tokens: models/sherpa-onnx-fire-red-asr2-ctc-zh_en-int8-2026-02-25/tokens.txt
+  encoder: ""
+  decoder: ""
+  num_threads: 2
+  provider: cpu
