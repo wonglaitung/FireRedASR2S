@@ -2,6 +2,7 @@
 
 > 目标形态：**说完停顿约 0.5s 出整句高精度结果**（不做逐字真流式），端到端延迟控制在 600~800ms。
 > 核心思路：**流式 VAD 负责低延迟切分，非流式大模型负责满血精度**。
+> 语言范围：**粤语（香港/广东）、普通话、英文，并支持句内中英/粤英混说（code-switching）**。
 
 ---
 
@@ -10,6 +11,7 @@
 | 维度 | 约定 |
 | --- | --- |
 | 交互形态 | 句级出字，允许说完停顿 0.45~0.5s 后再返回整句 |
+| 语言覆盖 | 粤语（香港/广东）、普通话、英文，支持句内 code-switching |
 | 精度优先级 | 同音字、专有名词、方言混杂、噪音场景下尽量接近离线非流式模型 |
 | 延迟预算 | 静音判定 400~450ms + 网络传输 50~100ms + 推理 50~150ms ≈ 500~700ms |
 | 输入规范 | 16kHz / 16bit / 单声道 PCM，20ms(640B) 或 40ms 一帧，WebSocket 推流 |
@@ -38,9 +40,10 @@
 │ 推理层 (GPU, 无状态)                          │
 │  异步队列 → 微批调度 (10~20ms) → ASR 模型      │
 │    └─ FireRedASR2-AED / FireRedASR2-LLM      │
-│       或 Paraformer-large / SenseVoice       │
-│  后处理: 标点 (FireRedPunc / CT-Transformer)   │
-│          ITN 逆文本正则化                      │
+│       (粤/普/英 统一多语 + code-switch)        │
+│  (可选) FireRedLID → 每句语言标签              │
+│  后处理: FireRedPunc (中/英标点)               │
+│          文字体系归一化 + ITN 逆文本正则化      │
 └───────────────┬─────────────────────────────┘
                 │ 整句文本
                 ▼
@@ -51,31 +54,56 @@
 
 ---
 
-## 3. 核心组件选型
+## 3. 核心组件选型（粤语 + 普通话 + 英文）
 
-### 方案 A：极限多方言 / 复杂声学环境（FireRed 全家桶）
+### 3.1 首选：FireRedASR2S 全家桶
 
-| 组件 | 选型 | 理由 |
-| --- | --- | --- |
-| 流式 VAD | **FireRedVAD (Stream 模式)** | 对音乐、歌声、底噪抗干扰强，避免把背景音判为人声导致 ASR 幻觉 |
-| ASR | **FireRedASR2-AED**（高并发/低显存）或 **FireRedASR2-LLM**（极限语义纠错 + Prompt 注入） | 普通话 + 20+ 方言 + 中英夹杂；AED 单句 5s 音频约 50~150ms |
-| 标点 | **FireRedPunc** | 与 ASR 同体系，衔接自然 |
-| 规整 | 规则 ITN | 数字/日期/金额格式化 |
-
-### 方案 B：热词高召回 / 部署最省事（FunASR 体系）
+FireRedASR2 官方即支持 **普通话、20+ 中文方言（含粤语：香港与广东）、英文、code-switching**，与本项目三语需求完全对齐，且四模块（ASR / VAD / LID / Punc）同源，工程衔接成本最低。
 
 | 组件 | 选型 | 理由 |
 | --- | --- | --- |
-| 流式 VAD | **FSMN-VAD (流式版)** | 参数极小，CPU 可扛数百路，端点判定稳定 |
-| ASR | **SeACo-Paraformer-large**（热词增强）或 **SenseVoice-Large** | 热词表加权即可拉高专有名词召回，无需微调 |
-| 标点 | **CT-Transformer** | FunASR 内置 |
+| 流式 VAD | **FireRedVAD (Stream 模式)** | 0.6M 参数、支持 100+ 语言与 speech/singing/music；对音乐、歌声、底噪抗干扰强，避免把背景音判为人声导致 ASR 幻觉 |
+| ASR | **FireRedASR2-AED**（1B+，高并发/低显存，默认）或 **FireRedASR2-LLM**（8B+，极限语义纠错 + Prompt 注入） | 粤/普/英统一多语 + 句内混说；AED 单句 5s 音频约 50~150ms |
+| 语种识别（可选） | **FireRedLID** | 100+ 语言 / 20+ 中文方言，句级打语言标签，用于日志、分流与输出策略 |
+| 标点 | **FireRedPunc** | 中英标点，同体系衔接自然 |
+| 文字体系/规整 | **OpenCC + 规则 ITN** | 粤语繁简归一；数字/日期/金额格式化 |
+
+**精度参考（官方公开评测）**：
+
+| 场景 | FireRedASR2-LLM | FireRedASR2-AED |
+| --- | --- | --- |
+| 普通话（4 测试集平均 CER） | 2.89% | 3.05% |
+| 粤语 ws-yue-short / ws-yue-long | 5.14% / 8.71% | 5.15% / 8.54% |
+| 粤语 md-yue-daily / md-yue-conv | 3.61% / 12.23% | 3.35% / 11.66% |
+| 英文 | 支持，具备竞争力 | 支持，具备竞争力 |
+
+> 结论：三语场景下 **AED 已能覆盖绝大多数精度需求且吞吐更高**；仅在复杂语境/长尾专名纠错要求极高时切到 LLM。
+
+### 3.2 备选：FunASR 体系（降级 / A-B 对比）
+
+| 组件 | 选型 | 说明 |
+| --- | --- | --- |
+| 流式 VAD | **FSMN-VAD (流式版)** | 参数极小，CPU 可扛数百路 |
+| ASR | **SenseVoice-Large / Small** | 支持 zh/yue/en；**注意 Paraformer-large 以普通话为主，不可直接用于粤语** |
+| 标点 | **CT-Transformer** | 中英标点 |
 | 规整 | 内置 ITN | 开箱即用 |
 
-### 选型建议
+FunASR 的热词增强与 2-Pass 生态成熟，适合作为降级通道或 A/B 基线；但粤语与方言整体精度低于 FireRedASR2。
 
-- **含粤语/川渝/吴语、中英混杂、噪声/音乐场景多 → 方案 A**（精度优先）。
-- **普通话为主、业务专有名词多、想最快上线 → 方案 B**（热词 + 生态成熟）。
-- 两套都遵循同一套 Session 状态机与接口，ASR 以 Adapter 形式可插拔，后期可切换/双跑对比。
+### 3.3 三语支持要点
+
+1. **统一模型，不做语种路由**：FireRedASR2 单模型即可处理粤/普/英及句内混说，避免"先检测语种再选模型"带来的误判放大。
+2. **LID 只做辅助**：用 FireRedLID 给每句打语言标签（`zh` / `yue` / `en` / `mixed`），用于监控、数据分析与后处理策略，不阻塞主链路。
+3. **输出文字体系**：粤语识别结果可能是繁体，按业务用 OpenCC 统一为简体（或按 locale 保留繁体）；英文保持原样，不做繁简转换。
+4. **标点与 ITN**：FireRedPunc 覆盖中英标点；粤语按中文标点处理；粤语口语数字（如"廿三"）与英文数字分别做 ITN。
+5. **热词 / Prompt 注入**：港式专有名词、英文缩写、品牌名人名按业务注入；AED 侧用热词/偏置，LLM 侧可用 Prompt 注入上下文。
+6. **口音覆盖**：粤语需覆盖香港与广东两类口音；如业务集中在港式粤英混说，测试集要包含对应样本。
+
+### 3.4 选型结论
+
+- **主选 FireRedASR2S**：AED 为默认推理后端，LLM 作为高精度可选后端。
+- **FunASR 作为降级/对比**：仅在 FireRed 不可用或需要热词 2-Pass 时启用。
+- 所有后端以 **Adapter 接口** 接入，遵循同一套 Session 状态机与协议，便于切换与双跑。
 
 ---
 
@@ -121,6 +149,8 @@ IDLE ──(VAD: Speech Start)──► SPEAKING ──(静音 ≥ max_end_silen
 | `hard_max_segment_ms` | 15000 | 强制切分上限 |
 | `segment_overlap_ms` | 400 | 切分重叠，防断字 |
 | `batch_window_ms` | 10~20 | 推理微批窗口 |
+| `lang` | `auto` | `auto` / `zh` / `yue` / `en`，`auto` 支持混说 |
+| `output_script` | `simplified` | `simplified` / `traditional` / `as-is` |
 
 > 调参经验：线上识别率翻车多数出在音频预处理与切分边界，而非模型本身。优先校准 `pre_roll` 与 `max_end_silence`。
 
@@ -129,8 +159,8 @@ IDLE ──(VAD: Speech Start)──► SPEAKING ──(静音 ≥ max_end_silen
 ## 6. 推理加速与容量估算
 
 - **动态批处理**：10~20ms 微批窗口，多路同时 `Speech End` 合并成 batch，吞吐可提升约 3 倍且几乎不增延迟。
-- **显存参考**：FireRedASR2-AED / Paraformer-large 单模型 FP16 约 1.5~3GB。
-- **并发估算**：单张 24GB（4090 / A10 / L4）配合动态批处理，句级识别约可支撑 **30~60 路** 实时流（视句长与模型而定）。
+- **显存参考**：FireRedASR2-AED 单模型 FP16 约 1.5~3GB；FireRedASR2-LLM（8B+）需显著更多显存，按实际权重评估。
+- **并发估算**：单张 24GB（4090 / A10 / L4）跑 AED + 动态批处理，句级识别约可支撑 **30~60 路** 实时流（视句长与模型而定）。
 - **VAD**：CPU 运行，不占 GPU；接入层可多实例水平扩展。
 
 ---
@@ -141,7 +171,7 @@ IDLE ──(VAD: Speech Start)──► SPEAKING ──(静音 ≥ max_end_silen
 
 | 消息 | 载荷 |
 | --- | --- |
-| `start` | `{ "type":"start", "sample_rate":16000, "format":"pcm_s16le", "lang":"zh" }` |
+| `start` | `{ "type":"start", "sample_rate":16000, "format":"pcm_s16le", "lang":"auto", "output_script":"simplified" }` |
 | `audio` | 二进制 PCM 帧（20ms/40ms） |
 | `stop` | `{ "type":"stop" }`（提前结束，触发 flush） |
 
@@ -150,10 +180,10 @@ IDLE ──(VAD: Speech Start)──► SPEAKING ──(静音 ≥ max_end_silen
 | 消息 | 载荷 |
 | --- | --- |
 | `partial`（可选） | `{ "type":"partial", "text":"...", "segment_id":1 }` 草稿 |
-| `final` | `{ "type":"final", "segment_id":1, "text":"...", "start_ms":0, "end_ms":3200 }` |
+| `final` | `{ "type":"final", "segment_id":1, "text":"...", "lang":"yue", "start_ms":0, "end_ms":3200 }` |
 | `error` | `{ "type":"error", "code":"...", "message":"..." }` |
 
-> 句级方案默认只回 `final`；如需"正在识别"体验可加低频 `partial`。
+> 句级方案默认只回 `final`；如需"正在识别"体验可加低频 `partial`。`lang` 为可选 LID 标签（`zh`/`yue`/`en`/`mixed`）。
 
 ---
 
@@ -165,6 +195,8 @@ IDLE ──(VAD: Speech Start)──► SPEAKING ──(静音 ≥ max_end_silen
 | 首字被吞 | 前置回看 200ms + 环形缓冲 |
 | 长句不断句 | 软/硬切分 + overlap |
 | 换气被腰斩 | `max_end_silence` ≥ 400ms |
+| 粤语与普通话/英文句内频繁切换 | 统一多语模型 + code-switching 训练；测试集覆盖混说样本 |
+| 粤语输出繁简不一致 | OpenCC 按 `output_script` 统一 |
 | 推理排队导致延迟抖动 | 异步队列 + 动态批处理 + 超时降级（返回可用结果或重试） |
 | 模型/方言覆盖不足 | Adapter 可插拔，支持热词/Prompt 注入与 A/B 双跑 |
 
@@ -173,17 +205,18 @@ IDLE ──(VAD: Speech Start)──► SPEAKING ──(静音 ≥ max_end_silen
 ## 9. 实施里程碑
 
 1. **M1 骨架跑通**：WebSocket 接入 + Session 状态机 + RingBuffer + 端点判定 + Mock ASR，打通端到端延迟测量。
-2. **M2 接入真模型**：Adapter 接 FireRedASR2 或 FunASR，验证精度与单路延迟。
-3. **M3 吞吐优化**：异步队列 + 动态批处理 + 标点/ITN 后处理。
-4. **M4 调参与压测**：按真实音频校准参数，做 30~60 路并发与显存压测。
-5. **M5 上线保障**：监控（延迟分位、失败率、幻觉率）、降级与灰度。
+2. **M2 接入真模型**：Adapter 接 FireRedASR2S（AED 默认，LLM 可选），用粤/普/英三语样本验证精度与单路延迟。
+3. **M3 吞吐优化**：异步队列 + 动态批处理 + FireRedPunc 标点 + 繁简归一 + ITN。
+4. **M4 调参与压测**：按真实三语音频校准参数，做 30~60 路并发与显存压测。
+5. **M5 上线保障**：监控（延迟分位、失败率、幻觉率、分语种 CER/WER）、降级与灰度。
 
 ---
 
 ## 10. 待确认
 
-- [ ] 语言类型：纯普通话 / 中英混合 / 是否含粤语等方言
+- [x] 语言类型：粤语（香港/广东）+ 普通话 + 英文 + code-switching
 - [ ] 硬件：GPU 型号与数量（当前环境有 4090，但 torch 为 CPU 版，需装 CUDA 版）
 - [ ] 服务端语言：Python（推荐，贴合官方代码）/ Go / C++
-- [ ] ASR 后端优先级：FireRedASR2 / FunASR / 先 Mock
+- [ ] ASR 后端优先级：FireRedASR2-AED（默认）/ FireRedASR2-LLM / FunASR 降级
+- [ ] 输出文字体系：简体 / 繁体 / 按客户端 locale
 - [ ] 是否需要 `partial` 草稿体验
