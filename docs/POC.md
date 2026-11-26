@@ -1,8 +1,8 @@
 # FireRedASR2S POC 设计与 MVP 范围
 
-> 版本：v1.1
+> 版本：v1.2
 > 目标：用最小闭环验证 **音频 → 句级文字**，并明确 MVP 要实现的功能、技术选型与验收标准。
-> 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2-CTC）。
+> 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2-CTC）；已加入句段合并以减少碎句。
 
 ---
 
@@ -25,7 +25,7 @@ POC（Proof of Concept，概念验证）只回答一个问题：**用 FireRedASR
 | --- | --- | --- |
 | F1 | WAV 文件转写 | 读 16kHz/16bit/mono；非 16kHz 自动重采样 |
 | F2 | WebSocket 串流 | 接收 20ms PCM（Pulse Code Modulation，脉冲编码调制）帧，句尾回 `final` |
-| F3 | 句级切分 | pre-roll（句首回看）300ms、post-roll（句尾保留）300ms、静音 450ms、最短 250ms、最长 15s |
+| F3 | 句级切分 | pre-roll（句首回看）300ms、post-roll（句尾保留）300ms、静音 450ms、最短 250ms、最长 15s；支持相邻句段按 gap 合并 |
 | F4 | 非流式 ASR（Automatic Speech Recognition，自动语音识别） | 整句送入 FireRedASR2，返回 `text` 与 `start_ms/end_ms` |
 | F5 | 单引擎失败处理 | 重试一次；仍失败返回明确 `error`，不跨引擎降级 |
 | F6 | 配置化 | 模型路径、VAD（Voice Activity Detection，语音活动检测）参数、线程数走 YAML |
@@ -174,6 +174,7 @@ vad:
   max_end_silence_ms: 450
   min_speech_ms: 250
   hard_max_segment_ms: 15000
+  merge_gap_ms: 1200        # 相邻句段间隔 ≤ 此值时合并（仅文件模式）
 
 asr:
   backend: firered_ctc       # firered_ctc | firered_aed
@@ -198,14 +199,16 @@ asr:
 | 样例 | 内容 | 结果 | 耗时 |
 | --- | --- | --- | --- |
 | `test_wavs/0.wav`（中英混说） | 整段 | `昨天是 MOAY TOAY IS礼拜八二 THE DAYAY AFTER TOMORROW是星期三` | 1.7~3.5s |
+| `test_wavs/0.wav`（VAD + merge 1200ms） | 1 段 | `昨天是 MOAY TOAY IS礼拜八二 THEAY AFTER TOMORROW是星期三` | 2.9s |
+| `test_wavs/0.wav`（VAD 不合并） | 5 段 | `昨天是 M` / `TOAY IS` / `礼八二` / `THEDAY AFTER TOMORROW` / `是星期三` | 2.9s |
 | `test_wavs/1.wav`（普通话） | 整段 | `这是第一种第二种叫呃与 ALWAYSISE ALWAYS什么意思啊` | 0.90s |
 | `test_wavs/3-sichuan.wav`（四川话） | 整段 | `自己就是在那个在那个就是在情节里面就是感觉是演的特别好就是好像很真实一样你知道吧` | 1.33s |
 | `yue.wav`（粤语） | 整段 | `呢几个字都表达唔到我想讲嘅意思` | 0.89s |
 | `hello_en.wav`（英文） | 整段 | `HELLO SPEECH` | 0.41s |
 | `test_wavs/0.wav`（WS 流式） | 5 段 | 5 条 `final`，句级时间戳正常 | 端到端约 2s |
 
-> 质量门禁：`ruff check .` PASS；`pytest` 14 passed（含真实模型冒烟测试）。
-> 结论：三语与混说均可出字；CTC 在英文与部分数字上仍有错字（如 `MONDAY TODAY`），属 POC 可接受范围。能量 VAD 会把自然停顿切成多段，后续可换 Silero VAD 或 FireRedVAD。
+> 质量门禁：`ruff check .` PASS；`pytest` 20 passed（含真实模型与 WebSocket 冒烟测试）。
+> 结论：三语与混说均可出字；CTC 在英文与部分数字上仍有错字（如 `MONDAY TODAY`），属 POC 可接受范围。句段合并已把 5 段碎句合并为 1 段，文本更接近整段解码；后续可换 Silero VAD 或 FireRedVAD。
 
 ---
 
@@ -226,6 +229,7 @@ asr:
 | CPU 推理慢 | 延迟高于生产 | POC 只验证可行性；生产换 GPU + AED/LLM |
 | 无标点/ITN | 输出可读性一般 | POC 接受；P2 再接后处理 |
 | 能量 VAD 对噪声不稳 | 切分不准 | 可切换 Silero VAD（+2MB 模型） |
+| 自然停顿被切成多句 | 上下文丢失、文本碎片化 | 已加 `merge_gap_ms`（默认 1200ms，文件模式） |
 | 模型下载 520MB | 首次启动慢 | 预下载到 `models/`，加入 `.gitignore` |
 | 粤语/英语样例覆盖不全 | 三语验证不足 | 确认 `test_wavs` 覆盖，必要时补样例 |
 | CTC 与正式 AED 有差异 | 精度结论不能直接外推 | 正式评测以 AED/LLM 为准 |
@@ -236,7 +240,7 @@ asr:
 
 1. POC 后端：**sherpa-onnx FireRedASR2-CTC-int8**。
 2. 入口顺序：**先 WAV CLI，再 WebSocket**。
-3. VAD：**能量 VAD 起步**，预留 Silero 替换。
+3. VAD：**能量 VAD 起步**，预留 Silero 替换；文件模式默认合并 ≤1200ms 的相邻句段。
 4. 失败策略：**单引擎重试一次 → error**，不引入 FunASR。
 
 ---
@@ -258,11 +262,18 @@ PYTHONPATH=src python3 -m firered_poc.cli transcribe \
   --config configs/app.yaml --json
 ```
 
-需要按句切分时加 `--vad`：
+需要按句切分时加 `--vad`（默认合并 ≤1200ms 的相邻句段）：
 
 ```bash
 PYTHONPATH=src python3 -m firered_poc.cli transcribe \
   --audio /path/to/long.wav --config configs/app.yaml --vad --json
+```
+
+如需关闭合并或调整阈值：
+
+```bash
+PYTHONPATH=src python3 -m firered_poc.cli transcribe \
+  --audio /path/to/long.wav --config configs/app.yaml --vad --merge-gap-ms -1
 ```
 
 启动 WebSocket 服务：

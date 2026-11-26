@@ -135,3 +135,36 @@ class StreamingSegmenter:
         self.speaking = False
         self.first_speech_start = 0
         self.last_speech_end = 0
+
+
+def merge_segments(
+    segments: list[Segment],
+    sample_rate: int,
+    max_gap_ms: int,
+    hard_max_ms: int,
+) -> list[Segment]:
+    """Merge close segments so short pauses do not destroy sentence context.
+
+    Pauses are filled with digital silence to keep timestamps monotonic.
+    """
+    if not segments or max_gap_ms < 0:
+        return list(segments)
+
+    merged = [segments[0]]
+    for nxt in segments[1:]:
+        cur = merged[-1]
+        gap_ms = nxt.start_ms - cur.end_ms
+        if gap_ms > max_gap_ms or nxt.end_ms - cur.start_ms > hard_max_ms:
+            merged.append(nxt)
+            continue
+
+        gap_samples = int(round(max(0, gap_ms) * sample_rate / 1000))
+        pcm = cur.pcm + b"\x00\x00" * gap_samples + nxt.pcm
+        merged[-1] = Segment(
+            pcm=pcm,
+            start_ms=cur.start_ms,
+            end_ms=nxt.end_ms,
+            sample_rate=sample_rate,
+        )
+
+    return merged

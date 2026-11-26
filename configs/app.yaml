@@ -14,6 +14,7 @@ vad:
   max_end_silence_ms: 450
   min_speech_ms: 250
   hard_max_segment_ms: 15000
+  merge_gap_ms: 1200
 
 asr:
   backend: firered_ctc

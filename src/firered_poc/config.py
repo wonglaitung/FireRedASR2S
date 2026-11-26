@@ -26,6 +26,7 @@ class VadConfig:
     max_end_silence_ms: int = 450
     min_speech_ms: int = 250
     hard_max_segment_ms: int = 15000
+    merge_gap_ms: int = 1200
 
 
 @dataclass
