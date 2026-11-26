@@ -10,7 +10,7 @@
 - `progress.md` — current status, done, todo, risks.
 
 ## Locked decisions (do not drift)
-- **Initial default ASR = FireRedASR2-AED (1B+, BF16, balanced/high-concurrency).** LLM is the accuracy upgrade / low-confidence second pass; FunASR SenseVoice is last-resort degradation.
+- **Initial default ASR = FireRedASR2-AED (1B+, BF16, balanced/high-concurrency).** LLM is the accuracy upgrade / low-confidence second pass. **Single engine only**: no FunASR or cross-engine fallback — retry once, then return an explicit error.
 - **Accuracy first (phased)**: initial ships AED for throughput; never use INT8, shorten segments, or tighten endpointing just to cut latency; LLM remains the accuracy upgrade path.
 - One unified multilingual model; **no hard language routing**. FireRedLID is optional metadata/hint only.
 - **Sentence-level**: streaming VAD + non-streaming full-sentence inference. No word-by-word streaming ASR.
@@ -39,7 +39,7 @@
 
 ## Environment notes (verify; may change)
 - Host has an RTX 4090 (24GB), but installed `torch`/`torchaudio` are **CPU-only** (`2.10.0+cpu`). GPU inference needs a CUDA-enabled build.
-- `modelscope` is installed; **FunASR is not**. FireRedASR2S weights are **not downloaded**.
+- `modelscope` is installed; **FunASR is not, and is out of scope** (single-engine policy). FireRedASR2S weights are **not downloaded**.
 - `pytest 9.0.2` and `ruff 0.15.14` are available globally. No project config yet.
 - No `README`, `pyproject.toml`, CI, or test config exists.
 

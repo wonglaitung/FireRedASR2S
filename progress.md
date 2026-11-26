@@ -3,12 +3,13 @@
 Last updated: 2026-11-26
 
 ## 当前状态
-- 方案 v1.2 完成；**初步设计改用 FireRedASR2-AED（均衡/高并发）作为默认后端**，LLM 作为精度升级与低置信重解码路径。
+- 方案 v1.3 完成；**初步设计使用 FireRedASR2-AED（均衡/高并发）作为默认后端**，LLM 作为精度升级与低置信重解码路径。
+- **单引擎策略**：只维护 FireRedASR2，不引入 FunASR；失败重试一次，仍失败返回明确 `error`。
 - 尚未开始编码。
 
 ## 已完成
-- `docs/ARCHITECTURE.md` v1.2：三语（粤/普/英 + 混说）、精度优先的完整方案；架构/流程改用 Mermaid；补充术语解释。
-- 决策：初步默认 AED；`balanced` 为默认模式，`accuracy`（LLM）后续接入；降级链 AED → FunASR。
+- `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先的完整方案；架构/流程使用 Mermaid；补充术语解释。
+- 决策：初步默认 AED；`balanced` 为默认模式，`accuracy`（LLM）后续接入；取消 FunASR 降级链，改为单引擎重试/报错。
 - `AGENTS.md`：仓库现状、锁定决策、进度更新要求、验证要求与文档规范。
 - 文档检查：PASS（16 个围栏 / 8 对，5 个 Mermaid 块）；报告不入库。
 
@@ -21,7 +22,7 @@ Last updated: 2026-11-26
 
 ## 风险 / 阻塞
 - 环境 `torch` 为 CPU 版，4090 暂不可用于推理，需安装 CUDA 版。
-- FireRedASR2S 权重未下载；FunASR 未安装；需确认下载渠道与许可。
+- FireRedASR2S 权重未下载；需确认下载渠道与许可。FunASR 不在维护范围（单引擎策略）。
 - 初步 AED 的精度需用三语/混说内部集验证；LLM 升级路径待评测后决定是否切换默认。
 - 生产硬件规格与并发目标未定（AED 可跑 24GB；LLM 建议 A100/H20）。
 - 三语/混说评测集尚未建立，验收指标待基线校准。

@@ -1,8 +1,8 @@
 # FireRedASR2S 三语准实时语音识别系统 — 完整技术方案
 
-> 版本：v1.2
+> 版本：v1.3
 > 定位：**粤语 + 普通话 + 英文 + 句内混说**（code-switching，句内语码混用），**精度优先**（Accuracy First），句级出字。
-> 阶段策略：**初步设计以 FireRedASR2-AED 为默认后端（均衡/高并发）**，LLM 作为精度升级与低置信重解码路径。
+> 阶段策略：**初步设计以 FireRedASR2-AED 为默认后端（均衡/高并发）**，LLM 作为精度升级与低置信重解码路径；**只维护 FireRedASR2 一套引擎，不做跨引擎降级**。
 
 ---
 
@@ -13,7 +13,7 @@
 | 识别范式 | **流式 VAD（Voice Activity Detection，语音活动检测）切分 + 句级非流式大模型整句推理**（不做逐字流式） |
 | 默认模型（初步） | **FireRedASR2-AED（Attention-based Encoder-Decoder，注意力编码器-解码器，1B+，BF16）**，均衡/高并发 |
 | 精度升级 | FireRedASR2-LLM（Large Language Model，大语言模型，8B+，BF16）；低置信重解码 / `accuracy` 模式 |
-| 降级模型 | FunASR SenseVoice（兜底） |
+| 失败策略 | 重试一次 → 明确 `error`；不维护第二套引擎 |
 | 默认模式 | `balanced`（初步）；`accuracy` 在接入 LLM 后启用 |
 | VAD | FireRedVAD（Stream 模式，CPU） |
 | 语种识别 | FireRedLID（Language Identification，语种识别；可选，句级标签 + 语言提示） |
@@ -32,7 +32,7 @@
 2. **统一多语模型**：不做"先判语种再选模型"的硬路由，由 FireRedASR2 单模型处理粤/普/英及混说。
 3. **句级而非逐字**：允许说完停顿后再出整句；`partial` 草稿仅作可选体验。
 4. **前后填充 + 少切分**：pre-roll（句首回看）300ms、post-roll（句尾保留）300ms；精度模式静音 550ms / overlap（切分段重叠）600ms，均衡模式（初步默认）450ms / 400ms。
-5. **Adapter（适配器）可插拔**：AED（初步默认）/ LLM / FunASR 同一接口，支持双跑对比与降级。
+5. **Adapter（适配器）可插拔**：AED（初步默认）/ LLM（精度升级）同一接口，支持双跑对比。
 6. **两遍可选**：AED 快速初稿 + 低置信句 LLM 重解码（`revised` 回推）。
 
 ---
@@ -50,7 +50,7 @@
 | F5 | 返回句级时间戳（start_ms/end_ms）与语言标签 |
 | F6 | 支持 `accuracy` / `balanced` 两种模式 |
 | F7 | 可选返回低置信重解码的 `revised` 结果 |
-| F8 | 多路并发、会话隔离、异常兜底与降级 |
+| F8 | 多路并发、会话隔离、异常兜底与失败重试 |
 
 ### 2.2 非功能需求（初版目标，内部测试集校准后锁定）
 
@@ -72,6 +72,7 @@
 - 不做说话人分离 / 声纹识别。
 - 不做离线批量转写（架构可复用，但不在本期）。
 - 不为延迟做 INT8 量化（与精度优先冲突）。
+- **不维护第二套 ASR 引擎**（不引入 FunASR 等跨引擎降级）。
 
 ---
 
@@ -91,7 +92,7 @@ flowchart TB
     Q[("任务队列<br/>Redis Stream / NATS")]
     subgraph WK["推理层 ASR Worker（GPU，无状态）"]
         S["Scheduler<br/>优先级 / 超时 / 重试"]
-        A["ASR Adapter<br/>AED（初步默认）/ LLM（升级）/ FunASR"]
+        A["ASR Adapter<br/>AED（初步默认）/ LLM（升级）"]
         L["FireRedLID（可选）"]
         P["后处理<br/>FireRedPunc + OpenCC + ITN"]
     end
@@ -114,14 +115,14 @@ flowchart TB
 | SegmentBuilder | RingBuffer、pre/post roll、soft/hard 切分、overlap | 随 Gateway |
 | Job Queue | 解耦接入与推理，削峰、重试、死信 | Redis/NATS |
 | ASR Worker | 加载模型、批处理、解码、后处理 | GPU，多实例 |
-| Model Adapter | LLM/AED/FunASR 统一接口 | 随 Worker |
+| Model Adapter | AED/LLM 统一接口 | 随 Worker |
 | Postprocess | 标点、ITN、繁简、敏感/空结果处理 | 随 Worker |
 | Evaluator | 离线评测三语 CER/WER、回归 | 独立 |
 
 ### 3.3 为什么这样分
 
 - **接入层有状态、推理层无状态**：VAD 需要按会话维护缓冲，天然有状态；推理无状态才能自由扩缩容、灰度、双跑。
-- **队列解耦**：GPU 抖动不会反压到 WS 连接；可做优先级与超时降级。
+- **队列解耦**：GPU 抖动不会反压到 WS 连接；可做优先级与超时重试/拒绝。
 - **VAD 放 CPU**：极轻量，避免占用 GPU 显存与调度。
 
 ---
@@ -153,15 +154,12 @@ flowchart TB
 
 > AED 在粤语对话集上已具竞争力，且吞吐/显存更友好，故作为初步默认；LLM 作为精度升级路径，上线前按内部集双跑决定是否切换默认。
 
-### 4.3 降级组合（FunASR）
+### 4.3 失败策略（单引擎）
 
-| 模块 | 选型 | 说明 |
-| --- | --- | --- |
-| VAD | FSMN-VAD 流式 | CPU 友好 |
-| ASR | SenseVoice-Large | zh/yue/en；**Paraformer-large 不适合粤语** |
-| Punc | CT-Transformer | 中英 |
-
-FunASR 仅用于 FireRed 不可用时的降级与 A/B 基线。
+- 只维护 FireRedASR2 一套引擎（AED 默认、LLM 可选升级），不引入 FunASR 等第二套 ASR。
+- 推理失败或超时：**原任务重试一次**；仍失败则返回明确 `error`，不返回不可信文本。
+- 队列积压：背压拒绝新任务并返回可观测错误码，不跨引擎降级。
+- 降低成本：通过重试、超时、扩容解决，不用"换小模型"掩盖故障。
 
 ---
 
@@ -331,7 +329,7 @@ Adapter 约定：输入为单句完整 PCM；输出已含原始文本；后处�
 - Gateway：asyncio 单进程多连接，VAD 计算放线程池，避免阻塞事件循环。
 - Queue：Redis Stream / NATS，按会话分区，保证同会话有序。
 - Worker：每 GPU 进程一个模型实例；`accuracy` 模式小批窗口（0~10ms），`balanced` 模式 10~20ms。
-- 超时：Job 级 deadline（accuracy 1.2s / balanced 0.8s），超时按降级阶梯处理。
+- 超时：Job 级 deadline（accuracy 1.2s / balanced 0.8s），超时按重试/失败策略处理。
 
 ---
 
@@ -362,20 +360,21 @@ flowchart LR
 
 ---
 
-## 10. 可靠性与降级
+## 10. 可靠性与失败处理
 
-### 10.1 降级阶梯
+### 10.1 失败处理（单引擎）
 
 ```mermaid
 flowchart LR
-    A["AED（初步默认）"] -- "失败/超时" --> F["FunASR SenseVoice"]
-    F -- "失败/超时" --> E["返回 error"]
+    A["AED（初步默认）"] -- "失败/超时" --> R["重试一次"]
+    R -- "仍失败" --> E["返回 error"]
     A -. "低置信（可选）" .-> L["LLM 重解码"]
 ```
 
 - 触发条件：模型异常、队列超时、显存不足、单句超长。
+- 不维护第二套引擎：失败只重试，不切换到 FunASR 等外部模型。
 - LLM 是**精度升级/重解码路径**，不是降级项；初步可不部署。
-- 降级结果在响应中带 `degraded: true`（可扩展字段），便于监控。
+- 失败与重试在响应/监控中可观测，不静默吞错。
 
 ### 10.2 异常处理
 
@@ -384,8 +383,8 @@ flowchart LR
 | 音频过短/空 | 直接返回空文本，不入模型 |
 | VAD 误触发 | 最短语音 + 能量门限过滤 |
 | 单句超长 | 软/硬切分 + overlap |
-| 推理超时 | 降级 + 重试一次；仍失败返回 error |
-| 队列积压 | 拒绝新任务或降级，返回可观测错误码 |
+| 推理超时 | 重试一次；仍失败返回 error |
+| 队列积压 | 背压拒绝新任务，返回可观测错误码 |
 | 客户端断连 | 清理会话与缓冲，取消未完成任务 |
 
 ---
@@ -395,7 +394,7 @@ flowchart LR
 ### 11.1 指标
 
 - 延迟：VAD 端点耗时、排队耗时、推理耗时、端到端 p50/p95/p99。
-- 质量：分语种 CER/WER、混说 CER、幻觉率、空结果率、降级率。
+- 质量：分语种 CER/WER、混说 CER、幻觉率、空结果率、失败率/重试率。
 - 资源：GPU 利用率/显存、队列深度、活跃会话数。
 - 业务：每会话句数、平均句长、`revised` 触发率。
 
@@ -433,7 +432,7 @@ flowchart LR
 | M1 骨架 | Gateway + Session + VAD + Mock ASR | 端到端跑通，延迟可测 |
 | M2 真模型 | AED Adapter（初步默认）+ 三语验证 | 三语样本可识别，均衡模式延迟达标 |
 | M3 精度增强 | 热词/LID/前后填充；LLM 两遍（可选） | 评测集 CER 达标 |
-| M4 吞吐与压测 | 队列/批处理/降级/容量报告 | 目标并发稳定，p95 达标 |
+| M4 吞吐与压测 | 队列/批处理/重试/容量报告 | 目标并发稳定，p95 达标 |
 | M5 上线 | 监控/灰度/回归门禁 | 灰度通过，SLO（Service Level Objective，服务等级目标）达成 |
 
 ---
@@ -448,7 +447,7 @@ flowchart LR
 | 繁简不一致 | 体验/下游不一致 | OpenCC 统一 + `output_script` |
 | 端点切分吞字/截尾 | 首尾字错误 | pre/post roll + overlap + 调参 |
 | 背景音乐误判 | 幻觉 | FireRedVAD + 最短语音 + 合理性校验 |
-| 队列积压 | 延迟抖动 | 背压 + 降级 + 扩容 |
+| 队列积压 | 延迟抖动 | 背压 + 重试 + 扩容 |
 
 ---
 
