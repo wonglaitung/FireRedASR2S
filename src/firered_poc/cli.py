@@ -7,6 +7,7 @@ from .asr import build_asr
 from .audio import float_to_int16, load_wav
 from .config import AppConfig
 from .pipeline import segment_audio
+from .postprocess import Postprocessor
 from .segmenter import merge_segments
 
 
@@ -37,6 +38,7 @@ def main(argv: list[str] | None = None) -> int:
     cfg = AppConfig.load(args.config)
     samples, sample_rate = load_wav(args.audio, cfg.audio.sample_rate)
     engine = build_asr(cfg.asr)
+    post = Postprocessor(cfg.postprocess)
 
     items: list[dict] = []
     if args.vad:
@@ -52,20 +54,22 @@ def main(argv: list[str] | None = None) -> int:
         )
         for segment in segments:
             result = engine.transcribe(segment.pcm, segment.sample_rate)
-            if result.text:
+            text = post.process(result.text)
+            if text:
                 items.append(
                     {
-                        "text": result.text,
+                        "text": text,
                         "start_ms": segment.start_ms,
                         "end_ms": segment.end_ms,
                     }
                 )
     else:
         result = engine.transcribe(float_to_int16(samples), sample_rate)
-        if result.text:
+        text = post.process(result.text)
+        if text:
             items.append(
                 {
-                    "text": result.text,
+                    "text": text,
                     "start_ms": 0,
                     "end_ms": int(round(samples.size / sample_rate * 1000)),
                 }

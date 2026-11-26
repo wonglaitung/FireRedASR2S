@@ -12,4 +12,6 @@ def test_load_repo_config() -> None:
     assert cfg.audio.sample_rate == 16000
     assert cfg.audio.frame_samples == 320
     assert cfg.vad.max_end_silence_ms == 450
-    assert cfg.asr.backend == "firered_ctc"
+    assert cfg.vad.backend == "silero"
+    assert cfg.asr.backend == "firered_aed"
+    assert cfg.asr.encoder

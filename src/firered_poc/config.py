@@ -27,6 +27,20 @@ class VadConfig:
     min_speech_ms: int = 250
     hard_max_segment_ms: int = 15000
     merge_gap_ms: int = 1200
+    silero_model: str = ""
+    silero_threshold: float = 0.5
+    silero_min_silence_ms: int = 500
+    silero_min_speech_ms: int = 250
+    silero_max_speech_ms: int = 20000
+    silero_window_size: int = 512
+
+
+@dataclass
+class PostprocessConfig:
+    punctuation: bool = False
+    punctuation_model: str = ""
+    itn: bool = False
+    output_script: str = "as-is"  # as-is | simplified | traditional
 
 
 @dataclass
@@ -58,6 +72,7 @@ class AppConfig:
     audio: AudioConfig = field(default_factory=AudioConfig)
     vad: VadConfig = field(default_factory=VadConfig)
     asr: AsrConfig = field(default_factory=AsrConfig)
+    postprocess: PostprocessConfig = field(default_factory=PostprocessConfig)
     server: ServerConfig = field(default_factory=ServerConfig)
 
     @classmethod
@@ -67,5 +82,6 @@ class AppConfig:
             audio=_build(AudioConfig, raw.get("audio")),
             vad=_build(VadConfig, raw.get("vad")),
             asr=_build(AsrConfig, raw.get("asr")),
+            postprocess=_build(PostprocessConfig, raw.get("postprocess")),
             server=_build(ServerConfig, raw.get("server")),
         )

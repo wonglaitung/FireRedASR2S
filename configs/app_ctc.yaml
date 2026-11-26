@@ -1,0 +1,37 @@
+server:
+  host: 0.0.0.0
+  port: 8000
+
+audio:
+  sample_rate: 16000
+  frame_ms: 20
+
+vad:
+  backend: silero
+  silero_model: models/silero_vad.onnx
+  silero_threshold: 0.5
+  silero_min_silence_ms: 500
+  silero_min_speech_ms: 250
+  silero_max_speech_ms: 20000
+  silero_window_size: 512
+  pre_roll_ms: 300
+  post_roll_ms: 300
+  max_end_silence_ms: 450
+  min_speech_ms: 250
+  hard_max_segment_ms: 15000
+  merge_gap_ms: 1200
+
+postprocess:
+  punctuation: true
+  punctuation_model: models/sherpa-onnx-punct-ct-transformer-zh-en-vocab272727-2024-04-12-int8/model.int8.onnx
+  itn: true
+  output_script: simplified
+
+asr:
+  backend: firered_ctc
+  model: models/sherpa-onnx-fire-red-asr2-ctc-zh_en-int8-2026-02-25/model.int8.onnx
+  tokens: models/sherpa-onnx-fire-red-asr2-ctc-zh_en-int8-2026-02-25/tokens.txt
+  encoder: ""
+  decoder: ""
+  num_threads: 2
+  provider: cpu

@@ -12,11 +12,11 @@ from firered_poc.config import AppConfig  # noqa: E402
 from firered_poc.server import create_app  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-MODEL_DIR = ROOT / "models" / "sherpa-onnx-fire-red-asr2-ctc-zh_en-int8-2026-02-25"
-MODEL = MODEL_DIR / "model.int8.onnx"
+MODEL_DIR = ROOT / "models" / "sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26"
+MODEL = MODEL_DIR / "encoder.int8.onnx"
 TEST_WAV = MODEL_DIR / "test_wavs" / "0.wav"
 
-pytestmark = pytest.mark.skipif(not MODEL.exists(), reason="FireRedASR2 CTC model not downloaded")
+pytestmark = pytest.mark.skipif(not MODEL.exists(), reason="FireRedASR2 AED model not downloaded")
 
 
 def test_websocket_returns_final() -> None:

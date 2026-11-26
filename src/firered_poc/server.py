@@ -10,6 +10,7 @@ from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 
 from .asr import ASRAdapter, build_asr
 from .config import AppConfig
+from .postprocess import Postprocessor
 from .segmenter import Segment
 from .session import Session, build_session
 
@@ -17,6 +18,7 @@ from .session import Session, build_session
 async def _send_segment(
     websocket: WebSocket,
     engine: ASRAdapter,
+    post: Postprocessor,
     segment: Segment,
     segment_id: int,
 ) -> None:
@@ -27,13 +29,14 @@ async def _send_segment(
             {"type": "error", "code": "ASR_FAILED", "message": str(exc)}
         )
         return
-    if not result.text:
+    text = post.process(result.text)
+    if not text:
         return
     await websocket.send_json(
         {
             "type": "final",
             "segment_id": segment_id,
-            "text": result.text,
+            "text": text,
             "start_ms": segment.start_ms,
             "end_ms": segment.end_ms,
         }
@@ -43,6 +46,7 @@ async def _send_segment(
 def create_app(config_path: str = "configs/app.yaml") -> FastAPI:
     cfg = AppConfig.load(config_path)
     engine = build_asr(cfg.asr)
+    post = Postprocessor(cfg.postprocess)
     app = FastAPI(title="FireRedASR2S POC")
 
     @app.get("/health")
@@ -76,13 +80,15 @@ def create_app(config_path: str = "configs/app.yaml") -> FastAPI:
                         if session is not None:
                             for segment in session.flush():
                                 segment_id += 1
-                                await _send_segment(websocket, engine, segment, segment_id)
+                                await _send_segment(
+                                    websocket, engine, post, segment, segment_id
+                                )
                         await websocket.send_json({"type": "stopped", "session_id": session_id})
                         break
                 elif data is not None and session is not None:
                     for segment in session.push_pcm(data):
                         segment_id += 1
-                        await _send_segment(websocket, engine, segment, segment_id)
+                        await _send_segment(websocket, engine, post, segment, segment_id)
         except WebSocketDisconnect:
             pass
         finally:

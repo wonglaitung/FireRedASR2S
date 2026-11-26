@@ -10,7 +10,7 @@ from .vad import make_vad
 def segment_audio(samples: np.ndarray, sample_rate: int, cfg: AppConfig) -> list[Segment]:
     """Run VAD + segmenter over a completed waveform (used by the CLI)."""
     frame_samples = int(sample_rate * cfg.audio.frame_ms / 1000)
-    vad = make_vad(cfg.vad)
+    vad = make_vad(cfg.vad, sample_rate)
     segmenter = StreamingSegmenter(sample_rate, cfg.audio.frame_ms, cfg.vad)
 
     out: list[Segment] = []

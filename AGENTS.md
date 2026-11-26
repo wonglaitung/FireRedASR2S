@@ -25,7 +25,7 @@
 ## Validation requirements
 - **Actually run checks** before claiming completion; never state a result you did not execute.
 - After code changes: run `ruff check .`, then `python3 -m pytest`. Order: lint → typecheck (when configured) → test.
-- A pytest baseline of **44 passed, 8 skipped** was reported, but `main` currently contains **no tests**; confirm the suite exists before trusting or quoting that number.
+- The `main` suite currently reports **28 passed** (`ruff check .` clean). A user-reported 44 passed / 8 skipped baseline belongs to an unrelated context; do not quote it for this repo.
 - After doc edits: verify every **Mermaid** block and Markdown code fence is paired and closed.
 - Every gate conclusion (lint / test / docs) must cite a concrete report artifact (e.g. `/tmp/opencode/reports/` or CI artifacts); **do not commit report files to the repo**.
 
@@ -39,9 +39,8 @@
 
 ## Environment notes (verify; may change)
 - Host has an RTX 4090 (24GB), but installed `torch`/`torchaudio` are **CPU-only** (`2.10.0+cpu`). GPU inference needs a CUDA-enabled build.
-- `modelscope` is installed; **FunASR is not, and is out of scope** (single-engine policy). FireRedASR2S weights are **not downloaded**.
-- `pytest 9.0.2` and `ruff 0.15.14` are available globally. No project config yet.
-- No `README`, `pyproject.toml`, CI, or test config exists.
+- `modelscope` is installed; **FunASR is not, and is out of scope** (single-engine policy). POC models live in `models/` (gitignored): FireRedASR2 CTC + AED ONNX, Silero VAD, CT-Transformer punctuation.
+- `pytest 9.0.2`, `ruff 0.15.14`, `sherpa-onnx`, `cn2an`, and `OpenCC` are available. `pyproject.toml` and `configs/` exist; no README or CI yet.
 
 ## Conventions
 - Design docs are in **Chinese**; keep terminology consistent with `docs/ARCHITECTURE.md`.

@@ -44,6 +44,6 @@ class Session:
 
 
 def build_session(cfg: AppConfig) -> Session:
-    vad = make_vad(cfg.vad)
+    vad = make_vad(cfg.vad, cfg.audio.sample_rate)
     segmenter = StreamingSegmenter(cfg.audio.sample_rate, cfg.audio.frame_ms, cfg.vad)
     return Session(vad, segmenter, cfg.audio.frame_samples)
