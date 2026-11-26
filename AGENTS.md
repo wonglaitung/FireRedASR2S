@@ -27,7 +27,7 @@
 - After code changes: run `ruff check .`, then `python3 -m pytest`. Order: lint → typecheck (when configured) → test.
 - A pytest baseline of **44 passed, 8 skipped** was reported, but `main` currently contains **no tests**; confirm the suite exists before trusting or quoting that number.
 - After doc edits: verify every **Mermaid** block and Markdown code fence is paired and closed.
-- Every gate conclusion (lint / test / docs) must be backed by a **report file under `reports/`**; a bare conclusion is not acceptable.
+- Every gate conclusion (lint / test / docs) must cite a concrete report artifact (e.g. `/tmp/opencode/reports/` or CI artifacts); **do not commit report files to the repo**.
 
 ## Documentation rules
 - Write in **Chinese Markdown**.

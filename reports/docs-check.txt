@@ -1,9 +1,0 @@
-# 文档检查报告
-
-- 日期：2026-11-26
-- 文件：`docs/ARCHITECTURE.md`
-- 检查项：Markdown 代码围栏配对；Mermaid 代码块闭合；Mermaid 首行关键字合法
-- 结果：**PASS**
-- 围栏：16 个（8 对）
-- Mermaid 块：5 个
-- 命令：Python 围栏/块检查脚本（见 AGENTS.md「验证要求」）

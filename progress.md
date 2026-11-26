@@ -10,7 +10,7 @@ Last updated: 2026-11-26
 - `docs/ARCHITECTURE.md` v1.2：三语（粤/普/英 + 混说）、精度优先的完整方案；架构/流程改用 Mermaid；补充术语解释。
 - 决策：初步默认 AED；`balanced` 为默认模式，`accuracy`（LLM）后续接入；降级链 AED → FunASR。
 - `AGENTS.md`：仓库现状、锁定决策、进度更新要求、验证要求与文档规范。
-- 文档检查：`reports/docs-check.txt` 记录 PASS（16 个围栏 / 8 对，5 个 Mermaid 块）。
+- 文档检查：PASS（16 个围栏 / 8 对，5 个 Mermaid 块）；报告不入库。
 
 ## 待办
 - [ ] M1 骨架：WS Gateway + Session 状态机 + RingBuffer + FireRedVAD + Mock ASR，打通端到端延迟测量。
