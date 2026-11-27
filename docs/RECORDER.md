@@ -1,8 +1,7 @@
 # FireRedASR2S 桌面录音转写器（POC）
 
-> 版本：v1.4
+> 版本：v1.5
 > 目标：在本项目内做一个**独立桌面录音器**：麦克风录音 → WebSocket 推流 → 后端逐句返回文字 → 窗口内流式展示。
-> 说明：仅参考 opencode portable launcher 的「窗口 + 内嵌 UI + 与后端解耦」思路；**不引用其代码、依赖或安装包**。
 
 ---
 
@@ -223,7 +222,7 @@ tests/gui/test_recorder_window.py
 | --- | --- |
 | `ruff check .` | PASS |
 | `pytest` | **36 passed**（含录音器协议、音频转换、GUI 冒烟、真实后端文件推流） |
-| GUI 冒烟 | offscreen 渲染 980×680 窗口，截图 `/tmp/opencode/recorder-window.png` |
+| GUI 冒烟 | offscreen 渲染 980×680 窗口，截图保存在本机临时目录（未入库） |
 | 文件模式 E2E | 真实后端返回 2 条 `final`：`昨天是MONDAY。` / `TODAY IS礼拜二。THE DAY AFTER TOMORROW是星期三。` |
 | GitHub Actions | `build-recorder` run `45915057637` 成功；artifact 约 103MB |
 

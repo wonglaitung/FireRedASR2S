@@ -10,10 +10,11 @@ Last updated: 2026-11-27
 - **录音器打包脚本与 Windows CI 已就绪**：PyInstaller 构建脚本已在本机 Linux 验证；Windows exe 需在 Windows 或 GitHub Actions 构建。
 
 ## 已完成
-- `README.md` v1.0：项目概览、快速开始、录音器/Windows exe 使用与环境说明。
+- `README.md` v1.1：项目概览、快速开始、录音器/Windows exe 使用与环境说明。
+- 文档约定：README/设计与使用文档不写参考项目；过程与历史统一记录在本文件。
 - `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先的完整方案。
-- `docs/POC.md` v1.5：POC 范围、选型、架构、接口、配置、验收、AED/CTC 对比与运行方式。
-- `docs/RECORDER.md` v1.4：独立录音器设计、协议、跨机器部署、Windows exe 使用与打包。
+- `docs/POC.md` v1.6：POC 范围、选型、架构、接口、配置、验收、AED/CTC 对比与运行方式。
+- `docs/RECORDER.md` v1.5：独立录音器设计、协议、跨机器部署、Windows exe 使用与打包。
 - POC 后端：`src/firered_poc/`（audio、Silero/能量 VAD、segmenter+merge、session、ASR Adapter、postprocess、CLI、WebSocket server）。
 - 默认后端：**AED**（`configs/app.yaml`）；**CTC 快速模式**（`configs/app_ctc.yaml`）。
 - 后处理：CT-Transformer 标点 + 保守 ITN（日期/金额/百分比）+ OpenCC 繁简。

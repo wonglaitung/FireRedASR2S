@@ -28,7 +28,7 @@
 - After code changes: run `ruff check .`, then `python3 -m pytest`. Order: lint → typecheck (when configured) → test.
 - The `main` suite currently reports **36 passed** (`ruff check .` clean). A user-reported 44 passed / 8 skipped baseline belongs to an unrelated context; do not quote it for this repo.
 - After doc edits: verify every **Mermaid** block and Markdown code fence is paired and closed.
-- Every gate conclusion (lint / test / docs) must cite a concrete report artifact (e.g. `/tmp/opencode/reports/` or CI artifacts); **do not commit report files to the repo**.
+- Every gate conclusion (lint / test / docs) must cite a concrete report artifact (a temporary report directory or CI artifacts); **do not commit report files to the repo**.
 
 ## Documentation rules
 - Write in **Chinese Markdown**.
@@ -47,7 +47,7 @@
 - `PYTHONPATH=src python3 -m firered_recorder` opens the PyQt6 recorder (backend must already be running).
 - Headless verification: `--file <wav> --no-realtime`.
 - Build: `python scripts/build_recorder.py` (PyInstaller). Windows exe must be built on Windows or via `.github/workflows/build-recorder.yml`; PyInstaller cannot cross-compile.
-- It is independent of `/data/opencode`; only the windowed-UI idea is referenced.
+- Standalone desktop recorder; see `docs/RECORDER.md`.
 
 ## Conventions
 - Design docs are in **Chinese**; keep terminology consistent with `docs/ARCHITECTURE.md`.
