@@ -1,6 +1,6 @@
 # FireRedASR2S 桌面录音转写器（POC）
 
-> 版本：v1.2
+> 版本：v1.4
 > 目标：在本项目内做一个**独立桌面录音器**：麦克风录音 → WebSocket 推流 → 后端逐句返回文字 → 窗口内流式展示。
 > 说明：仅参考 opencode portable launcher 的「窗口 + 内嵌 UI + 与后端解耦」思路；**不引用其代码、依赖或安装包**。
 
@@ -156,6 +156,26 @@ PYTHONPATH=src python3 -m firered_poc.server --config configs/app.yaml
 
 > 跨公网时不要直接暴露裸 WS；应加 WSS/反向代理/鉴权。当前 POC 只面向可信局域网。
 
+### 5.2 Windows exe 使用（已构建）
+
+1. GitHub → Actions → `build-recorder` → 最近一次成功运行 → 下载 artifact `FireRedRecorder-windows`。
+2. 解压到能看到 `FireRedRecorder.exe` 与 `_internal` 同目录：
+   ```text
+   FireRedRecorder/
+   ├── FireRedRecorder.exe
+   └── _internal/
+   ```
+3. 双击 `FireRedRecorder.exe`。
+4. 在「后端」填 `ws://<后端IP>:8000/ws`，点「开始录音」。
+5. 首次运行若被 SmartScreen 拦截：更多信息 → 仍要运行。
+
+注意：
+
+- 不要只拷贝 `FireRedRecorder.exe`；`_internal` 必须同目录。
+- 默认地址是 `ws://127.0.0.1:8000/ws`，前后端不同机时必须改成后端 LAN IP。
+- 录音器只含客户端；后端与模型仍在服务器。
+- 当前 exe 未签名；正式分发需做代码签名。
+
 无麦克风/无窗口验证（把 WAV 当麦克风流）：
 
 ```bash
@@ -205,6 +225,7 @@ tests/gui/test_recorder_window.py
 | `pytest` | **36 passed**（含录音器协议、音频转换、GUI 冒烟、真实后端文件推流） |
 | GUI 冒烟 | offscreen 渲染 980×680 窗口，截图 `/tmp/opencode/recorder-window.png` |
 | 文件模式 E2E | 真实后端返回 2 条 `final`：`昨天是MONDAY。` / `TODAY IS礼拜二。THE DAY AFTER TOMORROW是星期三。` |
+| GitHub Actions | `build-recorder` run `45915057637` 成功；artifact 约 103MB |
 
 > 当前容器没有真实麦克风语音输入；麦克风链路以「格式转换 + QtMultimedia 设备枚举 + offscreen GUI」验证，真机录音需在 Windows/Linux 桌面手动冒烟。
 
@@ -247,7 +268,7 @@ python scripts\build_recorder.py --onefile
 
 1. push 代码到 GitHub；
 2. 打开 Actions → `build-recorder` → Run workflow；
-3. 下载 artifact `FireRedRecorder-windows`（zip）。
+3. 下载 artifact `FireRedRecorder-windows`（zip）；解压到能看到 `FireRedRecorder.exe` 与 `_internal` 同目录为止。
 
 ### 9.3 说明
 

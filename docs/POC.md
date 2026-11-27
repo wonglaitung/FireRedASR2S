@@ -1,6 +1,6 @@
 # FireRedASR2S POC 设计与 MVP 范围
 
-> 版本：v1.4
+> 版本：v1.5
 > 目标：用最小闭环验证 **音频 → 句级文字**，并明确 MVP 要实现的功能、技术选型与验收标准。
 > 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2）；默认 AED，CTC 作为快速备选；已接入 Silero VAD、句段合并、标点/ITN/繁简后处理。
 
@@ -320,6 +320,9 @@ PYTHONPATH=src python3 -m firered_poc.cli transcribe \
 ```bash
 PYTHONPATH=src python3 -m firered_poc.server --config configs/app.yaml
 ```
+
+启动横幅会打印本机与 LAN 的 WebSocket/健康检查地址；前后端不同机时，录音器填横幅中的 LAN 地址。
+桌面录音器的源码运行、Windows exe、跨机器部署见 [`docs/RECORDER.md`](RECORDER.md) 与 [`README.md`](../README.md)。
 
 健康检查：`GET /health`；串流端点：`ws://127.0.0.1:8000/ws`。
 发送 `start` → 二进制 20ms PCM → `stop`，接收 `final`。

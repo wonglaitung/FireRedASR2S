@@ -10,14 +10,16 @@ Last updated: 2026-11-27
 - **录音器打包脚本与 Windows CI 已就绪**：PyInstaller 构建脚本已在本机 Linux 验证；Windows exe 需在 Windows 或 GitHub Actions 构建。
 
 ## 已完成
+- `README.md` v1.0：项目概览、快速开始、录音器/Windows exe 使用与环境说明。
 - `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先的完整方案。
-- `docs/POC.md` v1.4：POC 范围、选型、架构、接口、配置、验收、AED/CTC 对比与运行方式。
-- `docs/RECORDER.md` v1.1：独立录音器设计、协议、运行、打包与限制。
+- `docs/POC.md` v1.5：POC 范围、选型、架构、接口、配置、验收、AED/CTC 对比与运行方式。
+- `docs/RECORDER.md` v1.4：独立录音器设计、协议、跨机器部署、Windows exe 使用与打包。
 - POC 后端：`src/firered_poc/`（audio、Silero/能量 VAD、segmenter+merge、session、ASR Adapter、postprocess、CLI、WebSocket server）。
 - 默认后端：**AED**（`configs/app.yaml`）；**CTC 快速模式**（`configs/app_ctc.yaml`）。
 - 后处理：CT-Transformer 标点 + 保守 ITN（日期/金额/百分比）+ OpenCC 繁简。
 - 录音器：`src/firered_recorder/`（PyQt6 + QtMultimedia + WebSocket；GUI 与 `--file` 无窗口模式）。
-- 打包：`scripts/build_recorder.py`、`.github/workflows/build-recorder.yml`。
+- 打包：`scripts/build_recorder.py`、`.github/workflows/build-recorder.yml`；GitHub Actions run `45915057637` 成功。
+- Windows 产物：`dist/FireRedRecorder-windows.zip`（约 102MB，sha256 `fcd389b4…`），解压后 `FireRedRecorder/FireRedRecorder.exe` + `_internal`。
 - 脚本：`scripts/download_model.sh`（AED + CTC + Silero + 标点）、`scripts/compare_backends.py`。
 - 实测（CPU）：
   - 中英混说：CTC `MOAY TOAY ... 礼拜八二` → AED `MONDAY TODAY ... 礼拜二`（AED 明显更好）。
@@ -36,7 +38,8 @@ Last updated: 2026-11-27
 - [x] 后端启动横幅：打印监听地址、健康检查、WebSocket（含 LAN IP）与录音器示例命令。
 - [x] 录音器跨机器：先连 WebSocket，收到 `ready` 后才开麦；地址可指向 `ws://<局域网IP>:8000/ws`。
 - [x] 录音器打包脚本 + GitHub Actions（Windows 构建入口）。
-- [ ] 在 Windows 或 GitHub Actions 实际产出 `FireRedRecorder.exe` 并冒烟。
+- [x] 在 GitHub Actions 实际产出 `FireRedRecorder.exe`。
+- [ ] 在真实 Windows 上双击冒烟（本机 Wine 6 无法运行该 exe，报 UCRT `fetestexcept` 缺失）。
 - [ ] 真机麦克风冒烟（Windows/Linux 桌面），验证设备热插拔与长时录音。
 - [ ] 后端打包（Python + 依赖 + 模型）或保留独立服务部署。
 - [ ] 托盘/快捷键、代码签名、安装包。
@@ -47,7 +50,8 @@ Last updated: 2026-11-27
 - [ ] 工程化：server 重试/超时、并发压测、生产部署。
 
 ## 风险 / 阻塞
-- PyInstaller 不能跨平台：本机只产出 Linux 二进制（约 370MB）；Windows exe 需 Windows 或 GitHub Actions。
+- PyInstaller 不能跨平台：本机只产出 Linux 二进制（约 370MB）；Windows exe 已由 GitHub Actions 产出，但尚未在真实 Windows 运行验证。
+- GitHub Actions artifact 为双层 zip；本机已整理为 `dist/FireRedRecorder-windows.zip`。
 - 录音器包只含客户端，不含后端与模型；后端仍需单独运行。
 - 当前容器无真实麦克风语音输入；录音器麦克风链路仅做设备枚举、格式转换与 offscreen GUI 验证。
 - Linux QtMultimedia 依赖 PipeWire/GStreamer；容器内会打印缺失警告，但 offscreen UI 正常。

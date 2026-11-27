@@ -6,6 +6,7 @@
 - Remote: `git@github.com:wonglaitung/FireRedASR2S.git` (branch `main`). It is **not** upstream `github.com/FireRedTeam/FireRedASR2S`; upstream is reference only, not vendored here.
 
 ## Read first
+- `README.md` — quick start, architecture summary, recorder usage.
 - `docs/ARCHITECTURE.md` — source of truth, locked decisions, current version. Update it before any code/spec change that alters the architecture.
 - `progress.md` — current status, done, todo, risks.
 
@@ -40,7 +41,7 @@
 ## Environment notes (verify; may change)
 - Host has an RTX 4090 (24GB), but installed `torch`/`torchaudio` are **CPU-only** (`2.10.0+cpu`). GPU inference needs a CUDA-enabled build.
 - `modelscope` is installed; **FunASR is not, and is out of scope** (single-engine policy). POC models live in `models/` (gitignored): FireRedASR2 CTC + AED ONNX, Silero VAD, CT-Transformer punctuation.
-- `pytest 9.0.2`, `ruff 0.15.14`, `sherpa-onnx`, `cn2an`, and `OpenCC` are available. `PyQt6` is available for the desktop recorder. `pyproject.toml` and `configs/` exist; GitHub Actions builds the recorder; no README yet.
+- `pytest 9.0.2`, `ruff 0.15.14`, `sherpa-onnx`, `cn2an`, and `OpenCC` are available. `PyQt6` is available for the desktop recorder. `pyproject.toml` and `configs/` exist; GitHub Actions builds the recorder.
 
 ## Desktop recorder
 - `PYTHONPATH=src python3 -m firered_recorder` opens the PyQt6 recorder (backend must already be running).
