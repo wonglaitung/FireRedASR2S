@@ -1,6 +1,6 @@
 # FireRedASR2S 后端 Docker 镜像
 
-> 版本：v1.0
+> 版本：v1.1
 > 目标：把后端依赖、配置和模型打包成镜像，服务器只需 `docker run` 即可提供 WebSocket API。
 > 录音器仍在 Windows/本机独立运行，通过 `ws://<宿主机IP>:8000/ws` 连接。
 
@@ -100,13 +100,9 @@ curl http://127.0.0.1:8000/health
 docker inspect --format '{{.State.Health.Status}}' firered-asr
 ```
 
-### 4.1 Docker Compose
+### 4.1 不需要 Docker Compose
 
-```bash
-docker compose up -d --build
-docker logs -f firered-asr
-docker compose down
-```
+单容器直接用 `docker run` 即可。等以后加入队列、缓存、多副本或 GPU Worker 池时，再考虑 compose / Kubernetes。
 
 ---
 

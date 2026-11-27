@@ -8,15 +8,16 @@ Last updated: 2026-11-27
 - **POC MVP 已实现并跑通**：WAV + WebSocket 两条链路，真实 FireRedASR2-AED（默认）/ CTC（快速）。
 - **独立桌面录音器 MVP 已实现**：PyQt6 窗口，麦克风 → WebSocket → 后端逐句转写；不依赖 `/data/opencode`。
 - **录音器打包脚本与 Windows CI 已就绪**：PyInstaller 构建脚本已在本机 Linux 验证；Windows exe 需在 Windows 或 GitHub Actions 构建。
-- **后端 Docker 镜像已就绪**：Dockerfile + compose；本机已验证小镜像挂载模型与模型烤入镜像两种方式。
+- **后端 Docker 镜像已就绪**：单容器 Dockerfile；本机已验证小镜像挂载模型与模型烤入镜像两种方式。
 
 ## 已完成
 - `README.md` v1.3：项目概览、快速开始、录音器/Windows exe 使用与环境说明。
 - 文档约定：README/设计与使用文档不写参考项目；过程与历史统一记录在本文件。
+- 决策：后端只有单个容器，不引入 Docker Compose；直接用 `docker build` + `docker run`。
 - `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先的完整方案。
 - `docs/POC.md` v1.6：POC 范围、选型、架构、接口、配置、验收、AED/CTC 对比与运行方式。
 - `docs/RECORDER.md` v1.5：独立录音器设计、协议、跨机器部署、Windows exe 使用与打包。
-- `docs/DOCKER.md` v1.0：后端镜像构建、compose、端口、模型挂载与常见问题。
+- `docs/DOCKER.md` v1.1：后端镜像构建、端口、模型挂载与常见问题；明确单容器不使用 compose。
 - POC 后端：`src/firered_poc/`（audio、Silero/能量 VAD、segmenter+merge、session、ASR Adapter、postprocess、CLI、WebSocket server）。
 - 默认后端：**AED**（`configs/app.yaml`）；**CTC 快速模式**（`configs/app_ctc.yaml`）。
 - 后处理：CT-Transformer 标点 + 保守 ITN（日期/金额/百分比）+ OpenCC 繁简。
@@ -24,7 +25,7 @@ Last updated: 2026-11-27
 - 打包：`scripts/build_recorder.py`、`.github/workflows/build-recorder.yml`；GitHub Actions run `45915057637` 成功。
 - Windows 产物：`dist/FireRedRecorder-windows.zip`（约 102MB，sha256 `fcd389b4…`），解压后 `FireRedRecorder/FireRedRecorder.exe` + `_internal`。
 - 脚本：`scripts/download_model.sh`（AED + CTC + Silero + 标点，支持 `--aed-only`）、`scripts/compare_backends.py`。
-- Docker：`Dockerfile`、`compose.yaml`、`.dockerignore`；`SKIP_MODELS=1` 小镜像 289MB，模型烤入镜像约 2.38GB（含 CTC）。
+- Docker：`Dockerfile`、`.dockerignore`；`SKIP_MODELS=1` 小镜像 289MB，模型烤入镜像约 2.38GB（含 CTC）。
 - 实测（CPU）：
   - 中英混说：CTC `MOAY TOAY ... 礼拜八二` → AED `MONDAY TODAY ... 礼拜二`（AED 明显更好）。
   - AED 时延：10.05s 音频约 2.76s（RTF ≈ 0.27）；CTC 约 1.75s（RTF ≈ 0.17）。
@@ -47,7 +48,7 @@ Last updated: 2026-11-27
 - [x] 在 GitHub Actions 实际产出 `FireRedRecorder.exe`。
 - [ ] 在真实 Windows 上双击冒烟（本机 Wine 6 无法运行该 exe，报 UCRT `fetestexcept` 缺失）。
 - [ ] 真机麦克风冒烟（Windows/Linux 桌面），验证设备热插拔与长时录音。
-- [x] 后端 Docker 镜像（Dockerfile + compose + 文档）。
+- [x] 后端 Docker 镜像（单容器 Dockerfile + 文档）。
 - [ ] 完整 `docker build` 下载模型路径的端到端验证（本机已验证挂载模型与本地模型烤入）。
 - [ ] 推送镜像到镜像仓库（可选）。
 - [ ] 托盘/快捷键、代码签名、安装包。

@@ -1,6 +1,6 @@
 # FireRedASR2S
 
-> 版本：v1.3
+> 版本：v1.4
 > **精度优先**的粤语 / 普通话 / 英文句级语音转写系统，附独立桌面录音器。
 
 ---
@@ -13,7 +13,7 @@
 | 句级切分 | Silero VAD + pre/post roll + 句段合并 |
 | 后处理 | 标点 + 保守 ITN + OpenCC 繁简 |
 | 桌面录音器 | PyQt6 窗口；麦克风 → WebSocket → 逐句显示 |
-| 后端镜像 | Dockerfile + compose；默认把 AED/Silero/标点烤进镜像 |
+| 后端镜像 | Dockerfile；默认把 AED/Silero/标点烤进镜像 |
 | 打包 | PyInstaller 脚本 + GitHub Actions（Windows exe） |
 | 测试 | `ruff` PASS；`pytest` 39 passed |
 
@@ -92,11 +92,12 @@ PYTHONPATH=src python3 -m firered_poc.server --config configs/app.yaml
 #### Docker 方式（推荐服务器）
 
 ```bash
-docker compose up -d --build
+docker build -t firered-asr:latest .
+docker run -d --name firered-asr -p 8000:8000 --restart unless-stopped firered-asr:latest
 docker logs -f firered-asr
 ```
 
-- 默认把 AED + Silero VAD + 标点烤进镜像（约 1.2GB 模型）。
+- 首次构建会下载 AED + Silero VAD + 标点（约 1.2GB 模型），耗时取决于网络。
 - 宿主机端口映射 `8000:8000`；录音器填 `ws://<宿主机IP>:8000/ws`。
 - 若 8000 被占用，改 `-p 8001:8000`，录音器 URL 同步改。
 - 容器内打印的 `172.x` 是容器 IP，不要填给录音器。
@@ -198,7 +199,6 @@ FireRedASR2S/
 ├── src/firered_recorder/    # 桌面录音器：PyQt6 + WebSocket
 ├── tests/                   # unit / integration / gui
 ├── Dockerfile               # 后端镜像
-├── compose.yaml             # docker compose
 ├── requirements.txt
 ├── requirements-recorder.txt
 └── pyproject.toml

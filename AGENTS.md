@@ -50,7 +50,7 @@
 - Standalone desktop recorder; see `docs/RECORDER.md`.
 
 ## Backend Docker
-- `docker compose up -d --build`; see `docs/DOCKER.md`.
+- `docker build -t firered-asr:latest .` + `docker run`; see `docs/DOCKER.md`. Single container: no compose.
 - Default bakes AED + Silero + punctuation; `MODELS=all` adds CTC.
 - `SKIP_MODELS=1` builds a small image for mounting `models/` at `/app/models`.
 
