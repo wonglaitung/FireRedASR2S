@@ -49,6 +49,11 @@
 - Build: `python scripts/build_recorder.py` (PyInstaller). Windows exe must be built on Windows or via `.github/workflows/build-recorder.yml`; PyInstaller cannot cross-compile.
 - Standalone desktop recorder; see `docs/RECORDER.md`.
 
+## Backend Docker
+- `docker compose up -d --build`; see `docs/DOCKER.md`.
+- Default bakes AED + Silero + punctuation; `MODELS=all` adds CTC.
+- `SKIP_MODELS=1` builds a small image for mounting `models/` at `/app/models`.
+
 ## Conventions
 - Design docs are in **Chinese**; keep terminology consistent with `docs/ARCHITECTURE.md`.
 - Commit history uses conventional prefixes (`docs: ...`). Only commit/push when explicitly asked.

@@ -1,0 +1,11 @@
+services:
+  asr:
+    build:
+      context: .
+      args:
+        MODELS: aed
+    image: firered-asr:latest
+    container_name: firered-asr
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
