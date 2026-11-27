@@ -40,7 +40,7 @@
 
 ## Environment notes (verify; may change)
 - Host has an RTX 4090 (24GB), but installed `torch`/`torchaudio` are **CPU-only** (`2.10.0+cpu`). GPU inference needs a CUDA-enabled build.
-- `modelscope` is installed; **FunASR is not, and is out of scope** (single-engine policy). POC models live in `models/` (gitignored): FireRedASR2 CTC + AED ONNX, Silero VAD, CT-Transformer punctuation.
+- `modelscope` is installed; **FunASR is not, and is out of scope** (single-engine policy). POC models live in `models/` (gitignored): FireRedASR2 AED ONNX, Silero VAD, CT-Transformer punctuation.
 - `pytest 9.0.2`, `ruff 0.15.14`, `sherpa-onnx`, `cn2an`, and `OpenCC` are available. `PyQt6` is available for the desktop recorder. `pyproject.toml` and `configs/` exist; GitHub Actions builds the recorder.
 
 ## Desktop recorder
@@ -49,9 +49,15 @@
 - Build: `python scripts/build_recorder.py` (PyInstaller). Windows exe must be built on Windows or via `.github/workflows/build-recorder.yml`; PyInstaller cannot cross-compile.
 - Standalone desktop recorder; see `docs/RECORDER.md`.
 
+## Eval data
+- `eval/yue/` (20 pure Cantonese, words.hk CC BY 4.0), `eval/en/` (20 English, LibriSpeech CC BY 4.0), `eval/yue_en/` (20 Cantonese-English, MCE research-only).
+- Baseline: Cantonese CER 11.5%, English WER 1.1%, code-switch English term recall 87.4% (AED, sherpa int8 greedy).
+- Run all: `PYTHONPATH=src python3 scripts/eval_suite.py --config configs/app.yaml --output eval/baseline_aed.json`.
+- MCE is not commercial-clear and is not an official benchmark.
+
 ## Backend Docker
 - `docker build -t firered-asr:latest .` + `docker run`; see `docs/DOCKER.md`. Single container: no compose.
-- Default bakes AED + Silero + punctuation; `MODELS=all` adds CTC.
+- Default bakes AED + Silero + punctuation.
 - `SKIP_MODELS=1` builds a small image for mounting `models/` at `/app/models`.
 - Local models baked in: `bash scripts/build_docker_local.sh` (uses `Dockerfile.local` + build context).
 

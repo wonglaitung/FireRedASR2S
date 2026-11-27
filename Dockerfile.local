@@ -1,2 +1,4 @@
 FROM firered-asr:base
-COPY --from=models . /app/models
+COPY --from=models ./sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26 /app/models/sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26
+COPY --from=models ./sherpa-onnx-punct-ct-transformer-zh-en-vocab272727-2024-04-12-int8 /app/models/sherpa-onnx-punct-ct-transformer-zh-en-vocab272727-2024-04-12-int8
+COPY --from=models ./silero_vad.onnx /app/models/silero_vad.onnx

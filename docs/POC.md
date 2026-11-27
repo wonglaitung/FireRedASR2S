@@ -1,8 +1,8 @@
 # FireRedASR2S POC 设计与 MVP 范围
 
-> 版本：v1.6
+> 版本：v1.7
 > 目标：用最小闭环验证 **音频 → 句级文字**，并明确 MVP 要实现的功能、技术选型与验收标准。
-> 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2）；默认 AED，CTC 作为快速备选；已接入 Silero VAD、句段合并、标点/ITN/繁简后处理。
+> 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2）；默认 AED；已接入 Silero VAD、句段合并、标点/ITN/繁简后处理。
 
 ---
 
@@ -46,24 +46,23 @@ POC（Proof of Concept，概念验证）只回答一个问题：**用 FireRedASR
 
 ## 4. 技术选型
 
-### 4.1 推荐路径：sherpa-onnx + FireRedASR2-AED（CTC 快速备选）
+### 4.1 推荐路径：sherpa-onnx + FireRedASR2-AED
 
 | 项 | 选择 | 理由 |
 | --- | --- | --- |
 | 推理运行时 | sherpa-onnx | 纯 ONNX（Open Neural Network Exchange，开放神经网络交换格式）、CPU 可跑、安装简单 |
-| 默认模型 | **FireRedASR2-AED ONNX（约 838MB）** | 精度优先；中英混说明显优于 CTC；与正式方案默认 AED 一致 |
-| 快速备选 | FireRedASR2-CTC-int8（约 520MB） | CPU 更快；单语场景可接受，混说/英文较弱 |
+| 默认模型 | **FireRedASR2-AED ONNX（约 838MB）** | 精度优先；中英/粤英混说表现最佳；与正式方案默认 AED 一致 |
 | VAD | Silero VAD（约 0.6MB） | 比能量 VAD 稳，CPU 运行 |
 | 句段合并 | `merge_gap_ms` | 减少自然停顿造成的碎句，文件模式默认开启 |
 | 后处理 | CT-Transformer 标点 + cn2an ITN + OpenCC | 标点、日期/金额/百分比、繁简归一 |
 | 正式生产 | 官方 FireRedASR2S PyTorch + AED/LLM + CUDA | POC 只验证可行性，不替代生产方案 |
 
-> AED 比 CTC 慢约 1.5~2 倍，但 10s 音频 CPU 仍在 3s 内出字，且中英混说准确率明显更好，故 POC 默认 AED。Adapter（适配器）隔离后端，`configs/app_ctc.yaml` 可切回 CTC。
+> POC 只保留 AED；10s 音频 CPU 仍在 3s 内出字。Adapter（适配器）隔离后端，后续可替换为 LLM。
 
 ### 4.2 关键指标参考
 
-- 官方文档中 CTC 单句 RTF（Real Time Factor，实时率）约 0.17；POC 实测 AED 约 0.25~0.33（CPU）。
-- POC 目标：10s 音频单句延迟可接受；WS 端到端 CTC 约 2s、AED 实测约 2.2s；不承诺生产延迟。
+- POC 实测 AED 约 0.25~0.33 RTF（Real Time Factor，实时率，CPU）。
+- POC 目标：10s 音频单句延迟可接受；WS 端到端 AED 实测约 2.2s；不承诺生产延迟。
 
 ---
 
@@ -72,7 +71,7 @@ POC（Proof of Concept，概念验证）只回答一个问题：**用 FireRedASR
 ```mermaid
 flowchart LR
     IN["输入<br/>WAV 文件 / WebSocket PCM"] --> SEG["Segmenter<br/>VAD + pre/post roll"]
-    SEG --> ASR["ASR Adapter<br/>FireRedASR2-AED（默认）/ CTC"]
+    SEG --> ASR["ASR Adapter<br/>FireRedASR2-AED"]
     ASR --> OUT["结果<br/>text + start_ms/end_ms"]
     OUT --> CLI["CLI stdout"]
     OUT --> WS["WS final"]
@@ -108,7 +107,7 @@ src/firered_poc/
 ├── segmenter.py      # RingBuffer / 端点 / 软硬切分 / 句段合并
 ├── asr/
 │   ├── base.py       # ASRAdapter 接口
-│   └── sherpa.py     # FireRedASR2 CTC/AED 实现
+│   └── sherpa.py     # FireRedASR2 AED 实现
 ├── postprocess.py    # 标点 / ITN / 繁简
 ├── session.py        # 会话状态机
 ├── server.py         # WebSocket 服务
@@ -193,8 +192,7 @@ postprocess:
   output_script: simplified  # as-is | simplified | traditional
 
 asr:
-  backend: firered_aed       # firered_aed（默认）| firered_ctc（快速）
-  model: ""
+  backend: firered_aed
   tokens: models/sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26/tokens.txt
   encoder: models/sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26/encoder.int8.onnx
   decoder: models/sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26/decoder.int8.onnx
@@ -224,20 +222,8 @@ asr:
 | `hello_en.wav`（英文） | 整段 | `HELLO SPEECH.` | 0.55s |
 | `test_wavs/0.wav`（WS 流式） | 2 段 | 2 条 `final`：`昨天是MONDAY。` / `TODAY IS礼拜二。THE DAY AFTER TOMORROW是星期三。` | 2.24s |
 
-> 质量门禁：`ruff check .` PASS；`pytest` 28 passed（含真实模型、Silero VAD、后处理与 WebSocket 冒烟测试）。
+> 质量门禁：`ruff check .` PASS；`pytest` 39 passed（含真实模型、Silero VAD、后处理与 WebSocket 冒烟测试）。
 > 结论：AED 默认下三语与混说均可出字；Silero VAD + 句段合并减少碎句；标点/ITN/繁简显著提升可读性。
-
-### 9.2 AED vs CTC 同集对比
-
-| 音频 | CTC（1.75 / 0.87 / 1.34 / 0.90 / 0.41s） | AED（2.76 / 1.35 / 2.57 / 1.30 / 0.55s） | 结论 |
-| --- | --- | --- | --- |
-| `0.wav` 中英混说 | `MOAY TOAY ... 礼拜八二 ... THE DAYAY` | `MONDAY TODAY ... 礼拜二 ... THE DAY AFTER` | **AED 明显更好** |
-| `1.wav` 普通话 | `ALWAYSISE ALWAYS` | `ALWAYS ALWAYS` | AED 更好 |
-| `3-sichuan.wav` 四川话 | `是演的特别好` | `戏演的特别好` | 接近，AED 更自然 |
-| `yue.wav` 粤语 | `呢几个字都表达唔到我想讲嘅意思。` | 同左 | 持平 |
-| `hello_en.wav` 英文 | `HELLO SPEECH.` | 同左 | 持平 |
-
-> 决策：**POC 默认切到 AED**（精度优先）；CTC 保留为 `configs/app_ctc.yaml` 快速模式。AED 在 CPU 上仍快于实时（RTF ≈ 0.25~0.33）。
 
 ---
 
@@ -262,13 +248,12 @@ asr:
 | 自然停顿被切成多句 | 上下文丢失、文本碎片化 | `merge_gap_ms`（默认 1200ms，文件模式） |
 | 模型下载约 600MB | 首次启动慢 | `download_model.sh` 预下载到 `models/`，已 gitignore |
 | 粤语/英语样例覆盖不全 | 三语验证不足 | 确认 `test_wavs` 覆盖，必要时补样例 |
-| CTC 与正式 AED 有差异 | 精度结论不能直接外推 | POC 已默认 AED；CTC 仅作快速备选 |
 
 ---
 
 ## 12. 默认决策
 
-1. POC 默认后端：**sherpa-onnx FireRedASR2-AED-int8**；`configs/app_ctc.yaml` 为快速模式。
+1. POC 后端：**sherpa-onnx FireRedASR2-AED-int8**（单引擎）。
 2. 入口顺序：**先 WAV CLI，再 WebSocket**。
 3. VAD：**Silero VAD 默认**，能量 VAD 保留兜底；文件模式合并 ≤1200ms 的相邻句段。
 4. 后处理：**标点 + 保守 ITN + OpenCC 繁简**，默认输出简体。
@@ -278,7 +263,7 @@ asr:
 
 ## 13. 运行方式（已验证）
 
-安装依赖并下载模型（AED + CTC + Silero VAD + 标点，约 1.3GB）：
+安装依赖并下载模型（AED + Silero VAD + 标点，约 1.3GB）：
 
 ```bash
 python3 -m pip install --user -r requirements.txt
@@ -289,16 +274,8 @@ WAV 文件转写（默认 AED）：
 
 ```bash
 PYTHONPATH=src python3 -m firered_poc.cli transcribe \
-  --audio models/sherpa-onnx-fire-red-asr2-ctc-zh_en-int8-2026-02-25/test_wavs/0.wav \
+  --audio models/sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26/test_wavs/0.wav \
   --config configs/app.yaml --json
-```
-
-快速 CTC 模式：
-
-```bash
-PYTHONPATH=src python3 -m firered_poc.cli transcribe \
-  --audio models/sherpa-onnx-fire-red-asr2-ctc-zh_en-int8-2026-02-25/test_wavs/0.wav \
-  --config configs/app_ctc.yaml --json
 ```
 
 需要按句切分时加 `--vad`（默认合并 ≤1200ms 的相邻句段）：
@@ -326,13 +303,6 @@ PYTHONPATH=src python3 -m firered_poc.server --config configs/app.yaml
 
 健康检查：`GET /health`；串流端点：`ws://127.0.0.1:8000/ws`。
 发送 `start` → 二进制 20ms PCM → `stop`，接收 `final`。
-
-AED vs CTC 对比：
-
-```bash
-PYTHONPATH=src python3 scripts/compare_backends.py \
-  --wavs models/sherpa-onnx-fire-red-asr2-ctc-zh_en-int8-2026-02-25/test_wavs/0.wav
-```
 
 质量门禁：
 

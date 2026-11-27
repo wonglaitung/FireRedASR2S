@@ -19,15 +19,12 @@ COPY configs ./configs
 COPY scripts/download_model.sh ./scripts/download_model.sh
 COPY src/firered_poc ./src/firered_poc
 
-ARG MODELS=aed
 ARG SKIP_MODELS=0
 RUN chmod +x scripts/download_model.sh \
     && if [ "$SKIP_MODELS" = "1" ]; then \
          echo "skip model download (mount models at /app/models)"; \
-       elif [ "$MODELS" = "all" ]; then \
-         ./scripts/download_model.sh; \
        else \
-         ./scripts/download_model.sh --aed-only; \
+         ./scripts/download_model.sh; \
        fi
 
 RUN useradd --create-home --uid 10001 app \

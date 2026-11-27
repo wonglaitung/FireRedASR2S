@@ -1,0 +1,362 @@
+[
+  {
+    "id": "001",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 0,
+    "topic": "天氣",
+    "duration_s": 8.11,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_001.wav",
+    "transcript": "你知唔知今日嘅temperature會落到低至10度，一定要著厚d嘅clothes啊！",
+    "english_terms": [
+      "temperature",
+      "d",
+      "clothes"
+    ]
+  },
+  {
+    "id": "002",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 4,
+    "topic": "天氣",
+    "duration_s": 8.6,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_002.wav",
+    "transcript": "Forecast話晚上嘅weather會變得好cold，會降到freezing point，甚至可能會有snow喎。",
+    "english_terms": [
+      "Forecast",
+      "weather",
+      "cold",
+      "freezing",
+      "point",
+      "snow"
+    ]
+  },
+  {
+    "id": "003",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 15,
+    "topic": "食物",
+    "duration_s": 8.49,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_003.wav",
+    "transcript": "喺黃埔嗰間日本餐廳嘅sushi, sashimi都新鮮之餘，presentation都好on point，好worth it!",
+    "english_terms": [
+      "sushi",
+      "sashimi",
+      "presentation",
+      "on",
+      "point",
+      "worth",
+      "it"
+    ]
+  },
+  {
+    "id": "004",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 25,
+    "topic": "旅遊",
+    "duration_s": 8.77,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_004.wav",
+    "transcript": "下一個dream destination係New York，我想去times square countdown，感覺好fantastic嘅！",
+    "english_terms": [
+      "dream",
+      "destination",
+      "New",
+      "York",
+      "times",
+      "square",
+      "countdown",
+      "fantastic"
+    ]
+  },
+  {
+    "id": "005",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 34,
+    "topic": "娛樂",
+    "duration_s": 8.11,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_005.wav",
+    "transcript": "我最近開始追韓劇'Crash Landing On You'，個plot好intriguing，每集都令我excited。",
+    "english_terms": [
+      "Crash",
+      "Landing",
+      "On",
+      "You'",
+      "plot",
+      "intriguing",
+      "excited"
+    ]
+  },
+  {
+    "id": "006",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 48,
+    "topic": "本地時事",
+    "duration_s": 13.76,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_006.wav",
+    "transcript": "我見到報導話佢哋準備implement新嘅rent control policy，我覺得咁樣好保護住住客，但都怕有negative side effects喺房東身上。",
+    "english_terms": [
+      "implement",
+      "rent",
+      "control",
+      "policy",
+      "negative",
+      "side",
+      "effects"
+    ]
+  },
+  {
+    "id": "007",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 56,
+    "topic": "購物",
+    "duration_s": 9.41,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_007.wav",
+    "transcript": "我鐘意喺weekend去designer boutique睇新款clothes，可以keep up with fashion trends，好有fun。",
+    "english_terms": [
+      "weekend",
+      "designer",
+      "boutique",
+      "clothes",
+      "keep",
+      "up",
+      "with",
+      "fashion",
+      "trends",
+      "fun"
+    ]
+  },
+  {
+    "id": "008",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 68,
+    "topic": "學習",
+    "duration_s": 6.89,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_008.wav",
+    "transcript": "喺呢個digital era，學coding變得好重要，我唔想miss out呢個opportunity。",
+    "english_terms": [
+      "digital",
+      "era",
+      "coding",
+      "miss",
+      "out",
+      "opportunity"
+    ]
+  },
+  {
+    "id": "009",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 79,
+    "topic": "工作",
+    "duration_s": 9.86,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_009.wav",
+    "transcript": "喺workplace裡面，respect同埋trust傾嘅係最重要，如果大家無呢啲，就好難cooperate effectively。",
+    "english_terms": [
+      "workplace",
+      "respect",
+      "trust",
+      "cooperate",
+      "effectively"
+    ]
+  },
+  {
+    "id": "010",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 99,
+    "topic": "食物",
+    "duration_s": 5.76,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_010.wav",
+    "transcript": "啲麵包店嘅croissant好crispy嘅，我totally fall in love住咗！",
+    "english_terms": [
+      "croissant",
+      "crispy",
+      "totally",
+      "fall",
+      "in",
+      "love"
+    ]
+  },
+  {
+    "id": "011",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 10,
+    "topic": "食物",
+    "duration_s": 7.85,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_011.wav",
+    "transcript": "我個人好like去金鐘嘅food court，因為嗰度嘅選擇好wide，應有盡有。",
+    "english_terms": [
+      "like",
+      "food",
+      "court",
+      "wide"
+    ]
+  },
+  {
+    "id": "012",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 21,
+    "topic": "旅遊",
+    "duration_s": 7.17,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_012.wav",
+    "transcript": "每次行過airport嘅duty free shop我就会feel excited，一覺去咗另一個world。",
+    "english_terms": [
+      "airport",
+      "duty",
+      "free",
+      "shop",
+      "feel",
+      "excited",
+      "world"
+    ]
+  },
+  {
+    "id": "013",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 31,
+    "topic": "娛樂",
+    "duration_s": 9.07,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_013.wav",
+    "transcript": "我個weekend去睇咗'The Avengers'嘅movie，電影咁intense，真係我今年睇過最好嘅show。",
+    "english_terms": [
+      "weekend",
+      "The",
+      "Avengers'",
+      "movie",
+      "intense",
+      "show"
+    ]
+  },
+  {
+    "id": "014",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 40,
+    "topic": "體育",
+    "duration_s": 7.04,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_014.wav",
+    "transcript": "我哋嘅basketball team今次比賽表現得好good，大家都play得好努力，我好感動呀！",
+    "english_terms": [
+      "basketball",
+      "team",
+      "good",
+      "play"
+    ]
+  },
+  {
+    "id": "015",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 50,
+    "topic": "本地時事",
+    "duration_s": 12.95,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_015.wav",
+    "transcript": "嗰日我聽到政府落嘅新減排target，我認為呢個step forward真係好crucial，對抗climate change我哋需要全部人齊心協力。",
+    "english_terms": [
+      "target",
+      "step",
+      "forward",
+      "crucial",
+      "climate",
+      "change"
+    ]
+  },
+  {
+    "id": "016",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 61,
+    "topic": "購物",
+    "duration_s": 8.96,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_016.wav",
+    "transcript": "我每個月都會去health & beauty store買個skin care product，想keep my skin healthy 同glowing，真係值得invest。",
+    "english_terms": [
+      "health",
+      "beauty",
+      "store",
+      "skin",
+      "care",
+      "product",
+      "keep",
+      "my",
+      "skin",
+      "healthy",
+      "glowing",
+      "invest"
+    ]
+  },
+  {
+    "id": "017",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 71,
+    "topic": "學習",
+    "duration_s": 5.67,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_017.wav",
+    "transcript": "呢個weekend我要去attend一個workshop，針對音樂製作，真係好期待。",
+    "english_terms": [
+      "weekend",
+      "attend",
+      "workshop"
+    ]
+  },
+  {
+    "id": "018",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 82,
+    "topic": "工作",
+    "duration_s": 9.6,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_018.wav",
+    "transcript": "如果你覺得你嘅career stagnant咗，就要去找新嘅opportunities或者提升自己嘅技能，唔可以just settle down。",
+    "english_terms": [
+      "career",
+      "stagnant",
+      "opportunities",
+      "just",
+      "settle",
+      "down"
+    ]
+  },
+  {
+    "id": "019",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 90,
+    "topic": "天氣",
+    "duration_s": 4.86,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_019.wav",
+    "transcript": "今日好hot，大家記住帶sunscreen唔好中曬喎。",
+    "english_terms": [
+      "hot",
+      "sunscreen"
+    ]
+  },
+  {
+    "id": "020",
+    "source": "AlienKevin/mixed_cantonese_and_english_speech",
+    "source_index": 96,
+    "topic": "食物",
+    "duration_s": 6.02,
+    "sample_rate": 16000,
+    "audio": "audio/yue_en_020.wav",
+    "transcript": "我好love上環嘅street food，每次都會食到我well satisfied咁。",
+    "english_terms": [
+      "love",
+      "street",
+      "food",
+      "well",
+      "satisfied"
+    ]
+  }
+]

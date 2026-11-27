@@ -29,7 +29,6 @@ postprocess:
 
 asr:
   backend: firered_aed
-  model: ""
   tokens: models/sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26/tokens.txt
   encoder: models/sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26/encoder.int8.onnx
   decoder: models/sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26/decoder.int8.onnx

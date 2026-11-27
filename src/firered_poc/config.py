@@ -45,8 +45,7 @@ class PostprocessConfig:
 
 @dataclass
 class AsrConfig:
-    backend: str = "firered_ctc"
-    model: str = ""
+    backend: str = "firered_aed"
     tokens: str = ""
     encoder: str = ""
     decoder: str = ""

@@ -1,6 +1,6 @@
 # FireRedASR2S 桌面录音转写器（POC）
 
-> 版本：v1.5
+> 版本：v1.6
 > 目标：在本项目内做一个**独立桌面录音器**：麦克风录音 → WebSocket 推流 → 后端逐句返回文字 → 窗口内流式展示。
 
 ---
@@ -180,7 +180,7 @@ PYTHONPATH=src python3 -m firered_poc.server --config configs/app.yaml
 ```bash
 PYTHONPATH=src python3 -m firered_recorder \
   --url ws://127.0.0.1:8000/ws \
-  --file models/sherpa-onnx-fire-red-asr2-ctc-zh_en-int8-2026-02-25/test_wavs/0.wav \
+  --file models/sherpa-onnx-fire-red-asr2-zh_en-int8-2026-02-26/test_wavs/0.wav \
   --no-realtime
 ```
 

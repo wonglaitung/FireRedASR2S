@@ -1,0 +1,222 @@
+[
+  {
+    "id": "001",
+    "source": "openslr/librispeech_asr",
+    "source_index": 0,
+    "speaker_id": 2277,
+    "chapter_id": 149896,
+    "duration_s": 6.59,
+    "sample_rate": 16000,
+    "audio": "audio/en_001.wav",
+    "transcript": "HE WAS IN A FEVERED STATE OF MIND OWING TO THE BLIGHT HIS WIFE'S ACTION THREATENED TO CAST UPON HIS ENTIRE FUTURE"
+  },
+  {
+    "id": "002",
+    "source": "openslr/librispeech_asr",
+    "source_index": 1,
+    "speaker_id": 2277,
+    "chapter_id": 149896,
+    "duration_s": 7.14,
+    "sample_rate": 16000,
+    "audio": "audio/en_002.wav",
+    "transcript": "HE WOULD HAVE TO PAY HER THE MONEY WHICH SHE WOULD NOW REGULARLY DEMAND OR THERE WOULD BE TROUBLE IT DID NOT MATTER WHAT HE DID"
+  },
+  {
+    "id": "003",
+    "source": "openslr/librispeech_asr",
+    "source_index": 2,
+    "speaker_id": 2277,
+    "chapter_id": 149896,
+    "duration_s": 4.83,
+    "sample_rate": 16000,
+    "audio": "audio/en_003.wav",
+    "transcript": "HURSTWOOD WALKED THE FLOOR MENTALLY ARRANGING THE CHIEF POINTS OF HIS SITUATION"
+  },
+  {
+    "id": "004",
+    "source": "openslr/librispeech_asr",
+    "source_index": 95,
+    "speaker_id": 2035,
+    "chapter_id": 147960,
+    "duration_s": 9.02,
+    "sample_rate": 16000,
+    "audio": "audio/en_004.wav",
+    "transcript": "SHE WAS FOUR YEARS OLDER THAN I TO BE SURE AND HAD SEEN MORE OF THE WORLD BUT I WAS A BOY AND SHE WAS A GIRL AND I RESENTED HER PROTECTING MANNER"
+  },
+  {
+    "id": "005",
+    "source": "openslr/librispeech_asr",
+    "source_index": 96,
+    "speaker_id": 2035,
+    "chapter_id": 147960,
+    "duration_s": 3.92,
+    "sample_rate": 16000,
+    "audio": "audio/en_005.wav",
+    "transcript": "THIS CHANGE CAME ABOUT FROM AN ADVENTURE WE HAD TOGETHER"
+  },
+  {
+    "id": "006",
+    "source": "openslr/librispeech_asr",
+    "source_index": 97,
+    "speaker_id": 2035,
+    "chapter_id": 147960,
+    "duration_s": 8.84,
+    "sample_rate": 16000,
+    "audio": "audio/en_006.wav",
+    "transcript": "ONE DAY WHEN I RODE OVER TO THE SHIMERDAS I FOUND ANTONIA STARTING OFF ON FOOT FOR RUSSIAN PETER'S HOUSE TO BORROW A SPADE AMBROSCH NEEDED"
+  },
+  {
+    "id": "007",
+    "source": "openslr/librispeech_asr",
+    "source_index": 172,
+    "speaker_id": 2086,
+    "chapter_id": 149214,
+    "duration_s": 9.81,
+    "sample_rate": 16000,
+    "audio": "audio/en_007.wav",
+    "transcript": "THE NARRATIVE IT MAY BE IS WOVEN OF SO HUMBLE A TEXTURE AS TO REQUIRE THIS ADVANTAGE AND AT THE SAME TIME TO RENDER IT THE MORE DIFFICULT OF ATTAINMENT"
+  },
+  {
+    "id": "008",
+    "source": "openslr/librispeech_asr",
+    "source_index": 173,
+    "speaker_id": 2086,
+    "chapter_id": 149214,
+    "duration_s": 6.97,
+    "sample_rate": 16000,
+    "audio": "audio/en_008.wav",
+    "transcript": "IN GOOD FAITH HOWEVER HE IS NOT SUFFICIENTLY IMAGINATIVE TO FLATTER HIMSELF WITH THE SLIGHTEST HOPE OF THIS KIND"
+  },
+  {
+    "id": "009",
+    "source": "openslr/librispeech_asr",
+    "source_index": 174,
+    "speaker_id": 2086,
+    "chapter_id": 149214,
+    "duration_s": 16.75,
+    "sample_rate": 16000,
+    "audio": "audio/en_009.wav",
+    "transcript": "THE AUTHOR HAS CONSIDERED IT HARDLY WORTH HIS WHILE THEREFORE RELENTLESSLY TO IMPALE THE STORY WITH ITS MORAL AS WITH AN IRON ROD OR RATHER AS BY STICKING A PIN THROUGH A BUTTERFLY THUS AT ONCE DEPRIVING IT OF LIFE AND CAUSING IT TO STIFFEN IN AN UNGAINLY AND UNNATURAL ATTITUDE"
+  },
+  {
+    "id": "010",
+    "source": "openslr/librispeech_asr",
+    "source_index": 227,
+    "speaker_id": 7976,
+    "chapter_id": 110124,
+    "duration_s": 3.55,
+    "sample_rate": 16000,
+    "audio": "audio/en_010.wav",
+    "transcript": "LONG AGO THERE LIVED A MERCHANT WHO HAD THREE DAUGHTERS"
+  },
+  {
+    "id": "011",
+    "source": "openslr/librispeech_asr",
+    "source_index": 228,
+    "speaker_id": 7976,
+    "chapter_id": 110124,
+    "duration_s": 7.35,
+    "sample_rate": 16000,
+    "audio": "audio/en_011.wav",
+    "transcript": "EVERY YEAR AT A CERTAIN DAY OF A CERTAIN MONTH HE WENT AWAY TO A DISTANT CITY TO COLLECT MONEY ON AN ACCOUNT"
+  },
+  {
+    "id": "012",
+    "source": "openslr/librispeech_asr",
+    "source_index": 229,
+    "speaker_id": 7976,
+    "chapter_id": 110124,
+    "duration_s": 7.84,
+    "sample_rate": 16000,
+    "audio": "audio/en_012.wav",
+    "transcript": "HOW DO YOU KNOW ASKED THEIR FATHER I AM OLDER AND WISER THAN YOU ARE AND I KNOW THAT THERE ARE MANY EVILS WHICH MIGHT COME UPON YOU"
+  },
+  {
+    "id": "013",
+    "source": "openslr/librispeech_asr",
+    "source_index": 305,
+    "speaker_id": 1988,
+    "chapter_id": 147956,
+    "duration_s": 14.95,
+    "sample_rate": 16000,
+    "audio": "audio/en_013.wav",
+    "transcript": "FUCHS BROUGHT UP A SACK OF POTATOES AND A PIECE OF CURED PORK FROM THE CELLAR AND GRANDMOTHER PACKED SOME LOAVES OF SATURDAY'S BREAD A JAR OF BUTTER AND SEVERAL PUMPKIN PIES IN THE STRAW OF THE WAGON BOX"
+  },
+  {
+    "id": "014",
+    "source": "openslr/librispeech_asr",
+    "source_index": 306,
+    "speaker_id": 1988,
+    "chapter_id": 147956,
+    "duration_s": 14.21,
+    "sample_rate": 16000,
+    "audio": "audio/en_014.wav",
+    "transcript": "OCCASIONALLY ONE OF THE HORSES WOULD TEAR OFF WITH HIS TEETH A PLANT FULL OF BLOSSOMS AND WALK ALONG MUNCHING IT THE FLOWERS NODDING IN TIME TO HIS BITES AS HE ATE DOWN TOWARD THEM"
+  },
+  {
+    "id": "015",
+    "source": "openslr/librispeech_asr",
+    "source_index": 307,
+    "speaker_id": 1988,
+    "chapter_id": 147956,
+    "duration_s": 4.39,
+    "sample_rate": 16000,
+    "audio": "audio/en_015.wav",
+    "transcript": "IT'S NO BETTER THAN A BADGER HOLE NO PROPER DUGOUT AT ALL"
+  },
+  {
+    "id": "016",
+    "source": "openslr/librispeech_asr",
+    "source_index": 380,
+    "speaker_id": 777,
+    "chapter_id": 126732,
+    "duration_s": 2.74,
+    "sample_rate": 16000,
+    "audio": "audio/en_016.wav",
+    "transcript": "ALL IDEALISATION MAKES LIFE POORER"
+  },
+  {
+    "id": "017",
+    "source": "openslr/librispeech_asr",
+    "source_index": 381,
+    "speaker_id": 777,
+    "chapter_id": 126732,
+    "duration_s": 2.3,
+    "sample_rate": 16000,
+    "audio": "audio/en_017.wav",
+    "transcript": "THEN WHY INDULGE IN PROPHETIC PHANTASIES"
+  },
+  {
+    "id": "018",
+    "source": "openslr/librispeech_asr",
+    "source_index": 382,
+    "speaker_id": 777,
+    "chapter_id": 126732,
+    "duration_s": 5.06,
+    "sample_rate": 16000,
+    "audio": "audio/en_018.wav",
+    "transcript": "AT BEST THEY CAN ONLY INTERPRET THE MIND OF THE PROPHET AND CAN HAVE NO OBJECTIVE VALUE"
+  },
+  {
+    "id": "019",
+    "source": "openslr/librispeech_asr",
+    "source_index": 463,
+    "speaker_id": 84,
+    "chapter_id": 121123,
+    "duration_s": 3.99,
+    "sample_rate": 16000,
+    "audio": "audio/en_019.wav",
+    "transcript": "BUT IN LESS THAN FIVE MINUTES THE STAIRCASE GROANED BENEATH AN EXTRAORDINARY WEIGHT"
+  },
+  {
+    "id": "020",
+    "source": "openslr/librispeech_asr",
+    "source_index": 464,
+    "speaker_id": 84,
+    "chapter_id": 121123,
+    "duration_s": 13.69,
+    "sample_rate": 16000,
+    "audio": "audio/en_020.wav",
+    "transcript": "AT THIS MOMENT THE WHOLE SOUL OF THE OLD MAN SEEMED CENTRED IN HIS EYES WHICH BECAME BLOODSHOT THE VEINS OF THE THROAT SWELLED HIS CHEEKS AND TEMPLES BECAME PURPLE AS THOUGH HE WAS STRUCK WITH EPILEPSY NOTHING WAS WANTING TO COMPLETE THIS BUT THE UTTERANCE OF A CRY"
+  }
+]
