@@ -25,7 +25,7 @@
 ## Validation requirements
 - **Actually run checks** before claiming completion; never state a result you did not execute.
 - After code changes: run `ruff check .`, then `python3 -m pytest`. Order: lint → typecheck (when configured) → test.
-- The `main` suite currently reports **28 passed** (`ruff check .` clean). A user-reported 44 passed / 8 skipped baseline belongs to an unrelated context; do not quote it for this repo.
+- The `main` suite currently reports **36 passed** (`ruff check .` clean). A user-reported 44 passed / 8 skipped baseline belongs to an unrelated context; do not quote it for this repo.
 - After doc edits: verify every **Mermaid** block and Markdown code fence is paired and closed.
 - Every gate conclusion (lint / test / docs) must cite a concrete report artifact (e.g. `/tmp/opencode/reports/` or CI artifacts); **do not commit report files to the repo**.
 
@@ -40,7 +40,13 @@
 ## Environment notes (verify; may change)
 - Host has an RTX 4090 (24GB), but installed `torch`/`torchaudio` are **CPU-only** (`2.10.0+cpu`). GPU inference needs a CUDA-enabled build.
 - `modelscope` is installed; **FunASR is not, and is out of scope** (single-engine policy). POC models live in `models/` (gitignored): FireRedASR2 CTC + AED ONNX, Silero VAD, CT-Transformer punctuation.
-- `pytest 9.0.2`, `ruff 0.15.14`, `sherpa-onnx`, `cn2an`, and `OpenCC` are available. `pyproject.toml` and `configs/` exist; no README or CI yet.
+- `pytest 9.0.2`, `ruff 0.15.14`, `sherpa-onnx`, `cn2an`, and `OpenCC` are available. `PyQt6` is available for the desktop recorder. `pyproject.toml` and `configs/` exist; GitHub Actions builds the recorder; no README yet.
+
+## Desktop recorder
+- `PYTHONPATH=src python3 -m firered_recorder` opens the PyQt6 recorder (backend must already be running).
+- Headless verification: `--file <wav> --no-realtime`.
+- Build: `python scripts/build_recorder.py` (PyInstaller). Windows exe must be built on Windows or via `.github/workflows/build-recorder.yml`; PyInstaller cannot cross-compile.
+- It is independent of `/data/opencode`; only the windowed-UI idea is referenced.
 
 ## Conventions
 - Design docs are in **Chinese**; keep terminology consistent with `docs/ARCHITECTURE.md`.

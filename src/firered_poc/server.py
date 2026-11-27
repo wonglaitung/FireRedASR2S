@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import asyncio
 import json
+import socket
 import uuid
 
 import uvicorn
@@ -97,6 +98,56 @@ def create_app(config_path: str = "configs/app.yaml") -> FastAPI:
     return app
 
 
+def _lan_ipv4_addresses() -> list[str]:
+    ips: set[str] = set()
+    try:
+        for info in socket.getaddrinfo(socket.gethostname(), None, socket.AF_INET):
+            ips.add(info[4][0])
+    except OSError:
+        pass
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as sock:
+            sock.connect(("8.8.8.8", 80))
+            ips.add(sock.getsockname()[0])
+    except OSError:
+        pass
+    return sorted(ip for ip in ips if not ip.startswith("127.") and ip != "0.0.0.0")
+
+
+def connection_urls(host: str, port: int) -> list[str]:
+    if host in {"0.0.0.0", "::", ""}:
+        urls = [f"ws://127.0.0.1:{port}/ws"]
+        urls.extend(f"ws://{ip}:{port}/ws" for ip in _lan_ipv4_addresses())
+        return list(dict.fromkeys(urls))
+    return [f"ws://{host}:{port}/ws"]
+
+
+def format_startup_banner(cfg: AppConfig, host: str, port: int) -> str:
+    urls = connection_urls(host, port)
+    health_urls = [url.replace("ws://", "http://").replace("/ws", "/health") for url in urls]
+    lines = [
+        "",
+        "=" * 66,
+        " FireRedASR2S ASR backend",
+        f" ASR backend : {cfg.asr.backend}",
+        f" VAD backend : {cfg.vad.backend}",
+        f" Postprocess : punctuation={cfg.postprocess.punctuation} "
+        f"itn={cfg.postprocess.itn} script={cfg.postprocess.output_script}",
+        "",
+        " WebSocket endpoints:",
+        *[f"   {url}" for url in urls],
+        "",
+        " Health check:",
+        *[f"   {url}" for url in health_urls],
+        "",
+        " Recorder (same machine / other machine):",
+        *[f"   --url {url}" for url in urls],
+        "=" * 66,
+        "",
+    ]
+    return "\n".join(lines)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="firered_poc.server")
     parser.add_argument("--config", default="configs/app.yaml")
@@ -107,6 +158,7 @@ def main(argv: list[str] | None = None) -> int:
     cfg = AppConfig.load(args.config)
     host = args.host or cfg.server.host
     port = args.port or cfg.server.port
+    print(format_startup_banner(cfg, host, port), flush=True)
     uvicorn.run(create_app(args.config), host=host, port=port)
     return 0
 
