@@ -25,7 +25,7 @@ Last updated: 2026-11-27
 - 打包：`scripts/build_recorder.py`、`.github/workflows/build-recorder.yml`；GitHub Actions run `45915057637` 成功。
 - Windows 产物：`dist/FireRedRecorder-windows.zip`（约 102MB，sha256 `fcd389b4…`），解压后 `FireRedRecorder/FireRedRecorder.exe` + `_internal`。
 - 脚本：`scripts/download_model.sh`（AED + CTC + Silero + 标点，支持 `--aed-only`）、`scripts/compare_backends.py`。
-- Docker：`Dockerfile`、`.dockerignore`；`SKIP_MODELS=1` 小镜像 289MB，模型烤入镜像约 2.38GB（含 CTC）。
+- Docker：`Dockerfile`、`Dockerfile.local`、`.dockerignore`、`scripts/build_docker_local.sh`；`SKIP_MODELS=1` 小镜像 289MB，模型烤入镜像约 2.38GB（含 CTC）。
 - 实测（CPU）：
   - 中英混说：CTC `MOAY TOAY ... 礼拜八二` → AED `MONDAY TODAY ... 礼拜二`（AED 明显更好）。
   - AED 时延：10.05s 音频约 2.76s（RTF ≈ 0.27）；CTC 约 1.75s（RTF ≈ 0.17）。
@@ -34,6 +34,7 @@ Last updated: 2026-11-27
   - PyInstaller Linux 构建：`dist/FireRedRecorder`（约 370MB），`--help` 与文件模式 E2E 均通过。
   - Docker 小镜像（挂载模型）：健康检查 200，录音器 E2E 返回 2 条 `final`。
   - Docker 模型烤入镜像：约 2.38GB（含 CTC），E2E 通过。
+  - 本机模型构建：`bash scripts/build_docker_local.sh` 不下载模型，生成 `firered-asr:latest`（2.38GB），E2E 通过。
 - 质量门禁：`ruff check .` PASS；`pytest` 39 passed（真实模型、Silero VAD、后处理、WS、录音器协议/GUI/文件 E2E）。
 - 报告与截图：`/tmp/opencode/reports/`、`/tmp/opencode/recorder-window.png`。
 

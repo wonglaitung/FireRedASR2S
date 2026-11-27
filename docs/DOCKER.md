@@ -1,6 +1,6 @@
 # FireRedASR2S 后端 Docker 镜像
 
-> 版本：v1.1
+> 版本：v1.2
 > 目标：把后端依赖、配置和模型打包成镜像，服务器只需 `docker run` 即可提供 WebSocket API。
 > 录音器仍在 Windows/本机独立运行，通过 `ws://<宿主机IP>:8000/ws` 连接。
 
@@ -45,7 +45,26 @@ docker build -t firered-asr:latest .
 docker build --build-arg MODELS=all -t firered-asr:latest .
 ```
 
-- 本地已有 `models/`，不想重新下载时：
+### 3.1 使用本机模型构建（不下载）
+
+本机已有 `models/`，直接烤进镜像：
+
+```bash
+bash scripts/build_docker_local.sh
+```
+
+等价的手工命令（需要 Docker BuildKit）：
+
+```bash
+docker build --build-arg SKIP_MODELS=1 -t firered-asr:base .
+docker build --build-context models=./models -f Dockerfile.local -t firered-asr:latest .
+```
+
+- 脚本会检查 `models/` 里是否有 AED、Silero、标点；缺失会提示先下载。
+- 不访问网络下载模型；本机模型原样复制进 `/app/models`。
+- 镜像约 2.38GB（本机模型含 CTC 时）。
+
+### 3.2 只挂载模型，不烤进镜像
 
 ```bash
 docker build --build-arg SKIP_MODELS=1 -t firered-asr:local .

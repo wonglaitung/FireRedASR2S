@@ -1,0 +1,2 @@
+FROM firered-asr:base
+COPY --from=models . /app/models

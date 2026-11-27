@@ -53,6 +53,7 @@
 - `docker build -t firered-asr:latest .` + `docker run`; see `docs/DOCKER.md`. Single container: no compose.
 - Default bakes AED + Silero + punctuation; `MODELS=all` adds CTC.
 - `SKIP_MODELS=1` builds a small image for mounting `models/` at `/app/models`.
+- Local models baked in: `bash scripts/build_docker_local.sh` (uses `Dockerfile.local` + build context).
 
 ## Conventions
 - Design docs are in **Chinese**; keep terminology consistent with `docs/ARCHITECTURE.md`.
