@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+from collections import Counter
 from pathlib import Path
 
 from opencc import OpenCC
@@ -15,8 +16,8 @@ from firered_poc.postprocess import Postprocessor
 
 ROOT = Path(__file__).resolve().parents[1]
 _T2S = OpenCC("t2s")
-_EN_RE = re.compile(r"[A-Za-z][A-Za-z0-9.'\-]*")
-_EN_TOKEN_RE = re.compile(r"[a-z0-9']+")
+_EN_TOKEN_RE = re.compile(r"[a-z0-9]+(?:['\-][a-z0-9]+)*")
+_MIXED_TOKEN_RE = re.compile(r"[\u4e00-\u9fff]|[A-Za-z0-9]+(?:['\-][A-Za-z0-9]+)*")
 
 
 def levenshtein(ref: list[str], hyp: list[str]) -> int:
@@ -38,23 +39,64 @@ def normalize_zh(text: str) -> str:
 
 
 def normalize_en(text: str) -> list[str]:
+    """Lower-case English word tokens with token-boundary matching."""
     return _EN_TOKEN_RE.findall(text.lower().replace("’", "'"))
 
 
-def english_terms(text: str) -> list[str]:
-    return [term for term in _EN_RE.findall(text) if len(term) >= 2]
+def english_tokens(text: str) -> list[str]:
+    """English terms used by the code-switch metric (ignore single letters/numbers)."""
+    return [
+        token
+        for token in normalize_en(text)
+        if len(token) >= 2 and any(ch.isalpha() for ch in token)
+    ]
+
+
+def mixed_tokens(text: str) -> list[str]:
+    """Chinese characters and English words, both as single metric units."""
+    simplified = _T2S.convert(text)
+    tokens: list[str] = []
+    for match in _MIXED_TOKEN_RE.finditer(simplified):
+        token = match.group(0)
+        tokens.append(token if "\u4e00" <= token <= "\u9fff" else token.lower())
+    return tokens
+
+
+def english_scores(reference: str, hypothesis: str) -> dict:
+    ref_counts = Counter(english_tokens(reference))
+    hyp_counts = Counter(english_tokens(hypothesis))
+    hits = sum((ref_counts & hyp_counts).values())
+    ref_total = sum(ref_counts.values())
+    hyp_total = sum(hyp_counts.values())
+    precision = hits / hyp_total if hyp_total else 0.0
+    recall = hits / ref_total if ref_total else 0.0
+    f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
+    return {
+        "precision": precision,
+        "recall": recall,
+        "f1": f1,
+        "hits": hits,
+        "ref_terms": ref_total,
+        "hyp_terms": hyp_total,
+    }
 
 
 def run_set(engine, post: Postprocessor, directory: Path, sample_rate: int) -> dict:
     rows = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
     details = []
     ref_total = error_total = 0
-    term_total = term_hits = 0
+    term_total = term_hits = hyp_terms = 0
     for row in rows:
         samples, sr = load_wav(directory / row["audio"], sample_rate)
-        text = post.process(engine.transcribe(float_to_int16(samples), sr).text)
+        raw_text = engine.transcribe(float_to_int16(samples), sr).text
+        text = post.process(raw_text)
         ref = row["transcript"]
-        details.append({"id": row["id"], "reference": ref, "text": text})
+        detail = {
+            "id": row["id"],
+            "reference": ref,
+            "raw_text": raw_text,
+            "text": text,
+        }
         if directory.name == "yue":
             ref_norm = normalize_zh(ref)
             hyp_norm = normalize_zh(text)
@@ -66,22 +108,50 @@ def run_set(engine, post: Postprocessor, directory: Path, sample_rate: int) -> d
             error_total += levenshtein(ref_norm, hyp_norm)
             ref_total += len(ref_norm)
         elif directory.name == "yue_en":
-            for term in english_terms(ref):
-                term_total += 1
-                if term.lower() in text.lower():
-                    term_hits += 1
+            ref_tokens = mixed_tokens(ref)
+            hyp_tokens = mixed_tokens(text)
+            scores = english_scores(ref, text)
+            error_total += levenshtein(ref_tokens, hyp_tokens)
+            ref_total += len(ref_tokens)
+            term_total += scores["ref_terms"]
+            term_hits += scores["hits"]
+            hyp_terms += scores["hyp_terms"]
+            detail["english"] = {
+                "reference": english_tokens(ref),
+                "hypothesis": english_tokens(text),
+                "hits": scores["hits"],
+            }
+        details.append(detail)
+
     result = {"set": directory.name, "clips": len(rows), "details": details}
     if directory.name == "yue":
         result["metric"] = "CER"
         result["rate"] = error_total / ref_total if ref_total else 0.0
+        result["errors"] = error_total
+        result["units"] = ref_total
     elif directory.name == "en":
         result["metric"] = "WER"
         result["rate"] = error_total / ref_total if ref_total else 0.0
+        result["errors"] = error_total
+        result["units"] = ref_total
     else:
-        result["metric"] = "English term recall"
-        result["rate"] = term_hits / term_total if term_total else 0.0
+        result["metric"] = "English term F1"
+        precision = term_hits / hyp_terms if hyp_terms else 0.0
+        recall = term_hits / term_total if term_total else 0.0
+        result["metrics"] = {
+            "english_precision": precision,
+            "english_recall": recall,
+            "english_f1": (
+                2 * precision * recall / (precision + recall)
+                if precision + recall
+                else 0.0
+            ),
+            "mixed_cer": error_total / ref_total if ref_total else 0.0,
+        }
         result["hits"] = term_hits
         result["terms"] = term_total
+        result["hyp_terms"] = hyp_terms
+        result["rate"] = result["metrics"]["english_recall"]
     return result
 
 
@@ -101,10 +171,13 @@ def main(argv: list[str] | None = None) -> int:
     for name in ("yue", "en", "yue_en"):
         result = run_set(engine, post, root / name, cfg.audio.sample_rate)
         results.append(result)
-        if result["metric"] == "English term recall":
+        if name == "yue_en":
+            metrics = result["metrics"]
             print(
-                f"{name}: English recall {result['hits']}/{result['terms']} "
-                f"= {result['rate']:.1%} ({result['clips']} clips)"
+                f"yue_en: English F1 {metrics['english_f1']:.1%} "
+                f"(P {metrics['english_precision']:.1%} / "
+                f"R {metrics['english_recall']:.1%}), "
+                f"mixed CER {metrics['mixed_cer']:.1%} ({result['clips']} clips)"
             )
         else:
             print(f"{name}: {result['metric']} {result['rate']:.1%} ({result['clips']} clips)")

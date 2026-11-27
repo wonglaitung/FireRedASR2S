@@ -1,6 +1,6 @@
 # FireRedASR2S
 
-> 版本：v1.8
+> 版本：v1.9
 > **精度优先**的粤语 / 普通话 / 英文句级语音转写系统，附独立桌面录音器。
 
 ---
@@ -15,7 +15,7 @@
 | 桌面录音器 | PyQt6 窗口；麦克风 → WebSocket → 逐句显示 |
 | 后端镜像 | Dockerfile；默认把 AED/Silero/标点烤进镜像 |
 | 打包 | PyInstaller 脚本 + GitHub Actions（Windows exe） |
-| 测试 | `ruff` PASS；`pytest` 39 passed |
+| 测试 | `ruff` PASS；`pytest` 44 passed |
 
 > 这是 **POC（Proof of Concept，概念验证）**，不是生产成品；延迟、并发、鉴权与模型精度仍需按正式方案推进。
 
@@ -184,9 +184,9 @@ ruff check .
 python3 -m pytest
 ```
 
-当前：`ruff` PASS；`pytest` **39 passed**（含真实模型、Silero VAD、后处理、WebSocket、录音器协议/GUI/文件 E2E）。
+当前：`ruff` PASS；`pytest` **44 passed**（含真实模型、Silero VAD、后处理、WebSocket、录音器协议/GUI/文件 E2E）。
 
-验证集：`eval/`（粤语 20 / 英文 20 / 粤英混说 20）；AED 基线：粤语 CER 11.5%、英文 WER 1.1%、粤英英文词召回 87.4%。
+验证集：`eval/`（粤语 20 / 英文 20 / 粤英混说 20）；AED 基线：粤语 CER 11.5%、英文 WER 1.1%、粤英英文词 F1 87.8%（P 88.1% / R 87.4%）、混合 CER 6.8%。
 
 > 集成测试在模型不存在时会自动 skip。
 

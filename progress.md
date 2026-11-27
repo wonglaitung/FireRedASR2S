@@ -13,26 +13,26 @@ Last updated: 2026-11-27
 ## 已验证基线（AED，本机 CPU，sherpa int8 + greedy）
 - 粤语 CER：**11.5%**（`eval/yue`，20 条）
 - 英文 WER：**1.1%**（`eval/en`，20 条）
-- 粤英混说英文词召回：**104/119 = 87.4%**（`eval/yue_en`，20 条）
+- 粤英混说英文词 F1：**87.8%**（P 88.1% / R 87.4%）、混合 CER **6.8%**（`eval/yue_en`，20 条）
 - 汇总：`eval/baseline_aed.json`
 
 ## 已完成
-- `README.md` v1.8：项目概览、快速开始、录音器/Windows exe、验证集。
+- `README.md` v1.9：项目概览、快速开始、录音器/Windows exe、验证集。
 - `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先方案。
-- `docs/POC.md` v1.7：AED-only POC、接口、配置、实测与运行方式。
-- `docs/RECORDER.md` v1.6：录音器设计、跨机器、Windows exe、打包。
+- `docs/POC.md` v1.8：AED-only POC、接口、配置、实测与运行方式。
+- `docs/RECORDER.md` v1.7：录音器设计、跨机器、Windows exe、打包。
 - `docs/DOCKER.md` v1.3：AED-only 镜像、端口、模型挂载。
 - **删除 CTC**：`configs/app_ctc.yaml`、`scripts/compare_backends.py`、sherpa CTC 分支、CTC 下载逻辑均移除。
 - 验证集：
   - `eval/yue/`：words.hk，CC BY 4.0，20 条纯粤语。
   - `eval/en/`：LibriSpeech validation.clean，CC BY 4.0，20 条英文。
   - `eval/yue_en/`：MCE，研究用途，20 条粤英混说。
-  - `scripts/eval_suite.py`：一次跑三套，输出 CER/WER/英文召回。
+  - `scripts/eval_suite.py`：一次跑三套，输出 CER/WER/英文 P/R/F1、混合 CER；英文按 token 边界匹配。
 - 后端：`src/firered_poc/`（Silero VAD、segmenter+merge、AED Adapter、postprocess、CLI、WS server）。
 - 录音器：`src/firered_recorder/`（PyQt6 + QtMultimedia + WebSocket）。
 - 打包：`scripts/build_recorder.py`、`.github/workflows/build-recorder.yml`；Windows exe 已产出。
 - Docker：`Dockerfile`（AED-only）、`Dockerfile.local`（只复制 AED/Silero/标点）、`scripts/build_docker_local.sh`。
-- 质量门禁：`ruff check .` PASS；`pytest` 39 passed。
+- 质量门禁：`ruff check .` PASS；`pytest` 44 passed。
 - 报告：`/tmp/opencode/reports/`。
 
 ## 待办
@@ -55,4 +55,4 @@ Last updated: 2026-11-27
 - 录音器包只含客户端，不含后端与模型。
 - 当前容器无真实麦克风；录音器麦克风链路仅做设备枚举/格式转换/offscreen GUI 验证。
 - 未做代码签名；Windows SmartScreen 可能拦截。
-- 上报的 pytest 基线（44 passed, 8 skipped）与本仓库无关；本仓库现为 39 passed。
+- 本仓库当前 pytest 为 44 passed（新增严格评测指标测试）。
