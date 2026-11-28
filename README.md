@@ -1,6 +1,6 @@
 # FireRedASR2S
 
-> 版本：v2.3
+> 版本：v2.4
 > **精度优先**的粤语 / 普通话 / 英文句级语音转写系统，附独立桌面录音器。
 
 ---
@@ -15,7 +15,7 @@
 | 桌面录音器 | PyQt6 窗口；麦克风 → WebSocket → 逐句显示 |
 | 后端镜像 | Dockerfile；默认把 AED/Silero/标点烤进镜像 |
 | 打包 | PyInstaller 脚本 + GitHub Actions（Windows exe） |
-| 测试 | `ruff` PASS；`pytest` 49 passed |
+| 测试 | `ruff` PASS；`pytest` 53 passed |
 
 > 这是 **POC（Proof of Concept，概念验证）**，不是生产成品；延迟、并发、鉴权与模型精度仍需按正式方案推进。
 
@@ -184,7 +184,7 @@ ruff check .
 python3 -m pytest
 ```
 
-当前：`ruff` PASS；`pytest` **49 passed**（含真实模型、Silero VAD、后处理、WebSocket、录音器协议/GUI/文件 E2E）。
+当前：`ruff` PASS；`pytest` **53 passed**（含真实模型、Silero VAD、后处理、WebSocket、录音器协议/GUI/文件 E2E）。
 
 验证集：`eval/`（粤语 20 / 英文 20 / MCE 混说 100 / WSYue 自發混说 153）。
 
@@ -228,7 +228,8 @@ FireRedASR2S/
 - [`docs/POC.md`](docs/POC.md)：POC 范围、AED 实测结果与运行方式。
 - [`docs/RECORDER.md`](docs/RECORDER.md)：录音器协议、跨机器部署、Windows 打包。
 - [`docs/DOCKER.md`](docs/DOCKER.md)：后端镜像构建、运行、端口与模型挂载。
-- [`eval/README.md`](eval/README.md)：三套验证集、来源、基线与指标定义。
+- [`eval/README.md`](eval/README.md)：四套验证集、来源、基线与指标定义。
+- [`docs/DATA.md`](docs/DATA.md)：个人听写/会议全文的数据采集、标注、划分与校验规范。
 
 ---
 

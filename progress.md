@@ -32,9 +32,10 @@ Last updated: 2026-11-27
 - 简单 OOV 词表纠错收益有限：F1 90.3% → 90.8%。
 
 ## 已完成
-- `README.md` v2.3：项目概览、快速开始、录音器/Windows exe、MCE/WSYue 验证集与官方 AED/LM 对照。
+- `README.md` v2.4：项目概览、快速开始、录音器/Windows exe、MCE/WSYue 验证集与数据规范。
 - `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先方案。
 - `docs/POC.md` v2.5：AED-only POC、官方 AED 对照、端到端、MCE/WSYue 验证与 n-best LM。
+- `docs/DATA.md` v1.0：个人听写/会议全文的采集、标注、划分与校验规范。
 - `docs/RECORDER.md` v1.7：录音器设计、跨机器、Windows exe、打包。
 - `docs/DOCKER.md` v1.3：AED-only 镜像、端口、模型挂载。
 - **删除 CTC**：`configs/app_ctc.yaml`、`scripts/compare_backends.py`、sherpa CTC 分支、CTC 下载逻辑均移除。
@@ -48,7 +49,7 @@ Last updated: 2026-11-27
 - 录音器：`src/firered_recorder/`（PyQt6 + QtMultimedia + WebSocket）。
 - 打包：`scripts/build_recorder.py`、`.github/workflows/build-recorder.yml`；Windows exe 已产出。
 - Docker：`Dockerfile`（AED-only）、`Dockerfile.local`（只复制 AED/Silero/标点）、`scripts/build_docker_local.sh`。
-- 质量门禁：`ruff check .` PASS；`pytest` 49 passed。
+- 质量门禁：`ruff check .` PASS；`pytest` 53 passed。
 - 报告：`/tmp/opencode/reports/`。
 
 ## 待办
@@ -59,6 +60,9 @@ Last updated: 2026-11-27
 - [x] 扩到 100 条同分布混说验证集，确认 20 条明显偏乐观。
 - [x] 补 WSYue 自發混说 153 条。
 - [ ] 为自發域单独训练/选择 LM，或按场景开关 LM。
+- [x] 个人听写/会议全文数据采集、标注、划分与校验规范（`docs/DATA.md`）。
+- [ ] 采集个人听写 pilot 100–200 条，并用单句 harness 跑基线。
+- [ ] 采集会议 pilot 3 场，并用全文/切分 harness 跑基线。
 - [ ] 用 `eval_suite.py` 对比官方 AED 与当前基线，重点看粤语 CER、英文 WER、英文召回。
 - [ ] 重建 Docker 镜像（AED-only）并复测。
 - [ ] 真实 Windows 双击冒烟、真机麦克风冒烟。
@@ -75,4 +79,4 @@ Last updated: 2026-11-27
 - 录音器包只含客户端，不含后端与模型。
 - 当前容器无真实麦克风；录音器麦克风链路仅做设备枚举/格式转换/offscreen GUI 验证。
 - 未做代码签名；Windows SmartScreen 可能拦截。
-- 本仓库当前 pytest 为 49 passed（新增严格评测指标、LM、官方 AED 配置测试）。
+- 本仓库当前 pytest 为 53 passed（新增严格评测指标、LM、官方 AED 配置、数据校验测试）。
