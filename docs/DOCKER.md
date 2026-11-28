@@ -1,6 +1,6 @@
 # FireRedASR2S 后端 Docker 镜像
 
-> 版本：v1.5
+> 版本：v1.6
 > 目标：把后端依赖、配置和模型打包成镜像，服务器只需 `docker run` 即可提供 WebSocket API。
 > 录音器仍在 Windows/本机独立运行，通过 `ws://<宿主机IP>:8000/ws` 连接。
 
@@ -202,9 +202,44 @@ docker run -d --name firered-asr \
 | CPU | CPU 镜像为 sherpa int8；GPU 镜像需 `--gpus all` |
 | GPU | `firered-asr:gpu` 使用 PyTorch CUDA；显存约 3GB/实例 |
 | 镜像体积 | CPU `SKIP_MODELS=1` 约 289MB；GPU 镜像含 4.7GB 官方权重；本机本地 CUDA 基础镜像构建约 30.4GB，换瘦基础镜像可减小 |
-| 并发 | 单进程 + 单模型；高并发需多副本/队列/GPU |
+| 并发 | 单进程 + 单模型；4 路短句实测可用；更高并发需多副本/队列/GPU |
 | 安全 | 无鉴权、无 TLS；仅建议可信局域网 |
 | 更新模型 | 重新 `docker build`（加 `--no-cache` 可强制重下） |
+
+### 7.1 4 路并发实测与资源建议
+
+测试条件：
+
+- 镜像 `firered-asr:gpu`，官方 AED、BF16、beam10、1-best
+- 8.78s 粤英混说音频
+- 4 个录音器客户端同时推送
+- 容器未设置 CPU/内存上限
+
+| 指标 | 实测 |
+| --- | ---: |
+| 4 路总耗时 | 约 **3.5s** |
+| CPU 峰值 | 约 **1.46 核**（Docker `CPU%` 146%） |
+| 容器内存 | 约 **4.36GB** |
+| GPU 显存 | 约 **3.2GB** |
+
+推荐启动参数：
+
+```bash
+docker run -d --gpus all \
+  --name firered-asr-gpu \
+  -p 8000:8000 \
+  --cpus=4 \
+  --memory=8g \
+  --memory-swap=8g \
+  --shm-size=2g \
+  --restart unless-stopped \
+  firered-asr:gpu
+```
+
+- 4 路短句：**4 核 / 8GB** 足够。
+- 会议长流或更稳：CPU 提到 **6 核**。
+- Docker 默认不限制 CPU/内存，会按需占用宿主机资源；生产建议显式限制。
+- 当前仍是单模型串行推理，4 路以上不会线性扩展。
 
 ---
 

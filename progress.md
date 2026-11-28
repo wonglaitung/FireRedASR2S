@@ -33,7 +33,7 @@ Last updated: 2026-11-27
 - 简单 OOV 词表纠错收益有限：F1 90.3% → 90.8%。
 
 ## 已完成
-- `README.md` v3.3：按当前状态重写：官方 AED、GPU Docker、录音器目录 CSV 留存、5 套验证集、配置与限制。
+- `README.md` v3.4：按当前状态重写：官方 AED、GPU Docker、4 路并发资源、录音器目录 CSV 留存、5 套验证集。
 - `docs/README.md` v1.0：文档索引与推荐阅读顺序。
 - `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先方案。
 - `docs/POC.md` v2.6：AED-only POC、官方 AED 对照、端到端、MCE/WSYue/听写代理验证与 n-best LM。
@@ -66,6 +66,7 @@ Last updated: 2026-11-27
 - [x] 个人听写/会议全文数据采集、标注、划分与校验规范（`docs/DATA.md`）。
 - [x] 接 SwitchLingua 个人听写公开代理 100 条（非真实听写）。
 - [x] GPU Docker 配置：官方 AED + 本地模型/代码缓存。已构建 `firered-asr:gpu`，健康检查与录音器 E2E 通过；本机因 Docker Hub 基础镜像拉取超时，使用本地 `vllm-app` CUDA 基础镜像，镜像约 30.4GB。
+- [x] 4 路并发实测：8.78s 音频约 3.5s，CPU 峰值约 1.46 核、内存约 4.36GB。
 - [ ] 采集个人听写 pilot 100–200 条，并用单句 harness 跑基线。
 - [ ] 采集会议 pilot 3 场，并用全文/切分 harness 跑基线。
 - [ ] 用 `eval_suite.py` 对比官方 AED 与当前基线，重点看粤语 CER、英文 WER、英文召回。
