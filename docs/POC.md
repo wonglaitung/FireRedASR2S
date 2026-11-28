@@ -1,6 +1,6 @@
 # FireRedASR2S POC 设计与 MVP 范围
 
-> 版本：v1.9
+> 版本：v2.0
 > 目标：用最小闭环验证 **音频 → 句级文字**，并明确 MVP 要实现的功能、技术选型与验收标准。
 > 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2）；默认 AED；已接入 Silero VAD、句段合并、标点/ITN/繁简后处理。
 
@@ -234,6 +234,9 @@ asr:
 
 - 官方 AED 显著降低粤语 CER（11.5% → 4.7%），英文 WER 与混说 F1 也有提升。
 - `beam=3` 对照：粤语 CER 7.5%、英文 WER 1.1%、混说 F1 90.3%、混合 CER 6.2%；POC 选 `beam=5`。
+- 端到端（server + Silero VAD + 标点/ITN）：8.78s 混说音频 **2.67s** 返回结果；GPU 整卡约 **3.7GB**（含其他进程约 0.9GB），服务进程约 **2.8GB**。
+- 简单英文 OOV 纠错实验：只能修 `countstown→countdown`，F1 90.3% → 90.8%，收益有限；剩余错误多为合法英文词替换。
+- n-best 上界实验（beam5、nbest5、按参考选最优）：混说 F1 **95.4%**、混合 CER **3.9%**，说明正确英文常在 n-best 中，下一步应做 n-best 重打分。
 - 运行方式：
 
 ```bash
