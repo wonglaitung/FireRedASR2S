@@ -33,13 +33,13 @@ Last updated: 2026-11-27
 - 简单 OOV 词表纠错收益有限：F1 90.3% → 90.8%。
 
 ## 已完成
-- `README.md` v2.9：项目概览、快速开始、录音器/Windows exe、MCE/WSYue/听写代理验证集、数据规范、技术演化与 GPU Docker。
+- `README.md` v3.0：按当前状态重写：官方 AED、GPU Docker、录音器、5 套验证集、配置与限制。
 - `docs/README.md` v1.0：文档索引与推荐阅读顺序。
 - `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先方案。
 - `docs/POC.md` v2.6：AED-only POC、官方 AED 对照、端到端、MCE/WSYue/听写代理验证与 n-best LM。
 - `docs/EVOLUTION.md` v1.0：从第一版 POC 到当前阶段的完整技术演化。
 - `docs/DATA.md` v1.0：个人听写/会议全文的采集、标注、划分与校验规范。
-- `docs/RECORDER.md` v1.7：录音器设计、跨机器、Windows exe、打包。
+- `docs/RECORDER.md` v1.8：录音器设计、图标/自动滚动、跨机器、Windows exe、打包。
 - `docs/DOCKER.md` v1.3：AED-only 镜像、端口、模型挂载。
 - **删除 CTC**：`configs/app_ctc.yaml`、`scripts/compare_backends.py`、sherpa CTC 分支、CTC 下载逻辑均移除。
 - 验证集：
@@ -52,7 +52,7 @@ Last updated: 2026-11-27
 - 录音器：`src/firered_recorder/`（PyQt6 + QtMultimedia + WebSocket）。
 - 打包：`scripts/build_recorder.py`、`.github/workflows/build-recorder.yml`；Windows exe 已产出。
 - Docker：`Dockerfile`（AED-only）、`Dockerfile.local`（只复制 AED/Silero/标点）、`scripts/build_docker_local.sh`。
-- 质量门禁：`ruff check .` PASS；`pytest` 54 passed。
+- 质量门禁：`ruff check .` PASS；`pytest` 55 passed。
 - 报告：`/tmp/opencode/reports/`。
 
 ## 待办
@@ -84,4 +84,4 @@ Last updated: 2026-11-27
 - 录音器包只含客户端，不含后端与模型。
 - 当前容器无真实麦克风；录音器麦克风链路仅做设备枚举/格式转换/offscreen GUI 验证。
 - 未做代码签名；Windows SmartScreen 可能拦截。
-- 本仓库当前 pytest 为 54 passed（新增严格评测指标、LM、官方 AED/Docker 配置、数据校验测试）。
+- 本仓库当前 pytest 为 55 passed（新增严格评测指标、LM、官方 AED/Docker 配置、数据校验、录音器图标/自动滚动测试）。
