@@ -51,6 +51,19 @@ class AsrConfig:
     decoder: str = ""
     num_threads: int = 2
     provider: str = "cpu"
+    # Official PyTorch AED (optional, separate from the sherpa-onnx path)
+    model_dir: str = ""
+    repo_path: str = ""
+    use_gpu: bool = False
+    use_half: bool = False
+    beam_size: int = 5
+    nbest: int = 1
+    decode_max_len: int = 0
+    softmax_smoothing: float = 1.25
+    aed_length_penalty: float = 0.6
+    eos_penalty: float = 1.0
+    elm_dir: str = ""
+    elm_weight: float = 0.0
 
 
 @dataclass

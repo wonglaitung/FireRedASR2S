@@ -15,3 +15,15 @@ def test_load_repo_config() -> None:
     assert cfg.vad.backend == "silero"
     assert cfg.asr.backend == "firered_aed"
     assert cfg.asr.encoder
+
+
+def test_load_official_aed_config() -> None:
+    root = Path(__file__).resolve().parents[2]
+    cfg = AppConfig.load(root / "configs" / "app_official.yaml")
+
+    assert cfg.asr.backend == "firered_aed_torch"
+    assert cfg.asr.model_dir.endswith("FireRedASR2-AED")
+    assert cfg.asr.use_gpu is True
+    assert cfg.asr.use_half is True
+    assert cfg.asr.beam_size == 5
+    assert cfg.asr.nbest == 1

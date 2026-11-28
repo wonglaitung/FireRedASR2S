@@ -1,6 +1,6 @@
 # 粵英混說驗證集（20 條）
 
-> 版本：v1.2
+> 版本：v1.3
 > 用途：本項目內部的**粵英混說回歸驗證集**，不是官方 benchmark，也不代表生產分佈。
 
 ---
@@ -53,15 +53,15 @@ eval/yue_en/
 
 ## 3. 基線結果（本機 CPU）
 
-| 指標 | 結果 |
-| --- | --- |
-| AED（`configs/app.yaml`） | **F1 87.8%**（P 88.1% / R 87.4%） |
-| 混合 CER | **6.8%** |
+| 引擎 | 英文詞 F1 | 混合 CER |
+| --- | --- | --- |
+| sherpa int8 greedy | **87.8%**（P 88.1% / R 87.4%） | **6.8%** |
+| 官方 AED BF16 beam5 | **90.3%**（P 90.7% / R 89.9%） | **6.2%** |
 
 - 英文詞 P/R/F1：按 token 邊界匹配，長度 ≥2 且含字母；不再用 substring。
 - 混合 CER：中文按字、英文按詞計編輯距離。
 - P/R/F1 與混合 CER 一起看，避免「多吐英文」推高召回。
-- 詳細輸出：`baseline.tsv` / `baseline.json`。
+- 詳細輸出：`baseline.tsv` / `baseline.json`；官方 AED 逐條：`eval/baseline_official_aed.json`。
 
 觀察：
 

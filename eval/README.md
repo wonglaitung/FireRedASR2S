@@ -1,6 +1,6 @@
 # 验证集套件
 
-> 版本：v1.1
+> 版本：v1.2
 > 用途：AED-only 优化前后对比；不是官方 benchmark，也不代表生产分布。
 
 ## 1. 三个子集
@@ -13,17 +13,16 @@
 
 所有音频已转为 **16kHz / 16bit / mono WAV**。
 
-## 2. 基线（AED，本机 CPU）
+## 2. 基线对比
 
-| 子集 | 指标 | 结果 |
-| --- | --- | --- |
-| `yue` | CER（字符错误率） | **11.5%** |
-| `en` | WER（词错误率） | **1.1%** |
-| `yue_en` | 英文词 F1 / 混合 CER | **87.8% / 6.8%**（P 88.1% / R 87.4%） |
+| 引擎 | 环境 | `yue` CER | `en` WER | `yue_en` F1 | `yue_en` 混合 CER |
+| --- | --- | --- | --- | --- | --- |
+| sherpa int8 greedy | CPU | 11.5% | 1.1% | 87.8% | 6.8% |
+| 官方 AED PyTorch | RTX 4090，BF16，beam5 | **4.7%** | **0.9%** | **90.3%**（P 90.7 / R 89.9） | **6.2%** |
 
-详细逐条结果：`eval/baseline_aed.json`。
+逐条结果：`eval/baseline_aed.json`（sherpa）、`eval/baseline_official_aed.json`（官方 AED）。
 
-> 这是 `sherpa-onnx int8 + greedy` 的基线；换官方 AED + beam/LM 后应重新跑。
+> 官方 AED 使用 `configs/app_official.yaml`；模型/代码缓存见 `scripts/setup_official_aed.sh`。
 
 ## 3. 指标定义
 

@@ -9,17 +9,25 @@ Last updated: 2026-11-27
 - **桌面录音器已实现并打包**：PyQt6 + QtWebSocket 客户端；Windows exe 已由 GitHub Actions 产出。
 - **验证集已准备**：`eval/yue/` 20 条粤语、`eval/en/` 20 条英文、`eval/yue_en/` 20 条粤英混说。
 - **Dockerfile 已改为 AED-only**；本地镜像重建尚未完成（上次构建超时）。
+- **官方 AED PyTorch Adapter 已接入**：BF16 + beam5，三套验证集全部优于 sherpa int8。
 
-## 已验证基线（AED，本机 CPU，sherpa int8 + greedy）
+## 已验证基线
+### sherpa int8 + greedy（CPU）
 - 粤语 CER：**11.5%**（`eval/yue`，20 条）
 - 英文 WER：**1.1%**（`eval/en`，20 条）
-- 粤英混说英文词 F1：**87.8%**（P 88.1% / R 87.4%）、混合 CER **6.8%**（`eval/yue_en`，20 条）
+- 粤英混说英文词 F1：**87.8%**（P 88.1% / R 87.4%）、混合 CER **6.8%**
 - 汇总：`eval/baseline_aed.json`
 
+### 官方 AED PyTorch（RTX 4090，BF16，beam5）
+- 粤语 CER：**4.7%**
+- 英文 WER：**0.9%**
+- 粤英混说英文词 F1：**90.3%**（P 90.7% / R 89.9%）、混合 CER **6.2%**
+- 汇总：`eval/baseline_official_aed.json`
+
 ## 已完成
-- `README.md` v1.9：项目概览、快速开始、录音器/Windows exe、验证集。
+- `README.md` v2.0：项目概览、快速开始、录音器/Windows exe、验证集与官方 AED 对照。
 - `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先方案。
-- `docs/POC.md` v1.8：AED-only POC、接口、配置、实测与运行方式。
+- `docs/POC.md` v1.9：AED-only POC、官方 AED 对照、缓存与运行方式。
 - `docs/RECORDER.md` v1.7：录音器设计、跨机器、Windows exe、打包。
 - `docs/DOCKER.md` v1.3：AED-only 镜像、端口、模型挂载。
 - **删除 CTC**：`configs/app_ctc.yaml`、`scripts/compare_backends.py`、sherpa CTC 分支、CTC 下载逻辑均移除。
@@ -28,17 +36,19 @@ Last updated: 2026-11-27
   - `eval/en/`：LibriSpeech validation.clean，CC BY 4.0，20 条英文。
   - `eval/yue_en/`：MCE，研究用途，20 条粤英混说。
   - `scripts/eval_suite.py`：一次跑三套，输出 CER/WER/英文 P/R/F1、混合 CER；英文按 token 边界匹配。
+- 官方 AED：`src/firered_poc/asr/official.py`、`configs/app_official.yaml`、`scripts/setup_official_aed.sh`；模型/代码缓存于 `models/`。
 - 后端：`src/firered_poc/`（Silero VAD、segmenter+merge、AED Adapter、postprocess、CLI、WS server）。
 - 录音器：`src/firered_recorder/`（PyQt6 + QtMultimedia + WebSocket）。
 - 打包：`scripts/build_recorder.py`、`.github/workflows/build-recorder.yml`；Windows exe 已产出。
 - Docker：`Dockerfile`（AED-only）、`Dockerfile.local`（只复制 AED/Silero/标点）、`scripts/build_docker_local.sh`。
-- 质量门禁：`ruff check .` PASS；`pytest` 44 passed。
+- 质量门禁：`ruff check .` PASS；`pytest` 45 passed。
 - 报告：`/tmp/opencode/reports/`。
 
 ## 待办
 - [x] 删除 CTC，统一 AED。
 - [x] 准备粤语/英文/粤英混说三套验证集与基线。
-- [ ] 将 POC 从 sherpa int8 greedy 切到官方 AED PyTorch（FP16/BF16 + beam/n-best + 外部 LM）。
+- [x] 将 POC 从 sherpa int8 greedy 切到官方 AED PyTorch（BF16 + beam5）。
+- [ ] 外部 LM / n-best 重打分。
 - [ ] 用 `eval_suite.py` 对比官方 AED 与当前基线，重点看粤语 CER、英文 WER、英文召回。
 - [ ] 重建 Docker 镜像（AED-only）并复测。
 - [ ] 真实 Windows 双击冒烟、真机麦克风冒烟。
@@ -55,4 +65,4 @@ Last updated: 2026-11-27
 - 录音器包只含客户端，不含后端与模型。
 - 当前容器无真实麦克风；录音器麦克风链路仅做设备枚举/格式转换/offscreen GUI 验证。
 - 未做代码签名；Windows SmartScreen 可能拦截。
-- 本仓库当前 pytest 为 44 passed（新增严格评测指标测试）。
+- 本仓库当前 pytest 为 45 passed（新增严格评测指标与官方 AED 配置测试）。

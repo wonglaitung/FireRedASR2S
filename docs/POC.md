@@ -1,6 +1,6 @@
 # FireRedASR2S POC 设计与 MVP 范围
 
-> 版本：v1.8
+> 版本：v1.9
 > 目标：用最小闭环验证 **音频 → 句级文字**，并明确 MVP 要实现的功能、技术选型与验收标准。
 > 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2）；默认 AED；已接入 Silero VAD、句段合并、标点/ITN/繁简后处理。
 
@@ -222,8 +222,29 @@ asr:
 | `hello_en.wav`（英文） | 整段 | `HELLO SPEECH.` | 0.55s |
 | `test_wavs/0.wav`（WS 流式） | 2 段 | 2 条 `final`：`昨天是MONDAY。` / `TODAY IS礼拜二。THE DAY AFTER TOMORROW是星期三。` | 2.24s |
 
-> 质量门禁：`ruff check .` PASS；`pytest` 44 passed（含真实模型、Silero VAD、后处理与 WebSocket 冒烟测试）。
+> 质量门禁：`ruff check .` PASS；`pytest` 45 passed（含真实模型、Silero VAD、后处理与 WebSocket 冒烟测试）。
 > 结论：AED 默认下三语与混说均可出字；Silero VAD + 句段合并减少碎句；标点/ITN/繁简显著提升可读性。
+
+### 9.2 官方 AED PyTorch 对照（RTX 4090，BF16，beam=5）
+
+| 引擎 | 粤语 CER | 英文 WER | 粤英英文词 F1 | 混合 CER |
+| --- | --- | --- | --- | --- |
+| sherpa int8 greedy | 11.5% | 1.1% | 87.8% | 6.8% |
+| 官方 AED PyTorch | **4.7%** | **0.9%** | **90.3%**（P 90.7% / R 89.9%） | **6.2%** |
+
+- 官方 AED 显著降低粤语 CER（11.5% → 4.7%），英文 WER 与混说 F1 也有提升。
+- `beam=3` 对照：粤语 CER 7.5%、英文 WER 1.1%、混说 F1 90.3%、混合 CER 6.2%；POC 选 `beam=5`。
+- 运行方式：
+
+```bash
+bash scripts/setup_official_aed.sh   # 只补缺失文件，缓存在 models/
+FIREREDASR2S_HOME=models/FireRedASR2S-code \
+PYTHONPATH=src python3 scripts/eval_suite.py \
+  --config configs/app_official.yaml \
+  --output eval/baseline_official_aed.json
+```
+
+> 需要 CUDA 版 PyTorch；官方 AED 权重约 4.7GB，代码缓存约 17MB。缓存目录为 `models/FireRedASR2-AED` 与 `models/FireRedASR2S-code`，均已在 `.gitignore`。
 
 ---
 
@@ -246,7 +267,7 @@ asr:
 | 标点模型 73MB | 首次启动与内存开销 | 可关闭 `postprocess.punctuation` |
 | 能量 VAD 对噪声不稳 | 切分不准 | 默认已切 Silero VAD，保留能量 VAD 兜底 |
 | 自然停顿被切成多句 | 上下文丢失、文本碎片化 | `merge_gap_ms`（默认 1200ms，文件模式） |
-| 模型下载约 600MB | 首次启动慢 | `download_model.sh` 预下载到 `models/`，已 gitignore |
+| 模型下载约 600MB（sherpa）/ 4.7GB（官方 AED） | 首次启动慢 | `download_model.sh` / `setup_official_aed.sh` 预下载到 `models/`，已 gitignore |
 | 粤语/英语样例覆盖不全 | 三语验证不足 | 确认 `test_wavs` 覆盖，必要时补样例 |
 
 ---
@@ -258,6 +279,7 @@ asr:
 3. VAD：**Silero VAD 默认**，能量 VAD 保留兜底；文件模式合并 ≤1200ms 的相邻句段。
 4. 后处理：**标点 + 保守 ITN + OpenCC 繁简**，默认输出简体。
 5. 失败策略：**单引擎重试一次 → error**，不引入 FunASR。
+6. 官方 AED PyTorch 作为**精度对照/生产升级路径**；POC 默认仍保留 sherpa 轻量路径。
 
 ---
 

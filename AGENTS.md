@@ -26,7 +26,7 @@
 ## Validation requirements
 - **Actually run checks** before claiming completion; never state a result you did not execute.
 - After code changes: run `ruff check .`, then `python3 -m pytest`. Order: lint → typecheck (when configured) → test.
-- The `main` suite currently reports **44 passed** (`ruff check .` clean).
+- The `main` suite currently reports **45 passed** (`ruff check .` clean).
 - After doc edits: verify every **Mermaid** block and Markdown code fence is paired and closed.
 - Every gate conclusion (lint / test / docs) must cite a concrete report artifact (a temporary report directory or CI artifacts); **do not commit report files to the repo**.
 
@@ -39,7 +39,7 @@
 - **Do not modify sections unrelated to the task.**
 
 ## Environment notes (verify; may change)
-- Host has an RTX 4090 (24GB), but installed `torch`/`torchaudio` are **CPU-only** (`2.10.0+cpu`). GPU inference needs a CUDA-enabled build.
+- Host has an RTX 4090 (24GB); the default environment has CPU-only `torch` (`2.10.0+cpu`). The official AED adapter needs a CUDA torch environment; its model/code cache is under `models/` (`setup_official_aed.sh`).
 - `modelscope` is installed; **FunASR is not, and is out of scope** (single-engine policy). POC models live in `models/` (gitignored): FireRedASR2 AED ONNX, Silero VAD, CT-Transformer punctuation.
 - `pytest 9.0.2`, `ruff 0.15.14`, `sherpa-onnx`, `cn2an`, and `OpenCC` are available. `PyQt6` is available for the desktop recorder. `pyproject.toml` and `configs/` exist; GitHub Actions builds the recorder.
 
@@ -51,7 +51,7 @@
 
 ## Eval data
 - `eval/yue/` (20 pure Cantonese, words.hk CC BY 4.0), `eval/en/` (20 English, LibriSpeech CC BY 4.0), `eval/yue_en/` (20 Cantonese-English, MCE research-only).
-- Baseline: Cantonese CER 11.5%, English WER 1.1%, code-switch English term F1 87.8% (P 88.1% / R 87.4%), mixed CER 6.8% (AED, sherpa int8 greedy).
+- Baseline (sherpa int8 greedy): Cantonese CER 11.5%, English WER 1.1%, code-switch English term F1 87.8%, mixed CER 6.8%. Official AED BF16 beam5: 4.7% / 0.9% / 90.3% / 6.2%.
 - Run all: `PYTHONPATH=src python3 scripts/eval_suite.py --config configs/app.yaml --output eval/baseline_aed.json`.
 - MCE is not commercial-clear and is not an official benchmark.
 

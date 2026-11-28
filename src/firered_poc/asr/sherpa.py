@@ -8,7 +8,7 @@ from .base import ASRResult
 
 
 class SherpaFireRedASR:
-    """FireRedASR2 Adapter backed by sherpa-onnx (CTC or AED ONNX)."""
+    """FireRedASR2 AED Adapter backed by sherpa-onnx."""
 
     def __init__(self, cfg: AsrConfig):
         try:
@@ -47,5 +47,9 @@ class SherpaFireRedASR:
         return ASRResult(text=text)
 
 
-def build_asr(cfg: AsrConfig) -> SherpaFireRedASR:
+def build_asr(cfg: AsrConfig):
+    if cfg.backend.lower() in {"firered_aed_torch", "aed_torch"}:
+        from .official import FireRedTorchASR
+
+        return FireRedTorchASR(cfg)
     return SherpaFireRedASR(cfg)
