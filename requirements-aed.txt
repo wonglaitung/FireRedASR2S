@@ -1,0 +1,5 @@
+-r requirements.txt
+kaldiio>=2.18
+kaldi-native-fbank>=1.15
+sentencepiece>=0.1.99
+transformers>=4.51

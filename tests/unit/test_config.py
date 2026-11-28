@@ -28,3 +28,15 @@ def test_load_official_aed_config() -> None:
     assert cfg.asr.beam_size == 10
     assert cfg.asr.nbest == 10
     assert cfg.asr.lm_path.endswith("mce_lm.json")
+
+
+def test_load_docker_config() -> None:
+    root = Path(__file__).resolve().parents[2]
+    cfg = AppConfig.load(root / "configs" / "app_docker.yaml")
+
+    assert cfg.asr.backend == "firered_aed_torch"
+    assert cfg.asr.model_dir == "/app/models/FireRedASR2-AED"
+    assert cfg.asr.repo_path == "/app/vendor/FireRedASR2S"
+    assert cfg.asr.lm_path == ""
+    assert cfg.asr.use_gpu is True
+    assert cfg.asr.beam_size == 10

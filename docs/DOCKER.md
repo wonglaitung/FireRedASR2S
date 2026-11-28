@@ -1,6 +1,6 @@
 # FireRedASR2S 后端 Docker 镜像
 
-> 版本：v1.3
+> 版本：v1.4
 > 目标：把后端依赖、配置和模型打包成镜像，服务器只需 `docker run` 即可提供 WebSocket API。
 > 录音器仍在 Windows/本机独立运行，通过 `ws://<宿主机IP>:8000/ws` 连接。
 
@@ -8,13 +8,17 @@
 
 ## 1. 镜像内容
 
-| 层 | 内容 |
-| --- | --- |
-| 基础 | `python:3.10-slim` |
-| 依赖 | `requirements.txt`（FastAPI、uvicorn、sherpa-onnx、numpy、cn2an、OpenCC 等） |
-| 代码 | `src/firered_poc`、`configs/` |
-| 模型 | 默认 AED + Silero VAD + 标点（约 1.2GB） |
-| 进程 | 非 root 用户 `app`；暴露 `8000`；内置 `/health` 健康检查 |
+| 镜像 | 基础 | 推理 | 用途 |
+| --- | --- | --- | --- |
+| `firered-asr:latest` | `python:3.10-slim` | sherpa ONNX CPU | 轻量回归/无 GPU |
+| `firered-asr:gpu` | `pytorch/pytorch:2.10.0-cuda12.8-cudnn9-runtime` | 官方 AED PyTorch BF16 | 精度优先/GPU 服务器 |
+
+GPU 镜像使用本地缓存：
+
+- 模型：`models/FireRedASR2-AED`（约 4.7GB 权重）
+- 上游代码：`models/FireRedASR2S-code`
+- Silero VAD、标点模型
+- 构建时不下载模型；只拉基础镜像（可覆盖 `BASE_IMAGE`）
 
 ---
 
@@ -56,7 +60,30 @@ docker build --build-context models=./models -f Dockerfile.local -t firered-asr:
 - 不访问网络下载模型；本机模型原样复制进 `/app/models`。
 - 镜像约 1.6GB（AED + Silero + 标点）。
 
-### 3.2 只挂载模型，不烤进镜像
+### 3.2 GPU 后端（官方 AED，本地缓存）
+
+```bash
+bash scripts/build_docker_gpu_local.sh
+docker run -d --gpus all --name firered-asr-gpu \
+  -p 8000:8000 --restart unless-stopped \
+  firered-asr:gpu
+```
+
+等价命令：
+
+```bash
+DOCKER_BUILDKIT=1 docker build \
+  --build-context models=./models \
+  -f Dockerfile.gpu \
+  -t firered-asr:gpu .
+```
+
+- 默认配置 `configs/app_docker.yaml`：官方 AED、BF16、beam10、1-best。
+- 不默认套 MCE LM：它在 WSYue/SwitchLingua 上会退化。
+- 运行必须带 `--gpus all`；宿主机需 NVIDIA Container Toolkit。
+- 前台协议不变，录音器仍填 `ws://<宿主机IP>:8000/ws`，无需改代码。
+
+### 3.3 只挂载模型，不烤进镜像
 
 ```bash
 docker build --build-arg SKIP_MODELS=1 -t firered-asr:local .
@@ -171,9 +198,9 @@ docker run -d --name firered-asr \
 
 | 项 | 说明 |
 | --- | --- |
-| CPU | 默认 CPU 推理；AED 10s 音频约 2.8s（视机器） |
-| GPU | 本镜像未接 CUDA/TensorRT；GPU 版需换基础镜像与 onnxruntime-gpu |
-| 镜像体积 | `SKIP_MODELS=1` 约 289MB；含 AED/标点约 1.6GB |
+| CPU | CPU 镜像为 sherpa int8；GPU 镜像需 `--gpus all` |
+| GPU | `firered-asr:gpu` 使用 PyTorch CUDA；显存约 3GB/实例 |
+| 镜像体积 | CPU `SKIP_MODELS=1` 约 289MB；GPU 镜像含 4.7GB 官方权重，明显更大 |
 | 并发 | 单进程 + 单模型；高并发需多副本/队列/GPU |
 | 安全 | 无鉴权、无 TLS；仅建议可信局域网 |
 | 更新模型 | 重新 `docker build`（加 `--no-cache` 可强制重下） |

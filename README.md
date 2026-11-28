@@ -1,6 +1,6 @@
 # FireRedASR2S
 
-> 版本：v2.6
+> 版本：v2.7
 > **精度优先**的粤语 / 普通话 / 英文句级语音转写系统，附独立桌面录音器。
 
 ---
@@ -15,7 +15,7 @@
 | 桌面录音器 | PyQt6 窗口；麦克风 → WebSocket → 逐句显示 |
 | 后端镜像 | Dockerfile；默认把 AED/Silero/标点烤进镜像 |
 | 打包 | PyInstaller 脚本 + GitHub Actions（Windows exe） |
-| 测试 | `ruff` PASS；`pytest` 53 passed |
+| 测试 | `ruff` PASS；`pytest` 54 passed |
 
 > 这是 **POC（Proof of Concept，概念验证）**，不是生产成品；延迟、并发、鉴权与模型精度仍需按正式方案推进。
 
@@ -101,7 +101,18 @@ docker logs -f firered-asr
 ```bash
 bash scripts/build_docker_local.sh
 ```
-- 宿主机端口映射 `8000:8000`；录音器填 `ws://<宿主机IP>:8000/ws`。
+
+GPU / 官方 AED 后端（推荐精度路径）：
+
+```bash
+bash scripts/build_docker_gpu_local.sh
+docker run -d --gpus all --name firered-asr-gpu -p 8000:8000 --restart unless-stopped firered-asr:gpu
+```
+
+- `Dockerfile.gpu` 使用本地 `models/FireRedASR2-AED`、`models/FireRedASR2S-code`、Silero、标点，构建时不再下载模型。
+- 默认 `configs/app_docker.yaml`：官方 AED、BF16、beam10、1-best、不套 MCE LM。
+- 基础镜像默认拉 `pytorch/pytorch:2.10.0-cuda12.8-cudnn9-runtime`；可设 `BASE_IMAGE` 覆盖。
+- 宿主机端口映射 `8000:8000`；录音器填 `ws://<宿主机IP>:8000/ws`，协议不变，前台不需要改。
 - 若 8000 被占用，改 `-p 8001:8000`，录音器 URL 同步改。
 - 容器内打印的 `172.x` 是容器 IP，不要填给录音器。
 - 详见 [`docs/DOCKER.md`](docs/DOCKER.md)。
@@ -184,7 +195,7 @@ ruff check .
 python3 -m pytest
 ```
 
-当前：`ruff` PASS；`pytest` **53 passed**（含真实模型、Silero VAD、后处理、WebSocket、录音器协议/GUI/文件 E2E）。
+当前：`ruff` PASS；`pytest` **54 passed**（含真实模型、Silero VAD、后处理、WebSocket、录音器协议/GUI/文件 E2E）。
 
 验证集：`eval/`（粤语 20 / 英文 20 / MCE 混说 100 / WSYue 自發混说 153 / 个人听写代理 100）。
 
@@ -215,8 +226,9 @@ FireRedASR2S/
 ├── src/firered_poc/         # 后端：VAD、切分、ASR、后处理、WS
 ├── src/firered_recorder/    # 桌面录音器：PyQt6 + WebSocket
 ├── tests/                   # unit / integration / gui
-├── Dockerfile               # 后端镜像（下载模型）
-├── Dockerfile.local         # 使用本机 models/ 构建
+├── Dockerfile               # CPU 后端镜像（下载模型）
+├── Dockerfile.local         # CPU 后端：使用本机 sherpa models/
+├── Dockerfile.gpu           # GPU 后端：官方 AED + 本地模型/代码缓存
 ├── requirements.txt
 ├── requirements-recorder.txt
 └── pyproject.toml

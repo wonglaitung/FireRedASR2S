@@ -27,7 +27,7 @@
 ## Validation requirements
 - **Actually run checks** before claiming completion; never state a result you did not execute.
 - After code changes: run `ruff check .`, then `python3 -m pytest`. Order: lint → typecheck (when configured) → test.
-- The `main` suite currently reports **53 passed** (`ruff check .` clean).
+- The `main` suite currently reports **54 passed** (`ruff check .` clean).
 - After doc edits: verify every **Mermaid** block and Markdown code fence is paired and closed.
 - Every gate conclusion (lint / test / docs) must cite a concrete report artifact (a temporary report directory or CI artifacts); **do not commit report files to the repo**.
 
@@ -61,7 +61,8 @@
 - `docker build -t firered-asr:latest .` + `docker run`; see `docs/DOCKER.md`. Single container: no compose.
 - Default bakes AED + Silero + punctuation.
 - `SKIP_MODELS=1` builds a small image for mounting `models/` at `/app/models`.
-- Local models baked in: `bash scripts/build_docker_local.sh` (uses `Dockerfile.local` + build context).
+- CPU sherpa image: `bash scripts/build_docker_local.sh` (`Dockerfile.local` + build context).
+- GPU official AED image: `bash scripts/build_docker_gpu_local.sh` (`Dockerfile.gpu` + local model/code cache; run with `--gpus all`).
 
 ## Conventions
 - Design docs are in **Chinese**; keep terminology consistent with `docs/ARCHITECTURE.md`.
