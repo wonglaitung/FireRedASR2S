@@ -23,6 +23,7 @@ def test_window_smoke(app) -> None:
     window = RecorderWindow(RecorderConfig())
     try:
         assert "录音转写" in window.windowTitle()
+        assert not window.windowIcon().isNull()
         assert window.record_btn.isEnabled()
         assert not window.stop_btn.isEnabled()
 
@@ -30,5 +31,22 @@ def test_window_smoke(app) -> None:
             {"type": "final", "text": "你好世界。", "start_ms": 0, "end_ms": 800}
         )
         assert "你好世界。" in window.transcript.toPlainText()
+    finally:
+        window.close()
+
+
+def test_new_text_scrolls_to_bottom(app) -> None:
+    window = RecorderWindow(RecorderConfig())
+    try:
+        window.show()
+        app.processEvents()
+        for index in range(40):
+            window._append_final(
+                {"type": "final", "text": f"第 {index} 行 " * 20, "start_ms": index * 1000}
+            )
+        app.processEvents()
+        scrollbar = window.transcript.verticalScrollBar()
+        assert scrollbar.maximum() > 0
+        assert scrollbar.value() == scrollbar.maximum()
     finally:
         window.close()

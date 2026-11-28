@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import shutil
 import subprocess
 import sys
@@ -51,6 +52,7 @@ def main(argv: list[str] | None = None) -> int:
         cmd.append("--onefile")
     if not args.no_collect_all:
         cmd.extend(["--collect-all", "PyQt6"])
+    cmd.extend(["--add-data", f"{ROOT / 'assets'}{os.pathsep}assets"])
     cmd.append(str(ROOT / "src" / "firered_recorder" / "__main__.py"))
 
     subprocess.run(cmd, check=True, cwd=ROOT)

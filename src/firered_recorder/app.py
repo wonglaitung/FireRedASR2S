@@ -3,8 +3,10 @@ from __future__ import annotations
 import asyncio
 import sys
 import time
+from pathlib import Path
 
 from PyQt6.QtCore import QObject, QThread, QTimer, pyqtSignal
+from PyQt6.QtGui import QIcon, QTextCursor
 from PyQt6.QtMultimedia import QAudioFormat, QAudioSource, QMediaDevices
 from PyQt6.QtWidgets import (
     QApplication,
@@ -23,6 +25,20 @@ from PyQt6.QtWidgets import (
 
 from .audio import PcmFramer, convert_capture, level_percent
 from .client import AsrStreamClient, RecorderConfig
+
+ASSET_DIRS = (
+    Path(__file__).resolve().parents[2] / "assets",
+    Path(getattr(sys, "_MEIPASS", "")) / "assets",
+    Path.cwd() / "assets",
+)
+
+
+def asset_path(name: str) -> Path | None:
+    for directory in ASSET_DIRS:
+        path = directory / name
+        if path.exists():
+            return path
+    return None
 
 
 class MicCapture(QObject):
@@ -140,6 +156,9 @@ class RecorderWindow(QMainWindow):
 
         self.setWindowTitle("FireRedASR2S 录音转写")
         self.resize(980, 680)
+        window_icon = asset_path("icon-small.svg")
+        if window_icon is not None:
+            self.setWindowIcon(QIcon(str(window_icon)))
 
         self._timer = QTimer(self)
         self._timer.setInterval(500)
@@ -151,9 +170,17 @@ class RecorderWindow(QMainWindow):
         layout.setContentsMargins(24, 20, 24, 20)
         layout.setSpacing(12)
 
+        title_row = QHBoxLayout()
+        title_icon = asset_path("icon.svg")
+        if title_icon is not None:
+            logo = QLabel()
+            logo.setPixmap(QIcon(str(title_icon)).pixmap(40, 40))
+            title_row.addWidget(logo)
         title = QLabel("FireRedASR2S 录音转写")
         title.setStyleSheet("font-size: 24px; font-weight: 600;")
-        layout.addWidget(title)
+        title_row.addWidget(title)
+        title_row.addStretch(1)
+        layout.addLayout(title_row)
 
         subtitle = QLabel("说完停顿约 0.5 秒，整句文字会逐条出现。")
         subtitle.setStyleSheet("color: #64748b;")
@@ -344,8 +371,14 @@ class RecorderWindow(QMainWindow):
         if self.transcript.toPlainText():
             self.transcript.append("")
         self.transcript.append(f"[{stamp}] {text}")
-        self.transcript.ensureCursorVisible()
+        self._scroll_to_bottom()
         self.draft.setText("")
+
+    def _scroll_to_bottom(self) -> None:
+        self.transcript.moveCursor(QTextCursor.MoveOperation.End)
+        self.transcript.ensureCursorVisible()
+        scrollbar = self.transcript.verticalScrollBar()
+        scrollbar.setValue(scrollbar.maximum())
 
     def _on_failed(self, message: str) -> None:
         self.status.setText(f"错误：{message}")

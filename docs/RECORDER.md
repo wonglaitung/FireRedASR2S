@@ -1,6 +1,6 @@
 # FireRedASR2S 桌面录音转写器（POC）
 
-> 版本：v1.7
+> 版本：v1.8
 > 目标：在本项目内做一个**独立桌面录音器**：麦克风录音 → WebSocket 推流 → 后端逐句返回文字 → 窗口内流式展示。
 
 ---
@@ -69,6 +69,8 @@ sequenceDiagram
 | R5 | 显示连接/录音/错误状态；后端断开时提示 |
 | R6 | 清空、复制转写结果 |
 | R7 | 无窗口 `--file` 模式，便于自动化测试与无麦克风环境验证 |
+| R8 | 窗口/标题图标使用 `assets/icon.svg`、`assets/icon-small.svg` |
+| R9 | 新 `final` 追加后自动滚到最底部 |
 
 ---
 
@@ -221,7 +223,7 @@ tests/gui/test_recorder_window.py
 | 检查 | 结果 |
 | --- | --- |
 | `ruff check .` | PASS |
-| `pytest` | **44 passed**（含录音器协议、音频转换、GUI 冒烟、真实后端文件推流） |
+| `pytest` | **55 passed**（含录音器协议、音频转换、GUI 冒烟、自动滚动、真实后端文件推流） |
 | GUI 冒烟 | offscreen 渲染 980×680 窗口，截图保存在本机临时目录（未入库） |
 | 文件模式 E2E | 真实后端返回 2 条 `final`：`昨天是MONDAY。` / `TODAY IS礼拜二。THE DAY AFTER TOMORROW是星期三。` |
 | GitHub Actions | `build-recorder` run `45915057637` 成功；artifact 约 103MB |
@@ -233,6 +235,8 @@ tests/gui/test_recorder_window.py
 ## 9. 打包（已提供脚本）
 
 PyInstaller 不支持跨平台构建：**Windows exe 必须在 Windows 上构建**（或走 GitHub Actions）。
+
+`scripts/build_recorder.py` 会通过 `--add-data` 把 `assets/` 打进产物，窗口图标和标题图标不依赖源码目录。
 
 ### 9.1 Windows 本地构建
 
