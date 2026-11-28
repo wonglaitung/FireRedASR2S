@@ -1,6 +1,6 @@
 # FireRedASR2S POC 设计与 MVP 范围
 
-> 版本：v3.0
+> 版本：v3.1
 > 目标：用最小闭环验证 **音频 → 句级文字**，并明确 MVP 要实现的功能、技术选型与验收标准。
 > 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2）；默认 AED；已接入 Silero VAD、句段合并、标点/ITN/繁简后处理。
 
@@ -222,7 +222,7 @@ asr:
 | `hello_en.wav`（英文） | 整段 | `HELLO SPEECH.` | 0.55s |
 | `test_wavs/0.wav`（WS 流式） | 2 段 | 2 条 `final`：`昨天是MONDAY。` / `TODAY IS礼拜二。THE DAY AFTER TOMORROW是星期三。` | 2.24s |
 
-> 质量门禁：`ruff check .` PASS；`pytest` 60 passed（含真实模型、Silero VAD、后处理与 WebSocket 冒烟测试）。
+> 质量门禁：`ruff check .` PASS；`pytest` 61 passed（含真实模型、Silero VAD、后处理与 WebSocket 冒烟测试）。
 > 结论：AED 默认下三语与混说均可出字；Silero VAD + 句段合并减少碎句；标点/ITN/繁简显著提升可读性。
 
 ### 9.2 官方 AED PyTorch 对照（RTX 4090，BF16，beam=10）

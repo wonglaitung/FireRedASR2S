@@ -5,8 +5,8 @@ import sys
 import time
 from pathlib import Path
 
-from PyQt6.QtCore import QObject, QThread, QTimer, pyqtSignal
-from PyQt6.QtGui import QIcon, QTextCursor
+from PyQt6.QtCore import QEvent, QObject, Qt, QThread, QTimer, pyqtSignal
+from PyQt6.QtGui import QFont, QFontMetrics, QIcon, QTextCursor
 from PyQt6.QtMultimedia import QAudioFormat, QAudioSource, QMediaDevices
 from PyQt6.QtWidgets import (
     QApplication,
@@ -128,6 +128,82 @@ class MicCapture(QObject):
             self.level_changed.emit(level_percent(samples))
 
 
+class SubtitleOverlay(QWidget):
+    """Two-line, translucent, click-through, always-on-top meeting subtitles."""
+
+    def __init__(self) -> None:
+        flags = (
+            Qt.WindowType.FramelessWindowHint
+            | Qt.WindowType.WindowStaysOnTopHint
+            | Qt.WindowType.Tool
+            | Qt.WindowType.WindowTransparentForInput
+        )
+        super().__init__(None, flags)
+        self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+        self.setAttribute(Qt.WidgetAttribute.WA_ShowWithoutActivating)
+        self.setAttribute(Qt.WidgetAttribute.WA_TransparentForMouseEvents)
+        self.setFocusPolicy(Qt.FocusPolicy.NoFocus)
+        self.setWindowTitle("灵枢-会议字幕")
+
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(0, 0, 0, 0)
+        self.panel = QFrame()
+        self.panel.setObjectName("subtitlePanel")
+        panel_layout = QVBoxLayout(self.panel)
+        panel_layout.setContentsMargins(24, 6, 24, 6)
+        panel_layout.setSpacing(0)
+
+        self.text = QTextEdit()
+        self.text.setReadOnly(True)
+        self.text.setFrameShape(QFrame.Shape.NoFrame)
+        self.text.setTextInteractionFlags(Qt.TextInteractionFlag.NoTextInteraction)
+        self.text.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.text.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.text.setAttribute(Qt.WidgetAttribute.WA_TransparentForMouseEvents)
+        self.text.document().setDocumentMargin(0)
+        font = QFont("Microsoft YaHei", 24, QFont.Weight.DemiBold)
+        self.text.setFont(font)
+        line_height = QFontMetrics(font).lineSpacing()
+        self.text.setFixedHeight(line_height * 2 + 2)
+        self.text.setStyleSheet(
+            "QTextEdit { background: transparent; color: #f8fafc; "
+            "border: none; padding: 0; }"
+        )
+        panel_layout.addWidget(self.text)
+        layout.addWidget(self.panel)
+        self.setFixedHeight(self.text.height() + 18)
+
+        self.panel.setStyleSheet(
+            "QFrame#subtitlePanel { background: rgba(15, 23, 42, 190); "
+            "border: 1px solid rgba(148, 163, 184, 90); border-radius: 14px; }"
+        )
+
+    def show_overlay(self) -> None:
+        screen = QApplication.primaryScreen()
+        if screen is None:
+            self.show()
+            return
+        area = screen.availableGeometry()
+        width = max(640, int(area.width() * 0.86))
+        width = min(width, area.width() - 32)
+        self.resize(width, self.height())
+        self.move(
+            area.x() + (area.width() - width) // 2,
+            area.y(),
+        )
+        self.show()
+        self.raise_()
+
+    def append_text(self, text: str) -> None:
+        if not text:
+            return
+        self.text.append(text)
+        self.text.moveCursor(QTextCursor.MoveOperation.End)
+        self.text.ensureCursorVisible()
+        scrollbar = self.text.verticalScrollBar()
+        scrollbar.setValue(scrollbar.maximum())
+
+
 class ClientThread(QThread):
     event = pyqtSignal(dict)
     failed = pyqtSignal(str)
@@ -157,6 +233,7 @@ class RecorderWindow(QMainWindow):
         self._mic: MicCapture | None = None
         self._started_at = 0.0
         self._csv = TranscriptCsvWriter()
+        self.subtitle = SubtitleOverlay()
 
         self.setWindowTitle("灵枢-录音器")
         self.resize(1180, 780)
@@ -293,11 +370,16 @@ class RecorderWindow(QMainWindow):
         self.settings_btn.setObjectName("secondary")
         self.settings_btn.setCheckable(True)
         self.settings_btn.toggled.connect(self.config_card.setVisible)
+        self.subtitle_btn = QPushButton("会议字幕")
+        self.subtitle_btn.setObjectName("secondary")
+        self.subtitle_btn.setCheckable(True)
+        self.subtitle_btn.toggled.connect(self._toggle_subtitle_mode)
         controls.addWidget(self.record_btn)
         controls.addWidget(self.stop_btn)
         controls.addSpacing(8)
         controls.addWidget(self.status, 1)
         controls.addWidget(self.timer_label)
+        controls.addWidget(self.subtitle_btn)
         controls.addWidget(self.settings_btn)
         main_layout.addLayout(controls)
 
@@ -397,6 +479,9 @@ class RecorderWindow(QMainWindow):
             QPushButton#stop:disabled { color: #94a3b8; border-color: #e2e8f0; }
             QPushButton#secondary {
                 background: #ffffff; color: #334155; border: 1px solid #cbd5e1;
+            }
+            QPushButton#secondary:checked {
+                background: #dbeafe; color: #1d4ed8; border-color: #93c5fd;
             }
             QTextEdit {
                 background: #ffffff; color: #0f172a;
@@ -527,6 +612,7 @@ class RecorderWindow(QMainWindow):
         if self.transcript.toPlainText():
             self.transcript.append("")
         self.transcript.append(f"[{stamp}] {text}")
+        self.subtitle.append_text(text)
         self._scroll_to_bottom()
         self.draft.setText("")
 
@@ -535,6 +621,32 @@ class RecorderWindow(QMainWindow):
         self.transcript.ensureCursorVisible()
         scrollbar = self.transcript.verticalScrollBar()
         scrollbar.setValue(scrollbar.maximum())
+
+    def _toggle_subtitle_mode(self, active: bool) -> None:
+        if active:
+            self.subtitle.show_overlay()
+            self.subtitle_btn.setText("退出字幕")
+            self.showMinimized()
+            return
+        self.subtitle.hide()
+        self.subtitle_btn.setText("会议字幕")
+        if self.isMinimized():
+            self.showNormal()
+        self.raise_()
+        self.activateWindow()
+
+    def changeEvent(self, event: QEvent) -> None:  # noqa: N802
+        if (
+            event.type() == QEvent.Type.WindowStateChange
+            and not self.isMinimized()
+            and self.subtitle_btn.isChecked()
+        ):
+            self.subtitle.hide()
+            self.subtitle_btn.blockSignals(True)
+            self.subtitle_btn.setChecked(False)
+            self.subtitle_btn.blockSignals(False)
+            self.subtitle_btn.setText("会议字幕")
+        super().changeEvent(event)
 
     def _on_failed(self, message: str) -> None:
         self.status.setText(f"错误：{message}")
@@ -554,6 +666,7 @@ class RecorderWindow(QMainWindow):
 
     def closeEvent(self, event) -> None:  # noqa: N802
         self.stop_recording()
+        self.subtitle.close()
         super().closeEvent(event)
 
 

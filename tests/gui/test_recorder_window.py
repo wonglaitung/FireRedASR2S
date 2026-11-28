@@ -70,3 +70,27 @@ def test_final_is_written_to_csv(app, tmp_path) -> None:
         assert rows[0]["start_ms"] == "1000"
     finally:
         window.close()
+
+
+def test_subtitle_mode_shows_two_line_overlay(app) -> None:
+    window = RecorderWindow(RecorderConfig())
+    try:
+        window.show()
+        app.processEvents()
+        window.subtitle_btn.setChecked(True)
+        app.processEvents()
+        window._append_final(
+            {"type": "final", "text": "我聽日同Alice開會", "start_ms": 1000, "end_ms": 2500}
+        )
+        app.processEvents()
+        assert window.subtitle.isVisible()
+        assert window.subtitle.text.toPlainText() == "我聽日同Alice開會"
+        assert window.subtitle.height() < 200
+        assert window.subtitle_btn.text() == "退出字幕"
+
+        window.subtitle_btn.setChecked(False)
+        app.processEvents()
+        assert not window.subtitle.isVisible()
+        assert window.subtitle_btn.text() == "会议字幕"
+    finally:
+        window.close()
