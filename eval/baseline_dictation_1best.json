@@ -1,0 +1,2220 @@
+[
+  {
+    "set": "yue_en_dictation",
+    "clips": 100,
+    "details": [
+      {
+        "id": "sl_1986_1",
+        "reference": "我哋去咗一間restaurant，個環境好靚，the food was amazing!",
+        "raw_text": "我哋去咗一间 restaurant个环境好靓 the food was amazing",
+        "text": "我哋去咗一间restaurant个环境，好靓，the food was amazing。",
+        "english": {
+          "reference": [
+            "restaurant",
+            "the",
+            "food",
+            "was",
+            "amazing"
+          ],
+          "hypothesis": [
+            "restaurant",
+            "the",
+            "food",
+            "was",
+            "amazing"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_772_6",
+        "reference": "睇一幅畫, 你可以感受到嗰陣時嘅氣氛, as if you're living that moment.",
+        "raw_text": "睇一幅画你可以感受到嗰阵时嘅气氛 as if you are living in that moment",
+        "text": "睇一幅画，你可以感受到𠮶阵时嘅气氛as if you are living in that moment。",
+        "english": {
+          "reference": [
+            "as",
+            "if",
+            "you're",
+            "living",
+            "that",
+            "moment"
+          ],
+          "hypothesis": [
+            "as",
+            "if",
+            "you",
+            "are",
+            "living",
+            "in",
+            "that",
+            "moment"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_1602_3",
+        "reference": "雖然AI帶嚟咗好多方便，但我都有少少擔心，especially about privacy and job displacement.",
+        "raw_text": "虽然 ai带嚟咗好多方便但我都有少少担心 especially about privacy and job displacement",
+        "text": "虽然ai带嚟咗好多方便，但我都有少少担心，especially about privacy and job displacement。",
+        "english": {
+          "reference": [
+            "ai",
+            "especially",
+            "about",
+            "privacy",
+            "and",
+            "job",
+            "displacement"
+          ],
+          "hypothesis": [
+            "ai",
+            "especially",
+            "about",
+            "privacy",
+            "and",
+            "job",
+            "displacement"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_1608_1",
+        "reference": "佢想試下bake一個士多啤梨flavored蛋糕，睇下味道會點。",
+        "raw_text": "佢想试下 bake一个士多啤梨 favorite蛋糕睇下味道会点",
+        "text": "佢想试下bake一个士多啤梨favorite蛋糕，睇下味道会点。",
+        "english": {
+          "reference": [
+            "bake",
+            "flavored"
+          ],
+          "hypothesis": [
+            "bake",
+            "favorite"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_2575_1",
+        "reference": "佢今年66歲, and she’s still so energetic.",
+        "raw_text": "佢今年六十六岁 and she is still so energetic",
+        "text": "佢今年六十六岁，and she is still so energetic。",
+        "english": {
+          "reference": [
+            "and",
+            "she's",
+            "still",
+            "so",
+            "energetic"
+          ],
+          "hypothesis": [
+            "and",
+            "she",
+            "is",
+            "still",
+            "so",
+            "energetic"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1061_0",
+        "reference": "今次個music festival有Blues section，大家都話好正！",
+        "raw_text": "今次个 music festival有 blue section大家都话好正",
+        "text": "今次个music festival有blue section，大家都话好正。",
+        "english": {
+          "reference": [
+            "music",
+            "festival",
+            "blues",
+            "section"
+          ],
+          "hypothesis": [
+            "music",
+            "festival",
+            "blue",
+            "section"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "sl_1557_5",
+        "reference": "我最鍾意佢哋嗰啲燈籠, they light up the whole street!",
+        "raw_text": "我最钟意佢哋嗰啲灯笼 delay up the whole street",
+        "text": "我最钟意佢哋𠮶啲灯笼，delay up the whole street。",
+        "english": {
+          "reference": [
+            "they",
+            "light",
+            "up",
+            "the",
+            "whole",
+            "street"
+          ],
+          "hypothesis": [
+            "delay",
+            "up",
+            "the",
+            "whole",
+            "street"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1042_2",
+        "reference": "當然啦，嗰度有好多好玩嘅嘢，like mulled wine and gingerbread!",
+        "raw_text": "当然啦度有好多好玩嘅嘢 like milk wine and gingerbit",
+        "text": "当然啦，度有好多好玩嘅嘢，like milk wine and gingerbit。",
+        "english": {
+          "reference": [
+            "like",
+            "mulled",
+            "wine",
+            "and",
+            "gingerbread"
+          ],
+          "hypothesis": [
+            "like",
+            "milk",
+            "wine",
+            "and",
+            "gingerbit"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "sl_1152_2",
+        "reference": "我諗下次可以加埋啲mushrooms試下。",
+        "raw_text": "我谂下次可以加埋啲 mushroom试下",
+        "text": "我谂下次可以加埋啲mushroom试下。",
+        "english": {
+          "reference": [
+            "mushrooms"
+          ],
+          "hypothesis": [
+            "mushroom"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "sl_1118_0",
+        "reference": "我哋成班friend去過一次country music concert, it was amazing!",
+        "raw_text": "我哋成班 friend去过一次 country music concert it was amazing",
+        "text": "我哋成班friend去过一次country music concert，it was amazing。",
+        "english": {
+          "reference": [
+            "friend",
+            "country",
+            "music",
+            "concert",
+            "it",
+            "was",
+            "amazing"
+          ],
+          "hypothesis": [
+            "friend",
+            "country",
+            "music",
+            "concert",
+            "it",
+            "was",
+            "amazing"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_1610_3",
+        "reference": "呢個project有啲複雜，不過I think I can manage it.",
+        "raw_text": "呢个 project有啲复杂不过 i think i can manage it",
+        "text": "呢个project有啲复杂，不过i think i can manage it。",
+        "english": {
+          "reference": [
+            "project",
+            "think",
+            "can",
+            "manage",
+            "it"
+          ],
+          "hypothesis": [
+            "project",
+            "think",
+            "can",
+            "manage",
+            "it"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_1853_1",
+        "reference": "我哋第一次約會嗰日係好chill, 佢好enjoy食嗰餐飯。",
+        "raw_text": "我哋第一次约会嗰日好 chill佢好 enjoy嗰餐饭",
+        "text": "我哋第一次约会𠮶日好chill佢，好enjoy𠮶餐饭。",
+        "english": {
+          "reference": [
+            "chill",
+            "enjoy"
+          ],
+          "hypothesis": [
+            "chill",
+            "enjoy"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1096_2",
+        "reference": "晚餐後，佢地一齊睇咗部 movie，個個都笑到肚痛。What a fun day!",
+        "raw_text": "晚餐后佢哋一齐睇咗部 movie个个都笑到肚痛 what a fun day",
+        "text": "晚餐后，佢哋一齐睇咗部movie，个个都笑到肚痛。what a fun day？",
+        "english": {
+          "reference": [
+            "movie",
+            "what",
+            "fun",
+            "day"
+          ],
+          "hypothesis": [
+            "movie",
+            "what",
+            "fun",
+            "day"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1767_2",
+        "reference": "政府啱啱宣佈咗新政策, what are your thoughts on that?",
+        "raw_text": "政府啱啱宣布咗新政策 what are your thoughts on that",
+        "text": "政府啱啱宣布咗新政策。what are your thoughts on that？",
+        "english": {
+          "reference": [
+            "what",
+            "are",
+            "your",
+            "thoughts",
+            "on",
+            "that"
+          ],
+          "hypothesis": [
+            "what",
+            "are",
+            "your",
+            "thoughts",
+            "on",
+            "that"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "sl_2583_2",
+        "reference": "最近我睇咗一篇文章講global warming，真係令人擔心。 We need to act now!",
+        "raw_text": "最近我睇咗一篇文章讲 global warming真系令人担心 we need to act now",
+        "text": "最近我睇咗一篇文章讲global warming，真系令人担心we need to act now。",
+        "english": {
+          "reference": [
+            "global",
+            "warming",
+            "we",
+            "need",
+            "to",
+            "act",
+            "now"
+          ],
+          "hypothesis": [
+            "global",
+            "warming",
+            "we",
+            "need",
+            "to",
+            "act",
+            "now"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_1023_5",
+        "reference": "我下次會試下用呢啲method，希望有幫助。",
+        "raw_text": "我下次会试下用呢啲 method希望有帮助",
+        "text": "我下次会试下用呢啲method希望有帮助。",
+        "english": {
+          "reference": [
+            "method"
+          ],
+          "hypothesis": [
+            "method"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_759_0",
+        "reference": "我哋全家計劃下星期去picnic，希望天氣好好。",
+        "raw_text": "我哋全家计划下星期去霹雳希望天气好好",
+        "text": "我哋全家计划下，星期去霹雳，希望天气好好。",
+        "english": {
+          "reference": [
+            "picnic"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "sl_1926_0",
+        "reference": "時尚係一個表達自己方式, and it reflects individual personality.",
+        "raw_text": "时尚系一个表达自己嘅方式 and it reflects individual personality",
+        "text": "时尚系一个表达自己嘅方式，and it reflects individual personality。",
+        "english": {
+          "reference": [
+            "and",
+            "it",
+            "reflects",
+            "individual",
+            "personality"
+          ],
+          "hypothesis": [
+            "and",
+            "it",
+            "reflects",
+            "individual",
+            "personality"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_1550_0",
+        "reference": "今晚煮咗好好味嘅牛扒 dinner, you would have loved it!",
+        "raw_text": "今晚煮咗好好味嘅牛排 dinner you would have loved it",
+        "text": "今晚煮咗，好好味嘅牛排dinner，you would have loved it。",
+        "english": {
+          "reference": [
+            "dinner",
+            "you",
+            "would",
+            "have",
+            "loved",
+            "it"
+          ],
+          "hypothesis": [
+            "dinner",
+            "you",
+            "would",
+            "have",
+            "loved",
+            "it"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "sl_9_0",
+        "reference": "嗰日我哋去咗mall，佢哋真係買咗好多嘢, you know what I mean?",
+        "raw_text": "嗰日我哋去咗么佢哋真系买咗好多嘢 you know what i mean",
+        "text": "𠮶日，我哋去咗么佢哋真系买咗好多嘢，you know what i mean。",
+        "english": {
+          "reference": [
+            "mall",
+            "you",
+            "know",
+            "what",
+            "mean"
+          ],
+          "hypothesis": [
+            "you",
+            "know",
+            "what",
+            "mean"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_2566_0",
+        "reference": "啲科技真係日日都有新嘢發展。It's fascinating to see how AI is changing everything.",
+        "raw_text": "啲科技真系日日都有新嘅发展 it's fascinating to see how ai is changing everything",
+        "text": "啲科技真系日日都有新嘅发展。it's fascinating to see how ai is changing everything。",
+        "english": {
+          "reference": [
+            "it's",
+            "fascinating",
+            "to",
+            "see",
+            "how",
+            "ai",
+            "is",
+            "changing",
+            "everything"
+          ],
+          "hypothesis": [
+            "it's",
+            "fascinating",
+            "to",
+            "see",
+            "how",
+            "ai",
+            "is",
+            "changing",
+            "everything"
+          ],
+          "hits": 9
+        }
+      },
+      {
+        "id": "sl_2601_0",
+        "reference": "我今晚玩咗個新game,真係好好玩！",
+        "raw_text": "我今晚玩咗个新 game真系好好玩",
+        "text": "我今晚玩咗个新game，真系好好玩。",
+        "english": {
+          "reference": [
+            "game"
+          ],
+          "hypothesis": [
+            "game"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_1946_2",
+        "reference": "呢個weekend，我計劃整個cozy corner喺我嘅花園。",
+        "raw_text": "呢个 weekend我计划整个 cozy corner喺我嘅花园",
+        "text": "呢个weekend，我计划整个cozy corner，喺我嘅花园。",
+        "english": {
+          "reference": [
+            "weekend",
+            "cozy",
+            "corner"
+          ],
+          "hypothesis": [
+            "weekend",
+            "cozy",
+            "corner"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "sl_1793_0",
+        "reference": "昨日萬聖節嗰陣，成街都係啲小朋友扮鬼扮馬，好開心呀, isn't it?",
+        "raw_text": "昨日万圣节嗰阵成街都系小朋友扮鬼扮马好开心啊 isn't it",
+        "text": "昨日，万圣节𠮶阵成街都系小朋友，扮鬼扮马好开心啊，isn't it？",
+        "english": {
+          "reference": [
+            "isn't",
+            "it"
+          ],
+          "hypothesis": [
+            "isn't",
+            "it"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_2612_1",
+        "reference": "我已經安排咗一個appointment，想check下健康狀況。 It's always good to be sure, right?",
+        "raw_text": "我已经安排咗一个 appointment想 check下健康状况 it's always good to be sure right",
+        "text": "我已经安排咗一个appointment，想check下健康状况。it's always good to be sure，right？",
+        "english": {
+          "reference": [
+            "appointment",
+            "check",
+            "it's",
+            "always",
+            "good",
+            "to",
+            "be",
+            "sure",
+            "right"
+          ],
+          "hypothesis": [
+            "appointment",
+            "check",
+            "it's",
+            "always",
+            "good",
+            "to",
+            "be",
+            "sure",
+            "right"
+          ],
+          "hits": 9
+        }
+      },
+      {
+        "id": "sl_1965_0",
+        "reference": "聽日有冇興趣去睇Hip Hop concert？",
+        "raw_text": "听日有冇兴趣去睇 hip hop concert",
+        "text": "听日有冇兴趣，去睇hip hop concert。",
+        "english": {
+          "reference": [
+            "hip",
+            "hop",
+            "concert"
+          ],
+          "hypothesis": [
+            "hip",
+            "hop",
+            "concert"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "sl_1766_0",
+        "reference": "今日佢交咗個assignment,好似marking會好嚴。",
+        "raw_text": "今日佢加咗个 assignment好似 marking会好热",
+        "text": "今日佢加咗个assignment，好似marking会好热。",
+        "english": {
+          "reference": [
+            "assignment",
+            "marking"
+          ],
+          "hypothesis": [
+            "assignment",
+            "marking"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1960_2",
+        "reference": "聽Jazz music嗰陣，我覺得好relaxed，好似所有壓力都冇咗。",
+        "raw_text": "听 jazz music嗰阵我觉得好 relax好似所有压力都冇咗",
+        "text": "听jazz music𠮶阵，我觉得好relax，好似，所有压力都冇咗。",
+        "english": {
+          "reference": [
+            "jazz",
+            "music",
+            "relaxed"
+          ],
+          "hypothesis": [
+            "jazz",
+            "music",
+            "relax"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1972_1",
+        "reference": "聽講主角演技好犀利, and the storyline is really engaging.",
+        "raw_text": "听讲主角演技好犀利 and the storyline is really engaging",
+        "text": "听讲主角，演技好犀利，and the storyline is really engaging。",
+        "english": {
+          "reference": [
+            "and",
+            "the",
+            "storyline",
+            "is",
+            "really",
+            "engaging"
+          ],
+          "hypothesis": [
+            "and",
+            "the",
+            "storyline",
+            "is",
+            "really",
+            "engaging"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "sl_1576_1",
+        "reference": "佢講嗰個resolution真係好有趣，make sure you stick to it!",
+        "raw_text": "佢讲嗰个 resolution真系好有趣 make sure you stick to it",
+        "text": "佢讲𠮶个resolution真系好，有趣，make sure you stick to it。",
+        "english": {
+          "reference": [
+            "resolution",
+            "make",
+            "sure",
+            "you",
+            "stick",
+            "to",
+            "it"
+          ],
+          "hypothesis": [
+            "resolution",
+            "make",
+            "sure",
+            "you",
+            "stick",
+            "to",
+            "it"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_1957_0",
+        "reference": "今日有個新聞講關於environmental conservation，真係好important喎！",
+        "raw_text": "今日有个新闻讲关于 environmental conservation真系好 important㖞",
+        "text": "今日有个新闻讲关于environmental conservation真系好important㖞。",
+        "english": {
+          "reference": [
+            "environmental",
+            "conservation",
+            "important"
+          ],
+          "hypothesis": [
+            "environmental",
+            "conservation",
+            "important"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "sl_1085_2",
+        "reference": "影人像相嗰陣，我鍾意用natural light，因為人工燈sometimes太harsh。",
+        "raw_text": "影人像相阵我钟意用 natural light因为人工灯 sometimes too harsh",
+        "text": "影人像相阵，我钟意用natural light，因为人工灯sometimes too harsh。",
+        "english": {
+          "reference": [
+            "natural",
+            "light",
+            "sometimes",
+            "harsh"
+          ],
+          "hypothesis": [
+            "natural",
+            "light",
+            "sometimes",
+            "too",
+            "harsh"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1811_2",
+        "reference": "今次選舉真係好緊張，大家都好關注。I wonder who will win in the end.",
+        "raw_text": "今次选举真系好紧张大家都好关注 i wonder who will win in the end",
+        "text": "今次选举真系好紧张，大家都好关注。i wonder who will win in the end？",
+        "english": {
+          "reference": [
+            "wonder",
+            "who",
+            "will",
+            "win",
+            "in",
+            "the",
+            "end"
+          ],
+          "hypothesis": [
+            "wonder",
+            "who",
+            "will",
+            "win",
+            "in",
+            "the",
+            "end"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_2500_0",
+        "reference": "最近啲pop song真係好catchy，尤其是嗰首叫 \"Butter\"，真係keep playing in my head。",
+        "raw_text": "最近啲 pop song真系好 catchy尤其是首叫 butter真系 keep playing in my head",
+        "text": "最近啲pop song真系好catchy，尤其是首叫butter，真系，keep playing in my head。",
+        "english": {
+          "reference": [
+            "pop",
+            "song",
+            "catchy",
+            "butter",
+            "keep",
+            "playing",
+            "in",
+            "my",
+            "head"
+          ],
+          "hypothesis": [
+            "pop",
+            "song",
+            "catchy",
+            "butter",
+            "keep",
+            "playing",
+            "in",
+            "my",
+            "head"
+          ],
+          "hits": 9
+        }
+      },
+      {
+        "id": "sl_1016_4",
+        "reference": "我覺得佢用嘅flow同埋rhythm真係好特別，唔係咁容易find到。",
+        "raw_text": "我觉得佢用嘅 photo同 reference真系好特别唔系咁容易翻到",
+        "text": "我觉得佢用嘅photo同reference真系好，特别唔系咁容易翻到。",
+        "english": {
+          "reference": [
+            "flow",
+            "rhythm",
+            "find"
+          ],
+          "hypothesis": [
+            "photo",
+            "reference"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "sl_2731_1",
+        "reference": "音樂個beat好powerful，令我覺得好exciting。",
+        "raw_text": "因为个 bit好 powerful令我觉得好 exciting",
+        "text": "因为个bit好powerful令，我觉得好exciting。",
+        "english": {
+          "reference": [
+            "beat",
+            "powerful",
+            "exciting"
+          ],
+          "hypothesis": [
+            "bit",
+            "powerful",
+            "exciting"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1851_3",
+        "reference": "我哋學校啲學生最近參加咗一個科學比賽，and they won first place!",
+        "raw_text": "我哋学校啲学生最近参加咗一个科学比赛 and they won first place",
+        "text": "我哋学校啲学生最近参加咗一个科学比赛，and they won first place。",
+        "english": {
+          "reference": [
+            "and",
+            "they",
+            "won",
+            "first",
+            "place"
+          ],
+          "hypothesis": [
+            "and",
+            "they",
+            "won",
+            "first",
+            "place"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_1605_2",
+        "reference": "我見到件衫好靚，but 我唔sure if it suits me.",
+        "raw_text": "我见到件衫好靓 but我唔 sure if it shouldn't",
+        "text": "我见到件衫好靓，but我唔sure if it shouldn't。",
+        "english": {
+          "reference": [
+            "but",
+            "sure",
+            "if",
+            "it",
+            "suits",
+            "me"
+          ],
+          "hypothesis": [
+            "but",
+            "sure",
+            "if",
+            "it",
+            "shouldn't"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1943_3",
+        "reference": "要記住，多practice就會make perfect。",
+        "raw_text": "要记住多 practice就会 make perfect",
+        "text": "要记住，多practice就会make perfect。",
+        "english": {
+          "reference": [
+            "practice",
+            "make",
+            "perfect"
+          ],
+          "hypothesis": [
+            "practice",
+            "make",
+            "perfect"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "sl_1535_3",
+        "reference": "新機出咗好多新顏色, my favorite is the dark blue one.",
+        "raw_text": "新机出咗好多新颜色 my favorite is the dark blue one",
+        "text": "新机出咗，好多新颜色。my favorite is the dark blue one。",
+        "english": {
+          "reference": [
+            "my",
+            "favorite",
+            "is",
+            "the",
+            "dark",
+            "blue",
+            "one"
+          ],
+          "hypothesis": [
+            "my",
+            "favorite",
+            "is",
+            "the",
+            "dark",
+            "blue",
+            "one"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_1813_0",
+        "reference": "唔知點解，我覺得而家啲人都好中意用Instagram，right?",
+        "raw_text": "唔知点解我觉得而家啲人好钟意用 instagram right",
+        "text": "唔知点解，我觉得而家啲人好钟意用instagram right。",
+        "english": {
+          "reference": [
+            "instagram",
+            "right"
+          ],
+          "hypothesis": [
+            "instagram",
+            "right"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_2571_2",
+        "reference": "我覺得下一場game我地應該會贏喇!",
+        "raw_text": "我觉得下一场 game我哋应该会赢啦",
+        "text": "我觉得下一场game我哋应该会赢啦。",
+        "english": {
+          "reference": [
+            "game"
+          ],
+          "hypothesis": [
+            "game"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_1060_1",
+        "reference": "嗰陣時我最鍾意嘅角色係Uncle Jesse，佢真係好cool!",
+        "raw_text": "嗰阵时我最钟意嘅角色系 uncle jesse佢真系好酷",
+        "text": "𠮶阵时，我最钟意嘅角色系uncle jesse佢真系好酷。",
+        "english": {
+          "reference": [
+            "uncle",
+            "jesse",
+            "cool"
+          ],
+          "hypothesis": [
+            "uncle",
+            "jesse"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1224_1",
+        "reference": "哎喲,我嘅手機又hang住咗, maybe it's time for an upgrade, don't you think?",
+        "raw_text": "哎哟我嘅手机又轻住咗 maybe it's time to find out great don't you think",
+        "text": "哎哟我嘅手机又轻住咗，maybe it's time to find out great，don't you think？",
+        "english": {
+          "reference": [
+            "hang",
+            "maybe",
+            "it's",
+            "time",
+            "for",
+            "an",
+            "upgrade",
+            "don't",
+            "you",
+            "think"
+          ],
+          "hypothesis": [
+            "maybe",
+            "it's",
+            "time",
+            "to",
+            "find",
+            "out",
+            "great",
+            "don't",
+            "you",
+            "think"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "sl_420_2",
+        "reference": "去完南丫島行山之後, I had the best seafood ever!",
+        "raw_text": "去完南丫岛行山之后 i had the best seafood ever",
+        "text": "去完南丫岛行山之后，i had the best seafood ever。",
+        "english": {
+          "reference": [
+            "had",
+            "the",
+            "best",
+            "seafood",
+            "ever"
+          ],
+          "hypothesis": [
+            "had",
+            "the",
+            "best",
+            "seafood",
+            "ever"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_2567_4",
+        "reference": "你識唔識邊度可以租到單車，so we can explore the city?",
+        "raw_text": "你识唔识边度可以租单车 so we can explore the city",
+        "text": "你识唔识边度可以租单车，so we can explore the city。",
+        "english": {
+          "reference": [
+            "so",
+            "we",
+            "can",
+            "explore",
+            "the",
+            "city"
+          ],
+          "hypothesis": [
+            "so",
+            "we",
+            "can",
+            "explore",
+            "the",
+            "city"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "sl_1033_2",
+        "reference": "係囉，今晚一定要order，唔可以miss。",
+        "raw_text": "系咯今晚一定要屙的唔可以 miss",
+        "text": "系咯，今晚一定要屙的唔可以miss。",
+        "english": {
+          "reference": [
+            "order",
+            "miss"
+          ],
+          "hypothesis": [
+            "miss"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_1035_0",
+        "reference": "今日個天咁藍,應該係個perfect day去hiking!",
+        "raw_text": "今日个天咁蓝应该系个 perfect day去嗨皮",
+        "text": "今日个天咁蓝应该系个perfect day，去嗨皮。",
+        "english": {
+          "reference": [
+            "perfect",
+            "day",
+            "hiking"
+          ],
+          "hypothesis": [
+            "perfect",
+            "day"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_2045_3",
+        "reference": "唔知佢會唔會請我哋食飯呢，哈哈，it’s a good chance!",
+        "raw_text": "唔知佢会唔会请我哋食饭呢哈哈 it's a good chance",
+        "text": "唔知佢会唔会，请我哋食饭呢，哈哈，it's a good chance。",
+        "english": {
+          "reference": [
+            "it's",
+            "good",
+            "chance"
+          ],
+          "hypothesis": [
+            "it's",
+            "good",
+            "chance"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "sl_1057_2",
+        "reference": "我老闆話, '呢個project一定要on time完成, you know?'",
+        "raw_text": "我老板话呢个 project一定要按 time完成 you know",
+        "text": "我老板话呢个project一定要按time完成，you know。",
+        "english": {
+          "reference": [
+            "project",
+            "on",
+            "time",
+            "you",
+            "know"
+          ],
+          "hypothesis": [
+            "project",
+            "time",
+            "you",
+            "know"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_2028_4",
+        "reference": "週年紀念嗰日佢同我講, 'I love you more every year!'",
+        "raw_text": "周年纪念日佢同我讲 i love you more every year",
+        "text": "周年纪念日，佢同我讲，i love you more every year。",
+        "english": {
+          "reference": [
+            "love",
+            "you",
+            "more",
+            "every",
+            "year"
+          ],
+          "hypothesis": [
+            "love",
+            "you",
+            "more",
+            "every",
+            "year"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_1188_0",
+        "reference": "藝術真係好神奇, it transforms the ordinary into something extraordinary.",
+        "raw_text": "i should真的好神奇 it transformed ordinary into something extraordinary",
+        "text": "i should真的好神奇，it transformed ordinary into something extraordinary。",
+        "english": {
+          "reference": [
+            "it",
+            "transforms",
+            "the",
+            "ordinary",
+            "into",
+            "something",
+            "extraordinary"
+          ],
+          "hypothesis": [
+            "should",
+            "it",
+            "transformed",
+            "ordinary",
+            "into",
+            "something",
+            "extraordinary"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_1995_4",
+        "reference": "教育方面，AI會幫助老師制定更有效嘅教學方法。And students will benefit from personalized learning experiences.",
+        "raw_text": "教育方面 ai会帮助老师制定更有效嘅教学方法 and students with benefits from personalized learning experiences",
+        "text": "教育方面，ai会帮助老师制定更有效嘅教学方法and students with benefits from personalized learning experiences。",
+        "english": {
+          "reference": [
+            "ai",
+            "and",
+            "students",
+            "will",
+            "benefit",
+            "from",
+            "personalized",
+            "learning",
+            "experiences"
+          ],
+          "hypothesis": [
+            "ai",
+            "and",
+            "students",
+            "with",
+            "benefits",
+            "from",
+            "personalized",
+            "learning",
+            "experiences"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_1241_3",
+        "reference": "佢成日話要整最靚嘅cupcakes, but 其實佢仲要practice多啲。",
+        "raw_text": "佢成日话要整最靓嘅级 kiss不其实佢仲要 practice多啲",
+        "text": "佢成日话要整，最靓嘅级kiss不？其实佢仲要practice多啲。",
+        "english": {
+          "reference": [
+            "cupcakes",
+            "but",
+            "practice"
+          ],
+          "hypothesis": [
+            "kiss",
+            "practice"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_1011_0",
+        "reference": "生日會真係好開心呀, everyone was there to celebrate!",
+        "raw_text": "生日会真系好开心啊 everyone was there to celebrate",
+        "text": "生日会真系好开心啊，everyone was there to celebrate。",
+        "english": {
+          "reference": [
+            "everyone",
+            "was",
+            "there",
+            "to",
+            "celebrate"
+          ],
+          "hypothesis": [
+            "everyone",
+            "was",
+            "there",
+            "to",
+            "celebrate"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_1987_1",
+        "reference": "聽藍調音樂會令人放鬆，好似一種情感療法, right?",
+        "raw_text": "听蓝调音乐会令人放松好似一种情感疗法 right",
+        "text": "听蓝调音乐会令人放松，好似一种情感疗法，right？",
+        "english": {
+          "reference": [
+            "right"
+          ],
+          "hypothesis": [
+            "right"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_1808_4",
+        "reference": "我最鍾意嗰part就係睇煙花，因為佢哋真係好beautiful。",
+        "raw_text": "我最中意 part就系睇烟花因为佢哋真系好 beautiful",
+        "text": "我最中意part就系睇烟花，因为佢哋真系好beautiful。",
+        "english": {
+          "reference": [
+            "part",
+            "beautiful"
+          ],
+          "hypothesis": [
+            "part",
+            "beautiful"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_2525_4",
+        "reference": "最緊要嘅係 enjoy 唔同朋友同屋企人慶祝呢個節日！",
+        "raw_text": "最紧要嘅<unk> enjoy唔同朋友同屋企人庆祝呢个节日",
+        "text": "最紧要嘅< unk > enjoy唔同朋友同屋企人庆祝呢个节日。",
+        "english": {
+          "reference": [
+            "enjoy"
+          ],
+          "hypothesis": [
+            "unk",
+            "enjoy"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_1799_1",
+        "reference": "佢總係話，\"呢個recipe好易,你試吓啦。\"",
+        "raw_text": "佢总系话呢个 recipe好易你试下啦",
+        "text": "佢总系话呢个recipe好易，你试下啦。",
+        "english": {
+          "reference": [
+            "recipe"
+          ],
+          "hypothesis": [
+            "recipe"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_2510_4",
+        "reference": "我覺得我應該再試下聽多啲呢種音樂，maybe I'll find a new favorite.",
+        "raw_text": "我觉得我应该再试下听多啲呢种音乐 maybe i'll find a new favorite",
+        "text": "我觉得我应该再试下听多啲呢种音乐，maybe i'll find a new favorite。",
+        "english": {
+          "reference": [
+            "maybe",
+            "i'll",
+            "find",
+            "new",
+            "favorite"
+          ],
+          "hypothesis": [
+            "maybe",
+            "i'll",
+            "find",
+            "new",
+            "favorite"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_1222_1",
+        "reference": "最初佢唔係太sure，但慢慢佢gain咗好多confidence。",
+        "raw_text": "最初佢唔系太 sure但慢慢佢经咗啲 confidence",
+        "text": "最初佢唔系太sure，但慢慢佢经咗啲confidence。",
+        "english": {
+          "reference": [
+            "sure",
+            "gain",
+            "confidence"
+          ],
+          "hypothesis": [
+            "sure",
+            "confidence"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1566_0",
+        "reference": "佢約咗個女仔出去食飯，之後仲話, \"Let's watch a movie together.\"",
+        "raw_text": "佢约咗个女仔出去食饭之后仲话 let's watch a movie together",
+        "text": "佢约咗个女仔出去食饭之后，仲话let's watch a movie together。",
+        "english": {
+          "reference": [
+            "let's",
+            "watch",
+            "movie",
+            "together"
+          ],
+          "hypothesis": [
+            "let's",
+            "watch",
+            "movie",
+            "together"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1053_0",
+        "reference": "有冇諗住Easter去邊度玩？我覺得去海洋公園會幾好喎，因為嗰度有好多活動。",
+        "raw_text": "有冇谂住今个 easter去边度玩我觉得去海洋公园会几好㖞因为嗰度有好多活动",
+        "text": "有冇谂住今个easter，去边度玩，我觉得去海洋公园会几好㖞因为𠮶度有好多活动。",
+        "english": {
+          "reference": [
+            "easter"
+          ],
+          "hypothesis": [
+            "easter"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_1111_3",
+        "reference": "好多公司都開始embrace新科技,因為it's crucial for survival.",
+        "raw_text": "好多公司都开始 embrace新科技因为 this is crucial for survival",
+        "text": "好多公司都开始embrace新科技，因为this is crucial for survival。",
+        "english": {
+          "reference": [
+            "embrace",
+            "it's",
+            "crucial",
+            "for",
+            "survival"
+          ],
+          "hypothesis": [
+            "embrace",
+            "this",
+            "is",
+            "crucial",
+            "for",
+            "survival"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_2679_0",
+        "reference": "今天天氣咁好，去海灘晒太陽真係perfect timing!",
+        "raw_text": "今天天气咁好去海滩晒太阳真系 perfect timing",
+        "text": "今天天气咁好，去海滩晒太阳，真系perfect timing。",
+        "english": {
+          "reference": [
+            "perfect",
+            "timing"
+          ],
+          "hypothesis": [
+            "perfect",
+            "timing"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1777_1",
+        "reference": "經過咁多努力, I finally got the result I wanted!",
+        "raw_text": "经过咁多努力 i finally got the results i wanted",
+        "text": "经过咁多努力，i finally got the results i wanted。",
+        "english": {
+          "reference": [
+            "finally",
+            "got",
+            "the",
+            "result",
+            "wanted"
+          ],
+          "hypothesis": [
+            "finally",
+            "got",
+            "the",
+            "results",
+            "wanted"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1503_4",
+        "reference": "我哋成日會喺周末睇電影, it's our family tradition.",
+        "raw_text": "我哋成日喺周末睇电影 it's our family tradition",
+        "text": "我哋成日喺周末睇电影，it's our family tradition。",
+        "english": {
+          "reference": [
+            "it's",
+            "our",
+            "family",
+            "tradition"
+          ],
+          "hypothesis": [
+            "it's",
+            "our",
+            "family",
+            "tradition"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1054_0",
+        "reference": "今季嘅潮流真係好interesting, especially when it comes to vintage styles.",
+        "raw_text": "今季嘅潮流真系好 interesting especially when it's come to vintage style",
+        "text": "今季嘅潮流真系好interesting，especially when it's come to vintage style。",
+        "english": {
+          "reference": [
+            "interesting",
+            "especially",
+            "when",
+            "it",
+            "comes",
+            "to",
+            "vintage",
+            "styles"
+          ],
+          "hypothesis": [
+            "interesting",
+            "especially",
+            "when",
+            "it's",
+            "come",
+            "to",
+            "vintage",
+            "style"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_1506_2",
+        "reference": "星期五我哋可以去嗰間new restaurant，聽講嗰度嘅pizza好正。",
+        "raw_text": "星期五我哋可以去嗰间 new restaurant听讲嗰度嘅披萨好正",
+        "text": "星期五，我哋可以去𠮶间new restaurant听讲𠮶度嘅披萨。好正。",
+        "english": {
+          "reference": [
+            "new",
+            "restaurant",
+            "pizza"
+          ],
+          "hypothesis": [
+            "new",
+            "restaurant"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_777_1",
+        "reference": "有呀，我哋book咗一間好靚嘅restaurant，you should join us!",
+        "raw_text": "有啊我哋 book咗一间好靓嘅 restaurant you should join us",
+        "text": "有啊，我哋book咗一间好靓嘅restaurant，you should join us。",
+        "english": {
+          "reference": [
+            "book",
+            "restaurant",
+            "you",
+            "should",
+            "join",
+            "us"
+          ],
+          "hypothesis": [
+            "book",
+            "restaurant",
+            "you",
+            "should",
+            "join",
+            "us"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "sl_771_1",
+        "reference": "其實我真係好期待 autonomous vehicles，因為可以令到交通更加安全。 But I wonder how soon that will become a reality?",
+        "raw_text": "其实我真系好期待 autonomous vehicle因为可以令到交通更加安全 but i wonder how soon that will become a reality",
+        "text": "其实我真系好期待autonomous vehicle，因为可以令到交通更加安全。but i wonder how soon that will become a reality。",
+        "english": {
+          "reference": [
+            "autonomous",
+            "vehicles",
+            "but",
+            "wonder",
+            "how",
+            "soon",
+            "that",
+            "will",
+            "become",
+            "reality"
+          ],
+          "hypothesis": [
+            "autonomous",
+            "vehicle",
+            "but",
+            "wonder",
+            "how",
+            "soon",
+            "that",
+            "will",
+            "become",
+            "reality"
+          ],
+          "hits": 9
+        }
+      },
+      {
+        "id": "sl_1249_0",
+        "reference": "Gaming真係好開心，呢個新game嘅graphics真係amazing!",
+        "raw_text": "经明真系好开心呢个新经嘅 graphics真系 amazing",
+        "text": "经明真系好开心呢个新经嘅graphics真系amazing。",
+        "english": {
+          "reference": [
+            "gaming",
+            "game",
+            "graphics",
+            "amazing"
+          ],
+          "hypothesis": [
+            "graphics",
+            "amazing"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1998_3",
+        "reference": "Next weekend我會開始起個小棚，因為我想試下種啲exotic fruits。",
+        "raw_text": "next weekend我会开始起个小棚因为我想试下种啲 exotic fruits",
+        "text": "next weekend，我会开始起个小棚，因为我想试下种啲exotic fruits。",
+        "english": {
+          "reference": [
+            "next",
+            "weekend",
+            "exotic",
+            "fruits"
+          ],
+          "hypothesis": [
+            "next",
+            "weekend",
+            "exotic",
+            "fruits"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1089_0",
+        "reference": "今年萬聖節我打算扮一個witch，because it's always fun to dress up!",
+        "raw_text": "今年万圣节我打算办一个 which because it's always fun to dress up",
+        "text": "今年万圣节，我打算办一个，which because it's always fun to dress up。",
+        "english": {
+          "reference": [
+            "witch",
+            "because",
+            "it's",
+            "always",
+            "fun",
+            "to",
+            "dress",
+            "up"
+          ],
+          "hypothesis": [
+            "which",
+            "because",
+            "it's",
+            "always",
+            "fun",
+            "to",
+            "dress",
+            "up"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_1546_1",
+        "reference": "一定要食早餐，因為早餐係最重要嘅meal of the day!",
+        "raw_text": "一定要食早餐因为早餐系最重要嘅 meal of the day",
+        "text": "一定要食早餐，因为早餐系最重要嘅meal of the day。",
+        "english": {
+          "reference": [
+            "meal",
+            "of",
+            "the",
+            "day"
+          ],
+          "hypothesis": [
+            "meal",
+            "of",
+            "the",
+            "day"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1867_1",
+        "reference": "我同朋友一齊聽歌，hip hop真係好catchy，大家都跳埋一齊。",
+        "raw_text": "我同朋友一齐听歌 hip hop真系好 catch大家都跳埋一齐",
+        "text": "我同朋友一齐听歌，hip hop真系好catch，大家都跳埋一齐。",
+        "english": {
+          "reference": [
+            "hip",
+            "hop",
+            "catchy"
+          ],
+          "hypothesis": [
+            "hip",
+            "hop",
+            "catch"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1589_4",
+        "reference": "你有冇試過熬夜寫功課？It's tough, but sometimes necessary!",
+        "raw_text": "你有冇试过熬夜写功课 it's tough but sometimes necessary",
+        "text": "你有冇试过熬夜写功课，it's tough，but sometimes necessary。",
+        "english": {
+          "reference": [
+            "it's",
+            "tough",
+            "but",
+            "sometimes",
+            "necessary"
+          ],
+          "hypothesis": [
+            "it's",
+            "tough",
+            "but",
+            "sometimes",
+            "necessary"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_2535_0",
+        "reference": "今晚我哋去聽Jazz concert, it’s going to be amazing!",
+        "raw_text": "今晚我哋去听 jazz concert it's going to be amazing",
+        "text": "今晚我哋去听jazz concert，it's going to be amazing。",
+        "english": {
+          "reference": [
+            "jazz",
+            "concert",
+            "it's",
+            "going",
+            "to",
+            "be",
+            "amazing"
+          ],
+          "hypothesis": [
+            "jazz",
+            "concert",
+            "it's",
+            "going",
+            "to",
+            "be",
+            "amazing"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_1868_0",
+        "reference": "今晚有新開嘅movie上映，我哋一齊去睇好唔好？",
+        "raw_text": "今晚有新开嘅 movie上映我哋一齐去睇好唔好",
+        "text": "今晚有新开嘅movie上映，我哋一齐去睇，好唔好。",
+        "english": {
+          "reference": [
+            "movie"
+          ],
+          "hypothesis": [
+            "movie"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_763_4",
+        "reference": "我阿媽話今年要努力, so I've set some goals for myself.",
+        "raw_text": "我阿妈话今年要努力 so i set some goals for myself",
+        "text": "我阿妈话今年要努力，so i set some goals for myself。",
+        "english": {
+          "reference": [
+            "so",
+            "i've",
+            "set",
+            "some",
+            "goals",
+            "for",
+            "myself"
+          ],
+          "hypothesis": [
+            "so",
+            "set",
+            "some",
+            "goals",
+            "for",
+            "myself"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "sl_1957_2",
+        "reference": "佢哋介紹咗好多methods去保護環境，值得學習。你覺得呢啲tips有冇用？",
+        "raw_text": "佢哋介绍咗好多 methods去保护环境值得学习你觉得呢啲 tips有冇用",
+        "text": "佢哋介绍咗，好多methods去保护环境，值得学习。你觉得呢？啲tips有冇用。",
+        "english": {
+          "reference": [
+            "methods",
+            "tips"
+          ],
+          "hypothesis": [
+            "methods",
+            "tips"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1085_3",
+        "reference": "我都有試過用film camera，雖然複雜，但出嚟嘅效果好有character。",
+        "raw_text": "我都有试过用 frame camera啊虽然复杂但出嚟嘅效果好有 characteristic",
+        "text": "我都有试过用frame camera啊，虽然复杂，但出嚟嘅效果好有characteristic。",
+        "english": {
+          "reference": [
+            "film",
+            "camera",
+            "character"
+          ],
+          "hypothesis": [
+            "frame",
+            "camera",
+            "characteristic"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_1811_4",
+        "reference": "嗰位議員喺會上講咗好多關於環保嘅嘢。It seems like they're really passionate about it.",
+        "raw_text": "位议员喺会上讲咗好多关于环保嘅嘢 it seems like they really passionate about it",
+        "text": "位议员喺会上讲咗好多关于环保嘅嘢，it seems like they really passionate about it。",
+        "english": {
+          "reference": [
+            "it",
+            "seems",
+            "like",
+            "they're",
+            "really",
+            "passionate",
+            "about",
+            "it"
+          ],
+          "hypothesis": [
+            "it",
+            "seems",
+            "like",
+            "they",
+            "really",
+            "passionate",
+            "about",
+            "it"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_1814_0",
+        "reference": "最近有啲新release嘅pop songs，我覺得好catchy，特別係嗰啲chorus part，真係keep looping in my mind。",
+        "raw_text": "最近有啲新 release嘅 pop songs我觉得好 catchy特别系嗰一个 chorus part真系 keep looping in my mind",
+        "text": "最近有啲新release嘅pop songs，我觉得好catchy，特别系𠮶一个chorus part真系keep looping in my mind。",
+        "english": {
+          "reference": [
+            "release",
+            "pop",
+            "songs",
+            "catchy",
+            "chorus",
+            "part",
+            "keep",
+            "looping",
+            "in",
+            "my",
+            "mind"
+          ],
+          "hypothesis": [
+            "release",
+            "pop",
+            "songs",
+            "catchy",
+            "chorus",
+            "part",
+            "keep",
+            "looping",
+            "in",
+            "my",
+            "mind"
+          ],
+          "hits": 11
+        }
+      },
+      {
+        "id": "sl_1016_2",
+        "reference": "昨晚去睇佢個concert, it was amazing!",
+        "raw_text": "寻晚去睇佢个 concert it's amazing",
+        "text": "寻晚去睇佢个concert，it's amazing。",
+        "english": {
+          "reference": [
+            "concert",
+            "it",
+            "was",
+            "amazing"
+          ],
+          "hypothesis": [
+            "concert",
+            "it's",
+            "amazing"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_2576_1",
+        "reference": "聽日我諗住買啲rock music albums,你有冇interest join我？",
+        "raw_text": "听日我谂住买啲 rock music albums你有冇 interest journal",
+        "text": "听日我谂住买啲rock music albums，你有冇interest journal。",
+        "english": {
+          "reference": [
+            "rock",
+            "music",
+            "albums",
+            "interest",
+            "join"
+          ],
+          "hypothesis": [
+            "rock",
+            "music",
+            "albums",
+            "interest",
+            "journal"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1904_2",
+        "reference": "基因工程技術會bring huge breakthroughs in medical science。",
+        "raw_text": "基因工程技术会 bring hill breakthroughs in medical science",
+        "text": "基因工程技术会bring hill breakthroughs in medical science。",
+        "english": {
+          "reference": [
+            "bring",
+            "huge",
+            "breakthroughs",
+            "in",
+            "medical",
+            "science"
+          ],
+          "hypothesis": [
+            "bring",
+            "hill",
+            "breakthroughs",
+            "in",
+            "medical",
+            "science"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "sl_1920_4",
+        "reference": "呢個價格好抵，but我無帶足夠嘅cash。",
+        "raw_text": "呢个价格好低不我冇带足够嘅 cash",
+        "text": "呢个价格好低不？我冇带足够嘅cash。",
+        "english": {
+          "reference": [
+            "but",
+            "cash"
+          ],
+          "hypothesis": [
+            "cash"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "sl_2019_4",
+        "reference": "上次我試過學畫畫，起初好難，but after a while, 我開始enjoy每一個創作嘅過程。",
+        "raw_text": "上次我试过学画画起初好难 but after a while我开始 enjoy每一个创作嘅过程",
+        "text": "上次我试过学画画，起初好难，but after a while，我开始enjoy每一个创作嘅过程。",
+        "english": {
+          "reference": [
+            "but",
+            "after",
+            "while",
+            "enjoy"
+          ],
+          "hypothesis": [
+            "but",
+            "after",
+            "while",
+            "enjoy"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1243_2",
+        "reference": "我覺得呢部手機嘅camera質素好好，影出嚟啲相真係靚，you know?",
+        "raw_text": "我觉得呢部手机嘅 camera质素好好影出嚟啲相真系靓 you know",
+        "text": "我觉得呢部手机嘅camera质素好好影出嚟啲相真系靓，you know。",
+        "english": {
+          "reference": [
+            "camera",
+            "you",
+            "know"
+          ],
+          "hypothesis": [
+            "camera",
+            "you",
+            "know"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "sl_1041_2",
+        "reference": "其實social media可以好有趣，但有時都會令人覺得壓力大, you know?",
+        "raw_text": "其实 social media可以好有趣但有时都会令人觉得压力大 you know",
+        "text": "其实social media可以好有趣，但有时都会令人觉得压力大，you know。",
+        "english": {
+          "reference": [
+            "social",
+            "media",
+            "you",
+            "know"
+          ],
+          "hypothesis": [
+            "social",
+            "media",
+            "you",
+            "know"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1007_2",
+        "reference": "我同我朋友都買咗啲snacks，睇比賽嗰陣真係好好氣氛！",
+        "raw_text": "我同我朋友都买咗啲 snack睇比赛阵真系好好气氛",
+        "text": "我同我朋友都买咗啲，snack睇比赛阵真系好好气氛。",
+        "english": {
+          "reference": [
+            "snacks"
+          ],
+          "hypothesis": [
+            "snack"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "sl_3_0",
+        "reference": "最近嗰套電視劇真係好吸引，the storyline keeps you hooked from the first episode!",
+        "raw_text": "最近嗰套电视剧真系好吸引 the storyline keeps you hooks from the first episode",
+        "text": "最近，𠮶套电视剧真系好吸引the storyline，keeps you hooks from the first episode。",
+        "english": {
+          "reference": [
+            "the",
+            "storyline",
+            "keeps",
+            "you",
+            "hooked",
+            "from",
+            "the",
+            "first",
+            "episode"
+          ],
+          "hypothesis": [
+            "the",
+            "storyline",
+            "keeps",
+            "you",
+            "hooks",
+            "from",
+            "the",
+            "first",
+            "episode"
+          ],
+          "hits": 8
+        }
+      },
+      {
+        "id": "sl_1606_0",
+        "reference": "未來嘅科技發展真係好快, I wonder what new inventions will come next year?",
+        "raw_text": "未来嘅科技发展真系好快 i wonder what news invention will come next year",
+        "text": "未来嘅科技发展真系好快，i wonder what news invention will come next year？",
+        "english": {
+          "reference": [
+            "wonder",
+            "what",
+            "new",
+            "inventions",
+            "will",
+            "come",
+            "next",
+            "year"
+          ],
+          "hypothesis": [
+            "wonder",
+            "what",
+            "news",
+            "invention",
+            "will",
+            "come",
+            "next",
+            "year"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "sl_159_0",
+        "reference": "上星期我去咗香港 Disneyland，我哋玩得好開心，especially when we saw Mickey Mouse!",
+        "raw_text": "上星期我去咗香港 disneyland我哋玩得好开心 especially when we saw mickey mouse",
+        "text": "上星期我去咗香港disneyland，我哋玩得好开心，especially when we saw mickey mouse。",
+        "english": {
+          "reference": [
+            "disneyland",
+            "especially",
+            "when",
+            "we",
+            "saw",
+            "mickey",
+            "mouse"
+          ],
+          "hypothesis": [
+            "disneyland",
+            "especially",
+            "when",
+            "we",
+            "saw",
+            "mickey",
+            "mouse"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_2705_0",
+        "reference": "上星期我搭咗地鐵去香港島, the ride was very smooth and efficient.",
+        "raw_text": "上星期我搭咗地铁去香港岛 the ride was very smooth and efficient",
+        "text": "上星期我搭咗地铁去香港岛。the ride was very smooth and efficient。",
+        "english": {
+          "reference": [
+            "the",
+            "ride",
+            "was",
+            "very",
+            "smooth",
+            "and",
+            "efficient"
+          ],
+          "hypothesis": [
+            "the",
+            "ride",
+            "was",
+            "very",
+            "smooth",
+            "and",
+            "efficient"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "sl_1783_0",
+        "reference": "情人節快到喇,我覺得應該要買啲朱古力俾佢, what do you think?",
+        "raw_text": "情人节快到啦我觉得应该要买啲朱古力俾佢 what do you think",
+        "text": "情人节快到啦，我觉得应该要买啲朱古力俾佢。what do you think？",
+        "english": {
+          "reference": [
+            "what",
+            "do",
+            "you",
+            "think"
+          ],
+          "hypothesis": [
+            "what",
+            "do",
+            "you",
+            "think"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_1127_0",
+        "reference": "今日個天咁藍,應該係個perfect day去hiking!",
+        "raw_text": "今日个天咁蓝应该有个 perfect day去嗨皮",
+        "text": "今日个天咁蓝应该有个perfect day，去嗨皮。",
+        "english": {
+          "reference": [
+            "perfect",
+            "day",
+            "hiking"
+          ],
+          "hypothesis": [
+            "perfect",
+            "day"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "sl_1924_1",
+        "reference": "有啲人話贏咗會去環遊世界，I think that's a great idea!",
+        "raw_text": "有啲人话赢咗会去环游世界 i think that's a great idea",
+        "text": "有啲人话赢咗会去环游世界。i think that's a great idea。",
+        "english": {
+          "reference": [
+            "think",
+            "that's",
+            "great",
+            "idea"
+          ],
+          "hypothesis": [
+            "think",
+            "that's",
+            "great",
+            "idea"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "sl_2039_0",
+        "reference": "今日喺office好忙，但係我見到佢哋都好enjoy their work.",
+        "raw_text": "今日喺 office好忙但系我见到佢哋都好 enjoy their work",
+        "text": "今日喺office好忙，但系我见到佢哋都好enjoy their work。",
+        "english": {
+          "reference": [
+            "office",
+            "enjoy",
+            "their",
+            "work"
+          ],
+          "hypothesis": [
+            "office",
+            "enjoy",
+            "their",
+            "work"
+          ],
+          "hits": 4
+        }
+      }
+    ],
+    "metric": "English term F1",
+    "metrics": {
+      "english_precision": 0.8966292134831461,
+      "english_recall": 0.8730853391684902,
+      "english_f1": 0.88470066518847,
+      "mixed_cer": 0.06640625
+    },
+    "hits": 399,
+    "terms": 457,
+    "hyp_terms": 445,
+    "rate": 0.8730853391684902
+  }
+]

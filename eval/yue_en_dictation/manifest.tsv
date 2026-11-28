@@ -1,0 +1,101 @@
+id	topic	cs_ratio	duration_s	audio	transcript
+sl_1986_1	Anniversary	50%	4.37	audio/sl_1986_1.wav	我哋去咗一間restaurant，個環境好靚，the food was amazing!
+sl_772_6	Art	50%	7.34	audio/sl_772_6.wav	睇一幅畫, 你可以感受到嗰陣時嘅氣氛, as if you're living that moment.
+sl_1602_3	Artificial Intelligence	30%	7.23	audio/sl_1602_3.wav	雖然AI帶嚟咗好多方便，但我都有少少擔心，especially about privacy and job displacement.
+sl_1608_1	Baking	70%	5.78	audio/sl_1608_1.wav	佢想試下bake一個士多啤梨flavored蛋糕，睇下味道會點。
+sl_2575_1	Birthday	30%	4.44	audio/sl_2575_1.wav	佢今年66歲, and she’s still so energetic.
+sl_1061_0	Blues Music	30%	6.02	audio/sl_1061_0.wav	今次個music festival有Blues section，大家都話好正！
+sl_1557_5	Chinese New Year	30%	4.71	audio/sl_1557_5.wav	我最鍾意佢哋嗰啲燈籠, they light up the whole street!
+sl_1042_2	Chiristmas	70%	6.4	audio/sl_1042_2.wav	當然啦，嗰度有好多好玩嘅嘢，like mulled wine and gingerbread!
+sl_1152_2	Cooking	50%	3.03	audio/sl_1152_2.wav	我諗下次可以加埋啲mushrooms試下。
+sl_1118_0	Country Music	30%	4.95	audio/sl_1118_0.wav	我哋成班friend去過一次country music concert, it was amazing!
+sl_1610_3	DIY	70%	4.8	audio/sl_1610_3.wav	呢個project有啲複雜，不過I think I can manage it.
+sl_1853_1	Dating	70%	4.39	audio/sl_1853_1.wav	我哋第一次約會嗰日係好chill, 佢好enjoy食嗰餐飯。
+sl_1096_2	Easter	70%	5.82	audio/sl_1096_2.wav	晚餐後，佢地一齊睇咗部 movie，個個都笑到肚痛。What a fun day!
+sl_1767_2	Economy	50%	4.33	audio/sl_1767_2.wav	政府啱啱宣佈咗新政策, what are your thoughts on that?
+sl_2583_2	Environment	30%	6.51	audio/sl_2583_2.wav	最近我睇咗一篇文章講global warming，真係令人擔心。 We need to act now!
+sl_1023_5	Exam	50%	4.65	audio/sl_1023_5.wav	我下次會試下用呢啲method，希望有幫助。
+sl_759_0	Family	50%	4.57	audio/sl_759_0.wav	我哋全家計劃下星期去picnic，希望天氣好好。
+sl_1926_0	Fashion	50%	5.14	audio/sl_1926_0.wav	時尚係一個表達自己方式, and it reflects individual personality.
+sl_1550_0	Food	30%	4.57	audio/sl_1550_0.wav	今晚煮咗好好味嘅牛扒 dinner, you would have loved it!
+sl_9_0	Friends	50%	4.82	audio/sl_9_0.wav	嗰日我哋去咗mall，佢哋真係買咗好多嘢, you know what I mean?
+sl_2566_0	Future Technology	30%	7.25	audio/sl_2566_0.wav	啲科技真係日日都有新嘢發展。It's fascinating to see how AI is changing everything.
+sl_2601_0	Gaming	30%	3.56	audio/sl_2601_0.wav	我今晚玩咗個新game,真係好好玩！
+sl_1946_2	Gardening	70%	3.67	audio/sl_1946_2.wav	呢個weekend，我計劃整個cozy corner喺我嘅花園。
+sl_1793_0	Halloween	30%	6.19	audio/sl_1793_0.wav	昨日萬聖節嗰陣，成街都係啲小朋友扮鬼扮馬，好開心呀, isn't it?
+sl_2612_1	Health	70%	6.53	audio/sl_2612_1.wav	我已經安排咗一個appointment，想check下健康狀況。 It's always good to be sure, right?
+sl_1965_0	Hip Hop Music	70%	2.94	audio/sl_1965_0.wav	聽日有冇興趣去睇Hip Hop concert？
+sl_1766_0	Homework	30%	3.71	audio/sl_1766_0.wav	今日佢交咗個assignment,好似marking會好嚴。
+sl_1960_2	Jazz Music	50%	4.61	audio/sl_1960_2.wav	聽Jazz music嗰陣，我覺得好relaxed，好似所有壓力都冇咗。
+sl_1972_1	Movies	50%	4.57	audio/sl_1972_1.wav	聽講主角演技好犀利, and the storyline is really engaging.
+sl_1576_1	New Year	70%	4.95	audio/sl_1576_1.wav	佢講嗰個resolution真係好有趣，make sure you stick to it!
+sl_1957_0	News	70%	5.21	audio/sl_1957_0.wav	今日有個新聞講關於environmental conservation，真係好important喎！
+sl_1085_2	Photography	50%	5.78	audio/sl_1085_2.wav	影人像相嗰陣，我鍾意用natural light，因為人工燈sometimes太harsh。
+sl_1811_2	Politics	50%	5.53	audio/sl_1811_2.wav	今次選舉真係好緊張，大家都好關注。I wonder who will win in the end.
+sl_2500_0	Pop Music	50%	6.72	audio/sl_2500_0.wav	最近啲pop song真係好catchy，尤其是嗰首叫 "Butter"，真係keep playing in my head。
+sl_1016_4	Rap Music	70%	6.51	audio/sl_1016_4.wav	我覺得佢用嘅flow同埋rhythm真係好特別，唔係咁容易find到。
+sl_2731_1	Rock Music	30%	3.71	audio/sl_2731_1.wav	音樂個beat好powerful，令我覺得好exciting。
+sl_1851_3	Science	50%	5.91	audio/sl_1851_3.wav	我哋學校啲學生最近參加咗一個科學比賽，and they won first place!
+sl_1605_2	Shopping	30%	4.1	audio/sl_1605_2.wav	我見到件衫好靚，but 我唔sure if it suits me.
+sl_1943_3	Skill Learning	50%	3.22	audio/sl_1943_3.wav	要記住，多practice就會make perfect。
+sl_1535_3	Smartphone	50%	4.65	audio/sl_1535_3.wav	新機出咗好多新顏色, my favorite is the dark blue one.
+sl_1813_0	Social Media	50%	4.31	audio/sl_1813_0.wav	唔知點解，我覺得而家啲人都好中意用Instagram，right?
+sl_2571_2	Sports	30%	3.43	audio/sl_2571_2.wav	我覺得下一場game我地應該會贏喇!
+sl_1060_1	TV Shows	50%	5.53	audio/sl_1060_1.wav	嗰陣時我最鍾意嘅角色係Uncle Jesse，佢真係好cool!
+sl_1224_1	Technology	30%	4.18	audio/sl_1224_1.wav	哎喲,我嘅手機又hang住咗, maybe it's time for an upgrade, don't you think?
+sl_420_2	Tourism	30%	6.4	audio/sl_420_2.wav	去完南丫島行山之後, I had the best seafood ever!
+sl_2567_4	Transportation	30%	4.69	audio/sl_2567_4.wav	你識唔識邊度可以租到單車，so we can explore the city?
+sl_1033_2	Valentine's Day	70%	3.31	audio/sl_1033_2.wav	係囉，今晚一定要order，唔可以miss。
+sl_1035_0	Weather	70%	4.48	audio/sl_1035_0.wav	今日個天咁藍,應該係個perfect day去hiking!
+sl_2045_3	Wining the Lottery	70%	6.14	audio/sl_2045_3.wav	唔知佢會唔會請我哋食飯呢，哈哈，it’s a good chance!
+sl_1057_2	Workplace	70%	4.25	audio/sl_1057_2.wav	我老闆話, '呢個project一定要on time完成, you know?'
+sl_2028_4	Anniversary	30%	6.23	audio/sl_2028_4.wav	週年紀念嗰日佢同我講, 'I love you more every year!'
+sl_1188_0	Art	50%	5.31	audio/sl_1188_0.wav	藝術真係好神奇, it transforms the ordinary into something extraordinary.
+sl_1995_4	Artificial Intelligence	70%	8.3	audio/sl_1995_4.wav	教育方面，AI會幫助老師制定更有效嘅教學方法。And students will benefit from personalized learning experiences.
+sl_1241_3	Baking	70%	4.65	audio/sl_1241_3.wav	佢成日話要整最靚嘅cupcakes, but 其實佢仲要practice多啲。
+sl_1011_0	Birthday	70%	5.78	audio/sl_1011_0.wav	生日會真係好開心呀, everyone was there to celebrate!
+sl_1987_1	Blues Music	50%	4.8	audio/sl_1987_1.wav	聽藍調音樂會令人放鬆，好似一種情感療法, right?
+sl_1808_4	Chinese New Year	50%	4.18	audio/sl_1808_4.wav	我最鍾意嗰part就係睇煙花，因為佢哋真係好beautiful。
+sl_2525_4	Chiristmas	30%	5.16	audio/sl_2525_4.wav	最緊要嘅係 enjoy 唔同朋友同屋企人慶祝呢個節日！
+sl_1799_1	Cooking	30%	4.25	audio/sl_1799_1.wav	佢總係話，"呢個recipe好易,你試吓啦。"
+sl_2510_4	Country Music	70%	6.1	audio/sl_2510_4.wav	我覺得我應該再試下聽多啲呢種音樂，maybe I'll find a new favorite.
+sl_1222_1	DIY	50%	3.9	audio/sl_1222_1.wav	最初佢唔係太sure，但慢慢佢gain咗好多confidence。
+sl_1566_0	Dating	70%	5.76	audio/sl_1566_0.wav	佢約咗個女仔出去食飯，之後仲話, "Let's watch a movie together."
+sl_1053_0	Easter	70%	8.21	audio/sl_1053_0.wav	有冇諗住Easter去邊度玩？我覺得去海洋公園會幾好喎，因為嗰度有好多活動。
+sl_1111_3	Economy	50%	6.1	audio/sl_1111_3.wav	好多公司都開始embrace新科技,因為it's crucial for survival.
+sl_2679_0	Environment	30%	4.05	audio/sl_2679_0.wav	今天天氣咁好，去海灘晒太陽真係perfect timing!
+sl_1777_1	Exam	70%	4.29	audio/sl_1777_1.wav	經過咁多努力, I finally got the result I wanted!
+sl_1503_4	Family	50%	5.03	audio/sl_1503_4.wav	我哋成日會喺周末睇電影, it's our family tradition.
+sl_1054_0	Fashion	50%	6.34	audio/sl_1054_0.wav	今季嘅潮流真係好interesting, especially when it comes to vintage styles.
+sl_1506_2	Food	30%	5.61	audio/sl_1506_2.wav	星期五我哋可以去嗰間new restaurant，聽講嗰度嘅pizza好正。
+sl_777_1	Friends	30%	4.86	audio/sl_777_1.wav	有呀，我哋book咗一間好靚嘅restaurant，you should join us!
+sl_771_1	Future Technology	70%	9.3	audio/sl_771_1.wav	其實我真係好期待 autonomous vehicles，因為可以令到交通更加安全。 But I wonder how soon that will become a reality?
+sl_1249_0	Gaming	50%	4.42	audio/sl_1249_0.wav	Gaming真係好開心，呢個新game嘅graphics真係amazing!
+sl_1998_3	Gardening	50%	5.14	audio/sl_1998_3.wav	Next weekend我會開始起個小棚，因為我想試下種啲exotic fruits。
+sl_1089_0	Halloween	30%	6.53	audio/sl_1089_0.wav	今年萬聖節我打算扮一個witch，because it's always fun to dress up!
+sl_1546_1	Health	50%	4.63	audio/sl_1546_1.wav	一定要食早餐，因為早餐係最重要嘅meal of the day!
+sl_1867_1	Hip Hop Music	70%	5.25	audio/sl_1867_1.wav	我同朋友一齊聽歌，hip hop真係好catchy，大家都跳埋一齊。
+sl_1589_4	Homework	70%	4.61	audio/sl_1589_4.wav	你有冇試過熬夜寫功課？It's tough, but sometimes necessary!
+sl_2535_0	Jazz Music	30%	4.59	audio/sl_2535_0.wav	今晚我哋去聽Jazz concert, it’s going to be amazing!
+sl_1868_0	Movies	70%	4.22	audio/sl_1868_0.wav	今晚有新開嘅movie上映，我哋一齊去睇好唔好？
+sl_763_4	New Year	70%	5.4	audio/sl_763_4.wav	我阿媽話今年要努力, so I've set some goals for myself.
+sl_1957_2	News	70%	5.97	audio/sl_1957_2.wav	佢哋介紹咗好多methods去保護環境，值得學習。你覺得呢啲tips有冇用？
+sl_1085_3	Photography	50%	5.74	audio/sl_1085_3.wav	我都有試過用film camera，雖然複雜，但出嚟嘅效果好有character。
+sl_1811_4	Politics	50%	6.89	audio/sl_1811_4.wav	嗰位議員喺會上講咗好多關於環保嘅嘢。It seems like they're really passionate about it.
+sl_1814_0	Pop Music	70%	7.59	audio/sl_1814_0.wav	最近有啲新release嘅pop songs，我覺得好catchy，特別係嗰啲chorus part，真係keep looping in my mind。
+sl_1016_2	Rap Music	70%	4.2	audio/sl_1016_2.wav	昨晚去睇佢個concert, it was amazing!
+sl_2576_1	Rock Music	70%	4.89	audio/sl_2576_1.wav	聽日我諗住買啲rock music albums,你有冇interest join我？
+sl_1904_2	Science	70%	4.82	audio/sl_1904_2.wav	基因工程技術會bring huge breakthroughs in medical science。
+sl_1920_4	Shopping	70%	4.03	audio/sl_1920_4.wav	呢個價格好抵，but我無帶足夠嘅cash。
+sl_2019_4	Skill Learning	70%	10.45	audio/sl_2019_4.wav	上次我試過學畫畫，起初好難，but after a while, 我開始enjoy每一個創作嘅過程。
+sl_1243_2	Smartphone	70%	5.12	audio/sl_1243_2.wav	我覺得呢部手機嘅camera質素好好，影出嚟啲相真係靚，you know?
+sl_1041_2	Social Media	50%	6.46	audio/sl_1041_2.wav	其實social media可以好有趣，但有時都會令人覺得壓力大, you know?
+sl_1007_2	Sports	30%	5.57	audio/sl_1007_2.wav	我同我朋友都買咗啲snacks，睇比賽嗰陣真係好好氣氛！
+sl_3_0	TV Shows	30%	6.61	audio/sl_3_0.wav	最近嗰套電視劇真係好吸引，the storyline keeps you hooked from the first episode!
+sl_1606_0	Technology	50%	5.44	audio/sl_1606_0.wav	未來嘅科技發展真係好快, I wonder what new inventions will come next year?
+sl_159_0	Tourism	70%	7.0	audio/sl_159_0.wav	上星期我去咗香港 Disneyland，我哋玩得好開心，especially when we saw Mickey Mouse!
+sl_2705_0	Transportation	50%	5.25	audio/sl_2705_0.wav	上星期我搭咗地鐵去香港島, the ride was very smooth and efficient.
+sl_1783_0	Valentine's Day	30%	5.08	audio/sl_1783_0.wav	情人節快到喇,我覺得應該要買啲朱古力俾佢, what do you think?
+sl_1127_0	Weather	30%	3.54	audio/sl_1127_0.wav	今日個天咁藍,應該係個perfect day去hiking!
+sl_1924_1	Wining the Lottery	30%	4.91	audio/sl_1924_1.wav	有啲人話贏咗會去環遊世界，I think that's a great idea!
+sl_2039_0	Workplace	70%	6.76	audio/sl_2039_0.wav	今日喺office好忙，但係我見到佢哋都好enjoy their work.

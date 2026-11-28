@@ -1,0 +1,1959 @@
+[
+  {
+    "id": "sl_1986_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1986_1.m4a",
+    "topic": "Anniversary",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 4.37,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1986_1.wav",
+    "transcript": "我哋去咗一間restaurant，個環境好靚，the food was amazing!",
+    "english_terms": [
+      "restaurant",
+      "the",
+      "food",
+      "was",
+      "amazing"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_772_6",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/772_6.m4a",
+    "topic": "Art",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 7.34,
+    "sample_rate": 16000,
+    "audio": "audio/sl_772_6.wav",
+    "transcript": "睇一幅畫, 你可以感受到嗰陣時嘅氣氛, as if you're living that moment.",
+    "english_terms": [
+      "as",
+      "if",
+      "you're",
+      "living",
+      "that",
+      "moment"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1602_3",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1602_3.m4a",
+    "topic": "Artificial Intelligence",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 7.23,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1602_3.wav",
+    "transcript": "雖然AI帶嚟咗好多方便，但我都有少少擔心，especially about privacy and job displacement.",
+    "english_terms": [
+      "AI",
+      "especially",
+      "about",
+      "privacy",
+      "and",
+      "job",
+      "displacement"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1608_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1608_1.m4a",
+    "topic": "Baking",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 5.78,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1608_1.wav",
+    "transcript": "佢想試下bake一個士多啤梨flavored蛋糕，睇下味道會點。",
+    "english_terms": [
+      "bake",
+      "flavored"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2575_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2575_1.m4a",
+    "topic": "Birthday",
+    "cs_ratio": "30%",
+    "gender": "Female",
+    "duration_s": 4.44,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2575_1.wav",
+    "transcript": "佢今年66歲, and she’s still so energetic.",
+    "english_terms": [
+      "and",
+      "she",
+      "still",
+      "so",
+      "energetic"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1061_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1061_0.m4a",
+    "topic": "Blues Music",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 6.02,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1061_0.wav",
+    "transcript": "今次個music festival有Blues section，大家都話好正！",
+    "english_terms": [
+      "music",
+      "festival",
+      "Blues",
+      "section"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1557_5",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1557_5.m4a",
+    "topic": "Chinese New Year",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 4.71,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1557_5.wav",
+    "transcript": "我最鍾意佢哋嗰啲燈籠, they light up the whole street!",
+    "english_terms": [
+      "they",
+      "light",
+      "up",
+      "the",
+      "whole",
+      "street"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1042_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1042_2.m4a",
+    "topic": "Chiristmas",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 6.4,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1042_2.wav",
+    "transcript": "當然啦，嗰度有好多好玩嘅嘢，like mulled wine and gingerbread!",
+    "english_terms": [
+      "like",
+      "mulled",
+      "wine",
+      "and",
+      "gingerbread"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1152_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1152_2.m4a",
+    "topic": "Cooking",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 3.03,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1152_2.wav",
+    "transcript": "我諗下次可以加埋啲mushrooms試下。",
+    "english_terms": [
+      "mushrooms"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1118_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1118_0.m4a",
+    "topic": "Country Music",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 4.95,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1118_0.wav",
+    "transcript": "我哋成班friend去過一次country music concert, it was amazing!",
+    "english_terms": [
+      "friend",
+      "country",
+      "music",
+      "concert",
+      "it",
+      "was",
+      "amazing"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1610_3",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1610_3.m4a",
+    "topic": "DIY",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 4.8,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1610_3.wav",
+    "transcript": "呢個project有啲複雜，不過I think I can manage it.",
+    "english_terms": [
+      "project",
+      "think",
+      "can",
+      "manage",
+      "it"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1853_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1853_1.m4a",
+    "topic": "Dating",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 4.39,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1853_1.wav",
+    "transcript": "我哋第一次約會嗰日係好chill, 佢好enjoy食嗰餐飯。",
+    "english_terms": [
+      "chill",
+      "enjoy"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1096_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1096_2.m4a",
+    "topic": "Easter",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 5.82,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1096_2.wav",
+    "transcript": "晚餐後，佢地一齊睇咗部 movie，個個都笑到肚痛。What a fun day!",
+    "english_terms": [
+      "movie",
+      "What",
+      "fun",
+      "day"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1767_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1767_2.m4a",
+    "topic": "Economy",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 4.33,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1767_2.wav",
+    "transcript": "政府啱啱宣佈咗新政策, what are your thoughts on that?",
+    "english_terms": [
+      "what",
+      "are",
+      "your",
+      "thoughts",
+      "on",
+      "that"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2583_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2583_2.m4a",
+    "topic": "Environment",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 6.51,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2583_2.wav",
+    "transcript": "最近我睇咗一篇文章講global warming，真係令人擔心。 We need to act now!",
+    "english_terms": [
+      "global",
+      "warming",
+      "We",
+      "need",
+      "to",
+      "act",
+      "now"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1023_5",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1023_5.m4a",
+    "topic": "Exam",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 4.65,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1023_5.wav",
+    "transcript": "我下次會試下用呢啲method，希望有幫助。",
+    "english_terms": [
+      "method"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_759_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/759_0.m4a",
+    "topic": "Family",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 4.57,
+    "sample_rate": 16000,
+    "audio": "audio/sl_759_0.wav",
+    "transcript": "我哋全家計劃下星期去picnic，希望天氣好好。",
+    "english_terms": [
+      "picnic"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1926_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1926_0.m4a",
+    "topic": "Fashion",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 5.14,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1926_0.wav",
+    "transcript": "時尚係一個表達自己方式, and it reflects individual personality.",
+    "english_terms": [
+      "and",
+      "it",
+      "reflects",
+      "individual",
+      "personality"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1550_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1550_0.m4a",
+    "topic": "Food",
+    "cs_ratio": "30%",
+    "gender": "Female",
+    "duration_s": 4.57,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1550_0.wav",
+    "transcript": "今晚煮咗好好味嘅牛扒 dinner, you would have loved it!",
+    "english_terms": [
+      "dinner",
+      "you",
+      "would",
+      "have",
+      "loved",
+      "it"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_9_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/9_0.m4a",
+    "topic": "Friends",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 4.82,
+    "sample_rate": 16000,
+    "audio": "audio/sl_9_0.wav",
+    "transcript": "嗰日我哋去咗mall，佢哋真係買咗好多嘢, you know what I mean?",
+    "english_terms": [
+      "mall",
+      "you",
+      "know",
+      "what",
+      "mean"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2566_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2566_0.m4a",
+    "topic": "Future Technology",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 7.25,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2566_0.wav",
+    "transcript": "啲科技真係日日都有新嘢發展。It's fascinating to see how AI is changing everything.",
+    "english_terms": [
+      "It's",
+      "fascinating",
+      "to",
+      "see",
+      "how",
+      "AI",
+      "is",
+      "changing",
+      "everything"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2601_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2601_0.m4a",
+    "topic": "Gaming",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 3.56,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2601_0.wav",
+    "transcript": "我今晚玩咗個新game,真係好好玩！",
+    "english_terms": [
+      "game"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1946_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1946_2.m4a",
+    "topic": "Gardening",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 3.67,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1946_2.wav",
+    "transcript": "呢個weekend，我計劃整個cozy corner喺我嘅花園。",
+    "english_terms": [
+      "weekend",
+      "cozy",
+      "corner"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1793_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1793_0.m4a",
+    "topic": "Halloween",
+    "cs_ratio": "30%",
+    "gender": "Female",
+    "duration_s": 6.19,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1793_0.wav",
+    "transcript": "昨日萬聖節嗰陣，成街都係啲小朋友扮鬼扮馬，好開心呀, isn't it?",
+    "english_terms": [
+      "isn't",
+      "it"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2612_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2612_1.m4a",
+    "topic": "Health",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 6.53,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2612_1.wav",
+    "transcript": "我已經安排咗一個appointment，想check下健康狀況。 It's always good to be sure, right?",
+    "english_terms": [
+      "appointment",
+      "check",
+      "It's",
+      "always",
+      "good",
+      "to",
+      "be",
+      "sure",
+      "right"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1965_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1965_0.m4a",
+    "topic": "Hip Hop Music",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 2.94,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1965_0.wav",
+    "transcript": "聽日有冇興趣去睇Hip Hop concert？",
+    "english_terms": [
+      "Hip",
+      "Hop",
+      "concert"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1766_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1766_0.m4a",
+    "topic": "Homework",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 3.71,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1766_0.wav",
+    "transcript": "今日佢交咗個assignment,好似marking會好嚴。",
+    "english_terms": [
+      "assignment",
+      "marking"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1960_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1960_2.m4a",
+    "topic": "Jazz Music",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 4.61,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1960_2.wav",
+    "transcript": "聽Jazz music嗰陣，我覺得好relaxed，好似所有壓力都冇咗。",
+    "english_terms": [
+      "Jazz",
+      "music",
+      "relaxed"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1972_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1972_1.m4a",
+    "topic": "Movies",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 4.57,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1972_1.wav",
+    "transcript": "聽講主角演技好犀利, and the storyline is really engaging.",
+    "english_terms": [
+      "and",
+      "the",
+      "storyline",
+      "is",
+      "really",
+      "engaging"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1576_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1576_1.m4a",
+    "topic": "New Year",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 4.95,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1576_1.wav",
+    "transcript": "佢講嗰個resolution真係好有趣，make sure you stick to it!",
+    "english_terms": [
+      "resolution",
+      "make",
+      "sure",
+      "you",
+      "stick",
+      "to",
+      "it"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1957_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1957_0.m4a",
+    "topic": "News",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 5.21,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1957_0.wav",
+    "transcript": "今日有個新聞講關於environmental conservation，真係好important喎！",
+    "english_terms": [
+      "environmental",
+      "conservation",
+      "important"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1085_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1085_2.m4a",
+    "topic": "Photography",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 5.78,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1085_2.wav",
+    "transcript": "影人像相嗰陣，我鍾意用natural light，因為人工燈sometimes太harsh。",
+    "english_terms": [
+      "natural",
+      "light",
+      "sometimes",
+      "harsh"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1811_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1811_2.m4a",
+    "topic": "Politics",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 5.53,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1811_2.wav",
+    "transcript": "今次選舉真係好緊張，大家都好關注。I wonder who will win in the end.",
+    "english_terms": [
+      "wonder",
+      "who",
+      "will",
+      "win",
+      "in",
+      "the",
+      "end"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2500_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2500_0.m4a",
+    "topic": "Pop Music",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 6.72,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2500_0.wav",
+    "transcript": "最近啲pop song真係好catchy，尤其是嗰首叫 \"Butter\"，真係keep playing in my head。",
+    "english_terms": [
+      "pop",
+      "song",
+      "catchy",
+      "Butter",
+      "keep",
+      "playing",
+      "in",
+      "my",
+      "head"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1016_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1016_4.m4a",
+    "topic": "Rap Music",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 6.51,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1016_4.wav",
+    "transcript": "我覺得佢用嘅flow同埋rhythm真係好特別，唔係咁容易find到。",
+    "english_terms": [
+      "flow",
+      "rhythm",
+      "find"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2731_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2731_1.m4a",
+    "topic": "Rock Music",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 3.71,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2731_1.wav",
+    "transcript": "音樂個beat好powerful，令我覺得好exciting。",
+    "english_terms": [
+      "beat",
+      "powerful",
+      "exciting"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1851_3",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1851_3.m4a",
+    "topic": "Science",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 5.91,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1851_3.wav",
+    "transcript": "我哋學校啲學生最近參加咗一個科學比賽，and they won first place!",
+    "english_terms": [
+      "and",
+      "they",
+      "won",
+      "first",
+      "place"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1605_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1605_2.m4a",
+    "topic": "Shopping",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 4.1,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1605_2.wav",
+    "transcript": "我見到件衫好靚，but 我唔sure if it suits me.",
+    "english_terms": [
+      "but",
+      "sure",
+      "if",
+      "it",
+      "suits",
+      "me"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1943_3",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1943_3.m4a",
+    "topic": "Skill Learning",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 3.22,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1943_3.wav",
+    "transcript": "要記住，多practice就會make perfect。",
+    "english_terms": [
+      "practice",
+      "make",
+      "perfect"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1535_3",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1535_3.m4a",
+    "topic": "Smartphone",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 4.65,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1535_3.wav",
+    "transcript": "新機出咗好多新顏色, my favorite is the dark blue one.",
+    "english_terms": [
+      "my",
+      "favorite",
+      "is",
+      "the",
+      "dark",
+      "blue",
+      "one"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1813_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1813_0.m4a",
+    "topic": "Social Media",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 4.31,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1813_0.wav",
+    "transcript": "唔知點解，我覺得而家啲人都好中意用Instagram，right?",
+    "english_terms": [
+      "Instagram",
+      "right"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2571_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2571_2.m4a",
+    "topic": "Sports",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 3.43,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2571_2.wav",
+    "transcript": "我覺得下一場game我地應該會贏喇!",
+    "english_terms": [
+      "game"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1060_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1060_1.m4a",
+    "topic": "TV Shows",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 5.53,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1060_1.wav",
+    "transcript": "嗰陣時我最鍾意嘅角色係Uncle Jesse，佢真係好cool!",
+    "english_terms": [
+      "Uncle",
+      "Jesse",
+      "cool"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1224_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1224_1.m4a",
+    "topic": "Technology",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 4.18,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1224_1.wav",
+    "transcript": "哎喲,我嘅手機又hang住咗, maybe it's time for an upgrade, don't you think?",
+    "english_terms": [
+      "hang",
+      "maybe",
+      "it's",
+      "time",
+      "for",
+      "an",
+      "upgrade",
+      "don't",
+      "you",
+      "think"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_420_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/420_2.m4a",
+    "topic": "Tourism",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 6.4,
+    "sample_rate": 16000,
+    "audio": "audio/sl_420_2.wav",
+    "transcript": "去完南丫島行山之後, I had the best seafood ever!",
+    "english_terms": [
+      "had",
+      "the",
+      "best",
+      "seafood",
+      "ever"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2567_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2567_4.m4a",
+    "topic": "Transportation",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 4.69,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2567_4.wav",
+    "transcript": "你識唔識邊度可以租到單車，so we can explore the city?",
+    "english_terms": [
+      "so",
+      "we",
+      "can",
+      "explore",
+      "the",
+      "city"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1033_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1033_2.m4a",
+    "topic": "Valentine's Day",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 3.31,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1033_2.wav",
+    "transcript": "係囉，今晚一定要order，唔可以miss。",
+    "english_terms": [
+      "order",
+      "miss"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1035_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1035_0.m4a",
+    "topic": "Weather",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 4.48,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1035_0.wav",
+    "transcript": "今日個天咁藍,應該係個perfect day去hiking!",
+    "english_terms": [
+      "perfect",
+      "day",
+      "hiking"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2045_3",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2045_3.m4a",
+    "topic": "Wining the Lottery",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 6.14,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2045_3.wav",
+    "transcript": "唔知佢會唔會請我哋食飯呢，哈哈，it’s a good chance!",
+    "english_terms": [
+      "it",
+      "good",
+      "chance"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1057_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1057_2.m4a",
+    "topic": "Workplace",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 4.25,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1057_2.wav",
+    "transcript": "我老闆話, '呢個project一定要on time完成, you know?'",
+    "english_terms": [
+      "project",
+      "on",
+      "time",
+      "you",
+      "know"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2028_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2028_4.m4a",
+    "topic": "Anniversary",
+    "cs_ratio": "30%",
+    "gender": "Female",
+    "duration_s": 6.23,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2028_4.wav",
+    "transcript": "週年紀念嗰日佢同我講, 'I love you more every year!'",
+    "english_terms": [
+      "love",
+      "you",
+      "more",
+      "every",
+      "year"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1188_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1188_0.m4a",
+    "topic": "Art",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 5.31,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1188_0.wav",
+    "transcript": "藝術真係好神奇, it transforms the ordinary into something extraordinary.",
+    "english_terms": [
+      "it",
+      "transforms",
+      "the",
+      "ordinary",
+      "into",
+      "something",
+      "extraordinary"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1995_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1995_4.m4a",
+    "topic": "Artificial Intelligence",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 8.3,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1995_4.wav",
+    "transcript": "教育方面，AI會幫助老師制定更有效嘅教學方法。And students will benefit from personalized learning experiences.",
+    "english_terms": [
+      "AI",
+      "And",
+      "students",
+      "will",
+      "benefit",
+      "from",
+      "personalized",
+      "learning",
+      "experiences"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1241_3",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1241_3.m4a",
+    "topic": "Baking",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 4.65,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1241_3.wav",
+    "transcript": "佢成日話要整最靚嘅cupcakes, but 其實佢仲要practice多啲。",
+    "english_terms": [
+      "cupcakes",
+      "but",
+      "practice"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1011_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1011_0.m4a",
+    "topic": "Birthday",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 5.78,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1011_0.wav",
+    "transcript": "生日會真係好開心呀, everyone was there to celebrate!",
+    "english_terms": [
+      "everyone",
+      "was",
+      "there",
+      "to",
+      "celebrate"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1987_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1987_1.m4a",
+    "topic": "Blues Music",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 4.8,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1987_1.wav",
+    "transcript": "聽藍調音樂會令人放鬆，好似一種情感療法, right?",
+    "english_terms": [
+      "right"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1808_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1808_4.m4a",
+    "topic": "Chinese New Year",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 4.18,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1808_4.wav",
+    "transcript": "我最鍾意嗰part就係睇煙花，因為佢哋真係好beautiful。",
+    "english_terms": [
+      "part",
+      "beautiful"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2525_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2525_4.m4a",
+    "topic": "Chiristmas",
+    "cs_ratio": "30%",
+    "gender": "Female",
+    "duration_s": 5.16,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2525_4.wav",
+    "transcript": "最緊要嘅係 enjoy 唔同朋友同屋企人慶祝呢個節日！",
+    "english_terms": [
+      "enjoy"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1799_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1799_1.m4a",
+    "topic": "Cooking",
+    "cs_ratio": "30%",
+    "gender": "Female",
+    "duration_s": 4.25,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1799_1.wav",
+    "transcript": "佢總係話，\"呢個recipe好易,你試吓啦。\"",
+    "english_terms": [
+      "recipe"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2510_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2510_4.m4a",
+    "topic": "Country Music",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 6.1,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2510_4.wav",
+    "transcript": "我覺得我應該再試下聽多啲呢種音樂，maybe I'll find a new favorite.",
+    "english_terms": [
+      "maybe",
+      "I'll",
+      "find",
+      "new",
+      "favorite"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1222_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1222_1.m4a",
+    "topic": "DIY",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 3.9,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1222_1.wav",
+    "transcript": "最初佢唔係太sure，但慢慢佢gain咗好多confidence。",
+    "english_terms": [
+      "sure",
+      "gain",
+      "confidence"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1566_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1566_0.m4a",
+    "topic": "Dating",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 5.76,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1566_0.wav",
+    "transcript": "佢約咗個女仔出去食飯，之後仲話, \"Let's watch a movie together.\"",
+    "english_terms": [
+      "Let's",
+      "watch",
+      "movie",
+      "together"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1053_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1053_0.m4a",
+    "topic": "Easter",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 8.21,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1053_0.wav",
+    "transcript": "有冇諗住Easter去邊度玩？我覺得去海洋公園會幾好喎，因為嗰度有好多活動。",
+    "english_terms": [
+      "Easter"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1111_3",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1111_3.m4a",
+    "topic": "Economy",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 6.1,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1111_3.wav",
+    "transcript": "好多公司都開始embrace新科技,因為it's crucial for survival.",
+    "english_terms": [
+      "embrace",
+      "it's",
+      "crucial",
+      "for",
+      "survival"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2679_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2679_0.m4a",
+    "topic": "Environment",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 4.05,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2679_0.wav",
+    "transcript": "今天天氣咁好，去海灘晒太陽真係perfect timing!",
+    "english_terms": [
+      "perfect",
+      "timing"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1777_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1777_1.m4a",
+    "topic": "Exam",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 4.29,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1777_1.wav",
+    "transcript": "經過咁多努力, I finally got the result I wanted!",
+    "english_terms": [
+      "finally",
+      "got",
+      "the",
+      "result",
+      "wanted"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1503_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1503_4.m4a",
+    "topic": "Family",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 5.03,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1503_4.wav",
+    "transcript": "我哋成日會喺周末睇電影, it's our family tradition.",
+    "english_terms": [
+      "it's",
+      "our",
+      "family",
+      "tradition"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1054_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1054_0.m4a",
+    "topic": "Fashion",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 6.34,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1054_0.wav",
+    "transcript": "今季嘅潮流真係好interesting, especially when it comes to vintage styles.",
+    "english_terms": [
+      "interesting",
+      "especially",
+      "when",
+      "it",
+      "comes",
+      "to",
+      "vintage",
+      "styles"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1506_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1506_2.m4a",
+    "topic": "Food",
+    "cs_ratio": "30%",
+    "gender": "Female",
+    "duration_s": 5.61,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1506_2.wav",
+    "transcript": "星期五我哋可以去嗰間new restaurant，聽講嗰度嘅pizza好正。",
+    "english_terms": [
+      "new",
+      "restaurant",
+      "pizza"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_777_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/777_1.m4a",
+    "topic": "Friends",
+    "cs_ratio": "30%",
+    "gender": "Female",
+    "duration_s": 4.86,
+    "sample_rate": 16000,
+    "audio": "audio/sl_777_1.wav",
+    "transcript": "有呀，我哋book咗一間好靚嘅restaurant，you should join us!",
+    "english_terms": [
+      "book",
+      "restaurant",
+      "you",
+      "should",
+      "join",
+      "us"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_771_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/771_1.m4a",
+    "topic": "Future Technology",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 9.3,
+    "sample_rate": 16000,
+    "audio": "audio/sl_771_1.wav",
+    "transcript": "其實我真係好期待 autonomous vehicles，因為可以令到交通更加安全。 But I wonder how soon that will become a reality?",
+    "english_terms": [
+      "autonomous",
+      "vehicles",
+      "But",
+      "wonder",
+      "how",
+      "soon",
+      "that",
+      "will",
+      "become",
+      "reality"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1249_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1249_0.m4a",
+    "topic": "Gaming",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 4.42,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1249_0.wav",
+    "transcript": "Gaming真係好開心，呢個新game嘅graphics真係amazing!",
+    "english_terms": [
+      "Gaming",
+      "game",
+      "graphics",
+      "amazing"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1998_3",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1998_3.m4a",
+    "topic": "Gardening",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 5.14,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1998_3.wav",
+    "transcript": "Next weekend我會開始起個小棚，因為我想試下種啲exotic fruits。",
+    "english_terms": [
+      "Next",
+      "weekend",
+      "exotic",
+      "fruits"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1089_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1089_0.m4a",
+    "topic": "Halloween",
+    "cs_ratio": "30%",
+    "gender": "Female",
+    "duration_s": 6.53,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1089_0.wav",
+    "transcript": "今年萬聖節我打算扮一個witch，because it's always fun to dress up!",
+    "english_terms": [
+      "witch",
+      "because",
+      "it's",
+      "always",
+      "fun",
+      "to",
+      "dress",
+      "up"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1546_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1546_1.m4a",
+    "topic": "Health",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 4.63,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1546_1.wav",
+    "transcript": "一定要食早餐，因為早餐係最重要嘅meal of the day!",
+    "english_terms": [
+      "meal",
+      "of",
+      "the",
+      "day"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1867_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1867_1.m4a",
+    "topic": "Hip Hop Music",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 5.25,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1867_1.wav",
+    "transcript": "我同朋友一齊聽歌，hip hop真係好catchy，大家都跳埋一齊。",
+    "english_terms": [
+      "hip",
+      "hop",
+      "catchy"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1589_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1589_4.m4a",
+    "topic": "Homework",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 4.61,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1589_4.wav",
+    "transcript": "你有冇試過熬夜寫功課？It's tough, but sometimes necessary!",
+    "english_terms": [
+      "It's",
+      "tough",
+      "but",
+      "sometimes",
+      "necessary"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2535_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2535_0.m4a",
+    "topic": "Jazz Music",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 4.59,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2535_0.wav",
+    "transcript": "今晚我哋去聽Jazz concert, it’s going to be amazing!",
+    "english_terms": [
+      "Jazz",
+      "concert",
+      "it",
+      "going",
+      "to",
+      "be",
+      "amazing"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1868_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1868_0.m4a",
+    "topic": "Movies",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 4.22,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1868_0.wav",
+    "transcript": "今晚有新開嘅movie上映，我哋一齊去睇好唔好？",
+    "english_terms": [
+      "movie"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_763_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/763_4.m4a",
+    "topic": "New Year",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 5.4,
+    "sample_rate": 16000,
+    "audio": "audio/sl_763_4.wav",
+    "transcript": "我阿媽話今年要努力, so I've set some goals for myself.",
+    "english_terms": [
+      "so",
+      "I've",
+      "set",
+      "some",
+      "goals",
+      "for",
+      "myself"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1957_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1957_2.m4a",
+    "topic": "News",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 5.97,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1957_2.wav",
+    "transcript": "佢哋介紹咗好多methods去保護環境，值得學習。你覺得呢啲tips有冇用？",
+    "english_terms": [
+      "methods",
+      "tips"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1085_3",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1085_3.m4a",
+    "topic": "Photography",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 5.74,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1085_3.wav",
+    "transcript": "我都有試過用film camera，雖然複雜，但出嚟嘅效果好有character。",
+    "english_terms": [
+      "film",
+      "camera",
+      "character"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1811_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1811_4.m4a",
+    "topic": "Politics",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 6.89,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1811_4.wav",
+    "transcript": "嗰位議員喺會上講咗好多關於環保嘅嘢。It seems like they're really passionate about it.",
+    "english_terms": [
+      "It",
+      "seems",
+      "like",
+      "they're",
+      "really",
+      "passionate",
+      "about",
+      "it"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1814_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1814_0.m4a",
+    "topic": "Pop Music",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 7.59,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1814_0.wav",
+    "transcript": "最近有啲新release嘅pop songs，我覺得好catchy，特別係嗰啲chorus part，真係keep looping in my mind。",
+    "english_terms": [
+      "release",
+      "pop",
+      "songs",
+      "catchy",
+      "chorus",
+      "part",
+      "keep",
+      "looping",
+      "in",
+      "my",
+      "mind"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1016_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1016_2.m4a",
+    "topic": "Rap Music",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 4.2,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1016_2.wav",
+    "transcript": "昨晚去睇佢個concert, it was amazing!",
+    "english_terms": [
+      "concert",
+      "it",
+      "was",
+      "amazing"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2576_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2576_1.m4a",
+    "topic": "Rock Music",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 4.89,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2576_1.wav",
+    "transcript": "聽日我諗住買啲rock music albums,你有冇interest join我？",
+    "english_terms": [
+      "rock",
+      "music",
+      "albums",
+      "interest",
+      "join"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1904_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1904_2.m4a",
+    "topic": "Science",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 4.82,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1904_2.wav",
+    "transcript": "基因工程技術會bring huge breakthroughs in medical science。",
+    "english_terms": [
+      "bring",
+      "huge",
+      "breakthroughs",
+      "in",
+      "medical",
+      "science"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1920_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1920_4.m4a",
+    "topic": "Shopping",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 4.03,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1920_4.wav",
+    "transcript": "呢個價格好抵，but我無帶足夠嘅cash。",
+    "english_terms": [
+      "but",
+      "cash"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2019_4",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2019_4.m4a",
+    "topic": "Skill Learning",
+    "cs_ratio": "70%",
+    "gender": "Female",
+    "duration_s": 10.45,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2019_4.wav",
+    "transcript": "上次我試過學畫畫，起初好難，but after a while, 我開始enjoy每一個創作嘅過程。",
+    "english_terms": [
+      "but",
+      "after",
+      "while",
+      "enjoy"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1243_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1243_2.m4a",
+    "topic": "Smartphone",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 5.12,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1243_2.wav",
+    "transcript": "我覺得呢部手機嘅camera質素好好，影出嚟啲相真係靚，you know?",
+    "english_terms": [
+      "camera",
+      "you",
+      "know"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1041_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1041_2.m4a",
+    "topic": "Social Media",
+    "cs_ratio": "50%",
+    "gender": "Male",
+    "duration_s": 6.46,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1041_2.wav",
+    "transcript": "其實social media可以好有趣，但有時都會令人覺得壓力大, you know?",
+    "english_terms": [
+      "social",
+      "media",
+      "you",
+      "know"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1007_2",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1007_2.m4a",
+    "topic": "Sports",
+    "cs_ratio": "30%",
+    "gender": "Female",
+    "duration_s": 5.57,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1007_2.wav",
+    "transcript": "我同我朋友都買咗啲snacks，睇比賽嗰陣真係好好氣氛！",
+    "english_terms": [
+      "snacks"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_3_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/3_0.m4a",
+    "topic": "TV Shows",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 6.61,
+    "sample_rate": 16000,
+    "audio": "audio/sl_3_0.wav",
+    "transcript": "最近嗰套電視劇真係好吸引，the storyline keeps you hooked from the first episode!",
+    "english_terms": [
+      "the",
+      "storyline",
+      "keeps",
+      "you",
+      "hooked",
+      "from",
+      "the",
+      "first",
+      "episode"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1606_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1606_0.m4a",
+    "topic": "Technology",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 5.44,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1606_0.wav",
+    "transcript": "未來嘅科技發展真係好快, I wonder what new inventions will come next year?",
+    "english_terms": [
+      "wonder",
+      "what",
+      "new",
+      "inventions",
+      "will",
+      "come",
+      "next",
+      "year"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_159_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/159_0.m4a",
+    "topic": "Tourism",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 7.0,
+    "sample_rate": 16000,
+    "audio": "audio/sl_159_0.wav",
+    "transcript": "上星期我去咗香港 Disneyland，我哋玩得好開心，especially when we saw Mickey Mouse!",
+    "english_terms": [
+      "Disneyland",
+      "especially",
+      "when",
+      "we",
+      "saw",
+      "Mickey",
+      "Mouse"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2705_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2705_0.m4a",
+    "topic": "Transportation",
+    "cs_ratio": "50%",
+    "gender": "Female",
+    "duration_s": 5.25,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2705_0.wav",
+    "transcript": "上星期我搭咗地鐵去香港島, the ride was very smooth and efficient.",
+    "english_terms": [
+      "the",
+      "ride",
+      "was",
+      "very",
+      "smooth",
+      "and",
+      "efficient"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1783_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1783_0.m4a",
+    "topic": "Valentine's Day",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 5.08,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1783_0.wav",
+    "transcript": "情人節快到喇,我覺得應該要買啲朱古力俾佢, what do you think?",
+    "english_terms": [
+      "what",
+      "do",
+      "you",
+      "think"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1127_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1127_0.m4a",
+    "topic": "Weather",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 3.54,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1127_0.wav",
+    "transcript": "今日個天咁藍,應該係個perfect day去hiking!",
+    "english_terms": [
+      "perfect",
+      "day",
+      "hiking"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_1924_1",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/1924_1.m4a",
+    "topic": "Wining the Lottery",
+    "cs_ratio": "30%",
+    "gender": "Male",
+    "duration_s": 4.91,
+    "sample_rate": 16000,
+    "audio": "audio/sl_1924_1.wav",
+    "transcript": "有啲人話贏咗會去環遊世界，I think that's a great idea!",
+    "english_terms": [
+      "think",
+      "that's",
+      "great",
+      "idea"
+    ],
+    "split": "test"
+  },
+  {
+    "id": "sl_2039_0",
+    "source": "SwitchLingua Cantonese-English",
+    "source_file": "Cantonese/2039_0.m4a",
+    "topic": "Workplace",
+    "cs_ratio": "70%",
+    "gender": "Male",
+    "duration_s": 6.76,
+    "sample_rate": 16000,
+    "audio": "audio/sl_2039_0.wav",
+    "transcript": "今日喺office好忙，但係我見到佢哋都好enjoy their work.",
+    "english_terms": [
+      "office",
+      "enjoy",
+      "their",
+      "work"
+    ],
+    "split": "test"
+  }
+]

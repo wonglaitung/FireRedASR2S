@@ -1,6 +1,6 @@
 # FireRedASR2S POC 设计与 MVP 范围
 
-> 版本：v2.5
+> 版本：v2.6
 > 目标：用最小闭环验证 **音频 → 句级文字**，并明确 MVP 要实现的功能、技术选型与验收标准。
 > 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2）；默认 AED；已接入 Silero VAD、句段合并、标点/ITN/繁简后处理。
 
@@ -242,7 +242,8 @@ asr:
 - 轻量重打分实验（confidence + 英文词频）反而退化：F1 88.6%~88.8%、混合 CER 6.9%，低于 1-best 的 90.3%/6.2%。说明仅靠词频不够。
 - 改用 MCE train 文本训练小型混说 n-gram LM（排除评估 100 条），n-best 重打分后（beam10/nbest10，100 条）：混说 F1 **88.4%**、混合 CER **6.0%**；相对 1-best 的 87.4% / 6.5% 有提升。
 - 额外用 20 条更长的 held-out 混说做 sanity check：F1 45.4% → 46.0%、混合 CER 17.3% → 16.7%，仍是正向但不显著。
-- 新增 **WSYue-ASR-eval Short 自發混说 153 条**：官方 AED 1-best F1 **71.5%** / 混合 CER **10.1%**；MCE LM 降到 **70.5% / 10.2%**。说明 MCE 朗读域 LM 不能直接外推到真实对话，LM 需要域内数据或按场景开关。
+- 新增 **WSYue-ASR-eval Short 自發混说 153 条**：官方 AED 1-best F1 **71.5%** / 混合 CER **10.1%**；MCE LM 降到 **70.5% / 10.2%**。说明 MCE 朗读域 LM 不能直接外推到真实对话。
+- 新增 **SwitchLingua 个人听写代理 100 条**：官方 AED 1-best F1 **88.5%** / 混合 CER **6.6%**；MCE LM 退化到 **83.2% / 9.4%**。LM 跨域风险再次确认。
 - 运行方式：
 
 ```bash

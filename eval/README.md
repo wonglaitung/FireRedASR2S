@@ -1,9 +1,9 @@
 # 验证集套件
 
-> 版本：v1.5
+> 版本：v1.6
 > 用途：AED-only 优化前后对比；不是官方 benchmark，也不代表生产分布。
 
-## 1. 四个子集
+## 1. 五个子集
 
 | 子集 | 数量 | 总时长 | 内容 | 来源 | 授权 |
 | --- | --- | --- | --- | --- | --- |
@@ -11,6 +11,7 @@
 | `eval/en/` | 20 | 153.94s | 纯英文（朗读，7 位说话人） | `openslr/librispeech_asr` validation.clean | CC BY 4.0 |
 | `eval/yue_en/` | 100 | 785.58s | 粤英混说（日常主题，含英文词/短语） | MCE / `AlienKevin/mixed_cantonese_and_english_speech` | 仅研究，商用需授权 |
 | `eval/yue_en_spont/` | 153 | 971.76s | 自發/多领域粤英混说 | WSYue-ASR-eval Short / `ASLP-lab/WSYue-ASR-eval` | CC BY-NC 4.0 |
+| `eval/yue_en_dictation/` | 100 | 529.23s | 个人听写公开代理 | SwitchLingua Cantonese / `Shelton1013/SwitchLingua_audio` | CC BY-NC 4.0 |
 
 所有音频已转为 **16kHz / 16bit / mono WAV**。
 
@@ -37,6 +38,15 @@
 
 结论：MCE LM 在自發域**退化**，当前不应默认套用；LM 需要域内数据或按场景开关。
 
+### 个人听写代理（SwitchLingua 100 条）
+
+| 引擎 | 英文词 F1 | 混合 CER |
+| --- | --- | --- |
+| 官方 AED 1-best | **88.5%**（P 89.7 / R 87.3） | **6.6%** |
+| 官方 AED + MCE LM | 83.2%（P 88.6 / R 78.3） | 9.4% |
+
+结论：SwitchLingua 是朗读/生成代理，不是真实听写；MCE LM 在该域同样退化。
+
 ## 3. 指标定义
 
 - **CER**：粤语参考/输出先转简体、只保留汉字，再算字符级编辑距离。
@@ -50,6 +60,15 @@
 PYTHONPATH=src python3 scripts/eval_suite.py \
   --config configs/app.yaml \
   --output eval/baseline_aed.json
+```
+
+跑个人听写代理（不套 MCE LM，用 1-best 配置）：
+
+```bash
+PYTHONPATH=src python3 scripts/eval_suite.py \
+  --config configs/app_official_1best.yaml \
+  --sets yue_en_dictation \
+  --output eval/baseline_dictation_1best.json
 ```
 
 跑自發集（不套 MCE LM，用 1-best 配置）：
@@ -79,7 +98,8 @@ eval/
 ├── yue/             # 纯粤语
 ├── en/              # 纯英文
 ├── yue_en/          # MCE 粤英混说（100）
-└── yue_en_spont/    # WSYue 自發粤英混说（153）
+├── yue_en_spont/    # WSYue 自發粤英混说（153）
+└── yue_en_dictation/# SwitchLingua 个人听写代理（100）
 ```
 
 每个子集都有 `manifest.tsv` / `manifest.json` 与 `audio/`。
