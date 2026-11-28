@@ -33,11 +33,15 @@ asr:
   repo_path: ""            # optional: upstream clone; or set FIREREDASR2S_HOME
   use_gpu: true
   use_half: true           # BF16 when supported
-  beam_size: 5
-  nbest: 1
+  beam_size: 10
+  nbest: 10
   decode_max_len: 0
   softmax_smoothing: 1.25
   aed_length_penalty: 0.6
   eos_penalty: 1.0
-  elm_dir: ""              # optional external LM
+  elm_dir: ""              # optional upstream external LM
   elm_weight: 0.0
+  lm_path: models/mce_lm.json
+  lm_weight: 0.5
+  rank_weight: 0.05
+  confidence_weight: 0.0

@@ -26,7 +26,7 @@
 ## Validation requirements
 - **Actually run checks** before claiming completion; never state a result you did not execute.
 - After code changes: run `ruff check .`, then `python3 -m pytest`. Order: lint → typecheck (when configured) → test.
-- The `main` suite currently reports **45 passed** (`ruff check .` clean).
+- The `main` suite currently reports **49 passed** (`ruff check .` clean).
 - After doc edits: verify every **Mermaid** block and Markdown code fence is paired and closed.
 - Every gate conclusion (lint / test / docs) must cite a concrete report artifact (a temporary report directory or CI artifacts); **do not commit report files to the repo**.
 
@@ -51,7 +51,7 @@
 
 ## Eval data
 - `eval/yue/` (20 pure Cantonese, words.hk CC BY 4.0), `eval/en/` (20 English, LibriSpeech CC BY 4.0), `eval/yue_en/` (20 Cantonese-English, MCE research-only).
-- Baseline (sherpa int8 greedy): Cantonese CER 11.5%, English WER 1.1%, code-switch English term F1 87.8%, mixed CER 6.8%. Official AED BF16 beam5: 4.7% / 0.9% / 90.3% / 6.2%.
+- Baseline (100 code-switch clips): sherpa int8 84.3% F1 / 7.2% mixed CER; official AED beam10 87.4% / 6.5%; official AED + n-best LM 88.4% / 6.0%. Cantonese CER 4.7%, English WER 0.9%. On the original 20-clip easier subset, LM reaches 95.4% F1.
 - Run all: `PYTHONPATH=src python3 scripts/eval_suite.py --config configs/app.yaml --output eval/baseline_aed.json`.
 - MCE is not commercial-clear and is not an official benchmark.
 

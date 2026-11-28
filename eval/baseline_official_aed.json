@@ -261,7 +261,7 @@
   },
   {
     "set": "yue_en",
-    "clips": 20,
+    "clips": 100,
     "details": [
       {
         "id": "001",
@@ -759,18 +759,1827 @@
           ],
           "hits": 4
         }
+      },
+      {
+        "id": "mce_100",
+        "reference": "\"啲意大利麵嘅sauce個taste好rich，真係惹味到不得了。\"",
+        "raw_text": "啲意大利面嘅 sauce个 taste rich真系惹味到不得了",
+        "text": "啲意大利面嘅sauce个taste rich真系，惹味到不得了。",
+        "english": {
+          "reference": [
+            "sauce",
+            "taste",
+            "rich"
+          ],
+          "hypothesis": [
+            "sauce",
+            "taste",
+            "rich"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_101",
+        "reference": "\"party time食pizza真係好fun，尤其係嗰啲薄底嘅，taste非常authentic！\"",
+        "raw_text": "party time食 pizza真系好分尤其系啲薄底嘅 taste非常 authentic",
+        "text": "party time食pizza真系好分，尤其系啲薄底嘅taste非常authentic。",
+        "english": {
+          "reference": [
+            "party",
+            "time",
+            "pizza",
+            "fun",
+            "taste",
+            "authentic"
+          ],
+          "hypothesis": [
+            "party",
+            "time",
+            "pizza",
+            "taste",
+            "authentic"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_102",
+        "reference": "\"小籠包裏面嘅肉汁好juicy，每次一咬就會流出嚟，簡直係mouthwatering！\"",
+        "raw_text": "小笼包里面嘅肉汁好 juicy每次一咬就会流出嚟简直系 mouth watering",
+        "text": "小笼包里面嘅肉汁好juicy，每次一咬就会流出嚟简直系mouth watering。",
+        "english": {
+          "reference": [
+            "juicy",
+            "mouthwatering"
+          ],
+          "hypothesis": [
+            "juicy",
+            "mouth",
+            "watering"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "mce_103",
+        "reference": "\"日本料理嘅presentation真係好impressive，就算係飯團sushi，都會令你一試難以忘懷。\"",
+        "raw_text": "日本料理嘅 presentation真系好 repressive就算系饭田舒时都会令你一时难以忘怀",
+        "text": "日本料理嘅presentation真系好repressive，就算系饭田舒时都会令你一时难以忘怀。",
+        "english": {
+          "reference": [
+            "presentation",
+            "impressive",
+            "sushi"
+          ],
+          "hypothesis": [
+            "presentation",
+            "repressive"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "mce_104",
+        "reference": "\"我好喜歡番茄海鮮湯嘅flavour，做得好，酸辣恰到好處！fiction",
+        "raw_text": "我好喜欢番茄海鲜汤嘅 flavor做得好酸辣恰到好处 fiction",
+        "text": "我好喜欢番茄海鲜汤嘅flavor做得好酸辣恰到好处fiction。",
+        "english": {
+          "reference": [
+            "flavour",
+            "fiction"
+          ],
+          "hypothesis": [
+            "flavor",
+            "fiction"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "mce_105",
+        "reference": "\"牛油果shrimp salad好划算，又健康！食完feel自己好healthy同energized！\"",
+        "raw_text": "牛油果 shrimp salad好划算又健康食完 feel自己好 healthy同 energized",
+        "text": "牛油果shrimp salad好划算又健康，食完feel自己好healthy同energized。",
+        "english": {
+          "reference": [
+            "shrimp",
+            "salad",
+            "feel",
+            "healthy",
+            "energized"
+          ],
+          "hypothesis": [
+            "shrimp",
+            "salad",
+            "feel",
+            "healthy",
+            "energized"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_106",
+        "reference": "\"我哋下次去Thailand，一定要try佢哋嘅local food，聽講超好食呀！\"",
+        "raw_text": "我哋下次去泰勒一定要 try佢哋嘅 local food听讲超好食呀",
+        "text": "我哋下次去泰勒，一定要try佢哋嘅local food，听讲超好食呀。",
+        "english": {
+          "reference": [
+            "thailand",
+            "try",
+            "local",
+            "food"
+          ],
+          "hypothesis": [
+            "try",
+            "local",
+            "food"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_107",
+        "reference": "\"有冇諗過去Australia睇睇當地嘅wildlife，一定好exciting架！\"",
+        "raw_text": "有冇谂过去 australia睇睇当地嘅 wildlife一定好好西停嘎",
+        "text": "有冇谂过去，australia睇睇当地嘅wildlife，一定好好西停嘎。",
+        "english": {
+          "reference": [
+            "australia",
+            "wildlife",
+            "exciting"
+          ],
+          "hypothesis": [
+            "australia",
+            "wildlife"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_108",
+        "reference": "\"我好想買個backpack，走一轉Europe，去好多個museums同historical sites就好啦！\"",
+        "raw_text": "我好想买个 backpack走一转 europe去好多个 museums同 historical size就好啦",
+        "text": "我好想买个backpack走一转europe，去好多个museums同historical size就好啦。",
+        "english": {
+          "reference": [
+            "backpack",
+            "europe",
+            "museums",
+            "historical",
+            "sites"
+          ],
+          "hypothesis": [
+            "backpack",
+            "europe",
+            "museums",
+            "historical",
+            "size"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "mce_109",
+        "reference": "\"聽講去U.S.A.round trip要花好多時間，不過如果有機會我都想試下，應該好unforgettable架！\"",
+        "raw_text": "听讲去 usa round trip要花好多时间不过如果有机会我都想试下应该好 unforgettable架",
+        "text": "听讲去usa round trip，要花好多时间。不过如果有机会，我都想试下，应该好unforgettable架。",
+        "english": {
+          "reference": [
+            "round",
+            "trip",
+            "unforgettable"
+          ],
+          "hypothesis": [
+            "usa",
+            "round",
+            "trip",
+            "unforgettable"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_110",
+        "reference": "\"我下個goal係想去Africa做volunteering，貢獻少少力量都好，我覺得好meaningful！\"",
+        "raw_text": "我下个高系想去 africa做 volunteering贡献少少力量都好我觉得好 meaningful",
+        "text": "我下个高系想去africa做volunteering贡献，少少力量都好。我觉得好meaningful。",
+        "english": {
+          "reference": [
+            "goal",
+            "africa",
+            "volunteering",
+            "meaningful"
+          ],
+          "hypothesis": [
+            "africa",
+            "volunteering",
+            "meaningful"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_111",
+        "reference": "\"去New Zealand搭個campervan一路drive一路玩，咁樣嘅旅行計劃一定好relaxing！\"",
+        "raw_text": "去纽斯兰搭个 comp一路 drive一路玩咁样嘅旅行计划一定好 relaxing",
+        "text": "去纽斯兰搭个comp，一路drive，一路玩咁样嘅旅行计划，一定好relaxing。",
+        "english": {
+          "reference": [
+            "new",
+            "zealand",
+            "campervan",
+            "drive",
+            "relaxing"
+          ],
+          "hypothesis": [
+            "comp",
+            "drive",
+            "relaxing"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_112",
+        "reference": "\"我哋下次一齊去Italy嘅wine tour啦，試吓佢地嘅紅酒，一定好enjoyable！\"",
+        "raw_text": "我哋下次一齐去 italy嘅 wild tour啦试下佢哋嘅红酒一定好 enjoyable",
+        "text": "我哋下次一齐去italy嘅wild tour啦，试下佢哋嘅红酒一定好enjoyable。",
+        "english": {
+          "reference": [
+            "italy",
+            "wine",
+            "tour",
+            "enjoyable"
+          ],
+          "hypothesis": [
+            "italy",
+            "wild",
+            "tour",
+            "enjoyable"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_113",
+        "reference": "\"France嘅cuisine大家都識，但如果當地嘅cooking class就未必咁簡單，但我想嘗試下，肯定好fun架！\"",
+        "raw_text": "friends嘅缺先大家都识但如果当地嘅 cooking class就未必咁简单但我想尝试下肯定好分架",
+        "text": "friends嘅缺先大家都识，但如果当地嘅cooking class就未必咁简单，但我想尝试下肯定好分架。",
+        "english": {
+          "reference": [
+            "france",
+            "cuisine",
+            "cooking",
+            "class",
+            "fun"
+          ],
+          "hypothesis": [
+            "friends",
+            "cooking",
+            "class"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_114",
+        "reference": "\"我想我會plan一個solo trip去Canada，享受一下自由同獨處嘅樂趣，一定好special嘅experience!\" ",
+        "raw_text": "我想我会 plan一个 solo trip去 canada享受一下自由同独处嘅乐趣一定好 special嘅 experience",
+        "text": "我想我会plan一个solo trip，去canada，享受一下自由同独处嘅乐趣一定好special嘅experience。",
+        "english": {
+          "reference": [
+            "plan",
+            "solo",
+            "trip",
+            "canada",
+            "special",
+            "experience"
+          ],
+          "hypothesis": [
+            "plan",
+            "solo",
+            "trip",
+            "canada",
+            "special",
+            "experience"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "mce_115",
+        "reference": "\"日本嘅cherry blossom season我一直都好想見識下，對我嚟講，應該好charming架！\"",
+        "raw_text": "日本嘅 cherry blossom season我一直都好想见识下对我嚟讲应该好 charming",
+        "text": "日本嘅cherry blossom season，我一直都好想见识下，对我嚟讲应该好charming。",
+        "english": {
+          "reference": [
+            "cherry",
+            "blossom",
+            "season",
+            "charming"
+          ],
+          "hypothesis": [
+            "cherry",
+            "blossom",
+            "season",
+            "charming"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "mce_116",
+        "reference": "\"我每個weekend都會去movie theatre睇新上映嘅films，我鍾意各種genre嘅movies，例如action, comedy同sci-fi等等。\"",
+        "raw_text": "我每个 weekend都会去 movie theater睇新上映嘅 films我钟意各种 dreams嘅 movies例如 action comedy同 scifi等等",
+        "text": "我每个weekend都会去movie theater睇新上映嘅films，我钟意各种dreams嘅movies，例如action、comedy、同scifi等等。",
+        "english": {
+          "reference": [
+            "weekend",
+            "movie",
+            "theatre",
+            "films",
+            "genre",
+            "movies",
+            "action",
+            "comedy",
+            "sci-fi"
+          ],
+          "hypothesis": [
+            "weekend",
+            "movie",
+            "theater",
+            "films",
+            "dreams",
+            "movies",
+            "action",
+            "comedy",
+            "scifi"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "mce_117",
+        "reference": "\"我周圍嘅mates都好鍾意聽我講ghost stories，我係個很大嘅horror fan，我鍾意嘅horror fix都唔係單單限制於書同film。\"",
+        "raw_text": "我周围嘅 mace都好钟意听我讲 ghost stories我系一个好很大嘅 horror fan我中意嘅 horror fix都唔系单单限制于书同 film",
+        "text": "我周围嘅mace都好，钟意听我讲ghost stories，我系一个好，很大嘅horror fan，我中意嘅horror fix，都唔系单单限制于书同film。",
+        "english": {
+          "reference": [
+            "mates",
+            "ghost",
+            "stories",
+            "horror",
+            "fan",
+            "horror",
+            "fix",
+            "film"
+          ],
+          "hypothesis": [
+            "mace",
+            "ghost",
+            "stories",
+            "horror",
+            "fan",
+            "horror",
+            "fix",
+            "film"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "mce_118",
+        "reference": "\"我好鍾意去karaoke同朋友唱歌，每次去都唔覺得boring，我同我朋友們都有好多fun。\"",
+        "raw_text": "我好钟意去卡拉 ok同朋友唱 k每次去都唔觉得 boring我同我朋友们都有好多分",
+        "text": "我好钟意去卡拉，ok同朋友唱k每次去都唔觉得boring，我同我朋友们都有好多分。",
+        "english": {
+          "reference": [
+            "karaoke",
+            "boring",
+            "fun"
+          ],
+          "hypothesis": [
+            "ok",
+            "boring"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "mce_119",
+        "reference": "\"我鍾意用我部iPad睇Netflix或者Disney+，我覺得我每個月payment都好值得，因為我可以睇到好多我鍾意嘅series同movie。\"",
+        "raw_text": "我钟意用我部 ipad睇 netflix或者 disney plus我觉得我每个月 payment都好值得因为我可以睇到好多我钟意嘅 series同 movie",
+        "text": "我钟意用我部ipad睇netflix或者disney plus，我觉得我每个月payment都好值得，因为我可以睇到好多我钟意嘅series同movie。",
+        "english": {
+          "reference": [
+            "ipad",
+            "netflix",
+            "disney",
+            "payment",
+            "series",
+            "movie"
+          ],
+          "hypothesis": [
+            "ipad",
+            "netflix",
+            "disney",
+            "plus",
+            "payment",
+            "series",
+            "movie"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "mce_120",
+        "reference": "\"我每日都會睇youtube，我其中一個favorite嘅youtuber就係Pewdiepie，我鍾意佢嘅gameplay videos同meme reviews。\"",
+        "raw_text": "我每次都会睇 youtube我其中一个 favorite嘅 youtuber就系 pudi派我中意佢嘅 gameplay videos同 meme reviews",
+        "text": "我每次都会睇youtube，我其中一个favorite嘅youtuber就系pudi派。我中意佢嘅gameplay videos同meme reviews。",
+        "english": {
+          "reference": [
+            "youtube",
+            "favorite",
+            "youtuber",
+            "pewdiepie",
+            "gameplay",
+            "videos",
+            "meme",
+            "reviews"
+          ],
+          "hypothesis": [
+            "youtube",
+            "favorite",
+            "youtuber",
+            "pudi",
+            "gameplay",
+            "videos",
+            "meme",
+            "reviews"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "mce_121",
+        "reference": "\"我係個音樂lover，我喺spotify上有好多嘅playlist，我嘅music taste包括pop, rock同classical等等。\"",
+        "raw_text": "我系个音乐 lover我喺 spotify上有好多嘅 playlist我嘅 music taste包括 pop rock同 classical等等",
+        "text": "我系个音乐lover，我喺spotify上有好多嘅playlist，我嘅music taste，包括pop rock同classical等等。",
+        "english": {
+          "reference": [
+            "lover",
+            "spotify",
+            "playlist",
+            "music",
+            "taste",
+            "pop",
+            "rock",
+            "classical"
+          ],
+          "hypothesis": [
+            "lover",
+            "spotify",
+            "playlist",
+            "music",
+            "taste",
+            "pop",
+            "rock",
+            "classical"
+          ],
+          "hits": 8
+        }
+      },
+      {
+        "id": "mce_122",
+        "reference": "\"我唔單止鍾意喺gaming console上玩video games，我都好鍾意喺arcade玩，我覺得咁樣會有個好嘅social experience。\"",
+        "raw_text": "我唔单止钟意喺 gaming console上玩 video games我都好钟意喺 arcade玩我觉得咁样会有好嘅 social experience",
+        "text": "我唔单止钟意喺gaming console，上玩video games。我都好钟意喺arcade玩，我觉得咁样会有好嘅social experience。",
+        "english": {
+          "reference": [
+            "gaming",
+            "console",
+            "video",
+            "games",
+            "arcade",
+            "social",
+            "experience"
+          ],
+          "hypothesis": [
+            "gaming",
+            "console",
+            "video",
+            "games",
+            "arcade",
+            "social",
+            "experience"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "mce_123",
+        "reference": "\"我鍾意睇Netflix嘅drama series，例如'Stranger Things'同'The Crown'，我覺得喺家睇係一個好relax嘅娛樂方式。\" ",
+        "raw_text": "我钟意睇 netflix嘅 drama series例如 stranger things同 the crown我觉得喺家睇系一个好 relax嘅娱乐方式",
+        "text": "我钟意睇netflix嘅drama series，例如stranger things同the crown，我觉得喺家睇系一个好relax嘅娱乐方式。",
+        "english": {
+          "reference": [
+            "netflix",
+            "drama",
+            "series",
+            "stranger",
+            "things",
+            "the",
+            "crown",
+            "relax"
+          ],
+          "hypothesis": [
+            "netflix",
+            "drama",
+            "series",
+            "stranger",
+            "things",
+            "the",
+            "crown",
+            "relax"
+          ],
+          "hits": 8
+        }
+      },
+      {
+        "id": "mce_124",
+        "reference": "\"我每個month都好look forward到嗰個新comic book day，我會去我最鍾意嘅comic shop揀選我最期待嘅new releases。\"",
+        "raw_text": "我每个 month都好 look forward到个新 comic book day我会去我最钟意嘅 comic shop拣选我最期待嘅 new releases",
+        "text": "我每个month都好look forward到个新comic book day。我会去我最钟意嘅comic shop拣选，我最期待嘅new releases。",
+        "english": {
+          "reference": [
+            "month",
+            "look",
+            "forward",
+            "comic",
+            "book",
+            "day",
+            "comic",
+            "shop",
+            "new",
+            "releases"
+          ],
+          "hypothesis": [
+            "month",
+            "look",
+            "forward",
+            "comic",
+            "book",
+            "day",
+            "comic",
+            "shop",
+            "new",
+            "releases"
+          ],
+          "hits": 10
+        }
+      },
+      {
+        "id": "mce_125",
+        "reference": "\"每年嘅summer我都會去參加music festival，我覺得呢種體驗好enjoyable，可以聽到我最鍾意嘅樂團live performance。\"",
+        "raw_text": "每年嘅生日我都会去参加 music festival我觉得呢种体验好 enjoyable可以听到我最钟意嘅乐团 live performance",
+        "text": "每年嘅生日我都会去参加music festival，我觉得呢种体验好enjoyable，可以听到我最钟意嘅乐团live performance。",
+        "english": {
+          "reference": [
+            "summer",
+            "music",
+            "festival",
+            "enjoyable",
+            "live",
+            "performance"
+          ],
+          "hypothesis": [
+            "music",
+            "festival",
+            "enjoyable",
+            "live",
+            "performance"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_126",
+        "reference": "\"見到Lionel Messi玩足球，簡直係masterpiece，佢嘅技巧真係outstanding！\"",
+        "raw_text": "见到 leon new mess玩足球简直系 masterpiece佢嘅技巧真系 outstanding",
+        "text": "见到leon new mess玩足球，简直系masterpiece佢嘅技巧真系outstanding。",
+        "english": {
+          "reference": [
+            "lionel",
+            "messi",
+            "masterpiece",
+            "outstanding"
+          ],
+          "hypothesis": [
+            "leon",
+            "new",
+            "mess",
+            "masterpiece",
+            "outstanding"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_127",
+        "reference": "\"我下個月要去參加yoga class，一直都想體驗下，希望我可以fit入去。\"",
+        "raw_text": "我下个月要去参加 yoga class一直都想体验下希望我可以 fit入去",
+        "text": "我下个月要去参加yoga class，一直都想体验下，希望。我可以fit入去。",
+        "english": {
+          "reference": [
+            "yoga",
+            "class",
+            "fit"
+          ],
+          "hypothesis": [
+            "yoga",
+            "class",
+            "fit"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_128",
+        "reference": "\"雖然我嘅swimming technique仲有好多需要提升的地方，但係我絕對唔會放棄，practice makes perfect！\"",
+        "raw_text": "虽然我嘅 swimming technique仲有好多需要提升的地方但系我绝对唔会放弃 practice makes perfect",
+        "text": "虽然我嘅swimming technique仲有好多需要提升的地方，但系我绝对唔会放弃practice makes perfect。",
+        "english": {
+          "reference": [
+            "swimming",
+            "technique",
+            "practice",
+            "makes",
+            "perfect"
+          ],
+          "hypothesis": [
+            "swimming",
+            "technique",
+            "practice",
+            "makes",
+            "perfect"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_129",
+        "reference": "\"我每個星期都會去gym做workout，健康身體真係well invested。”",
+        "raw_text": "我每个星期都会去 gym做 workouts健康身体真系 well invested",
+        "text": "我每个星期都会去gym，做workouts健康，身体真系well invested。",
+        "english": {
+          "reference": [
+            "gym",
+            "workout",
+            "well",
+            "invested"
+          ],
+          "hypothesis": [
+            "gym",
+            "workouts",
+            "well",
+            "invested"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_130",
+        "reference": "\"我哋今晚要去睇basketball game，已經買咗飲品同小食ready to enjoy。\"",
+        "raw_text": "我哋今晚要去睇 basketball game已经买咗饮品同小食 ready to enjoy",
+        "text": "我哋今晚要去睇basketball game，已经买咗饮品，同小食ready to enjoy。",
+        "english": {
+          "reference": [
+            "basketball",
+            "game",
+            "ready",
+            "to",
+            "enjoy"
+          ],
+          "hypothesis": [
+            "basketball",
+            "game",
+            "ready",
+            "to",
+            "enjoy"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_131",
+        "reference": "\"我嘅朋友一向鍾意玩badminton，雖然我之前冇試過，但係我已經準備好箍住玩。\"",
+        "raw_text": "我嘅朋友一向钟意玩 badminton虽然我之前冇试过但系我已经准备好箍住玩",
+        "text": "我嘅朋友一向钟意玩badminton，虽然我之前冇试过，但系我已经准备好箍住玩。",
+        "english": {
+          "reference": [
+            "badminton"
+          ],
+          "hypothesis": [
+            "badminton"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "mce_132",
+        "reference": "\"我鍾意跑步嘅原因,之一就係feel到風吹過嚟，完全係nature's gift啊。\"",
+        "raw_text": "我钟意跑步嘅原因之一就系 feel到风吹过嚟完全系 nature's gift啊",
+        "text": "我钟意跑步嘅原因之一就系feel到风吹过嚟完全系nature's gift啊。",
+        "english": {
+          "reference": [
+            "feel",
+            "nature's",
+            "gift"
+          ],
+          "hypothesis": [
+            "feel",
+            "nature's",
+            "gift"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_133",
+        "reference": "\"下次我哋可以試下hiking，頂到噉既環境，一定feel到超級relaxing。\"",
+        "raw_text": "下次我哋可以试下嗨擎顶到咁嘅环境一定 feel到超级 relaxing",
+        "text": "下次我哋可以试下嗨擎顶到咁嘅环境，一定feel到超级relaxing。",
+        "english": {
+          "reference": [
+            "hiking",
+            "feel",
+            "relaxing"
+          ],
+          "hypothesis": [
+            "feel",
+            "relaxing"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_134",
+        "reference": "\"今日好適合做outdoor exercises，天氣好好，我ready好水樽就要去公園啦。\" ",
+        "raw_text": "今日好适合做 out store exercises天气好好我 ready好水准就要去公园啦",
+        "text": "今日好，适合做out store exercises天气。好好，我ready好水准就要去公园啦。",
+        "english": {
+          "reference": [
+            "outdoor",
+            "exercises",
+            "ready"
+          ],
+          "hypothesis": [
+            "out",
+            "store",
+            "exercises",
+            "ready"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_135",
+        "reference": "\"我覺得做運動唔單止keep fit，佢對於精神上都有好大嘅help。\"",
+        "raw_text": "我觉得做运动唔单止 keep fit佢对于精神上都有好大嘅 help",
+        "text": "我觉得做运动唔单止keep fit佢，对于精神上都有好大嘅help。",
+        "english": {
+          "reference": [
+            "keep",
+            "fit",
+            "help"
+          ],
+          "hypothesis": [
+            "keep",
+            "fit",
+            "help"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_136",
+        "reference": "\"我覺得點解政府未有implement一個有效嘅交通system，以resolve香港嘅交通擠塞問題。\"",
+        "raw_text": "我觉得点解政府未有 implement一个有效嘅交通 system以 resolve香港嘅交通挤塞问题",
+        "text": "我觉得点解政府未有implement一个有效嘅交通system，以resolve香港嘅交通挤塞问题。",
+        "english": {
+          "reference": [
+            "implement",
+            "system",
+            "resolve"
+          ],
+          "hypothesis": [
+            "implement",
+            "system",
+            "resolve"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_137",
+        "reference": "\"我睇到佢哋打算開始更改教育嘅curriculum，但我喺咁嘅情況之下，我諗佢哋應該先focus喺學生嘅心理健康上面。\"",
+        "raw_text": "我睇到佢哋打算开始更改教育嘅 curriculum但系我系咁嘅情况之下我谂佢哋应该先 focus喺学生嘅心理健康上面",
+        "text": "我睇到佢哋，打算开始更改教育嘅curriculum，但系我系咁嘅情况之下，我谂佢哋应该先focus喺学生嘅心理健康上面。",
+        "english": {
+          "reference": [
+            "curriculum",
+            "focus"
+          ],
+          "hypothesis": [
+            "curriculum",
+            "focus"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_138",
+        "reference": "\"疫症keep going，廣大市民嘅生活變得越來越困難，而政府嘅support就變得相當critical。\"",
+        "raw_text": "疫症 keep going广大市民嘅生活变得越来越困难而政府 support就变得相当 critical",
+        "text": "疫症keep going广大市民嘅生活变得越来越困难，而政府support就变得相当critical。",
+        "english": {
+          "reference": [
+            "keep",
+            "going",
+            "support",
+            "critical"
+          ],
+          "hypothesis": [
+            "keep",
+            "going",
+            "support",
+            "critical"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "mce_139",
+        "reference": "\"佢哋嘅廢物管理真係improve咗喎，但係都仲未到我哋想象中嘅level，我哋還要重加努力去achieve噉嘅目標。\"",
+        "raw_text": "佢哋嘅废物管理真系 improve咗但系都仲未到我哋想象中嘅 level我哋还要重加努力去 achieve咁嘅目标",
+        "text": "佢哋嘅废物管理，真系improve咗，但系都仲未到。我哋想象中嘅level，我哋还要重加努力去achieve咁嘅目标。",
+        "english": {
+          "reference": [
+            "improve",
+            "level",
+            "achieve"
+          ],
+          "hypothesis": [
+            "improve",
+            "level",
+            "achieve"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_140",
+        "reference": "\"有關於食物waste，我諗呢個問題唔單止需要大家嘅collective effort，仲要政府要果斷take action。\"",
+        "raw_text": "有关于食物嘅 waste我谂呢个问题唔单止需要大家嘅 collective effort仲要政府要果断 take action",
+        "text": "有关于食物嘅waste，我谂呢个问题，唔单止需要大家嘅collective effort，仲要政府要果断take action。",
+        "english": {
+          "reference": [
+            "waste",
+            "collective",
+            "effort",
+            "take",
+            "action"
+          ],
+          "hypothesis": [
+            "waste",
+            "collective",
+            "effort",
+            "take",
+            "action"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_141",
+        "reference": "\"地方政府打算開launch咗更嚴厲嘅規定去控制smoking，但係我感到有啲憂慮呢個嘅implementation。\"",
+        "raw_text": "地方政府打算开 launch咗更严厉嘅规定去控制 smoking但系我感到有啲忧虑呢个嘅 implantation",
+        "text": "地方政府打算开launch咗更严厉嘅规定去控制smoking，但系我感到有啲忧虑呢个嘅implantation。",
+        "english": {
+          "reference": [
+            "launch",
+            "smoking",
+            "implementation"
+          ],
+          "hypothesis": [
+            "launch",
+            "smoking",
+            "implantation"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_142",
+        "reference": "\"最近嘅real estate嘅價格上升，可能導致我哋啲年輕人買不起house，因此我哋需要一個更fair嘅市場。\"",
+        "raw_text": "最近为 real estate嘅价格上升可能导致我哋啲年轻人带不起 house因此我哋需要一个更 fair嘅市场",
+        "text": "最近为real estate嘅价格上升，可能导致我哋啲年轻人带不起house。因此我哋需要一个更fair嘅市场。",
+        "english": {
+          "reference": [
+            "real",
+            "estate",
+            "house",
+            "fair"
+          ],
+          "hypothesis": [
+            "real",
+            "estate",
+            "house",
+            "fair"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "mce_143",
+        "reference": "\"依家香港嘅經濟狀況真係擔心，因為無咩野可以create jobs，政府必須即刻take action。\"",
+        "raw_text": "依家香港嘅经济情况真系担心因为冇咩嘢可以 create jobs政府必须即刻 take action",
+        "text": "依家香港嘅经济情况真系担心，因为冇咩嘢可以create jobs，政府必须即刻take action。",
+        "english": {
+          "reference": [
+            "create",
+            "jobs",
+            "take",
+            "action"
+          ],
+          "hypothesis": [
+            "create",
+            "jobs",
+            "take",
+            "action"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "mce_144",
+        "reference": "\"我諗緊本地大學應該更focus培訓啲技術高superior嘅學生，先至可以handle未來社會嘅挑戰。\"",
+        "raw_text": "我谂紧本地大学应该更 focus培训啲技术高 superior嘅学生先可以 handle未来社会嘅挑战",
+        "text": "我谂紧本地大学应该更focus培训啲技术，高superior嘅学生先可以handle未来社会嘅挑战。",
+        "english": {
+          "reference": [
+            "focus",
+            "superior",
+            "handle"
+          ],
+          "hypothesis": [
+            "focus",
+            "superior",
+            "handle"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_145",
+        "reference": "\"政府呢個round嘅市區重建plan有啲問題，大家覺得未必可行，需要進一步行review。\"",
+        "raw_text": "政府呢个 round嘅市区重建 plan有啲问题大家觉得未必可行需要进一步行微 feel",
+        "text": "政府呢个round嘅市区重建plan有啲问题，大家觉得未必可行，需要进一步行微feel。",
+        "english": {
+          "reference": [
+            "round",
+            "plan",
+            "review"
+          ],
+          "hypothesis": [
+            "round",
+            "plan",
+            "feel"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_146",
+        "reference": "\"我鐘意去boutique shopping，買一啲unique嘅clothes，又可以express my fashion sense，真係amazing。\"",
+        "raw_text": "我钟意去部 tick shopping买一啲 unique嘅 clothes又可以 express my fashion sense真系 amazing",
+        "text": "我钟意去部tick shopping买一啲unique嘅clothes，又可以express my fashion sense真系amazing。",
+        "english": {
+          "reference": [
+            "boutique",
+            "shopping",
+            "unique",
+            "clothes",
+            "express",
+            "my",
+            "fashion",
+            "sense",
+            "amazing"
+          ],
+          "hypothesis": [
+            "tick",
+            "shopping",
+            "unique",
+            "clothes",
+            "express",
+            "my",
+            "fashion",
+            "sense",
+            "amazing"
+          ],
+          "hits": 8
+        }
+      },
+      {
+        "id": "mce_147",
+        "reference": "\"我仲鐘意喺online stores 買fashion accessories，帶埋我嘅outfits，feel more stylish同埋fashionable。\"",
+        "raw_text": "我仲中意喺 online stores买 fashion accessories带埋我嘅 office feel more stylish同埋 fashionable",
+        "text": "我仲中意喺online stores，买fashion accessories带埋我嘅office，feel more stylish同埋fashionable。",
+        "english": {
+          "reference": [
+            "online",
+            "stores",
+            "fashion",
+            "accessories",
+            "outfits",
+            "feel",
+            "more",
+            "stylish",
+            "fashionable"
+          ],
+          "hypothesis": [
+            "online",
+            "stores",
+            "fashion",
+            "accessories",
+            "office",
+            "feel",
+            "more",
+            "stylish",
+            "fashionable"
+          ],
+          "hits": 8
+        }
+      },
+      {
+        "id": "mce_148",
+        "reference": "\"我成日去department stores，可以一次過買齊所有需要嘅goods，真係convenient。\"",
+        "raw_text": "我成日去 department store可以一次过买齐所有需要嘅 goods真系 convenient",
+        "text": "我成日去department store可以一次过买齐所有需要嘅goods真系convenient。",
+        "english": {
+          "reference": [
+            "department",
+            "stores",
+            "goods",
+            "convenient"
+          ],
+          "hypothesis": [
+            "department",
+            "store",
+            "goods",
+            "convenient"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_149",
+        "reference": "\"我鐘意喺朋友嘅recommendations後，去試新嘅cosmetics products，可以improve my skin care routine，感覺好refreshing。\"",
+        "raw_text": "我钟意喺朋友嘅 recommendation后去试新嘅 cost products又可以 improve my skin care routine咁就好",
+        "text": "我钟意喺朋友嘅recommendation后去试新嘅cost products又可以improve。my skin care routine咁就好。",
+        "english": {
+          "reference": [
+            "recommendations",
+            "cosmetics",
+            "products",
+            "improve",
+            "my",
+            "skin",
+            "care",
+            "routine",
+            "refreshing"
+          ],
+          "hypothesis": [
+            "recommendation",
+            "cost",
+            "products",
+            "improve",
+            "my",
+            "skin",
+            "care",
+            "routine"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "mce_150",
+        "reference": "\"我成日去bookstores，透過買新書去enhance my knowledge，同時間又可以enjoy the peaceful atmosphere，好relaxing。\"",
+        "raw_text": "我成日去 bookstore透过买新书去 enhance my knowledge同时间又可以 enjoy the peaceful atmosphere好 relaxing",
+        "text": "我成日去bookstore，透过买新书去enhance my knowledge，同时间又可以enjoy the peaceful atmosphere好relaxing。",
+        "english": {
+          "reference": [
+            "bookstores",
+            "enhance",
+            "my",
+            "knowledge",
+            "enjoy",
+            "the",
+            "peaceful",
+            "atmosphere",
+            "relaxing"
+          ],
+          "hypothesis": [
+            "bookstore",
+            "enhance",
+            "my",
+            "knowledge",
+            "enjoy",
+            "the",
+            "peaceful",
+            "atmosphere",
+            "relaxing"
+          ],
+          "hits": 8
+        }
+      },
+      {
+        "id": "mce_151",
+        "reference": "\"我鐘意喺同朋友一齊去shopping malls，透過買貨散心同埋share our interests，好fun同埋enjoyable。\"",
+        "raw_text": "我钟意喺同朋友一齐去 shopping mall透过买货散心同埋 share our interest好分同埋 enjoyable",
+        "text": "我钟意喺同朋友一齐去shopping mall，透过买货，散心同埋share，our interest好分同埋enjoyable。",
+        "english": {
+          "reference": [
+            "shopping",
+            "malls",
+            "share",
+            "our",
+            "interests",
+            "fun",
+            "enjoyable"
+          ],
+          "hypothesis": [
+            "shopping",
+            "mall",
+            "share",
+            "our",
+            "interest",
+            "enjoyable"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "mce_152",
+        "reference": "\"我常去outlet malls，用抵價嘅價錢買到我鐘意嘅brands，感覺好satisfying同埋exciting。\" ",
+        "raw_text": "我常去 outlet mall用抵嘅价钱买到我中意嘅 brands感觉好 satisfying同埋 exciting",
+        "text": "我常去outlet mall，用抵嘅价钱买到我中意嘅brands，感觉好satisfying同埋exciting。",
+        "english": {
+          "reference": [
+            "outlet",
+            "malls",
+            "brands",
+            "satisfying",
+            "exciting"
+          ],
+          "hypothesis": [
+            "outlet",
+            "mall",
+            "brands",
+            "satisfying",
+            "exciting"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "mce_153",
+        "reference": "\"喺Christmas sales期間，我會買一大堆禮物送比朋友家人，真係joyful同埋fulfilling。\"",
+        "raw_text": "喺 christmas sales期间我会买一大堆礼物送俾家人朋友家人真系 joyful同埋 full feeling",
+        "text": "喺christmas sales期间，我会买一大堆礼物，送俾家人朋友，家人真系joyful同埋full feeling。",
+        "english": {
+          "reference": [
+            "christmas",
+            "sales",
+            "joyful",
+            "fulfilling"
+          ],
+          "hypothesis": [
+            "christmas",
+            "sales",
+            "joyful",
+            "full",
+            "feeling"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_154",
+        "reference": "\"我會喺online platform bid二手物品，可以買到rare items，真係thrilling同埋rewarding。\"",
+        "raw_text": "我会喺 online platform bid二手物品可以买到 where items真系 feeling同埋 rewarding",
+        "text": "我会喺online platform bid，二手物品可以买到where items真系feeling同埋rewarding。",
+        "english": {
+          "reference": [
+            "online",
+            "platform",
+            "bid",
+            "rare",
+            "items",
+            "thrilling",
+            "rewarding"
+          ],
+          "hypothesis": [
+            "online",
+            "platform",
+            "bid",
+            "where",
+            "items",
+            "feeling",
+            "rewarding"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_155",
+        "reference": "\"我鐘意逛市集，可以睇到一啲handmade crafts，可以support local artists，真係meaningful。\"",
+        "raw_text": "我钟意旷市集可以睇到一啲 handicraft可以 support local artists真系 meaningful",
+        "text": "我钟意旷市集可以睇到一啲handicraft，可以support local artists真系meaningful。",
+        "english": {
+          "reference": [
+            "handmade",
+            "crafts",
+            "support",
+            "local",
+            "artists",
+            "meaningful"
+          ],
+          "hypothesis": [
+            "handicraft",
+            "support",
+            "local",
+            "artists",
+            "meaningful"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "mce_156",
+        "reference": "\"我嘅學習style係透過online courses同實際練習相結合，我認為，互聯網提供咗好多學習resources，真係好方便。\"",
+        "raw_text": "我嘅学习 style系透过 online courses同实际练习相结合我认为互联网提供咗好多学习 resources真系好方便",
+        "text": "我嘅学习style系透过online courses同实际练习相结合。我认为互联网提供咗好多学习resources，真系好方便。",
+        "english": {
+          "reference": [
+            "style",
+            "online",
+            "courses",
+            "resources"
+          ],
+          "hypothesis": [
+            "style",
+            "online",
+            "courses",
+            "resources"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "mce_157",
+        "reference": "\"剛開始學習新嘅事物時，我有時會feel overwhelmed，但我相信perseverance係最重要嘅。\"",
+        "raw_text": "刚开始学习新嘅事物时我有时会 feel overwhelmed但我相信 perseverance系最重要嘅",
+        "text": "刚开始学习新嘅事物时，我有时会feel overwhelmed，但我相信perseverance系最重要嘅。",
+        "english": {
+          "reference": [
+            "feel",
+            "overwhelmed",
+            "perseverance"
+          ],
+          "hypothesis": [
+            "feel",
+            "overwhelmed",
+            "perseverance"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_158",
+        "reference": "\"我相信唔論我哋學嘅知識level有幾高，到頭來都要keep learning, 因為學習真係一個lifelong journey。\"",
+        "raw_text": "我相信唔论我哋学嘅知识 level有几高到头来都要 keep learning因为学习真系一个 lifelong journey",
+        "text": "我相信唔论，我哋学嘅知识level有几高，到头来都要keep learning，因为学习真系一个lifelong journey。",
+        "english": {
+          "reference": [
+            "level",
+            "keep",
+            "learning",
+            "lifelong",
+            "journey"
+          ],
+          "hypothesis": [
+            "level",
+            "keep",
+            "learning",
+            "lifelong",
+            "journey"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_159",
+        "reference": "\"我真係好enjoy學新嘅語言，係一個操縱words嘅fun process，絕對增加咗我嘅cultural understanding。\"",
+        "raw_text": "我真系好 enjoy学生嘅语言系一个操控 words嘅分 process绝对增加咗我嘅 cultural understanding",
+        "text": "我真系好enjoy学生嘅语言，系一个操控words嘅分process，绝对增加咗我嘅cultural understanding。",
+        "english": {
+          "reference": [
+            "enjoy",
+            "words",
+            "fun",
+            "process",
+            "cultural",
+            "understanding"
+          ],
+          "hypothesis": [
+            "enjoy",
+            "words",
+            "process",
+            "cultural",
+            "understanding"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_160",
+        "reference": "\"喺呢個digital age，所有嘅information就喺我哋fingertips，我哋只要search，就可以find嘅。\"",
+        "raw_text": "喺呢个 digital age所有嘅 information就系我哋 fingertips我哋只要 search就可以返嘅",
+        "text": "喺呢个digital age，所有嘅information就系我哋fingertips，我哋，只要search就可以返嘅。",
+        "english": {
+          "reference": [
+            "digital",
+            "age",
+            "information",
+            "fingertips",
+            "search",
+            "find"
+          ],
+          "hypothesis": [
+            "digital",
+            "age",
+            "information",
+            "fingertips",
+            "search"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_161",
+        "reference": "\"讀book真係學習嘅好方法，但我覺得實際行動同practice亦都係好重要。\"",
+        "raw_text": "读 book真系学习嘅好地方但我觉得实际行动同 practice亦都系好重要",
+        "text": "读book真系学习嘅好地方，但我觉得实际行动同practice亦都系好重要。",
+        "english": {
+          "reference": [
+            "book",
+            "practice"
+          ],
+          "hypothesis": [
+            "book",
+            "practice"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_162",
+        "reference": "\"我相信學習嘅journey並唔會smooth一路順風，但就算挫折困難，我哋都唔可以give up，其實呢啲都係part of the learning process。\"",
+        "raw_text": "我相信学习嘅 jenny并唔会 smoke一路顺风但就算挫折困难我哋都唔可以 give up其实呢啲都系 part of the learning",
+        "text": "我相信学习嘅jenny并唔会smoke一路顺风，但就算挫折困难。我哋都唔可以give up。其实呢啲都系part of the learning。",
+        "english": {
+          "reference": [
+            "journey",
+            "smooth",
+            "give",
+            "up",
+            "part",
+            "of",
+            "the",
+            "learning",
+            "process"
+          ],
+          "hypothesis": [
+            "jenny",
+            "smoke",
+            "give",
+            "up",
+            "part",
+            "of",
+            "the",
+            "learning"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "mce_163",
+        "reference": "\"要學好coding，就需要大量嘅time同practice，而且永遠都有新嘅programming languages要學。\"  ",
+        "raw_text": "要学好 coding就需要大量嘅 time同 practice而且永远都会有新嘅 programming languages要学",
+        "text": "要学好coding就需要大量嘅time同practice，而且永远都会有新嘅programming languages。要学。",
+        "english": {
+          "reference": [
+            "coding",
+            "time",
+            "practice",
+            "programming",
+            "languages"
+          ],
+          "hypothesis": [
+            "coding",
+            "time",
+            "practice",
+            "programming",
+            "languages"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_164",
+        "reference": "\"我覺得學英文唔單止可以提升我們嘅communication skills，仲可以認識新嘅culture。\"",
+        "raw_text": "我觉得学英文唔单止可以提升我们嘅 communication skills仲可以学认识新嘅构",
+        "text": "我觉得学英文唔单止可以提升我们嘅communication skills。仲可以学认识新嘅构。",
+        "english": {
+          "reference": [
+            "communication",
+            "skills",
+            "culture"
+          ],
+          "hypothesis": [
+            "communication",
+            "skills"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_165",
+        "reference": "\"當學習變成一個habit，我哋就會更加enjoy學習嘅journey，無論係學習啲咩硬skills或者是soft skills。\"",
+        "raw_text": "当学习变成一个 habit我哋就会更有 enjoy学习嘅 journey无论系学习啲咩硬 skills或者系 soft skills",
+        "text": "当学习变成一个habit，我哋就会更有enjoy学习嘅journey。无论系学习啲咩硬skills或者系soft skills。",
+        "english": {
+          "reference": [
+            "habit",
+            "enjoy",
+            "journey",
+            "skills",
+            "soft",
+            "skills"
+          ],
+          "hypothesis": [
+            "habit",
+            "enjoy",
+            "journey",
+            "skills",
+            "soft",
+            "skills"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "mce_166",
+        "reference": "\"對於work performance，我哋應該要有continuous improvement嘅心態，始終唔可以satisfied with mediocrity。\"",
+        "raw_text": "对于 work performance我哋应该要有 continuous improvement嘅心态始终唔可以 satisfied with mediocrity",
+        "text": "对于work performance，我哋应该要有continuous improvement嘅心态，始终唔可以satisfied with mediocrity。",
+        "english": {
+          "reference": [
+            "work",
+            "performance",
+            "continuous",
+            "improvement",
+            "satisfied",
+            "with",
+            "mediocrity"
+          ],
+          "hypothesis": [
+            "work",
+            "performance",
+            "continuous",
+            "improvement",
+            "satisfied",
+            "with",
+            "mediocrity"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "mce_167",
+        "reference": "\"喺workplace裡面，我哋需要promote open communication，促使每個人都能夠express opinion freely。\"",
+        "raw_text": "喺 workplace里面我们需要 promote open communication促使每个人都能够 express opinion freely",
+        "text": "喺workplace里面我们需要promote open communication促，使每个人都能够express opinion freely。",
+        "english": {
+          "reference": [
+            "workplace",
+            "promote",
+            "open",
+            "communication",
+            "express",
+            "opinion",
+            "freely"
+          ],
+          "hypothesis": [
+            "workplace",
+            "promote",
+            "open",
+            "communication",
+            "express",
+            "opinion",
+            "freely"
+          ],
+          "hits": 7
+        }
+      },
+      {
+        "id": "mce_168",
+        "reference": "\"如果你做嘅project fail咗，就唔需要過於disappointed，失敗係成功之媽，學識learning from mistakes更加重要。\"",
+        "raw_text": "如果你做嘅 project fail咗就唔需要过于 disappointed失败系成功之妈学识 learning from mistakes更加重要",
+        "text": "如果你做嘅project fail咗，就唔需要过于disappointed失败系成功之妈，学识learning from mistakes更加重要。",
+        "english": {
+          "reference": [
+            "project",
+            "fail",
+            "disappointed",
+            "learning",
+            "from",
+            "mistakes"
+          ],
+          "hypothesis": [
+            "project",
+            "fail",
+            "disappointed",
+            "learning",
+            "from",
+            "mistakes"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "mce_169",
+        "reference": "\"喺你嘅career journey之中，唔可以忽視personal development，你嘅professional skills同personal attributes都要balance嘅。\"",
+        "raw_text": "喺你嘅 career journey之中唔可以忽视 personal development你嘅 professional skills同 personal attributes都要 balance嘅",
+        "text": "喺你嘅career journey之中唔可以忽视personal development，你嘅professional skills，同personal attributes都要balance嘅。",
+        "english": {
+          "reference": [
+            "career",
+            "journey",
+            "personal",
+            "development",
+            "professional",
+            "skills",
+            "personal",
+            "attributes",
+            "balance"
+          ],
+          "hypothesis": [
+            "career",
+            "journey",
+            "personal",
+            "development",
+            "professional",
+            "skills",
+            "personal",
+            "attributes",
+            "balance"
+          ],
+          "hits": 9
+        }
+      },
+      {
+        "id": "mce_170",
+        "reference": "\"工作唔係just about earning money，更加係實現自己嘅value，所以我哋需要在work中find passion。\"",
+        "raw_text": "工作唔系 just about earning money更加系实现自己嘅 failure所以我哋需要做 work中 fun passion",
+        "text": "工作唔系just about earning money，更加系实现自己嘅failure。所以我哋需要做work中fun passion。",
+        "english": {
+          "reference": [
+            "just",
+            "about",
+            "earning",
+            "money",
+            "value",
+            "work",
+            "find",
+            "passion"
+          ],
+          "hypothesis": [
+            "just",
+            "about",
+            "earning",
+            "money",
+            "failure",
+            "work",
+            "fun",
+            "passion"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "mce_171",
+        "reference": "\"喺困難面前，唔可以放棄，要有perseverance去克服challenges，因為這樣你就會更強大。\"",
+        "raw_text": "喺困难面前唔可以放弃要有 perseverance去克服 challenges因为这样你就会更强大",
+        "text": "喺困难面前唔可以放弃，要有perseverance去克服challenges。因为这样你就会更强大。",
+        "english": {
+          "reference": [
+            "perseverance",
+            "challenges"
+          ],
+          "hypothesis": [
+            "perseverance",
+            "challenges"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "mce_172",
+        "reference": "\"我哋嘅goal唔係為咗贏過第二名，而係去提升自己嘅performance，唔可以把focus放在beat others上面。\"",
+        "raw_text": "我哋嘅高唔系为咗赢过第二名而系去提升自己嘅 performance唔可以把 focus放在 bit others上面",
+        "text": "我哋嘅高唔系为咗赢过第二名，而系去提升自己嘅performance，唔，可以把focus放在bit others上面。",
+        "english": {
+          "reference": [
+            "goal",
+            "performance",
+            "focus",
+            "beat",
+            "others"
+          ],
+          "hypothesis": [
+            "performance",
+            "focus",
+            "bit",
+            "others"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_173",
+        "reference": "\"有時你可能會覺得當下嘅work唔係你想要做嘅，但你仍然要keep going，因為呢件事情可能會將你帶去未來嘅opportunity。\"",
+        "raw_text": "有时你可能觉得当下嘅 work唔系你想做嘅但你仍然要 keep going因为呢件事情可能会将你带去未来嘅 opportunity",
+        "text": "有时你可能觉得当下嘅work唔系你想做嘅，但你仍然要keep going，因为呢件事情可能会将你带去未来嘅opportunity。",
+        "english": {
+          "reference": [
+            "work",
+            "keep",
+            "going",
+            "opportunity"
+          ],
+          "hypothesis": [
+            "work",
+            "keep",
+            "going",
+            "opportunity"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "mce_174",
+        "reference": "\"有時候work會變得tough，但記住唔可以give up easily，有determination係必要嘅。\"",
+        "raw_text": "有时候 work会变得 tough但记住唔可以 give up easily有 determination系必要嘅",
+        "text": "有时候work会变得tough，但记住唔可以give up easily，有determination系必要嘅。",
+        "english": {
+          "reference": [
+            "work",
+            "tough",
+            "give",
+            "up",
+            "easily",
+            "determination"
+          ],
+          "hypothesis": [
+            "work",
+            "tough",
+            "give",
+            "up",
+            "easily",
+            "determination"
+          ],
+          "hits": 6
+        }
+      },
+      {
+        "id": "mce_175",
+        "reference": "\"喺teamwork中，我哋需要透過effective communication達到consensus，係喺理解同尊重each other的基礎上進行嘅。\"",
+        "raw_text": "喺 team work中我哋需要透过 effective communication达到 consensus系喺理解同尊重 each other的基础上进行嘅",
+        "text": "喺team work中，我哋需要透过effective communication，达到consensus系，喺理解同尊重each other的基础上进行嘅。",
+        "english": {
+          "reference": [
+            "teamwork",
+            "effective",
+            "communication",
+            "consensus",
+            "each",
+            "other"
+          ],
+          "hypothesis": [
+            "team",
+            "work",
+            "effective",
+            "communication",
+            "consensus",
+            "each",
+            "other"
+          ],
+          "hits": 5
+        }
+      },
+      {
+        "id": "mce_176",
+        "reference": "\"今日好sunny，可以去出去玩下，唔好浪費左咁好天氣噶。\"",
+        "raw_text": "今日好新年可以去出去玩下唔好浪费咗咁好嘅天气假",
+        "text": "今日好新年可以去出去玩下唔好浪费咗，咁好嘅天气假。",
+        "english": {
+          "reference": [
+            "sunny"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "mce_177",
+        "reference": "\"天氣預報話會有heavy rain，出門前記得carry傘喇。\"",
+        "raw_text": "天气预报话会有 heavy rain出门前记得 carry散啦",
+        "text": "天气预报话会有heavy rain，出门前记得carry散啦。",
+        "english": {
+          "reference": [
+            "heavy",
+            "rain",
+            "carry"
+          ],
+          "hypothesis": [
+            "heavy",
+            "rain",
+            "carry"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_178",
+        "reference": "\"下雨就算喇，有咁個nice weather，去park行下圈啦。\"",
+        "raw_text": "下雨就算啦有咁嘅 nice weather去 park行下圈啦",
+        "text": "下雨就算啦，有咁嘅nice weather去park行下圈啦。",
+        "english": {
+          "reference": [
+            "nice",
+            "weather",
+            "park"
+          ],
+          "hypothesis": [
+            "nice",
+            "weather",
+            "park"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "mce_179",
+        "reference": "\"今日會好cold，記得穿多件sweater出門啊。\"",
+        "raw_text": "今日会好 cold记得穿多件 sweater出门啊",
+        "text": "今日会好cold，记得穿多件sweater出门啊。",
+        "english": {
+          "reference": [
+            "cold",
+            "sweater"
+          ],
+          "hypothesis": [
+            "cold",
+            "sweater"
+          ],
+          "hits": 2
+        }
       }
     ],
     "metric": "English term F1",
     "metrics": {
-      "english_precision": 0.9067796610169492,
-      "english_recall": 0.8991596638655462,
-      "english_f1": 0.9029535864978903,
-      "mixed_cer": 0.06224066390041494
+      "english_precision": 0.8870967741935484,
+      "english_recall": 0.8610567514677103,
+      "english_f1": 0.8738828202581925,
+      "mixed_cer": 0.06454062262718299
     },
-    "hits": 107,
-    "terms": 119,
-    "hyp_terms": 118,
-    "rate": 0.8991596638655462
+    "hits": 440,
+    "terms": 511,
+    "hyp_terms": 496,
+    "rate": 0.8610567514677103
   }
 ]

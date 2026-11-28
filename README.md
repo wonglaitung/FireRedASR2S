@@ -1,6 +1,6 @@
 # FireRedASR2S
 
-> 版本：v2.0
+> 版本：v2.2
 > **精度优先**的粤语 / 普通话 / 英文句级语音转写系统，附独立桌面录音器。
 
 ---
@@ -15,7 +15,7 @@
 | 桌面录音器 | PyQt6 窗口；麦克风 → WebSocket → 逐句显示 |
 | 后端镜像 | Dockerfile；默认把 AED/Silero/标点烤进镜像 |
 | 打包 | PyInstaller 脚本 + GitHub Actions（Windows exe） |
-| 测试 | `ruff` PASS；`pytest` 45 passed |
+| 测试 | `ruff` PASS；`pytest` 49 passed |
 
 > 这是 **POC（Proof of Concept，概念验证）**，不是生产成品；延迟、并发、鉴权与模型精度仍需按正式方案推进。
 
@@ -184,16 +184,17 @@ ruff check .
 python3 -m pytest
 ```
 
-当前：`ruff` PASS；`pytest` **45 passed**（含真实模型、Silero VAD、后处理、WebSocket、录音器协议/GUI/文件 E2E）。
+当前：`ruff` PASS；`pytest` **49 passed**（含真实模型、Silero VAD、后处理、WebSocket、录音器协议/GUI/文件 E2E）。
 
-验证集：`eval/`（粤语 20 / 英文 20 / 粤英混说 20）。
+验证集：`eval/`（粤语 20 / 英文 20 / 粤英混说 100）。
 
 | 引擎 | 粤语 CER | 英文 WER | 粤英英文词 F1 | 混合 CER |
 | --- | --- | --- | --- | --- |
-| sherpa int8 greedy | 11.5% | 1.1% | 87.8% | 6.8% |
-| 官方 AED BF16 beam5 | **4.7%** | **0.9%** | **90.3%** | **6.2%** |
+| sherpa int8 greedy | 11.5% | 1.1% | 84.3% | 7.2% |
+| 官方 AED BF16 beam10 | **4.7%** | **0.9%** | **87.4%** | **6.5%** |
+| 官方 AED + n-best LM | **4.7%** | **0.9%** | **88.4%** | **6.0%** |
 
-官方 AED 对照配置：`configs/app_official.yaml`；模型/代码缓存准备：`bash scripts/setup_official_aed.sh`。
+官方 AED 对照配置：`configs/app_official.yaml`；模型/代码缓存：`bash scripts/setup_official_aed.sh`；混说 LM：`PYTHONPATH=src python3 scripts/build_mce_lm.py`。
 
 > 集成测试在模型不存在时会自动 skip。
 

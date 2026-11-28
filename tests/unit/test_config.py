@@ -25,5 +25,6 @@ def test_load_official_aed_config() -> None:
     assert cfg.asr.model_dir.endswith("FireRedASR2-AED")
     assert cfg.asr.use_gpu is True
     assert cfg.asr.use_half is True
-    assert cfg.asr.beam_size == 5
-    assert cfg.asr.nbest == 1
+    assert cfg.asr.beam_size == 10
+    assert cfg.asr.nbest == 10
+    assert cfg.asr.lm_path.endswith("mce_lm.json")

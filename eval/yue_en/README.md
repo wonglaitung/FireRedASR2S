@@ -1,7 +1,8 @@
-# 粵英混說驗證集（20 條）
+# 粵英混說驗證集（100 條）
 
-> 版本：v1.3
+> 版本：v1.5
 > 用途：本項目內部的**粵英混說回歸驗證集**，不是官方 benchmark，也不代表生產分佈。
+> 100 條 = 原 20 條 + 新增 80 條；原 20 條子集偏容易，不能單獨代表整體。
 
 ---
 
@@ -12,14 +13,12 @@ eval/yue_en/
 ├── README.md
 ├── manifest.tsv          # 人可讀清單
 ├── manifest.json         # 評測腳本使用
-├── baseline.tsv          # AED 基線輸出
-├── baseline.json
 └── audio/
     ├── yue_en_001.wav
     └── ... yue_en_020.wav
 ```
 
-- 20 條音頻，總時長約 **166.95 秒**
+- 100 條音頻，總時長約 **785.58 秒**
 - 16kHz / 16bit / mono WAV
 - 主題：天氣、食物、旅遊、娛樂、體育、本地時事、購物、學習、工作
 - 每條都包含粵語語法 + 英文詞/短語（句首、句中、句尾、英文標題、多詞英文段）
@@ -44,7 +43,7 @@ eval/yue_en/
 
 - 來源：HuggingFace [`AlienKevin/mixed_cantonese_and_english_speech`](https://huggingface.co/datasets/AlienKevin/mixed_cantonese_and_english_speech)
 - 上游：MCE（Mixed Cantonese and English）資料集 / [`Shelton1013/Whisper_MCE`](https://github.com/Shelton1013/Whisper_MCE)
-- 本驗證集從該資料集抽取 20 條，保留原始 row index，方便回溯。
+- 本驗證集從該資料集抽取 100 條，保留原始 row index，方便回溯。
 
 > **MCE 標註僅限研究用途，商用需取得作者授權。**  
 > 本目錄音頻僅供本項目內部研究與回歸測試；若倉庫需要公開分發或商用，請先確認授權，或刪除 `audio/` 只保留 manifest 與下載腳本。
@@ -55,13 +54,14 @@ eval/yue_en/
 
 | 引擎 | 英文詞 F1 | 混合 CER |
 | --- | --- | --- |
-| sherpa int8 greedy | **87.8%**（P 88.1% / R 87.4%） | **6.8%** |
-| 官方 AED BF16 beam5 | **90.3%**（P 90.7% / R 89.9%） | **6.2%** |
+| sherpa int8 greedy | **84.3%** | **7.2%** |
+| 官方 AED BF16 beam10 | **87.4%**（P 88.7% / R 86.1%） | **6.5%** |
+| 官方 AED + n-best LM | **88.4%**（P 90.1% / R 86.9%） | **6.0%** |
 
 - 英文詞 P/R/F1：按 token 邊界匹配，長度 ≥2 且含字母；不再用 substring。
 - 混合 CER：中文按字、英文按詞計編輯距離。
 - P/R/F1 與混合 CER 一起看，避免「多吐英文」推高召回。
-- 詳細輸出：`baseline.tsv` / `baseline.json`；官方 AED 逐條：`eval/baseline_official_aed.json`。
+- 逐條輸出：`eval/baseline_aed.json`、`eval/baseline_official_aed.json`、`eval/baseline_official_lm.json`。
 
 觀察：
 
@@ -71,7 +71,7 @@ eval/yue_en/
   - `boutique` → `补贴`
   - `croissant` → `CROSSING`
 
-> 這批資料偏**朗讀/半自發**，且全部來自原資料集的 train split。  
+> 這批資料偏**朗讀/半自發**，且全部來自原資料集的 train split；100 條比原 20 條更難。
 > 它適合做內部回歸，不適合宣稱「官方測試集」或直接外推生產準確率。
 
 ---

@@ -64,6 +64,10 @@ class AsrConfig:
     eos_penalty: float = 1.0
     elm_dir: str = ""
     elm_weight: float = 0.0
+    lm_path: str = ""
+    lm_weight: float = 0.5
+    rank_weight: float = 0.05
+    confidence_weight: float = 0.0
 
 
 @dataclass

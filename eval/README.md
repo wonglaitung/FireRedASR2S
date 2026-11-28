@@ -1,6 +1,6 @@
 # 验证集套件
 
-> 版本：v1.2
+> 版本：v1.4
 > 用途：AED-only 优化前后对比；不是官方 benchmark，也不代表生产分布。
 
 ## 1. 三个子集
@@ -17,12 +17,15 @@
 
 | 引擎 | 环境 | `yue` CER | `en` WER | `yue_en` F1 | `yue_en` 混合 CER |
 | --- | --- | --- | --- | --- | --- |
-| sherpa int8 greedy | CPU | 11.5% | 1.1% | 87.8% | 6.8% |
-| 官方 AED PyTorch | RTX 4090，BF16，beam5 | **4.7%** | **0.9%** | **90.3%**（P 90.7 / R 89.9） | **6.2%** |
+| sherpa int8 greedy | CPU | 11.5% | 1.1% | 84.3% | 7.2% |
+| 官方 AED PyTorch | RTX 4090，BF16，beam10 | **4.7%** | **0.9%** | **87.4%**（P 88.7 / R 86.1） | **6.5%** |
+| 官方 AED + n-best LM | RTX 4090，BF16，beam10 | **4.7%** | **0.9%** | **88.4%**（P 90.1 / R 86.9） | **6.0%** |
 
-逐条结果：`eval/baseline_aed.json`（sherpa）、`eval/baseline_official_aed.json`（官方 AED）。
+逐条结果：`eval/baseline_aed.json`（sherpa）、`eval/baseline_official_aed.json`（官方 1-best）、`eval/baseline_official_lm.json`（官方 + LM）。
 
-> 官方 AED 使用 `configs/app_official.yaml`；模型/代码缓存见 `scripts/setup_official_aed.sh`。
+> 官方 AED 使用 `configs/app_official.yaml`；模型/代码缓存见 `scripts/setup_official_aed.sh`。混说 LM 由 `scripts/build_mce_lm.py` 构建，训练时排除 100 条评估集。
+>
+> 原 20 条子集不是独立测试集，且偏容易；用 20 条会得到偏乐观的 95.4%，请以 100 条结果为准。
 
 ## 3. 指标定义
 

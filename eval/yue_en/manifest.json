@@ -358,5 +358,805 @@
       "well",
       "satisfied"
     ]
+  },
+  {
+    "id": "mce_100",
+    "source": "MCE",
+    "source_index": 100,
+    "topic": "食物",
+    "duration_s": 6.04,
+    "sample_rate": 16000,
+    "audio": "audio/mce_100.wav",
+    "transcript": "\"啲意大利麵嘅sauce個taste好rich，真係惹味到不得了。\""
+  },
+  {
+    "id": "mce_101",
+    "source": "MCE",
+    "source_index": 101,
+    "topic": "食物",
+    "duration_s": 8.15,
+    "sample_rate": 16000,
+    "audio": "audio/mce_101.wav",
+    "transcript": "\"party time食pizza真係好fun，尤其係嗰啲薄底嘅，taste非常authentic！\""
+  },
+  {
+    "id": "mce_102",
+    "source": "MCE",
+    "source_index": 102,
+    "topic": "食物",
+    "duration_s": 6.95,
+    "sample_rate": 16000,
+    "audio": "audio/mce_102.wav",
+    "transcript": "\"小籠包裏面嘅肉汁好juicy，每次一咬就會流出嚟，簡直係mouthwatering！\""
+  },
+  {
+    "id": "mce_103",
+    "source": "MCE",
+    "source_index": 103,
+    "topic": "食物",
+    "duration_s": 7.83,
+    "sample_rate": 16000,
+    "audio": "audio/mce_103.wav",
+    "transcript": "\"日本料理嘅presentation真係好impressive，就算係飯團sushi，都會令你一試難以忘懷。\""
+  },
+  {
+    "id": "mce_104",
+    "source": "MCE",
+    "source_index": 104,
+    "topic": "食物",
+    "duration_s": 6.89,
+    "sample_rate": 16000,
+    "audio": "audio/mce_104.wav",
+    "transcript": "\"我好喜歡番茄海鮮湯嘅flavour，做得好，酸辣恰到好處！fiction"
+  },
+  {
+    "id": "mce_105",
+    "source": "MCE",
+    "source_index": 105,
+    "topic": "食物",
+    "duration_s": 7.57,
+    "sample_rate": 16000,
+    "audio": "audio/mce_105.wav",
+    "transcript": "\"牛油果shrimp salad好划算，又健康！食完feel自己好healthy同energized！\""
+  },
+  {
+    "id": "mce_106",
+    "source": "MCE",
+    "source_index": 106,
+    "topic": "旅遊",
+    "duration_s": 6.08,
+    "sample_rate": 16000,
+    "audio": "audio/mce_106.wav",
+    "transcript": "\"我哋下次去Thailand，一定要try佢哋嘅local food，聽講超好食呀！\""
+  },
+  {
+    "id": "mce_107",
+    "source": "MCE",
+    "source_index": 107,
+    "topic": "旅遊",
+    "duration_s": 5.57,
+    "sample_rate": 16000,
+    "audio": "audio/mce_107.wav",
+    "transcript": "\"有冇諗過去Australia睇睇當地嘅wildlife，一定好exciting架！\""
+  },
+  {
+    "id": "mce_108",
+    "source": "MCE",
+    "source_index": 108,
+    "topic": "旅遊",
+    "duration_s": 6.76,
+    "sample_rate": 16000,
+    "audio": "audio/mce_108.wav",
+    "transcript": "\"我好想買個backpack，走一轉Europe，去好多個museums同historical sites就好啦！\""
+  },
+  {
+    "id": "mce_109",
+    "source": "MCE",
+    "source_index": 109,
+    "topic": "旅遊",
+    "duration_s": 7.85,
+    "sample_rate": 16000,
+    "audio": "audio/mce_109.wav",
+    "transcript": "\"聽講去U.S.A.round trip要花好多時間，不過如果有機會我都想試下，應該好unforgettable架！\""
+  },
+  {
+    "id": "mce_110",
+    "source": "MCE",
+    "source_index": 110,
+    "topic": "旅遊",
+    "duration_s": 7.21,
+    "sample_rate": 16000,
+    "audio": "audio/mce_110.wav",
+    "transcript": "\"我下個goal係想去Africa做volunteering，貢獻少少力量都好，我覺得好meaningful！\""
+  },
+  {
+    "id": "mce_111",
+    "source": "MCE",
+    "source_index": 111,
+    "topic": "旅遊",
+    "duration_s": 6.89,
+    "sample_rate": 16000,
+    "audio": "audio/mce_111.wav",
+    "transcript": "\"去New Zealand搭個campervan一路drive一路玩，咁樣嘅旅行計劃一定好relaxing！\""
+  },
+  {
+    "id": "mce_112",
+    "source": "MCE",
+    "source_index": 112,
+    "topic": "旅遊",
+    "duration_s": 8.11,
+    "sample_rate": 16000,
+    "audio": "audio/mce_112.wav",
+    "transcript": "\"我哋下次一齊去Italy嘅wine tour啦，試吓佢地嘅紅酒，一定好enjoyable！\""
+  },
+  {
+    "id": "mce_113",
+    "source": "MCE",
+    "source_index": 113,
+    "topic": "旅遊",
+    "duration_s": 8.0,
+    "sample_rate": 16000,
+    "audio": "audio/mce_113.wav",
+    "transcript": "\"France嘅cuisine大家都識，但如果當地嘅cooking class就未必咁簡單，但我想嘗試下，肯定好fun架！\""
+  },
+  {
+    "id": "mce_114",
+    "source": "MCE",
+    "source_index": 114,
+    "topic": "旅遊",
+    "duration_s": 8.92,
+    "sample_rate": 16000,
+    "audio": "audio/mce_114.wav",
+    "transcript": "\"我想我會plan一個solo trip去Canada，享受一下自由同獨處嘅樂趣，一定好special嘅experience!\""
+  },
+  {
+    "id": "mce_115",
+    "source": "MCE",
+    "source_index": 115,
+    "topic": "旅遊",
+    "duration_s": 6.49,
+    "sample_rate": 16000,
+    "audio": "audio/mce_115.wav",
+    "transcript": "\"日本嘅cherry blossom season我一直都好想見識下，對我嚟講，應該好charming架！\""
+  },
+  {
+    "id": "mce_116",
+    "source": "MCE",
+    "source_index": 116,
+    "topic": "娛樂",
+    "duration_s": 9.77,
+    "sample_rate": 16000,
+    "audio": "audio/mce_116.wav",
+    "transcript": "\"我每個weekend都會去movie theatre睇新上映嘅films，我鍾意各種genre嘅movies，例如action, comedy同sci-fi等等。\""
+  },
+  {
+    "id": "mce_117",
+    "source": "MCE",
+    "source_index": 117,
+    "topic": "娛樂",
+    "duration_s": 12.14,
+    "sample_rate": 16000,
+    "audio": "audio/mce_117.wav",
+    "transcript": "\"我周圍嘅mates都好鍾意聽我講ghost stories，我係個很大嘅horror fan，我鍾意嘅horror fix都唔係單單限制於書同film。\""
+  },
+  {
+    "id": "mce_118",
+    "source": "MCE",
+    "source_index": 118,
+    "topic": "娛樂",
+    "duration_s": 7.91,
+    "sample_rate": 16000,
+    "audio": "audio/mce_118.wav",
+    "transcript": "\"我好鍾意去karaoke同朋友唱歌，每次去都唔覺得boring，我同我朋友們都有好多fun。\""
+  },
+  {
+    "id": "mce_119",
+    "source": "MCE",
+    "source_index": 119,
+    "topic": "娛樂",
+    "duration_s": 10.2,
+    "sample_rate": 16000,
+    "audio": "audio/mce_119.wav",
+    "transcript": "\"我鍾意用我部iPad睇Netflix或者Disney+，我覺得我每個月payment都好值得，因為我可以睇到好多我鍾意嘅series同movie。\""
+  },
+  {
+    "id": "mce_120",
+    "source": "MCE",
+    "source_index": 120,
+    "topic": "娛樂",
+    "duration_s": 9.13,
+    "sample_rate": 16000,
+    "audio": "audio/mce_120.wav",
+    "transcript": "\"我每日都會睇youtube，我其中一個favorite嘅youtuber就係Pewdiepie，我鍾意佢嘅gameplay videos同meme reviews。\""
+  },
+  {
+    "id": "mce_121",
+    "source": "MCE",
+    "source_index": 121,
+    "topic": "娛樂",
+    "duration_s": 8.85,
+    "sample_rate": 16000,
+    "audio": "audio/mce_121.wav",
+    "transcript": "\"我係個音樂lover，我喺spotify上有好多嘅playlist，我嘅music taste包括pop, rock同classical等等。\""
+  },
+  {
+    "id": "mce_122",
+    "source": "MCE",
+    "source_index": 122,
+    "topic": "娛樂",
+    "duration_s": 9.39,
+    "sample_rate": 16000,
+    "audio": "audio/mce_122.wav",
+    "transcript": "\"我唔單止鍾意喺gaming console上玩video games，我都好鍾意喺arcade玩，我覺得咁樣會有個好嘅social experience。\""
+  },
+  {
+    "id": "mce_123",
+    "source": "MCE",
+    "source_index": 123,
+    "topic": "娛樂",
+    "duration_s": 8.53,
+    "sample_rate": 16000,
+    "audio": "audio/mce_123.wav",
+    "transcript": "\"我鍾意睇Netflix嘅drama series，例如'Stranger Things'同'The Crown'，我覺得喺家睇係一個好relax嘅娛樂方式。\""
+  },
+  {
+    "id": "mce_124",
+    "source": "MCE",
+    "source_index": 124,
+    "topic": "娛樂",
+    "duration_s": 10.18,
+    "sample_rate": 16000,
+    "audio": "audio/mce_124.wav",
+    "transcript": "\"我每個month都好look forward到嗰個新comic book day，我會去我最鍾意嘅comic shop揀選我最期待嘅new releases。\""
+  },
+  {
+    "id": "mce_125",
+    "source": "MCE",
+    "source_index": 125,
+    "topic": "娛樂",
+    "duration_s": 9.13,
+    "sample_rate": 16000,
+    "audio": "audio/mce_125.wav",
+    "transcript": "\"每年嘅summer我都會去參加music festival，我覺得呢種體驗好enjoyable，可以聽到我最鍾意嘅樂團live performance。\""
+  },
+  {
+    "id": "mce_126",
+    "source": "MCE",
+    "source_index": 126,
+    "topic": "體育",
+    "duration_s": 7.13,
+    "sample_rate": 16000,
+    "audio": "audio/mce_126.wav",
+    "transcript": "\"見到Lionel Messi玩足球，簡直係masterpiece，佢嘅技巧真係outstanding！\""
+  },
+  {
+    "id": "mce_127",
+    "source": "MCE",
+    "source_index": 127,
+    "topic": "體育",
+    "duration_s": 5.8,
+    "sample_rate": 16000,
+    "audio": "audio/mce_127.wav",
+    "transcript": "\"我下個月要去參加yoga class，一直都想體驗下，希望我可以fit入去。\""
+  },
+  {
+    "id": "mce_128",
+    "source": "MCE",
+    "source_index": 128,
+    "topic": "體育",
+    "duration_s": 7.47,
+    "sample_rate": 16000,
+    "audio": "audio/mce_128.wav",
+    "transcript": "\"雖然我嘅swimming technique仲有好多需要提升的地方，但係我絕對唔會放棄，practice makes perfect！\""
+  },
+  {
+    "id": "mce_129",
+    "source": "MCE",
+    "source_index": 129,
+    "topic": "體育",
+    "duration_s": 5.85,
+    "sample_rate": 16000,
+    "audio": "audio/mce_129.wav",
+    "transcript": "\"我每個星期都會去gym做workout，健康身體真係well invested。”"
+  },
+  {
+    "id": "mce_130",
+    "source": "MCE",
+    "source_index": 130,
+    "topic": "體育",
+    "duration_s": 5.44,
+    "sample_rate": 16000,
+    "audio": "audio/mce_130.wav",
+    "transcript": "\"我哋今晚要去睇basketball game，已經買咗飲品同小食ready to enjoy。\""
+  },
+  {
+    "id": "mce_131",
+    "source": "MCE",
+    "source_index": 131,
+    "topic": "體育",
+    "duration_s": 6.27,
+    "sample_rate": 16000,
+    "audio": "audio/mce_131.wav",
+    "transcript": "\"我嘅朋友一向鍾意玩badminton，雖然我之前冇試過，但係我已經準備好箍住玩。\""
+  },
+  {
+    "id": "mce_132",
+    "source": "MCE",
+    "source_index": 132,
+    "topic": "體育",
+    "duration_s": 6.36,
+    "sample_rate": 16000,
+    "audio": "audio/mce_132.wav",
+    "transcript": "\"我鍾意跑步嘅原因,之一就係feel到風吹過嚟，完全係nature's gift啊。\""
+  },
+  {
+    "id": "mce_133",
+    "source": "MCE",
+    "source_index": 133,
+    "topic": "體育",
+    "duration_s": 6.02,
+    "sample_rate": 16000,
+    "audio": "audio/mce_133.wav",
+    "transcript": "\"下次我哋可以試下hiking，頂到噉既環境，一定feel到超級relaxing。\""
+  },
+  {
+    "id": "mce_134",
+    "source": "MCE",
+    "source_index": 134,
+    "topic": "體育",
+    "duration_s": 6.46,
+    "sample_rate": 16000,
+    "audio": "audio/mce_134.wav",
+    "transcript": "\"今日好適合做outdoor exercises，天氣好好，我ready好水樽就要去公園啦。\""
+  },
+  {
+    "id": "mce_135",
+    "source": "MCE",
+    "source_index": 135,
+    "topic": "體育",
+    "duration_s": 5.55,
+    "sample_rate": 16000,
+    "audio": "audio/mce_135.wav",
+    "transcript": "\"我覺得做運動唔單止keep fit，佢對於精神上都有好大嘅help。\""
+  },
+  {
+    "id": "mce_136",
+    "source": "MCE",
+    "source_index": 136,
+    "topic": "本地時事",
+    "duration_s": 6.93,
+    "sample_rate": 16000,
+    "audio": "audio/mce_136.wav",
+    "transcript": "\"我覺得點解政府未有implement一個有效嘅交通system，以resolve香港嘅交通擠塞問題。\""
+  },
+  {
+    "id": "mce_137",
+    "source": "MCE",
+    "source_index": 137,
+    "topic": "本地時事",
+    "duration_s": 9.75,
+    "sample_rate": 16000,
+    "audio": "audio/mce_137.wav",
+    "transcript": "\"我睇到佢哋打算開始更改教育嘅curriculum，但我喺咁嘅情況之下，我諗佢哋應該先focus喺學生嘅心理健康上面。\""
+  },
+  {
+    "id": "mce_138",
+    "source": "MCE",
+    "source_index": 138,
+    "topic": "本地時事",
+    "duration_s": 6.98,
+    "sample_rate": 16000,
+    "audio": "audio/mce_138.wav",
+    "transcript": "\"疫症keep going，廣大市民嘅生活變得越來越困難，而政府嘅support就變得相當critical。\""
+  },
+  {
+    "id": "mce_139",
+    "source": "MCE",
+    "source_index": 139,
+    "topic": "本地時事",
+    "duration_s": 10.05,
+    "sample_rate": 16000,
+    "audio": "audio/mce_139.wav",
+    "transcript": "\"佢哋嘅廢物管理真係improve咗喎，但係都仲未到我哋想象中嘅level，我哋還要重加努力去achieve噉嘅目標。\""
+  },
+  {
+    "id": "mce_140",
+    "source": "MCE",
+    "source_index": 140,
+    "topic": "本地時事",
+    "duration_s": 7.7,
+    "sample_rate": 16000,
+    "audio": "audio/mce_140.wav",
+    "transcript": "\"有關於食物waste，我諗呢個問題唔單止需要大家嘅collective effort，仲要政府要果斷take action。\""
+  },
+  {
+    "id": "mce_141",
+    "source": "MCE",
+    "source_index": 141,
+    "topic": "本地時事",
+    "duration_s": 9.56,
+    "sample_rate": 16000,
+    "audio": "audio/mce_141.wav",
+    "transcript": "\"地方政府打算開launch咗更嚴厲嘅規定去控制smoking，但係我感到有啲憂慮呢個嘅implementation。\""
+  },
+  {
+    "id": "mce_142",
+    "source": "MCE",
+    "source_index": 142,
+    "topic": "本地時事",
+    "duration_s": 9.75,
+    "sample_rate": 16000,
+    "audio": "audio/mce_142.wav",
+    "transcript": "\"最近嘅real estate嘅價格上升，可能導致我哋啲年輕人買不起house，因此我哋需要一個更fair嘅市場。\""
+  },
+  {
+    "id": "mce_143",
+    "source": "MCE",
+    "source_index": 143,
+    "topic": "本地時事",
+    "duration_s": 8.34,
+    "sample_rate": 16000,
+    "audio": "audio/mce_143.wav",
+    "transcript": "\"依家香港嘅經濟狀況真係擔心，因為無咩野可以create jobs，政府必須即刻take action。\""
+  },
+  {
+    "id": "mce_144",
+    "source": "MCE",
+    "source_index": 144,
+    "topic": "本地時事",
+    "duration_s": 8.81,
+    "sample_rate": 16000,
+    "audio": "audio/mce_144.wav",
+    "transcript": "\"我諗緊本地大學應該更focus培訓啲技術高superior嘅學生，先至可以handle未來社會嘅挑戰。\""
+  },
+  {
+    "id": "mce_145",
+    "source": "MCE",
+    "source_index": 145,
+    "topic": "本地時事",
+    "duration_s": 7.53,
+    "sample_rate": 16000,
+    "audio": "audio/mce_145.wav",
+    "transcript": "\"政府呢個round嘅市區重建plan有啲問題，大家覺得未必可行，需要進一步行review。\""
+  },
+  {
+    "id": "mce_146",
+    "source": "MCE",
+    "source_index": 146,
+    "topic": "購物",
+    "duration_s": 6.89,
+    "sample_rate": 16000,
+    "audio": "audio/mce_146.wav",
+    "transcript": "\"我鐘意去boutique shopping，買一啲unique嘅clothes，又可以express my fashion sense，真係amazing。\""
+  },
+  {
+    "id": "mce_147",
+    "source": "MCE",
+    "source_index": 147,
+    "topic": "購物",
+    "duration_s": 7.83,
+    "sample_rate": 16000,
+    "audio": "audio/mce_147.wav",
+    "transcript": "\"我仲鐘意喺online stores 買fashion accessories，帶埋我嘅outfits，feel more stylish同埋fashionable。\""
+  },
+  {
+    "id": "mce_148",
+    "source": "MCE",
+    "source_index": 148,
+    "topic": "購物",
+    "duration_s": 6.12,
+    "sample_rate": 16000,
+    "audio": "audio/mce_148.wav",
+    "transcript": "\"我成日去department stores，可以一次過買齊所有需要嘅goods，真係convenient。\""
+  },
+  {
+    "id": "mce_149",
+    "source": "MCE",
+    "source_index": 149,
+    "topic": "購物",
+    "duration_s": 8.96,
+    "sample_rate": 16000,
+    "audio": "audio/mce_149.wav",
+    "transcript": "\"我鐘意喺朋友嘅recommendations後，去試新嘅cosmetics products，可以improve my skin care routine，感覺好refreshing。\""
+  },
+  {
+    "id": "mce_150",
+    "source": "MCE",
+    "source_index": 150,
+    "topic": "購物",
+    "duration_s": 8.9,
+    "sample_rate": 16000,
+    "audio": "audio/mce_150.wav",
+    "transcript": "\"我成日去bookstores，透過買新書去enhance my knowledge，同時間又可以enjoy the peaceful atmosphere，好relaxing。\""
+  },
+  {
+    "id": "mce_151",
+    "source": "MCE",
+    "source_index": 151,
+    "topic": "購物",
+    "duration_s": 8.62,
+    "sample_rate": 16000,
+    "audio": "audio/mce_151.wav",
+    "transcript": "\"我鐘意喺同朋友一齊去shopping malls，透過買貨散心同埋share our interests，好fun同埋enjoyable。\""
+  },
+  {
+    "id": "mce_152",
+    "source": "MCE",
+    "source_index": 152,
+    "topic": "購物",
+    "duration_s": 6.38,
+    "sample_rate": 16000,
+    "audio": "audio/mce_152.wav",
+    "transcript": "\"我常去outlet malls，用抵價嘅價錢買到我鐘意嘅brands，感覺好satisfying同埋exciting。\""
+  },
+  {
+    "id": "mce_153",
+    "source": "MCE",
+    "source_index": 153,
+    "topic": "購物",
+    "duration_s": 7.74,
+    "sample_rate": 16000,
+    "audio": "audio/mce_153.wav",
+    "transcript": "\"喺Christmas sales期間，我會買一大堆禮物送比朋友家人，真係joyful同埋fulfilling。\""
+  },
+  {
+    "id": "mce_154",
+    "source": "MCE",
+    "source_index": 154,
+    "topic": "購物",
+    "duration_s": 6.27,
+    "sample_rate": 16000,
+    "audio": "audio/mce_154.wav",
+    "transcript": "\"我會喺online platform bid二手物品，可以買到rare items，真係thrilling同埋rewarding。\""
+  },
+  {
+    "id": "mce_155",
+    "source": "MCE",
+    "source_index": 155,
+    "topic": "購物",
+    "duration_s": 6.66,
+    "sample_rate": 16000,
+    "audio": "audio/mce_155.wav",
+    "transcript": "\"我鐘意逛市集，可以睇到一啲handmade crafts，可以support local artists，真係meaningful。\""
+  },
+  {
+    "id": "mce_156",
+    "source": "MCE",
+    "source_index": 156,
+    "topic": "學習",
+    "duration_s": 8.41,
+    "sample_rate": 16000,
+    "audio": "audio/mce_156.wav",
+    "transcript": "\"我嘅學習style係透過online courses同實際練習相結合，我認為，互聯網提供咗好多學習resources，真係好方便。\""
+  },
+  {
+    "id": "mce_157",
+    "source": "MCE",
+    "source_index": 157,
+    "topic": "學習",
+    "duration_s": 8.83,
+    "sample_rate": 16000,
+    "audio": "audio/mce_157.wav",
+    "transcript": "\"剛開始學習新嘅事物時，我有時會feel overwhelmed，但我相信perseverance係最重要嘅。\""
+  },
+  {
+    "id": "mce_158",
+    "source": "MCE",
+    "source_index": 158,
+    "topic": "學習",
+    "duration_s": 8.64,
+    "sample_rate": 16000,
+    "audio": "audio/mce_158.wav",
+    "transcript": "\"我相信唔論我哋學嘅知識level有幾高，到頭來都要keep learning, 因為學習真係一個lifelong journey。\""
+  },
+  {
+    "id": "mce_159",
+    "source": "MCE",
+    "source_index": 159,
+    "topic": "學習",
+    "duration_s": 8.68,
+    "sample_rate": 16000,
+    "audio": "audio/mce_159.wav",
+    "transcript": "\"我真係好enjoy學新嘅語言，係一個操縱words嘅fun process，絕對增加咗我嘅cultural understanding。\""
+  },
+  {
+    "id": "mce_160",
+    "source": "MCE",
+    "source_index": 160,
+    "topic": "學習",
+    "duration_s": 8.83,
+    "sample_rate": 16000,
+    "audio": "audio/mce_160.wav",
+    "transcript": "\"喺呢個digital age，所有嘅information就喺我哋fingertips，我哋只要search，就可以find嘅。\""
+  },
+  {
+    "id": "mce_161",
+    "source": "MCE",
+    "source_index": 161,
+    "topic": "學習",
+    "duration_s": 5.97,
+    "sample_rate": 16000,
+    "audio": "audio/mce_161.wav",
+    "transcript": "\"讀book真係學習嘅好方法，但我覺得實際行動同practice亦都係好重要。\""
+  },
+  {
+    "id": "mce_162",
+    "source": "MCE",
+    "source_index": 162,
+    "topic": "學習",
+    "duration_s": 7.98,
+    "sample_rate": 16000,
+    "audio": "audio/mce_162.wav",
+    "transcript": "\"我相信學習嘅journey並唔會smooth一路順風，但就算挫折困難，我哋都唔可以give up，其實呢啲都係part of the learning process。\""
+  },
+  {
+    "id": "mce_163",
+    "source": "MCE",
+    "source_index": 163,
+    "topic": "學習",
+    "duration_s": 8.11,
+    "sample_rate": 16000,
+    "audio": "audio/mce_163.wav",
+    "transcript": "\"要學好coding，就需要大量嘅time同practice，而且永遠都有新嘅programming languages要學。\""
+  },
+  {
+    "id": "mce_164",
+    "source": "MCE",
+    "source_index": 164,
+    "topic": "學習",
+    "duration_s": 8.32,
+    "sample_rate": 16000,
+    "audio": "audio/mce_164.wav",
+    "transcript": "\"我覺得學英文唔單止可以提升我們嘅communication skills，仲可以認識新嘅culture。\""
+  },
+  {
+    "id": "mce_165",
+    "source": "MCE",
+    "source_index": 165,
+    "topic": "學習",
+    "duration_s": 10.35,
+    "sample_rate": 16000,
+    "audio": "audio/mce_165.wav",
+    "transcript": "\"當學習變成一個habit，我哋就會更加enjoy學習嘅journey，無論係學習啲咩硬skills或者是soft skills。\""
+  },
+  {
+    "id": "mce_166",
+    "source": "MCE",
+    "source_index": 166,
+    "topic": "工作",
+    "duration_s": 10.73,
+    "sample_rate": 16000,
+    "audio": "audio/mce_166.wav",
+    "transcript": "\"對於work performance，我哋應該要有continuous improvement嘅心態，始終唔可以satisfied with mediocrity。\""
+  },
+  {
+    "id": "mce_167",
+    "source": "MCE",
+    "source_index": 167,
+    "topic": "工作",
+    "duration_s": 7.3,
+    "sample_rate": 16000,
+    "audio": "audio/mce_167.wav",
+    "transcript": "\"喺workplace裡面，我哋需要promote open communication，促使每個人都能夠express opinion freely。\""
+  },
+  {
+    "id": "mce_168",
+    "source": "MCE",
+    "source_index": 168,
+    "topic": "工作",
+    "duration_s": 9.43,
+    "sample_rate": 16000,
+    "audio": "audio/mce_168.wav",
+    "transcript": "\"如果你做嘅project fail咗，就唔需要過於disappointed，失敗係成功之媽，學識learning from mistakes更加重要。\""
+  },
+  {
+    "id": "mce_169",
+    "source": "MCE",
+    "source_index": 169,
+    "topic": "工作",
+    "duration_s": 9.45,
+    "sample_rate": 16000,
+    "audio": "audio/mce_169.wav",
+    "transcript": "\"喺你嘅career journey之中，唔可以忽視personal development，你嘅professional skills同personal attributes都要balance嘅。\""
+  },
+  {
+    "id": "mce_170",
+    "source": "MCE",
+    "source_index": 170,
+    "topic": "工作",
+    "duration_s": 6.72,
+    "sample_rate": 16000,
+    "audio": "audio/mce_170.wav",
+    "transcript": "\"工作唔係just about earning money，更加係實現自己嘅value，所以我哋需要在work中find passion。\""
+  },
+  {
+    "id": "mce_171",
+    "source": "MCE",
+    "source_index": 171,
+    "topic": "工作",
+    "duration_s": 6.93,
+    "sample_rate": 16000,
+    "audio": "audio/mce_171.wav",
+    "transcript": "\"喺困難面前，唔可以放棄，要有perseverance去克服challenges，因為這樣你就會更強大。\""
+  },
+  {
+    "id": "mce_172",
+    "source": "MCE",
+    "source_index": 172,
+    "topic": "工作",
+    "duration_s": 7.81,
+    "sample_rate": 16000,
+    "audio": "audio/mce_172.wav",
+    "transcript": "\"我哋嘅goal唔係為咗贏過第二名，而係去提升自己嘅performance，唔可以把focus放在beat others上面。\""
+  },
+  {
+    "id": "mce_173",
+    "source": "MCE",
+    "source_index": 173,
+    "topic": "工作",
+    "duration_s": 9.6,
+    "sample_rate": 16000,
+    "audio": "audio/mce_173.wav",
+    "transcript": "\"有時你可能會覺得當下嘅work唔係你想要做嘅，但你仍然要keep going，因為呢件事情可能會將你帶去未來嘅opportunity。\""
+  },
+  {
+    "id": "mce_174",
+    "source": "MCE",
+    "source_index": 174,
+    "topic": "工作",
+    "duration_s": 7.02,
+    "sample_rate": 16000,
+    "audio": "audio/mce_174.wav",
+    "transcript": "\"有時候work會變得tough，但記住唔可以give up easily，有determination係必要嘅。\""
+  },
+  {
+    "id": "mce_175",
+    "source": "MCE",
+    "source_index": 175,
+    "topic": "工作",
+    "duration_s": 8.32,
+    "sample_rate": 16000,
+    "audio": "audio/mce_175.wav",
+    "transcript": "\"喺teamwork中，我哋需要透過effective communication達到consensus，係喺理解同尊重each other的基礎上進行嘅。\""
+  },
+  {
+    "id": "mce_176",
+    "source": "MCE",
+    "source_index": 176,
+    "topic": "天氣",
+    "duration_s": 5.29,
+    "sample_rate": 16000,
+    "audio": "audio/mce_176.wav",
+    "transcript": "\"今日好sunny，可以去出去玩下，唔好浪費左咁好天氣噶。\""
+  },
+  {
+    "id": "mce_177",
+    "source": "MCE",
+    "source_index": 177,
+    "topic": "天氣",
+    "duration_s": 4.78,
+    "sample_rate": 16000,
+    "audio": "audio/mce_177.wav",
+    "transcript": "\"天氣預報話會有heavy rain，出門前記得carry傘喇。\""
+  },
+  {
+    "id": "mce_178",
+    "source": "MCE",
+    "source_index": 178,
+    "topic": "天氣",
+    "duration_s": 4.57,
+    "sample_rate": 16000,
+    "audio": "audio/mce_178.wav",
+    "transcript": "\"下雨就算喇，有咁個nice weather，去park行下圈啦。\""
+  },
+  {
+    "id": "mce_179",
+    "source": "MCE",
+    "source_index": 179,
+    "topic": "天氣",
+    "duration_s": 3.9,
+    "sample_rate": 16000,
+    "audio": "audio/mce_179.wav",
+    "transcript": "\"今日會好cold，記得穿多件sweater出門啊。\""
   }
 ]

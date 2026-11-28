@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import importlib.machinery
+import logging
 import os
+import re
 import sys
 import threading
 import types
@@ -10,7 +12,10 @@ from pathlib import Path
 import numpy as np
 
 from ..config import AsrConfig
+from ..lm import MixedNgramLM
 from .base import ASRResult
+
+logger = logging.getLogger(__name__)
 
 
 class FireRedTorchASR:
@@ -63,6 +68,13 @@ class FireRedTorchASR:
             elm_weight=cfg.elm_weight,
         )
         self._recognizer = FireRedAsr2.from_pretrained("aed", str(model_dir), asr_config)
+        self._lm = None
+        if cfg.lm_path:
+            lm_path = Path(cfg.lm_path).expanduser()
+            if lm_path.exists():
+                self._lm = MixedNgramLM.load(lm_path)
+            else:
+                logger.warning("LM not found at %s; falling back to AED 1-best", lm_path)
 
     @staticmethod
     def _install_torchaudio_stub() -> None:
@@ -78,20 +90,81 @@ class FireRedTorchASR:
         module.functional = types.SimpleNamespace()
         sys.modules["torchaudio"] = module
 
+    def _transcribe_nbest(self, samples: np.ndarray, sample_rate: int) -> list[dict]:
+        import torch
+
+        recognizer = self._recognizer
+        feats, lengths, _, _, _ = recognizer.feat_extractor(
+            [(sample_rate, samples)], ["utt"]
+        )
+        if feats is None:
+            return []
+        if self.cfg.use_gpu:
+            feats, lengths = feats.cuda(), lengths.cuda()
+            if self.cfg.use_half:
+                if torch.cuda.is_bf16_supported():
+                    feats = feats.bfloat16()
+                else:
+                    feats = feats.half()
+        nbest = max(int(self.cfg.nbest), 1)
+        hyps = recognizer.model.transcribe(
+            feats,
+            lengths,
+            self.cfg.beam_size,
+            nbest,
+            self.cfg.decode_max_len,
+            self.cfg.softmax_smoothing,
+            self.cfg.aed_length_penalty,
+            self.cfg.eos_penalty,
+            False,
+            recognizer.elm,
+            self.cfg.elm_weight,
+        )
+        if not hyps:
+            return []
+        candidates = []
+        for rank, hyp in enumerate(hyps[0]):
+            ids = [int(token) for token in hyp["yseq"].cpu()]
+            text = re.sub(r"(<blank>)|(<sil>)", "", recognizer.tokenizer.detokenize(ids))
+            candidates.append(
+                {
+                    "text": text.lower(),
+                    "confidence": float(hyp["confidence"].cpu()),
+                    "rank": rank,
+                }
+            )
+        return candidates
+
+    @staticmethod
+    def _is_code_switch(text: str) -> bool:
+        return bool(re.search(r"[\u4e00-\u9fff]", text) and re.search(r"[A-Za-z]", text))
+
+    def _rescore(self, candidates: list[dict]) -> dict:
+        if not candidates:
+            return {"text": "", "confidence": None, "rank": 0}
+        if (
+            self._lm is None
+            or len(candidates) == 1
+            or not self._is_code_switch(candidates[0]["text"])
+        ):
+            return candidates[0]
+        return max(
+            candidates,
+            key=lambda candidate: (
+                self.cfg.lm_weight * self._lm.score(candidate["text"])
+                - self.cfg.rank_weight * candidate["rank"]
+                + self.cfg.confidence_weight * candidate["confidence"]
+            ),
+        )
+
     def transcribe(self, pcm: bytes, sample_rate: int = 16000) -> ASRResult:
         samples = np.frombuffer(pcm, dtype=np.int16).copy()
         if samples.size == 0:
             return ASRResult(text="")
         with self._lock:
-            results = self._recognizer.transcribe(
-                ["utt"], [(sample_rate, samples)]
-            )
-        if not results:
-            return ASRResult(text="")
-        return ASRResult(
-            text=results[0].get("text", ""),
-            confidence=results[0].get("confidence"),
-        )
+            candidates = self._transcribe_nbest(samples, sample_rate)
+            best = self._rescore(candidates)
+        return ASRResult(text=best["text"], confidence=best["confidence"])
 
 
 def build_asr(cfg: AsrConfig) -> FireRedTorchASR:

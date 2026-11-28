@@ -1,6 +1,6 @@
 # FireRedASR2S POC 设计与 MVP 范围
 
-> 版本：v2.0
+> 版本：v2.4
 > 目标：用最小闭环验证 **音频 → 句级文字**，并明确 MVP 要实现的功能、技术选型与验收标准。
 > 状态：**POC MVP 已实现并跑通**（WAV + WebSocket，真实 FireRedASR2）；默认 AED；已接入 Silero VAD、句段合并、标点/ITN/繁简后处理。
 
@@ -222,29 +222,35 @@ asr:
 | `hello_en.wav`（英文） | 整段 | `HELLO SPEECH.` | 0.55s |
 | `test_wavs/0.wav`（WS 流式） | 2 段 | 2 条 `final`：`昨天是MONDAY。` / `TODAY IS礼拜二。THE DAY AFTER TOMORROW是星期三。` | 2.24s |
 
-> 质量门禁：`ruff check .` PASS；`pytest` 45 passed（含真实模型、Silero VAD、后处理与 WebSocket 冒烟测试）。
+> 质量门禁：`ruff check .` PASS；`pytest` 49 passed（含真实模型、Silero VAD、后处理与 WebSocket 冒烟测试）。
 > 结论：AED 默认下三语与混说均可出字；Silero VAD + 句段合并减少碎句；标点/ITN/繁简显著提升可读性。
 
-### 9.2 官方 AED PyTorch 对照（RTX 4090，BF16，beam=5）
+### 9.2 官方 AED PyTorch 对照（RTX 4090，BF16，beam=10）
 
 | 引擎 | 粤语 CER | 英文 WER | 粤英英文词 F1 | 混合 CER |
 | --- | --- | --- | --- | --- |
-| sherpa int8 greedy | 11.5% | 1.1% | 87.8% | 6.8% |
-| 官方 AED PyTorch | **4.7%** | **0.9%** | **90.3%**（P 90.7% / R 89.9%） | **6.2%** |
+| sherpa int8 greedy | 11.5% | 1.1% | 84.3% | 7.2% |
+| 官方 AED PyTorch | **4.7%** | **0.9%** | **87.4%**（P 88.7% / R 86.1%） | **6.5%** |
+| 官方 AED + n-best LM | **4.7%** | **0.9%** | **88.4%**（P 90.1% / R 86.9%） | **6.0%** |
 
-- 官方 AED 显著降低粤语 CER（11.5% → 4.7%），英文 WER 与混说 F1 也有提升。
-- `beam=3` 对照：粤语 CER 7.5%、英文 WER 1.1%、混说 F1 90.3%、混合 CER 6.2%；POC 选 `beam=5`。
-- 端到端（server + Silero VAD + 标点/ITN）：8.78s 混说音频 **2.67s** 返回结果；GPU 整卡约 **3.7GB**（含其他进程约 0.9GB），服务进程约 **2.8GB**。
+- 粤语 CER、英文 WER 在 100 条混说评测中保持不变；混说 F1 仍有提升。
+- 原 20 条子集偏容易：官方 AED + LM 在该子集 F1 95.4%，扩到 100 条后为 88.4%；后续应以 100 条集为准。
+- `beam=3` 对照：粤语 CER 7.5%、英文 WER 1.1%、混说 F1 90.3%、混合 CER 6.2%；最终 LM 配置使用 `beam=10`、`nbest=10`。
+- 端到端（server + Silero VAD + 标点/ITN，beam10 + n-best LM）：8.78s 混说音频 **2.42s** 返回结果；GPU 整卡约 **3.7GB**（含其他进程约 0.9GB），服务进程约 **2.8GB**。
 - 简单英文 OOV 纠错实验：只能修 `countstown→countdown`，F1 90.3% → 90.8%，收益有限；剩余错误多为合法英文词替换。
-- n-best 上界实验（beam5、nbest5、按参考选最优）：混说 F1 **95.4%**、混合 CER **3.9%**，说明正确英文常在 n-best 中，下一步应做 n-best 重打分。
+- 早期 n-best 上界实验（beam5、nbest5、按参考选最优）：混说 F1 **95.4%**、混合 CER **3.9%**，说明正确英文常在 n-best 中。
+- 轻量重打分实验（confidence + 英文词频）反而退化：F1 88.6%~88.8%、混合 CER 6.9%，低于 1-best 的 90.3%/6.2%。说明仅靠词频不够。
+- 改用 MCE train 文本训练小型混说 n-gram LM（排除评估 100 条），n-best 重打分后（beam10/nbest10，100 条）：混说 F1 **88.4%**、混合 CER **6.0%**；相对 1-best 的 87.4% / 6.5% 有提升。
+- 额外用 20 条更长的 held-out 混说做 sanity check：F1 45.4% → 46.0%、混合 CER 17.3% → 16.7%，仍是正向但不显著；长句和自發对话仍需单独覆盖。
 - 运行方式：
 
 ```bash
 bash scripts/setup_official_aed.sh   # 只补缺失文件，缓存在 models/
+PYTHONPATH=src python3 scripts/build_mce_lm.py  # 生成 models/mce_lm.json
 FIREREDASR2S_HOME=models/FireRedASR2S-code \
 PYTHONPATH=src python3 scripts/eval_suite.py \
   --config configs/app_official.yaml \
-  --output eval/baseline_official_aed.json
+  --output eval/baseline_official_lm.json
 ```
 
 > 需要 CUDA 版 PyTorch；官方 AED 权重约 4.7GB，代码缓存约 17MB。缓存目录为 `models/FireRedASR2-AED` 与 `models/FireRedASR2S-code`，均已在 `.gitignore`。
