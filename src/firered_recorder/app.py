@@ -11,6 +11,8 @@ from PyQt6.QtMultimedia import QAudioFormat, QAudioSource, QMediaDevices
 from PyQt6.QtWidgets import (
     QApplication,
     QComboBox,
+    QFrame,
+    QGridLayout,
     QHBoxLayout,
     QLabel,
     QLineEdit,
@@ -156,8 +158,9 @@ class RecorderWindow(QMainWindow):
         self._started_at = 0.0
         self._csv = TranscriptCsvWriter()
 
-        self.setWindowTitle("FireRedASR2S 录音转写")
-        self.resize(980, 680)
+        self.setWindowTitle("灵枢-录音器")
+        self.resize(1180, 780)
+        self.setMinimumSize(980, 680)
         window_icon = asset_path("icon-small.svg")
         if window_icon is not None:
             self.setWindowIcon(QIcon(str(window_icon)))
@@ -168,29 +171,94 @@ class RecorderWindow(QMainWindow):
 
         central = QWidget()
         self.setCentralWidget(central)
-        layout = QVBoxLayout(central)
-        layout.setContentsMargins(24, 20, 24, 20)
-        layout.setSpacing(12)
+        root = QHBoxLayout(central)
+        root.setContentsMargins(0, 0, 0, 0)
+        root.setSpacing(0)
 
-        title_row = QHBoxLayout()
-        title_icon = asset_path("icon.svg")
-        if title_icon is not None:
+        sidebar = QFrame()
+        sidebar.setObjectName("sidebar")
+        sidebar.setFixedWidth(260)
+        side = QVBoxLayout(sidebar)
+        side.setContentsMargins(24, 28, 24, 24)
+        side.setSpacing(16)
+
+        brand_row = QHBoxLayout()
+        brand_row.setSpacing(12)
+        brand_icon = asset_path("icon.svg")
+        if brand_icon is not None:
             logo = QLabel()
-            logo.setPixmap(QIcon(str(title_icon)).pixmap(40, 40))
-            title_row.addWidget(logo)
-        title = QLabel("FireRedASR2S 录音转写")
-        title.setStyleSheet("font-size: 24px; font-weight: 600;")
-        title_row.addWidget(title)
-        title_row.addStretch(1)
-        layout.addLayout(title_row)
+            logo.setPixmap(QIcon(str(brand_icon)).pixmap(46, 46))
+            brand_row.addWidget(logo)
+        brand_text = QVBoxLayout()
+        brand_text.setSpacing(0)
+        brand_title = QLabel("灵枢")
+        brand_title.setObjectName("brandTitle")
+        brand_sub = QLabel("录音器")
+        brand_sub.setObjectName("brandSub")
+        brand_text.addWidget(brand_title)
+        brand_text.addWidget(brand_sub)
+        brand_row.addLayout(brand_text)
+        brand_row.addStretch(1)
+        side.addLayout(brand_row)
+        side.addSpacing(18)
 
-        subtitle = QLabel("说完停顿约 0.5 秒，整句文字会逐条出现。")
-        subtitle.setStyleSheet("color: #64748b;")
-        layout.addWidget(subtitle)
+        flow_title = QLabel("工作流")
+        flow_title.setObjectName("sideSection")
+        side.addWidget(flow_title)
+        nav_record = QLabel("录音")
+        nav_record.setObjectName("navActive")
+        side.addWidget(nav_record)
+        side.addSpacing(10)
+        nav_hint = QLabel("句尾出字 · 本地留存")
+        nav_hint.setObjectName("sideMuted")
+        side.addWidget(nav_hint)
 
-        config_row = QHBoxLayout()
+        side.addSpacing(18)
+        local_title = QLabel("本地")
+        local_title.setObjectName("sideSection")
+        side.addWidget(local_title)
+        local_hint = QLabel("GPU 后端\nCSV 自动保存")
+        local_hint.setObjectName("sideMuted")
+        side.addWidget(local_hint)
+        side.addStretch(1)
+        footer = QLabel("本地模型 · 可信内网")
+        footer.setObjectName("sideMuted")
+        side.addWidget(footer)
+        root.addWidget(sidebar)
+
+        main = QWidget()
+        main.setObjectName("main")
+        main_layout = QVBoxLayout(main)
+        main_layout.setContentsMargins(40, 28, 40, 28)
+        main_layout.setSpacing(16)
+
+        top_row = QHBoxLayout()
+        crumbs = QLabel("录音 / 个人听写")
+        crumbs.setObjectName("crumb")
+        top_row.addWidget(crumbs)
+        top_row.addStretch(1)
+        top_right = QLabel("灵枢 · 本机")
+        top_right.setObjectName("crumb")
+        top_row.addWidget(top_right)
+        main_layout.addLayout(top_row)
+
+        title = QLabel("录音")
+        title.setObjectName("pageTitle")
+        main_layout.addWidget(title)
+        subtitle = QLabel("开始录音，句尾自动出字，并同步写入本地 CSV。")
+        subtitle.setObjectName("pageSub")
+        main_layout.addWidget(subtitle)
+
+        self.config_card = QFrame()
+        self.config_card.setObjectName("card")
+        self.config_card.setVisible(False)
+        config_card = self.config_card
+        form = QGridLayout(config_card)
+        form.setContentsMargins(20, 18, 20, 18)
+        form.setHorizontalSpacing(12)
+        form.setVerticalSpacing(10)
         self.url = QLineEdit(cfg.url)
-        self.url.setMinimumWidth(320)
+        self.url.setMinimumWidth(300)
         self.mode = QComboBox()
         self.mode.addItems(["balanced", "accuracy"])
         self.mode.setCurrentText(cfg.mode)
@@ -198,59 +266,87 @@ class RecorderWindow(QMainWindow):
         self.lang.addItems(["auto", "zh", "yue", "en"])
         self.lang.setCurrentText(cfg.lang)
         self.device = QComboBox()
-        config_row.addWidget(QLabel("后端"))
-        config_row.addWidget(self.url, 1)
-        config_row.addWidget(QLabel("模式"))
-        config_row.addWidget(self.mode)
-        config_row.addWidget(QLabel("语言"))
-        config_row.addWidget(self.lang)
-        config_row.addWidget(QLabel("麦克风"))
-        config_row.addWidget(self.device, 1)
-        layout.addLayout(config_row)
+        form.addWidget(QLabel("后端"), 0, 0)
+        form.addWidget(self.url, 0, 1, 1, 3)
+        form.addWidget(QLabel("模式"), 1, 0)
+        form.addWidget(self.mode, 1, 1)
+        form.addWidget(QLabel("语言"), 1, 2)
+        form.addWidget(self.lang, 1, 3)
+        form.addWidget(QLabel("麦克风"), 2, 0)
+        form.addWidget(self.device, 2, 1, 1, 3)
 
         controls = QHBoxLayout()
+        controls.setSpacing(10)
         self.record_btn = QPushButton("开始录音")
         self.record_btn.setObjectName("record")
+        self.record_btn.setMinimumWidth(132)
         self.record_btn.clicked.connect(self.start_recording)
         self.stop_btn = QPushButton("停止")
+        self.stop_btn.setObjectName("stop")
         self.stop_btn.setEnabled(False)
         self.stop_btn.clicked.connect(self.stop_recording)
         self.status = QLabel("就绪")
+        self.status.setObjectName("status")
         self.timer_label = QLabel("00:00")
+        self.timer_label.setObjectName("timer")
+        self.settings_btn = QPushButton("连接设置")
+        self.settings_btn.setObjectName("secondary")
+        self.settings_btn.setCheckable(True)
+        self.settings_btn.toggled.connect(self.config_card.setVisible)
         controls.addWidget(self.record_btn)
         controls.addWidget(self.stop_btn)
+        controls.addSpacing(8)
         controls.addWidget(self.status, 1)
         controls.addWidget(self.timer_label)
-        layout.addLayout(controls)
+        controls.addWidget(self.settings_btn)
+        main_layout.addLayout(controls)
+
+        main_layout.addWidget(self.config_card)
 
         self.level = QProgressBar()
         self.level.setRange(0, 100)
         self.level.setTextVisible(False)
-        self.level.setFixedHeight(8)
-        layout.addWidget(self.level)
+        self.level.setFixedHeight(6)
+        main_layout.addWidget(self.level)
 
         self.draft = QLabel("")
-        self.draft.setStyleSheet("color: #2563eb;")
-        layout.addWidget(self.draft)
+        self.draft.setObjectName("draft")
+        main_layout.addWidget(self.draft)
+
+        transcript_card = QFrame()
+        transcript_card.setObjectName("card")
+        transcript_layout = QVBoxLayout(transcript_card)
+        transcript_layout.setContentsMargins(20, 18, 20, 18)
+        transcript_layout.setSpacing(10)
+        transcript_header = QHBoxLayout()
+        transcript_title = QLabel("转写内容")
+        transcript_title.setObjectName("cardTitle")
+        transcript_header.addWidget(transcript_title)
+        transcript_header.addStretch(1)
+        self.csv_label = QLabel("CSV：未开始")
+        self.csv_label.setObjectName("hint")
+        self.csv_label.setToolTip("每收到一条 final 会立即写入本地 CSV")
+        transcript_header.addWidget(self.csv_label)
+        transcript_layout.addLayout(transcript_header)
 
         self.transcript = QTextEdit()
         self.transcript.setReadOnly(True)
         self.transcript.setPlaceholderText("转写文字会显示在这里…")
-        layout.addWidget(self.transcript, 1)
+        transcript_layout.addWidget(self.transcript, 1)
 
         bottom = QHBoxLayout()
-        self.csv_label = QLabel("CSV：未开始")
-        self.csv_label.setStyleSheet("color: #64748b;")
-        self.csv_label.setToolTip("每收到一条 final 会立即写入本地 CSV")
-        bottom.addWidget(self.csv_label)
         bottom.addStretch(1)
-        self.clear_btn = QPushButton("清空")
+        self.clear_btn = QPushButton("清空文本")
+        self.clear_btn.setObjectName("secondary")
         self.clear_btn.clicked.connect(self.transcript.clear)
         self.copy_btn = QPushButton("复制")
+        self.copy_btn.setObjectName("secondary")
         self.copy_btn.clicked.connect(self._copy)
         bottom.addWidget(self.clear_btn)
         bottom.addWidget(self.copy_btn)
-        layout.addLayout(bottom)
+        transcript_layout.addLayout(bottom)
+        main_layout.addWidget(transcript_card, 1)
+        root.addWidget(main, 1)
 
         self._refresh_devices()
         self._apply_style()
@@ -258,20 +354,57 @@ class RecorderWindow(QMainWindow):
     def _apply_style(self) -> None:
         self.setStyleSheet(
             """
-            QWidget { font-size: 14px; }
-            QTextEdit {
-                background: #0f172a; color: #e2e8f0;
-                border: 1px solid #1e293b; border-radius: 10px;
-                padding: 12px; font-size: 16px;
+            QWidget {
+                font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+                font-size: 14px;
+                color: #0f172a;
+            }
+            QFrame#sidebar { background: #0b1220; }
+            QLabel#brandTitle { color: #f8fafc; font-size: 26px; font-weight: 700; }
+            QLabel#brandSub { color: #94a3b8; font-size: 13px; }
+            QLabel#sideSection { color: #64748b; font-size: 12px; font-weight: 600; }
+            QLabel#navActive {
+                background: #2563eb; color: #ffffff;
+                border-radius: 10px; padding: 10px 14px; font-weight: 600;
+            }
+            QLabel#sideMuted { color: #94a3b8; font-size: 12px; }
+            QWidget#main { background: #f8fafc; }
+            QLabel#crumb { color: #64748b; font-size: 13px; }
+            QLabel#pageTitle { color: #0f172a; font-size: 32px; font-weight: 700; }
+            QLabel#pageSub { color: #64748b; font-size: 14px; }
+            QLabel#cardTitle { color: #0f172a; font-size: 16px; font-weight: 600; }
+            QLabel#hint { color: #64748b; font-size: 12px; }
+            QLabel#status { color: #475569; }
+            QLabel#timer { color: #0f172a; font-size: 15px; font-weight: 600; }
+            QLabel#draft { color: #2563eb; }
+            QFrame#card {
+                background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px;
             }
             QLineEdit, QComboBox {
-                padding: 6px 8px; border: 1px solid #cbd5e1; border-radius: 8px;
+                background: #ffffff; color: #0f172a;
+                border: 1px solid #cbd5e1; border-radius: 8px;
+                padding: 8px 10px; min-height: 20px;
             }
-            QPushButton { padding: 8px 16px; border-radius: 8px; }
-            QPushButton#record { background: #dc2626; color: white; font-weight: 600; }
-            QPushButton#record:disabled { background: #fca5a5; }
-            QProgressBar { background: #e2e8f0; border: none; border-radius: 4px; }
-            QProgressBar::chunk { background: #10b981; border-radius: 4px; }
+            QPushButton {
+                border: none; border-radius: 9px;
+                padding: 10px 18px; font-weight: 600;
+            }
+            QPushButton#record { background: #2563eb; color: #ffffff; }
+            QPushButton#record:disabled { background: #93c5fd; }
+            QPushButton#stop {
+                background: #ffffff; color: #334155; border: 1px solid #cbd5e1;
+            }
+            QPushButton#stop:disabled { color: #94a3b8; border-color: #e2e8f0; }
+            QPushButton#secondary {
+                background: #ffffff; color: #334155; border: 1px solid #cbd5e1;
+            }
+            QTextEdit {
+                background: #ffffff; color: #0f172a;
+                border: 1px solid #e2e8f0; border-radius: 10px;
+                padding: 14px; font-size: 15px;
+            }
+            QProgressBar { background: #e2e8f0; border: none; border-radius: 3px; }
+            QProgressBar::chunk { background: #2563eb; border-radius: 3px; }
             """
         )
 

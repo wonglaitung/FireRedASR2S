@@ -1,6 +1,6 @@
 # FireRedASR2S
 
-> 版本：v3.4
+> 版本：v3.6
 > 精度优先的粤语 / 普通话 / 英文句级语音转写系统，附桌面录音器与 Docker 后端。
 
 ---
@@ -12,11 +12,11 @@
 | 后端推理 | 官方 FireRedASR2-AED PyTorch，BF16，beam10；CPU 保留 sherpa ONNX 路径 |
 | 句级切分 | Silero VAD + pre/post roll + 句段合并 |
 | 后处理 | CT-Transformer 标点 + 保守 ITN + OpenCC 繁简 |
-| 桌面录音器 | PyQt6；麦克风 → WebSocket → 逐句显示；assets 图标；自动滚底；同步写本地 CSV |
+| 桌面录音器 | PyQt6；转写区优先；连接设置默认收起；assets 图标；自动滚底；同步写本地 CSV |
 | 后端 Docker | GPU 镜像使用官方 AED + 本地模型/代码缓存；CPU 镜像保留 sherpa |
 | 数据与评测 | 5 套验证集；严格英文 P/R/F1 + 混合 CER |
 | 本地留存 | 录音器目录下 `transcripts/`；每场录音一个 CSV |
-| 质量门禁 | `ruff` PASS；`pytest` 59 passed |
+| 质量门禁 | `ruff` PASS；`pytest` 60 passed |
 
 当前是 POC/内部验证阶段，不是生产成品；真实个人听写和会议数据尚未采集。
 
@@ -175,6 +175,9 @@ PYTHONPATH=src python3 -m firered_recorder \
 常用配置：
 
 ```yaml
+server:
+  connection_log_interval_s: 30   # 每 30s 打印在线连接数
+
 vad:
   backend: silero
   max_end_silence_ms: 450

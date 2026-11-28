@@ -23,7 +23,7 @@ def app():
 def test_window_smoke(app) -> None:
     window = RecorderWindow(RecorderConfig())
     try:
-        assert "录音转写" in window.windowTitle()
+        assert "灵枢-录音器" in window.windowTitle()
         assert not window.windowIcon().isNull()
         assert window.record_btn.isEnabled()
         assert not window.stop_btn.isEnabled()
