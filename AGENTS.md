@@ -7,6 +7,7 @@
 
 ## Read first
 - `README.md` — quick start, architecture summary, recorder usage.
+- `docs/README.md` — documentation index and reading order.
 - `docs/ARCHITECTURE.md` — source of truth, locked decisions, current version. Update it before any code/spec change that alters the architecture.
 - `docs/EVOLUTION.md` — learning-oriented evolution from the first POC to the current stage.
 - `progress.md` — current status, done, todo, risks.

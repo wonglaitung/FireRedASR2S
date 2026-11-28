@@ -33,7 +33,8 @@ Last updated: 2026-11-27
 - 简单 OOV 词表纠错收益有限：F1 90.3% → 90.8%。
 
 ## 已完成
-- `README.md` v2.8：项目概览、快速开始、录音器/Windows exe、MCE/WSYue/听写代理验证集、数据规范、技术演化与 GPU Docker。
+- `README.md` v2.9：项目概览、快速开始、录音器/Windows exe、MCE/WSYue/听写代理验证集、数据规范、技术演化与 GPU Docker。
+- `docs/README.md` v1.0：文档索引与推荐阅读顺序。
 - `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先方案。
 - `docs/POC.md` v2.6：AED-only POC、官方 AED 对照、端到端、MCE/WSYue/听写代理验证与 n-best LM。
 - `docs/EVOLUTION.md` v1.0：从第一版 POC 到当前阶段的完整技术演化。

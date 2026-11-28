@@ -1,6 +1,6 @@
 # FireRedASR2S
 
-> 版本：v2.8
+> 版本：v2.9
 > **精度优先**的粤语 / 普通话 / 英文句级语音转写系统，附独立桌面录音器。
 
 ---
@@ -238,6 +238,7 @@ FireRedASR2S/
 
 ## 8. 文档
 
+- [`docs/README.md`](docs/README.md)：文档索引与推荐阅读顺序。
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)：正式方案、三语选型、状态机、参数。
 - [`docs/POC.md`](docs/POC.md)：POC 范围、AED 实测结果与运行方式。
 - [`docs/EVOLUTION.md`](docs/EVOLUTION.md)：从第一版 POC 到当前阶段的完整技术演化。
