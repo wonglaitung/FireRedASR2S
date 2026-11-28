@@ -5,6 +5,7 @@ import asyncio
 import json
 import socket
 import uuid
+from contextlib import asynccontextmanager, suppress
 
 import uvicorn
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
@@ -48,15 +49,43 @@ def create_app(config_path: str = "configs/app.yaml") -> FastAPI:
     cfg = AppConfig.load(config_path)
     engine = build_asr(cfg.asr)
     post = Postprocessor(cfg.postprocess)
-    app = FastAPI(title="FireRedASR2S POC")
+    active = {"connections": 0}
+
+    async def _log_connections() -> None:
+        interval = float(cfg.server.connection_log_interval_s)
+        if interval <= 0:
+            return
+        while True:
+            await asyncio.sleep(interval)
+            print(
+                f"[connections] active={active['connections']}",
+                flush=True,
+            )
+
+    @asynccontextmanager
+    async def lifespan(_app: FastAPI):
+        task = asyncio.create_task(_log_connections())
+        try:
+            yield
+        finally:
+            task.cancel()
+            with suppress(asyncio.CancelledError):
+                await task
+
+    app = FastAPI(title="FireRedASR2S POC", lifespan=lifespan)
 
     @app.get("/health")
     async def health() -> dict:
-        return {"status": "ok", "asr_backend": cfg.asr.backend}
+        return {
+            "status": "ok",
+            "asr_backend": cfg.asr.backend,
+            "active_connections": active["connections"],
+        }
 
     @app.websocket("/ws")
     async def websocket_endpoint(websocket: WebSocket) -> None:
         await websocket.accept()
+        active["connections"] += 1
         session: Session | None = None
         session_id = uuid.uuid4().hex
         segment_id = 0
@@ -94,6 +123,7 @@ def create_app(config_path: str = "configs/app.yaml") -> FastAPI:
             pass
         finally:
             session = None
+            active["connections"] -= 1
 
     return app
 

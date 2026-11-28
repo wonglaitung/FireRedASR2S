@@ -1,6 +1,6 @@
 # FireRedASR2S 后端 Docker 镜像
 
-> 版本：v1.6
+> 版本：v1.7
 > 目标：把后端依赖、配置和模型打包成镜像，服务器只需 `docker run` 即可提供 WebSocket API。
 > 录音器仍在 Windows/本机独立运行，通过 `ws://<宿主机IP>:8000/ws` 连接。
 

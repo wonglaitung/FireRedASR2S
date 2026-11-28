@@ -1,6 +1,7 @@
 server:
   host: 0.0.0.0
   port: 8000
+  connection_log_interval_s: 30
 
 audio:
   sample_rate: 16000

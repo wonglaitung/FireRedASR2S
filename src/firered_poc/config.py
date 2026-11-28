@@ -74,6 +74,7 @@ class AsrConfig:
 class ServerConfig:
     host: str = "0.0.0.0"
     port: int = 8000
+    connection_log_interval_s: float = 30.0
 
 
 def _build(cls: type, data: dict | None):

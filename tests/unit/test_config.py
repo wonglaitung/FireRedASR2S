@@ -40,3 +40,8 @@ def test_load_docker_config() -> None:
     assert cfg.asr.lm_path == ""
     assert cfg.asr.use_gpu is True
     assert cfg.asr.beam_size == 10
+
+
+def test_connection_log_interval_default() -> None:
+    cfg = AppConfig()
+    assert cfg.server.connection_log_interval_s == 30.0
