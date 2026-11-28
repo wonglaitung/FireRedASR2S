@@ -25,6 +25,7 @@ from PyQt6.QtWidgets import (
 
 from .audio import PcmFramer, convert_capture, level_percent
 from .client import AsrStreamClient, RecorderConfig
+from .storage import TranscriptCsvWriter
 
 ASSET_DIRS = (
     Path(__file__).resolve().parents[2] / "assets",
@@ -153,6 +154,7 @@ class RecorderWindow(QMainWindow):
         self._client: ClientThread | None = None
         self._mic: MicCapture | None = None
         self._started_at = 0.0
+        self._csv = TranscriptCsvWriter()
 
         self.setWindowTitle("FireRedASR2S 录音转写")
         self.resize(980, 680)
@@ -237,11 +239,15 @@ class RecorderWindow(QMainWindow):
         layout.addWidget(self.transcript, 1)
 
         bottom = QHBoxLayout()
+        self.csv_label = QLabel("CSV：未开始")
+        self.csv_label.setStyleSheet("color: #64748b;")
+        self.csv_label.setToolTip("每收到一条 final 会立即写入本地 CSV")
+        bottom.addWidget(self.csv_label)
+        bottom.addStretch(1)
         self.clear_btn = QPushButton("清空")
         self.clear_btn.clicked.connect(self.transcript.clear)
         self.copy_btn = QPushButton("复制")
         self.copy_btn.clicked.connect(self._copy)
-        bottom.addStretch(1)
         bottom.addWidget(self.clear_btn)
         bottom.addWidget(self.copy_btn)
         layout.addLayout(bottom)
@@ -295,6 +301,14 @@ class RecorderWindow(QMainWindow):
             QMessageBox.warning(self, "地址无效", "后端地址需以 ws:// 或 wss:// 开头")
             return
 
+        try:
+            csv_path = self._csv.start()
+        except OSError as exc:
+            QMessageBox.critical(self, "无法保存转写", f"CSV 文件创建失败：{exc}")
+            return
+        self.csv_label.setText(f"CSV：{csv_path.name}")
+        self.csv_label.setToolTip(str(csv_path))
+
         self._client = ClientThread(cfg, self)
         self._client.event.connect(self._on_event)
         self._client.failed.connect(self._on_failed)
@@ -337,6 +351,7 @@ class RecorderWindow(QMainWindow):
             self._client.deleteLater()
             self._client = None
 
+        self._csv.close()
         self._timer.stop()
         self.level.setValue(0)
         self.record_btn.setEnabled(True)
@@ -346,7 +361,10 @@ class RecorderWindow(QMainWindow):
         self.lang.setEnabled(True)
         self.device.setEnabled(True)
         if self.status.text().startswith(("连接", "录音")):
-            self.status.setText("已停止")
+            if self._csv.path is not None:
+                self.status.setText(f"已停止；CSV 已保存：{self._csv.path.name}")
+            else:
+                self.status.setText("已停止")
 
     def _on_event(self, event: dict) -> None:
         kind = event.get("type")
@@ -367,6 +385,11 @@ class RecorderWindow(QMainWindow):
         if not text:
             return
         start_ms = int(event.get("start_ms", 0))
+        end_ms = int(event.get("end_ms", start_ms))
+        try:
+            self._csv.write(start_ms, end_ms, text)
+        except OSError as exc:
+            self.status.setText(f"CSV 写入失败：{exc}")
         stamp = f"{start_ms // 60000:02d}:{start_ms // 1000 % 60:02d}"
         if self.transcript.toPlainText():
             self.transcript.append("")

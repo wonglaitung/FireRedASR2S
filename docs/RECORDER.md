@@ -1,6 +1,6 @@
 # FireRedASR2S 桌面录音转写器（POC）
 
-> 版本：v1.8
+> 版本：v2.1
 > 目标：在本项目内做一个**独立桌面录音器**：麦克风录音 → WebSocket 推流 → 后端逐句返回文字 → 窗口内流式展示。
 
 ---
@@ -56,6 +56,19 @@ sequenceDiagram
 
 **分层原则**：录音器只负责采集、推流、展示；模型与切分全在后端。二者通过 WebSocket 协议解耦，换后端不影响窗口。
 
+### 4.1 本地 CSV 持久化
+
+每条 `final` 到达时立即追加一行并 `flush`，不等到关闭窗口。
+
+- 默认目录：**录音器所在目录下的 `transcripts/`**
+  - 源码运行：项目根目录 `transcripts/`
+  - PyInstaller：`FireRedRecorder.exe` 同目录下的 `transcripts/`
+- **每场录音一个文件**，文件名 `recorder-YYYYMMDD-HHMMSS-xxxxxx.csv`；新录音不会覆盖旧文件
+- 编码：`UTF-8 with BOM`，方便 Excel 打开
+- 字段：`start_ms, end_ms, text`
+- 「清空」只清空窗口显示，不删除 CSV
+- 可用环境变量 `FIRERED_RECORDER_DATA_DIR` 覆盖目录
+
 ---
 
 ## 3. MVP 功能
@@ -71,6 +84,7 @@ sequenceDiagram
 | R7 | 无窗口 `--file` 模式，便于自动化测试与无麦克风环境验证 |
 | R8 | 窗口/标题图标使用 `assets/icon.svg`、`assets/icon-small.svg` |
 | R9 | 新 `final` 追加后自动滚到最底部 |
+| R10 | 每条 `final` 立即写入本地 CSV；关闭窗口后保留 |
 
 ---
 
@@ -209,6 +223,7 @@ src/firered_recorder/
 ├── client.py       # WebSocket 客户端与协议
 ├── file_stream.py  # WAV 文件模拟推流
 ├── cli.py          # GUI / 文件模式入口
+├── storage.py      # 本地 CSV 持久化
 └── __main__.py
 requirements-recorder.txt
 tests/unit/test_recorder_*.py
@@ -223,7 +238,7 @@ tests/gui/test_recorder_window.py
 | 检查 | 结果 |
 | --- | --- |
 | `ruff check .` | PASS |
-| `pytest` | **55 passed**（含录音器协议、音频转换、GUI 冒烟、自动滚动、真实后端文件推流） |
+| `pytest` | **59 passed**（含录音器协议、音频转换、GUI 冒烟、自动滚动、CSV 持久化、真实后端文件推流） |
 | GUI 冒烟 | offscreen 渲染 980×680 窗口，截图保存在本机临时目录（未入库） |
 | 文件模式 E2E | 真实后端返回 2 条 `final`：`昨天是MONDAY。` / `TODAY IS礼拜二。THE DAY AFTER TOMORROW是星期三。` |
 | GitHub Actions | `build-recorder` run `45915057637` 成功；artifact 约 103MB |

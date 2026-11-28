@@ -12,6 +12,7 @@ from PyQt6.QtWidgets import QApplication  # noqa: E402
 
 from firered_recorder.app import RecorderWindow  # noqa: E402
 from firered_recorder.client import RecorderConfig  # noqa: E402
+from firered_recorder.storage import TranscriptCsvWriter  # noqa: E402
 
 
 @pytest.fixture(scope="module")
@@ -48,5 +49,24 @@ def test_new_text_scrolls_to_bottom(app) -> None:
         scrollbar = window.transcript.verticalScrollBar()
         assert scrollbar.maximum() > 0
         assert scrollbar.value() == scrollbar.maximum()
+    finally:
+        window.close()
+
+
+def test_final_is_written_to_csv(app, tmp_path) -> None:
+    import csv
+
+    window = RecorderWindow(RecorderConfig())
+    window._csv = TranscriptCsvWriter(tmp_path)
+    path = window._csv.start()
+    try:
+        window._append_final(
+            {"type": "final", "text": "我聽日同Alice開會", "start_ms": 1000, "end_ms": 2500}
+        )
+        window._csv.close()
+        with path.open(encoding="utf-8-sig", newline="") as handle:
+            rows = list(csv.DictReader(handle))
+        assert rows[0]["text"] == "我聽日同Alice開會"
+        assert rows[0]["start_ms"] == "1000"
     finally:
         window.close()
