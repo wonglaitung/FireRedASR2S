@@ -1,6 +1,6 @@
 # FireRedASR2S 后端 Docker 镜像
 
-> 版本：v1.4
+> 版本：v1.5
 > 目标：把后端依赖、配置和模型打包成镜像，服务器只需 `docker run` 即可提供 WebSocket API。
 > 录音器仍在 Windows/本机独立运行，通过 `ws://<宿主机IP>:8000/ws` 连接。
 
@@ -79,6 +79,7 @@ DOCKER_BUILDKIT=1 docker build \
 ```
 
 - 默认配置 `configs/app_docker.yaml`：官方 AED、BF16、beam10、1-best。
+- 如果 Docker Hub 拉取基础镜像失败，可用本机已有 CUDA PyTorch 镜像覆盖 `BASE_IMAGE`；本机实测用 `vllm-app:cuda12.8-v0.11.2-compile-fixed` 构建成功，镜像约 **30.4GB**。
 - 不默认套 MCE LM：它在 WSYue/SwitchLingua 上会退化。
 - 运行必须带 `--gpus all`；宿主机需 NVIDIA Container Toolkit。
 - 前台协议不变，录音器仍填 `ws://<宿主机IP>:8000/ws`，无需改代码。
@@ -200,7 +201,7 @@ docker run -d --name firered-asr \
 | --- | --- |
 | CPU | CPU 镜像为 sherpa int8；GPU 镜像需 `--gpus all` |
 | GPU | `firered-asr:gpu` 使用 PyTorch CUDA；显存约 3GB/实例 |
-| 镜像体积 | CPU `SKIP_MODELS=1` 约 289MB；GPU 镜像含 4.7GB 官方权重，明显更大 |
+| 镜像体积 | CPU `SKIP_MODELS=1` 约 289MB；GPU 镜像含 4.7GB 官方权重；本机本地 CUDA 基础镜像构建约 30.4GB，换瘦基础镜像可减小 |
 | 并发 | 单进程 + 单模型；高并发需多副本/队列/GPU |
 | 安全 | 无鉴权、无 TLS；仅建议可信局域网 |
 | 更新模型 | 重新 `docker build`（加 `--no-cache` 可强制重下） |

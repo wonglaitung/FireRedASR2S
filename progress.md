@@ -33,7 +33,7 @@ Last updated: 2026-11-27
 - 简单 OOV 词表纠错收益有限：F1 90.3% → 90.8%。
 
 ## 已完成
-- `README.md` v2.7：项目概览、快速开始、录音器/Windows exe、MCE/WSYue/听写代理验证集、数据规范、技术演化与 GPU Docker。
+- `README.md` v2.8：项目概览、快速开始、录音器/Windows exe、MCE/WSYue/听写代理验证集、数据规范、技术演化与 GPU Docker。
 - `docs/ARCHITECTURE.md` v1.3：三语（粤/普/英 + 混说）、精度优先方案。
 - `docs/POC.md` v2.6：AED-only POC、官方 AED 对照、端到端、MCE/WSYue/听写代理验证与 n-best LM。
 - `docs/EVOLUTION.md` v1.0：从第一版 POC 到当前阶段的完整技术演化。
@@ -64,7 +64,7 @@ Last updated: 2026-11-27
 - [ ] 为自發域单独训练/选择 LM，或按场景开关 LM。
 - [x] 个人听写/会议全文数据采集、标注、划分与校验规范（`docs/DATA.md`）。
 - [x] 接 SwitchLingua 个人听写公开代理 100 条（非真实听写）。
-- [x] GPU Docker 配置：官方 AED + 本地模型/代码缓存（未实际构建，Docker daemon 未启动）。
+- [x] GPU Docker 配置：官方 AED + 本地模型/代码缓存。已构建 `firered-asr:gpu`，健康检查与录音器 E2E 通过；本机因 Docker Hub 基础镜像拉取超时，使用本地 `vllm-app` CUDA 基础镜像，镜像约 30.4GB。
 - [ ] 采集个人听写 pilot 100–200 条，并用单句 harness 跑基线。
 - [ ] 采集会议 pilot 3 场，并用全文/切分 harness 跑基线。
 - [ ] 用 `eval_suite.py` 对比官方 AED 与当前基线，重点看粤语 CER、英文 WER、英文召回。

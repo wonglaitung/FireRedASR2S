@@ -1,6 +1,6 @@
 # FireRedASR2S
 
-> 版本：v2.7
+> 版本：v2.8
 > **精度优先**的粤语 / 普通话 / 英文句级语音转写系统，附独立桌面录音器。
 
 ---
@@ -111,7 +111,7 @@ docker run -d --gpus all --name firered-asr-gpu -p 8000:8000 --restart unless-st
 
 - `Dockerfile.gpu` 使用本地 `models/FireRedASR2-AED`、`models/FireRedASR2S-code`、Silero、标点，构建时不再下载模型。
 - 默认 `configs/app_docker.yaml`：官方 AED、BF16、beam10、1-best、不套 MCE LM。
-- 基础镜像默认拉 `pytorch/pytorch:2.10.0-cuda12.8-cudnn9-runtime`；可设 `BASE_IMAGE` 覆盖。
+- 基础镜像默认拉 `pytorch/pytorch:2.10.0-cuda12.8-cudnn9-runtime`；可设 `BASE_IMAGE` 覆盖为本地已有 CUDA PyTorch 镜像。
 - 宿主机端口映射 `8000:8000`；录音器填 `ws://<宿主机IP>:8000/ws`，协议不变，前台不需要改。
 - 若 8000 被占用，改 `-p 8001:8000`，录音器 URL 同步改。
 - 容器内打印的 `172.x` 是容器 IP，不要填给录音器。
