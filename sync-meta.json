@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "repoId": "f66acca90ec8da7e70527c05662a67a4",
+  "salt": "a835a03bd9eeabeb024173a8cdf76045",
+  "machines": [
+    "rtx4090-fba9a7"
+  ],
+  "createdAt": 1795743927176
+}
