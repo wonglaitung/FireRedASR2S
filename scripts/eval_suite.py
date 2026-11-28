@@ -107,7 +107,7 @@ def run_set(engine, post: Postprocessor, directory: Path, sample_rate: int) -> d
             hyp_norm = normalize_en(text)
             error_total += levenshtein(ref_norm, hyp_norm)
             ref_total += len(ref_norm)
-        elif directory.name == "yue_en":
+        elif directory.name.startswith("yue_en"):
             ref_tokens = mixed_tokens(ref)
             hyp_tokens = mixed_tokens(text)
             scores = english_scores(ref, text)
@@ -159,6 +159,11 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="eval_suite")
     parser.add_argument("--config", default="configs/app.yaml")
     parser.add_argument("--eval-root", default=str(ROOT / "eval"))
+    parser.add_argument(
+        "--sets",
+        default="yue,en,yue_en",
+        help="Comma-separated set directories under --eval-root",
+    )
     parser.add_argument("--output", default="")
     args = parser.parse_args(argv)
 
@@ -168,13 +173,13 @@ def main(argv: list[str] | None = None) -> int:
     root = Path(args.eval_root)
 
     results = []
-    for name in ("yue", "en", "yue_en"):
+    for name in [item.strip() for item in args.sets.split(",") if item.strip()]:
         result = run_set(engine, post, root / name, cfg.audio.sample_rate)
         results.append(result)
-        if name == "yue_en":
+        if name.startswith("yue_en"):
             metrics = result["metrics"]
             print(
-                f"yue_en: English F1 {metrics['english_f1']:.1%} "
+                f"{name}: English F1 {metrics['english_f1']:.1%} "
                 f"(P {metrics['english_precision']:.1%} / "
                 f"R {metrics['english_recall']:.1%}), "
                 f"mixed CER {metrics['mixed_cer']:.1%} ({result['clips']} clips)"

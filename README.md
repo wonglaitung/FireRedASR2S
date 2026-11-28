@@ -1,6 +1,6 @@
 # FireRedASR2S
 
-> 版本：v2.2
+> 版本：v2.3
 > **精度优先**的粤语 / 普通话 / 英文句级语音转写系统，附独立桌面录音器。
 
 ---
@@ -186,7 +186,7 @@ python3 -m pytest
 
 当前：`ruff` PASS；`pytest` **49 passed**（含真实模型、Silero VAD、后处理、WebSocket、录音器协议/GUI/文件 E2E）。
 
-验证集：`eval/`（粤语 20 / 英文 20 / 粤英混说 100）。
+验证集：`eval/`（粤语 20 / 英文 20 / MCE 混说 100 / WSYue 自發混说 153）。
 
 | 引擎 | 粤语 CER | 英文 WER | 粤英英文词 F1 | 混合 CER |
 | --- | --- | --- | --- | --- |
@@ -195,6 +195,8 @@ python3 -m pytest
 | 官方 AED + n-best LM | **4.7%** | **0.9%** | **88.4%** | **6.0%** |
 
 官方 AED 对照配置：`configs/app_official.yaml`；模型/代码缓存：`bash scripts/setup_official_aed.sh`；混说 LM：`PYTHONPATH=src python3 scripts/build_mce_lm.py`。
+
+自發 WSYue 153 条：官方 AED 1-best F1 **71.5%**、混合 CER **10.1%**；MCE 训练的 LM 反而降到 70.5% / 10.2%，说明 LM 有明显域偏移，不能无脑套到真实对话。
 
 > 集成测试在模型不存在时会自动 skip。
 

@@ -51,7 +51,7 @@
 
 ## Eval data
 - `eval/yue/` (20 pure Cantonese, words.hk CC BY 4.0), `eval/en/` (20 English, LibriSpeech CC BY 4.0), `eval/yue_en/` (20 Cantonese-English, MCE research-only).
-- Baseline (100 code-switch clips): sherpa int8 84.3% F1 / 7.2% mixed CER; official AED beam10 87.4% / 6.5%; official AED + n-best LM 88.4% / 6.0%. Cantonese CER 4.7%, English WER 0.9%. On the original 20-clip easier subset, LM reaches 95.4% F1.
+- Baseline (100 code-switch clips): sherpa int8 84.3% F1 / 7.2% mixed CER; official AED beam10 87.4% / 6.5%; official AED + n-best LM 88.4% / 6.0%. Cantonese CER 4.7%, English WER 0.9%. On the original 20-clip easier subset, LM reaches 95.4% F1. On 153 spontaneous WSYue clips, 1-best is 71.5% F1 / 10.1% mixed CER and the MCE LM degrades to 70.5% / 10.2%.
 - Run all: `PYTHONPATH=src python3 scripts/eval_suite.py --config configs/app.yaml --output eval/baseline_aed.json`.
 - MCE is not commercial-clear and is not an official benchmark.
 

@@ -1,0 +1,2467 @@
+[
+  {
+    "set": "yue_en_spont",
+    "clips": 153,
+    "details": [
+      {
+        "id": "spont_0000035350",
+        "reference": "我哋呢头先揸完椰奶之后呢再翻嚟佢换咗个setting跟住再整第二样嘢（好靓啊）",
+        "raw_text": "我哋咧头先揸完椰奶之后咧再翻嚟佢换咗个 setting跟住再整第二样嘢好靓啊",
+        "text": "我哋咧头先揸完椰奶之后咧，再翻嚟佢，换咗个setting跟住再整。第二样嘢好靓啊。",
+        "english": {
+          "reference": [
+            "setting"
+          ],
+          "hypothesis": [
+            "setting"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000062067",
+        "reference": "如果大家钟意呢条片记住like share同埋订阅我个channel记得揿埋个钟仔如果想俾comment记住喺下面留言咁我哋下条片见啦",
+        "raw_text": "如果大家钟意呢条片记住 like share同埋订阅我嘅 channel记得揿埋个钟仔如果想畀 comment记住喺下面留言咁我哋下条片见啦",
+        "text": "如果大家钟意呢条片记住，like share同埋订阅我嘅channel，记得揿埋个钟仔。如果想畀comment记住，喺，下面留言，咁，我哋下条片见啦。",
+        "english": {
+          "reference": [
+            "like",
+            "share",
+            "channel",
+            "comment"
+          ],
+          "hypothesis": [
+            "like",
+            "share",
+            "channel",
+            "comment"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "spont_0000086144",
+        "reference": "咁我哋收到结果之后呢今日再同大家报告喇OK咁我哋今日呢条片先到出去啲系咁先拜拜",
+        "raw_text": "咁我哋收到结果之后咧今日就同大家报告啦 ok咁我哋今日条片先到出嚟啲系咁先拜拜",
+        "text": "咁我哋收到结果之后咧，今日就同大家报告啦。ok咁我哋今日条片先到出嚟啲系，咁先拜拜。",
+        "english": {
+          "reference": [
+            "ok"
+          ],
+          "hypothesis": [
+            "ok"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000126996",
+        "reference": "ai嘅准确度超过百分之九十",
+        "raw_text": "ai嘅准确度超过九十",
+        "text": "ai嘅准确度超过九十。",
+        "english": {
+          "reference": [
+            "ai"
+          ],
+          "hypothesis": [
+            "ai"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000152279",
+        "reference": "咁会有个giveaway嘅咁个giveaway呢就下一段片就会睇到㗎喇好啦咁多谢大家支持咁我哋去到日本再见啦拜拜",
+        "raw_text": "咁会有个 giveaway嘅咁个 giveaway咧就下一段片就会睇到噶啦好啦咁多谢大家支持咁我哋去到日本再见啦拜拜",
+        "text": "咁会有个giveaway嘅，咁个giveaway咧，就下一段片就会睇到噶啦。好啦，咁多谢大家支持。咁我哋去到日本再见啦，拜拜。",
+        "english": {
+          "reference": [
+            "giveaway",
+            "giveaway"
+          ],
+          "hypothesis": [
+            "giveaway",
+            "giveaway"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000155979",
+        "reference": "佢话好得意果种味系形容得意啰即系你酸完之后带啲竹蔗嘅味啰即系你食咗柠檬嘅酸味再辣多*明明系唔夹唔会match㗎嘛但系我唔知点解可以做到咁match啰好正",
+        "raw_text": "佢系好得意种味系形容得意咯即系你酸完之后带啲竹蔗嘅味咯即系你食到柠檬嘅酸味再带竹食明明系唔夹唔会 match噶嘛但系我唔知点解可以做到咁 match咯好正",
+        "text": "佢系好得意种味系形容得意咯，即系你酸完之后带啲竹蔗嘅味咯，即系你食到柠檬嘅酸味，再带竹食。明明系唔夹唔会match噶嘛，但系我唔知点解，可以做到咁match咯。好正。",
+        "english": {
+          "reference": [
+            "match",
+            "match"
+          ],
+          "hypothesis": [
+            "match",
+            "match"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000199403",
+        "reference": "揾到我嘅onepiece然后朝住个目标去",
+        "raw_text": "稳到我嘅 onepiece然后朝住个目标去",
+        "text": "稳到我嘅onepiece，然后朝住个目标去。",
+        "english": {
+          "reference": [
+            "onepiece"
+          ],
+          "hypothesis": [
+            "onepiece"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000200539",
+        "reference": "佢哋就喺市中心果度起咗呢啲两层嘅商业街吖叫做rows你而家见到呢啲就系喇呢啲rows系全英国得chester独有嘎啫",
+        "raw_text": "佢哋就喺市中心度起咗呢啲两层嘅商业街啊叫做 rose你而家见到呢啲就系啦呢啲 rose系全英国得 chester独有嘅啫",
+        "text": "佢哋就喺市中心度起咗呢啲两层嘅商业街啊，叫做rose你而家。见到呢啲就系啦呢，啲rose系全英国得chester独有嘅啫。",
+        "english": {
+          "reference": [
+            "rows",
+            "rows",
+            "chester"
+          ],
+          "hypothesis": [
+            "rose",
+            "rose",
+            "chester"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000257326",
+        "reference": "咁所以我朋友就系话哎呀佢话好多美国人如果你真系读到个博士呢佢梗系想做research啊想喺大学啊定咩佢唔会想喺间工厂度工作嘅咁即系",
+        "raw_text": "咁所以我朋友就话诶佢话好多美国人如果你真系读到个博士咧佢梗系想做 research啊想喺大学啊定咩佢唔会想喺间工厂度工作嘅咁即系",
+        "text": "咁所以我朋友就话诶，佢话好多美国人如果你真系读到个博士咧佢梗系，想做research啊，想喺大学啊，定咩佢唔会想喺间工厂度工作嘅咁即系。",
+        "english": {
+          "reference": [
+            "research"
+          ],
+          "hypothesis": [
+            "research"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000274386",
+        "reference": "Jennifer讲到话俾人偷血去获得能",
+        "raw_text": "jennifer讲到话被人偷去去获得能",
+        "text": "jennifer讲到话，被人偷去去获得能。",
+        "english": {
+          "reference": [
+            "jennifer"
+          ],
+          "hypothesis": [
+            "jennifer"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000274396",
+        "reference": "而标题the savage she hook亦都",
+        "raw_text": "而标题 the savage xihouk一个",
+        "text": "而标题the savage xihouk一个。",
+        "english": {
+          "reference": [
+            "the",
+            "savage",
+            "she",
+            "hook"
+          ],
+          "hypothesis": [
+            "the",
+            "savage",
+            "xihouk"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000274938",
+        "reference": "同香港拍MV有咩唔同",
+        "raw_text": "同香港拍 mv有咩唔同",
+        "text": "同香港拍mv有咩唔。同。",
+        "english": {
+          "reference": [
+            "mv"
+          ],
+          "hypothesis": [
+            "mv"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000275344",
+        "reference": "咁如果大家都知道就系诶microsoft",
+        "raw_text": "咁如果大家都知道就系唉乜都想",
+        "text": "咁如果大家都知道，就系唉乜都想。",
+        "english": {
+          "reference": [
+            "microsoft"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0000405713",
+        "reference": "所以觉得呢样嘢系好重要你一定要有一个人constantly逼你或者constantly踢你逼你完成个样嘢你先会做到㗎",
+        "raw_text": "所以我觉得呢样嘢系好重要你一定要有一个人 constantly逼你或者 constantly踢你逼你完成样嘢你先会做到嘅",
+        "text": "所以我觉得呢样嘢系好重要，你一定要有一个人constantly逼你或者constantly踢你逼你完成样嘢你先会做到嘅。",
+        "english": {
+          "reference": [
+            "constantly",
+            "constantly"
+          ],
+          "hypothesis": [
+            "constantly",
+            "constantly"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000441207",
+        "reference": "咁如果大家唔介意嘅话呢我就会将佢摆喺我每一条片嘅后面啦咁希望留个纪念更加记住大家我哋 FACEBOOK INSTAGRAM 同埋微博见拜拜",
+        "raw_text": "如果大家不介意的话呢我就会将它摆在我每一条片的后面啦希望留个纪念更加记住大家我们 facebook instagram和微博见拜拜",
+        "text": "如果大家不介意的话呢，我就会将它摆在我每一条片的后面啦，希望留个纪念，更加记住大家，我们facebook instagram和微博见拜拜。",
+        "english": {
+          "reference": [
+            "facebook",
+            "instagram"
+          ],
+          "hypothesis": [
+            "facebook",
+            "instagram"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000451559",
+        "reference": "见到地下呢其实有啲系写住可以俾狗入啦要摆喺个袋度又或者系唔俾狗入嘅logo呢就喺呢度喇",
+        "raw_text": "见到地下呢其实有啲系写住可以俾狗入啦要摆喺个袋度又或者系唔俾狗入嘅 logo嘅就喺呢度啦",
+        "text": "见到地下呢其实有啲系写住，可以俾狗入啦，要摆喺个袋度，又或者系唔俾狗入嘅logo嘅就喺呢度啦。",
+        "english": {
+          "reference": [
+            "logo"
+          ],
+          "hypothesis": [
+            "logo"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000482477",
+        "reference": "传统嚟讲呢有有啲人拥有都仲系即系佢个个family佢可以可以umm诶inherit咗好多地",
+        "raw_text": "传统嚟讲咧有有啲人拥有都仲系即系佢个个 family佢可以可以诶诶 inherit咗好多地",
+        "text": "传统嚟讲咧，有有啲人拥有都仲系，即系佢个个family佢可以可以诶，诶，inherit咗好多地。",
+        "english": {
+          "reference": [
+            "family",
+            "umm",
+            "inherit"
+          ],
+          "hypothesis": [
+            "family",
+            "inherit"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000485864",
+        "reference": "就好似我啱啱提到啊𠮶个小男孩会中意自己阿妈啦但系普遍嚟讲呢个人冇work噶嘛即系你你真系好难同自己阿妈去发展𠮶类型嘅关系啊嘛",
+        "raw_text": "就好似我啱啱提到啊个小男孩会中意自己阿妈啦但系普遍嚟讲呢个系唔系好 work噶嘛即系你你真系好难同自己阿妈去发展类型嘅关系啊嘛",
+        "text": "就好似我啱啱提到啊个小男孩会中意自己阿妈啦，但系普遍嚟讲呢个系唔系好work噶嘛，即系你你真系好难同自己阿妈去发展类型嘅关系啊嘛。",
+        "english": {
+          "reference": [
+            "work"
+          ],
+          "hypothesis": [
+            "work"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000513046",
+        "reference": "hello大家好啊拖咗大家咁耐今日终于都有时间拍呢条片啦就系分享下我六月底喺韩国旅行时嘅战利品",
+        "raw_text": "哈喽大家好啊拖咗大家咁耐今日终于都有时间拍呢条片啦就系分享下我六月底喺韩国旅行时嘅战利品",
+        "text": "哈喽大家好啊，拖咗大家咁耐，今日终于都有时间拍呢条片啦，就系分享下我6月底喺韩国旅行时嘅战利品。",
+        "english": {
+          "reference": [
+            "hello"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0000527382",
+        "reference": "当中嘅二百零三个字呢都同阿谢伟信个条Q啦系完全一样相似到系九十点二个percent就惹来抄袭疑云",
+        "raw_text": "当中有二百零三个字呢都同阿谢伟信条 q呢系完全一样相似度系九十点二嘅 percent就惹来抄袭疑云",
+        "text": "当中有二百零三个字呢都同阿谢伟信条q呢系完全一样，相似度系九十点二嘅percent就惹来抄袭疑云。",
+        "english": {
+          "reference": [
+            "percent"
+          ],
+          "hypothesis": [
+            "percent"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000565744",
+        "reference": "一路keep住用细火直至到每一条糍粑嘅四面都煎成金黄色咁就可以噶啦",
+        "raw_text": "一路 keep住用小火直到每一条糍粑的四面都煎成金黄色就可以啦",
+        "text": "一路keep住，用小火，直到每一条糍粑的四面都煎成金黄色就可以啦。",
+        "english": {
+          "reference": [
+            "keep"
+          ],
+          "hypothesis": [
+            "keep"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000565790",
+        "reference": "而较高嘅四至七级就叫做事故accidents冇安全忧虑嘅事件就会被评为零级",
+        "raw_text": "而较高嘅四至七级就叫做事故 accidents冇安全忧虑嘅事件就会被评为零级",
+        "text": "而较高嘅四至七级就叫做事故accidents冇安全忧虑嘅事件就会被评为零级。",
+        "english": {
+          "reference": [
+            "accidents"
+          ],
+          "hypothesis": [
+            "accidents"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000582274",
+        "reference": "我哋食完饭嚟咗一间食甜品嘅地方呢一间系好好食果啲tiramisu咁嚟太远果一间近我地啲所以我哋就嚟咗喇",
+        "raw_text": "我哋食完饭嚟咗一间食甜品嘅地方呢一间系好好食啲 cherry miss咁离太远间近我哋啲所以我哋就嚟咗啦",
+        "text": "我哋食完饭嚟咗一间食甜品嘅地方呢，一间系好好食啲，cherry miss咁离太远间近。我哋啲，所以我哋就嚟咗啦。",
+        "english": {
+          "reference": [
+            "tiramisu"
+          ],
+          "hypothesis": [
+            "cherry",
+            "miss"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0000609425",
+        "reference": "ronald同eva开始准备文件手续点知呢个时候北海道突然落咗一场大雪令佢哋差啲失去乌啦啦",
+        "raw_text": "rono同 eva开始准备文件手续点知呢个时候北海道突然落咗一场大雪令佢哋差啲失去乌啦啦",
+        "text": "rono同eva开始准备文件手续。点知呢个时候，北海道突然落咗一场大雪，令佢哋差啲失去乌啦啦。",
+        "english": {
+          "reference": [
+            "ronald",
+            "eva"
+          ],
+          "hypothesis": [
+            "rono",
+            "eva"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000612961",
+        "reference": "至于十大热门创作者同埋十大人气创作者嘅第一位就分别系史当真同埋米子咁唔知大家又有冇睇过以上 CHANNEL 嘅影片呢",
+        "raw_text": "至于十大热门创作者同埋十大人气创作者嘅第一位就分别系是当真同埋米子咁唔知大家又有冇睇过以上 channel嘅影片呢",
+        "text": "至于十大热门创作者同埋十大人气创作者嘅第一位就分别系是当真同埋米子咁。唔知大家又有冇睇过以上channel嘅影片呢。",
+        "english": {
+          "reference": [
+            "channel"
+          ],
+          "hypothesis": [
+            "channel"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000621400",
+        "reference": "因为我谂我谂我应该唔可以carry全程我应该要寄翻香港咁运费都要欸好贵",
+        "raw_text": "因为我谂我谂我应该唔可以 carry全程我应该要寄翻香港咁运费都要诶好贵",
+        "text": "因为我谂我谂我应该唔可以carry全程，我应该要寄翻香港咁运费都要诶，好贵。",
+        "english": {
+          "reference": [
+            "carry"
+          ],
+          "hypothesis": [
+            "carry"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000621944",
+        "reference": "咁今次嘅分享系咁多喇如果呢一条片帮到你嘅话呢记得揿like如果有兴趣睇更加多嘅影片嘅话记得subscribe啦我系edwick我哋下一条片再见",
+        "raw_text": "今次的分享就这样了如果这一条片帮到你的话记得按 like如果有兴趣看更多影片的话记得 subscribe我是 edwin我们下一条片再见",
+        "text": "今次的分享就这样了。如果这一条片帮到你的话，记得按like如果有兴趣看更多影片的话，记得subscribe，我是edwin，我们下一条片再见。",
+        "english": {
+          "reference": [
+            "like",
+            "subscribe",
+            "edwick"
+          ],
+          "hypothesis": [
+            "like",
+            "subscribe",
+            "edwin"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000654257",
+        "reference": "如果你用咗呢个方法你有咩经验嘅话咁欢迎你咧留言话俾我知如果你觉得呢个video好嘅帮到你嘅咁记住啊揿翻个赞多谢大家下次再见拜拜",
+        "raw_text": "如果你用咗呢个方法你有咩经验嘅话咁欢迎你咧留言话俾我知如果你觉得呢个 video好嘅帮到你嘅咁记住揿翻个赞多谢大家下次再见拜拜",
+        "text": "如果你用咗呢个方法，你有咩经验嘅话，咁欢迎你咧留言话，俾我知。如果你觉得呢个video好嘅帮到你嘅咁记住揿翻个赞，多谢大家，下次再见，拜拜。",
+        "english": {
+          "reference": [
+            "video"
+          ],
+          "hypothesis": [
+            "video"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000664167",
+        "reference": "咁喺今个video里边呢我就想同大家呢讲一讲加拿大呢个情况先然之后呢另外video呢先至讲美国嘅C P I通胀嘅",
+        "raw_text": "咁喺今个 video里边咧我就想同大家咧讲一讲加拿大呢个情况先然之后咧另外 video咧先至讲美国嘅 cpi通胀嘅",
+        "text": "咁喺今个video里边咧，我就想同大家咧讲一讲加拿大呢个情况，先然之后咧。另外，video咧先至讲美国嘅cpi通胀嘅。",
+        "english": {
+          "reference": [
+            "video",
+            "video"
+          ],
+          "hypothesis": [
+            "video",
+            "video",
+            "cpi"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000674134",
+        "reference": "OK咁问你两样嘢第一你作为律师点样睇同埋你作为华裔嘅父亲又点样睇咧",
+        "raw_text": "ok咁问你两样嘢第一你作为律师点样睇同埋你作为华裔嘅父亲又点样睇呢",
+        "text": "ok咁问你两样嘢，第一，你作为律师点样睇同埋你作为华裔嘅，父亲又点样睇呢。",
+        "english": {
+          "reference": [
+            "ok"
+          ],
+          "hypothesis": [
+            "ok"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000710074",
+        "reference": "两款机型都会预载android十四系统有外媒就估计H M D将会效法以往nokia手机嘅做法提供接近原生android嘅界面同埋使用体验",
+        "raw_text": "两款机型都会预载 android十四系统有外媒就估计 hmd将会效法以往 nokia手机嘅做法提供接近原生 android嘅界面同埋使用体验",
+        "text": "两款机型都会预载android十四系统，有外媒就估计hmd将会效法以往nokia手机嘅做法提供接近原生android嘅界面同埋使用体验。",
+        "english": {
+          "reference": [
+            "android",
+            "nokia",
+            "android"
+          ],
+          "hypothesis": [
+            "android",
+            "hmd",
+            "nokia",
+            "android"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "spont_0000714165",
+        "reference": "今次新机系ipad首次支援five G都冇咩特别可以讲啦就系外出工作同埋上网更加快更加配合ipad pro流动性高同埋高效能嘅优点",
+        "raw_text": "今次新机系 ipad首次支援 five g都冇咩特别可以讲啦就系外出工作同埋上网更加快更加配合 ipad pro流动性高同埋高效能嘅优点",
+        "text": "今次新机系ipad首次支援five g都冇咩，特别可以讲啦，就系外出工作同埋上网，更加快更加配合ipad pro流动性高同埋高效能嘅优点。",
+        "english": {
+          "reference": [
+            "ipad",
+            "five",
+            "ipad",
+            "pro"
+          ],
+          "hypothesis": [
+            "ipad",
+            "five",
+            "ipad",
+            "pro"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "spont_0000734252",
+        "reference": "就咁啦今集（拜）今集完支持我哋嘅创作嘅话记得comment like share同埋subscribe我哋啦我哋下集再见",
+        "raw_text": "就咁啦今集拜今集完支持我哋嘅创作嘅话记得 comment like share同埋 subscribe我哋啦我哋下集再见",
+        "text": "就咁啦，今集拜今集完支持我哋嘅创作嘅话，记得comment like share同埋subscribe，我哋啦，我哋下集再见。",
+        "english": {
+          "reference": [
+            "comment",
+            "like",
+            "share",
+            "subscribe"
+          ],
+          "hypothesis": [
+            "comment",
+            "like",
+            "share",
+            "subscribe"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "spont_0000758088",
+        "reference": "呢个系一个专注力嘅游戏啊原来我已经抄咗两个钟啰我以为净系抄咗三十分钟咋㖞原来都两个钟啰㖞如果我用呢两个钟嚟开live呢",
+        "raw_text": "呢个系一个专注力嘅游戏啊原来我已经抄咗两个钟咯我以为就系抄咗三十分钟啫原来都两个钟咯如果用呢两个钟嚟开 live呢",
+        "text": "呢个系一个专注力嘅游戏啊，原来我已经抄咗两个钟咯，我以为就系抄咗三十分钟啫，原来都两个钟咯。如果用呢两个钟嚟开live呢。",
+        "english": {
+          "reference": [
+            "live"
+          ],
+          "hypothesis": [
+            "live"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000788885",
+        "reference": "各位网友大家好我就系beyond KL嘅Terence咁二零一年呢好快就会成为咗历史𠮶啦",
+        "raw_text": "各位网友大家好我就系 beyond kol嘅 terence咁二零一一年咧好快就会成为咗历史噶啦",
+        "text": "各位网友大家好，我就系beyond kol嘅terence咁2011年咧，好快就会成为咗历史噶啦。",
+        "english": {
+          "reference": [
+            "beyond",
+            "kl",
+            "terence"
+          ],
+          "hypothesis": [
+            "beyond",
+            "kol",
+            "terence"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000797142",
+        "reference": "如果想睇翻我哋试食港澳地区一百零一包薯片其中完美part一段片嘅话就可以咁依家有上角弹出嚟嘅I字我哋听日再见啦拜拜",
+        "raw_text": "如果想睇翻我哋试食港澳地区一百零一包薯片其中完美 part一段片嘅话就可以揿依家右上角弹出嚟嘅 i我哋听日再见啦拜拜",
+        "text": "如果想睇翻，我哋试食港澳地区一百零一包薯片，其中完美part一段片嘅话就可以揿依家右上角弹出嚟嘅。i我哋听日再见啦，拜拜。",
+        "english": {
+          "reference": [
+            "part"
+          ],
+          "hypothesis": [
+            "part"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0000810983",
+        "reference": "咁呢喺今个video里边呢我就想同大家呢讲一讲加拿大呢个情况先然之后呢另外video呢先至讲美国嘅C P I通胀嘅",
+        "raw_text": "咁喺今个 video里边咧我就想同大家咧讲一讲加拿大呢个情况先然之后咧另外 video咧先至讲美国嘅 cpi通胀嘅",
+        "text": "咁喺今个video里边咧，我就想同大家咧讲一讲加拿大呢个情况，先然之后咧。另外，video咧先至讲美国嘅cpi通胀嘅。",
+        "english": {
+          "reference": [
+            "video",
+            "video"
+          ],
+          "hypothesis": [
+            "video",
+            "video",
+            "cpi"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000903937",
+        "reference": "咁今日咁多喇记得俾个like share同埋订阅同埋下面留言啦好喇系咁多",
+        "raw_text": "咁今日咁多啦记住俾个 like share同埋订阅同埋下面留言啦好啦系咁多",
+        "text": "咁今日咁多啦，记住俾个like share同埋订阅同埋下面留言啦。好啦，系咁多。",
+        "english": {
+          "reference": [
+            "like",
+            "share"
+          ],
+          "hypothesis": [
+            "like",
+            "share"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0000991818",
+        "reference": "咁而第样嘢大家留意到呢就系如果相比个高峰期呢好多嘅城市呢其实都系跌咗嘅嗱例如vancouver",
+        "raw_text": "咁而第样嘢大家留意到咧就系如果相比个高峰期咧好多嘅城市咧其实都系跌咗嘅嗱例如 vancouver",
+        "text": "咁而第样嘢大家留意到咧，就系。如果相比个高峰期咧，好多嘅城市咧其实都系跌咗嘅嗱。",
+        "english": {
+          "reference": [
+            "vancouver"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001018199",
+        "reference": "可以见到啦喺二K分辨率之下三张卡咧都可以顺温到呢几只game而L O L C S go咧更加系食C P U多过G P U基本上咧拣边张卡都冇所谓啦",
+        "raw_text": "可以见到啦喺二 k解像度之下三张卡咧都可以顺温到呢几只 game而 lol cs go咧更加系食 cpu多过 gpu基本上咧拣边张卡都冇所谓啦",
+        "text": "可以见到啦，喺二k解像度之下，三张卡咧都可以顺温到呢几只game而lol cs go咧，更加系食，cpu多过gpu，基本上咧，拣边张卡都冇所谓啦。",
+        "english": {
+          "reference": [
+            "game",
+            "go"
+          ],
+          "hypothesis": [
+            "game",
+            "lol",
+            "cs",
+            "go",
+            "cpu",
+            "gpu"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0001029591",
+        "reference": "公主系列collection我睇咗个环保袋呢个会唔会太梦幻呢我觉得未用佢已经开始勾烂晒啲线",
+        "raw_text": "公主系列 collection我睇个环保袋呢个会唔会太梦幻呢我觉得未用佢已经开始勾烂晒线",
+        "text": "公主系列collection，我睇个环保袋呢，个会唔会太梦幻呢，我觉得未用佢已经开始勾烂晒线。",
+        "english": {
+          "reference": [
+            "collection"
+          ],
+          "hypothesis": [
+            "collection"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001064255",
+        "reference": "咁尤其是明显会feel到痛楚嘅时候系咩呢就系当我除衫手臂举起果阵时你就会feel到打针果个位呢系有啲酸软疼痛㗎",
+        "raw_text": "咁尤其是明显会 feel到痛楚嘅时候系咩咧就系当我除衫手臂举起嗰阵时你就会 feel到打针个位咧系有啲酸软疼痛嘅",
+        "text": "咁尤其是明显会feel到痛楚嘅时候系咩咧就系当我除衫手臂举起𠮶阵时，你就会feel到打针个位咧，系有啲酸软疼痛嘅。",
+        "english": {
+          "reference": [
+            "feel",
+            "feel"
+          ],
+          "hypothesis": [
+            "feel",
+            "feel"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0001070878",
+        "reference": "手机绳真系好紧要呢个手机绳其实我就应该唔会用呢一条嘅不过平时喺flog度见到绿色果条呢我唔知摆咗去边而家揾唔到所以就攞呢条嚟讲住先",
+        "raw_text": "手机绳真系好紧要呢个手机绳其实我就应该唔会用呢一条嘅不过平时喺 floor度见到绿色条呢我唔知摆咗去边而家揾唔到所以就攞呢条嚟讲住先",
+        "text": "手机绳真系好紧要呢个手机绳其实我就应该唔会用呢一条嘅。不过平时喺floor度见到绿色条呢，我唔知摆咗去边，而家揾唔到，所以就攞呢条嚟讲住先。",
+        "english": {
+          "reference": [
+            "flog"
+          ],
+          "hypothesis": [
+            "floor"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001096545",
+        "reference": "如果呢唔想自己慢慢教嘅话用家亦都可以呢喺呢个官方预设嘅八种模式入面去选择例如呢钟意听低音嘅朋友就可以呢将原本嘅popular mode呢转返做rock mode",
+        "raw_text": "如果呢不想自己慢慢教的话用家也可以呢在这个官方预设的八种模式里面去选择例如呢中意听低音的朋友就可以呢将原本的 popular mode呢转换成 rock mode",
+        "text": "如果呢不想自己慢慢教的话，用家也可以呢在这个官方预设的八种模式里面去选择。例如呢中意听低音的朋友就可以呢将原本的popular mode呢转换成rock mode。",
+        "english": {
+          "reference": [
+            "popular",
+            "mode",
+            "rock",
+            "mode"
+          ],
+          "hypothesis": [
+            "popular",
+            "mode",
+            "rock",
+            "mode"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "spont_0001171790",
+        "reference": "咁而第四个portfolio就比较特别嘅哈就系叫做strategic portfolio呢一个呢就最主要系hold住一啲港股嘅",
+        "raw_text": "咁而第四个 portfolio就比较特别嘅吓就系叫做 strategic portfolio呢一个咧就最主要系 hold住一啲港股嘅",
+        "text": "咁而第四个portfolio就比较特别嘅吓，就系叫做strategic portfolio呢一个咧，就最主要系hold住一啲港股嘅。",
+        "english": {
+          "reference": [
+            "portfolio",
+            "strategic",
+            "portfolio",
+            "hold"
+          ],
+          "hypothesis": [
+            "portfolio",
+            "strategic",
+            "portfolio",
+            "hold"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "spont_0001181682",
+        "reference": "无论你识N B A又好唔识N B A都好要知道呢配得起大帝the king呢个名一定唔系等闲之辈",
+        "raw_text": "无论你识 nba又好唔识 nba都好要知道咧配得起大帝 the king呢个名一定唔系等闲之辈",
+        "text": "无论你识nba又好唔识nba都好，要知道咧配得起大帝。the king呢个名一定唔系等闲之辈。",
+        "english": {
+          "reference": [
+            "the",
+            "king"
+          ],
+          "hypothesis": [
+            "nba",
+            "nba",
+            "the",
+            "king"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0001219396",
+        "reference": "今日要介绍嘅系我由留学开始就钟意食到而家嘅英国rib eye steak两磅几就有交易真系平到好夸张啊",
+        "raw_text": "今日要介绍嘅系我由留学开始就中意食到而家嘅英国 ripi stick两磅几就有交易真系平到好夸张啊",
+        "text": "今日要介绍嘅系，我由留学开始就中意食到。而家嘅英国ripi stick两磅几就有交易，真系平到，好夸张啊。",
+        "english": {
+          "reference": [
+            "rib",
+            "eye",
+            "steak"
+          ],
+          "hypothesis": [
+            "ripi",
+            "stick"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001230080",
+        "reference": "咁再一次呢多谢各位观众对于我哋嘅支持如果你哋真心钟意呢段video希望大家会like share同埋subscribe提提你哋你哋睇紧嘅亦是followers",
+        "raw_text": "再一次咧多谢各位观众对于我哋嘅支持如果你哋真心中意呢段 video希望大家会 like share同埋 subscribe提提你哋你哋睇紧嘅亦是 olivers",
+        "text": "再一次咧，多谢各位观众对于我哋嘅支持，如果你哋真心中意呢段video，希望大家会like share同埋subscribe，提提你哋你哋睇紧嘅亦是olivers。",
+        "english": {
+          "reference": [
+            "video",
+            "like",
+            "share",
+            "subscribe",
+            "followers"
+          ],
+          "hypothesis": [
+            "video",
+            "like",
+            "share",
+            "subscribe",
+            "olivers"
+          ],
+          "hits": 4
+        }
+      },
+      {
+        "id": "spont_0001234655",
+        "reference": "讲下你嘅睇法啦好唔好吖你会唔会认购啦或者认购几多手啦好唔好吖嗱咁吖都多谢大家呢就即系诶诶睇晒呢条片如果你钟意条片呢就记得俾个订阅同埋俾个like我哋好唔吖好多谢晒大家",
+        "raw_text": "讲下你嘅睇法啦好唔好啊你会唔会认购啦或者认购几多手啦好唔好嗱咁啊都多谢大家咧就即系诶诶睇晒呢条片如果你中意条片咧就记得俾个订阅同埋俾个 like我哋好唔好啊多谢晒大家",
+        "text": "讲下你嘅睇法啦。好唔好啊，你会唔会认购啦，或者认购几多手啦。好唔好嗱咁啊，都多谢大家咧，就即系诶，诶睇晒呢条片。如果你中意条片咧，就记得俾个订阅同埋。俾个like我哋好唔好啊，多谢晒大家。",
+        "english": {
+          "reference": [
+            "like"
+          ],
+          "hypothesis": [
+            "like"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001248633",
+        "reference": "咁喺佢哋第四part嘅研究度呢就包含咗有三十三个诶中咗呢一个新冠病毒嘅人士咧嚟到做一个研究嘅",
+        "raw_text": "咁喺佢哋第四 part嘅研究度呢就包含咗有三十三个诶中咗呢一个新冠病毒嘅人士呢嚟到做一个研究嘅",
+        "text": "咁喺佢哋。第四，part嘅研究度呢就包含咗有三十三个诶，中咗呢一个新冠病毒嘅人士呢嚟到做一个研究嘅。",
+        "english": {
+          "reference": [
+            "part"
+          ],
+          "hypothesis": [
+            "part"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001297787",
+        "reference": "仲有spinning studio同埋可以做‌aerobic嘅房添钟意做运动嘅呢间酒店就实啱你啦",
+        "raw_text": "仲有 spinning studio同埋可以做 arabic嘅房添中意做运动嘅呢间酒店就实啱你啦",
+        "text": "仲有spinning studio同埋，可以做arabic嘅房添中意做运动嘅呢，间酒店就实啱你啦。",
+        "english": {
+          "reference": [
+            "spinning",
+            "studio",
+            "aerobic"
+          ],
+          "hypothesis": [
+            "spinning",
+            "studio",
+            "arabic"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0001305685",
+        "reference": "mac mini咧最有可能登场嘅时间就系今个秋季咁同时咧apple都会预期咧喺同一时间咧带嚟新一代嘅mac book",
+        "raw_text": "mac mini咧最有可能登场嘅时间就系今个秋季咁同时咧 apple亦都会预期咧喺同一时间咧带嚟新一代嘅 macbook",
+        "text": "mac mini咧最有可能登场嘅时间就系今个秋季咁同时咧，apple亦都会预期咧，喺同一时间咧，带嚟新一代嘅macbook。",
+        "english": {
+          "reference": [
+            "mac",
+            "mini",
+            "apple",
+            "mac",
+            "book"
+          ],
+          "hypothesis": [
+            "mac",
+            "mini",
+            "apple",
+            "macbook"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "spont_0001309703",
+        "reference": "l'amour下个月中环四千尺旗舰店开幕喇以后大家生日拍拖有多个好选择喇",
+        "raw_text": "那么啊下个月中华四千尺旗舰店开幕啦以后大家生日拍拖有多个好选择啦",
+        "text": "那么啊下个月中华四千尺旗舰店开幕啦，以后，大家生日拍拖有多个好选择啦。",
+        "english": {
+          "reference": [
+            "l'amour"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001324709",
+        "reference": "加拿大嘅皇家银行汇钱出去香港或者其他唔同国际户口嘅limit",
+        "raw_text": "加拿大嘅皇家银行汇钱出去香港或者其他唔同国际户口嘅 limit",
+        "text": "加拿大嘅皇家银行汇钱出去香港或者其他唔同国际户口嘅limit。",
+        "english": {
+          "reference": [
+            "limit"
+          ],
+          "hypothesis": [
+            "limit"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001334493",
+        "reference": "我刷到料啊而家买日产嘅demo car或者display car优惠高达三万三千三百八十蚊啊千祈唔好话俾avery听吖我要赢佢",
+        "raw_text": "我刷到了啊而家买日产嘅 demo卡或者 display卡优惠高达三万三千三百八十蚊啊千祈唔好话俾 avery听我要赢佢",
+        "text": "我刷到了啊，而家买日产嘅demo卡或者display卡优惠高达三万三千三百八十。蚊啊，千祈唔好话，俾avery听我要赢佢。",
+        "english": {
+          "reference": [
+            "demo",
+            "car",
+            "display",
+            "car",
+            "avery"
+          ],
+          "hypothesis": [
+            "demo",
+            "display",
+            "avery"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "spont_0001379040",
+        "reference": "今日呢就donny试车为主我做乘客嘅",
+        "raw_text": "今日呢就当年试车为主我做乘客",
+        "text": "今日呢就当年试车为主，我做乘客。",
+        "english": {
+          "reference": [
+            "donny"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001386666",
+        "reference": "hello大家好啊储埋一大堆又可以同大家讲下最近有啲乜嘢好用嘅嘢喇首先呢第一样就系想介绍呢个",
+        "raw_text": "hello大家好啊储埋一大堆嘢可以同大家讲下最近有啲乜嘢好用嘅嘢啦首先呢第一样就系想介绍呢个",
+        "text": "hello，大家好啊，储埋一大堆嘢，可以同大家讲下最近有啲乜嘢，好用嘅嘢啦。首先呢第一样就系想介绍呢个。",
+        "english": {
+          "reference": [
+            "hello"
+          ],
+          "hypothesis": [
+            "hello"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001392613",
+        "reference": "而且第一次打开部机呢就帮你装咗好多app入去添真系佢装咗几多嘢入去你都唔知啦即插即用真系爽到不得了有兴趣可以睇睇啦",
+        "raw_text": "而且第一次打开部机呢就帮你装咗好多 app入去添真系佢装咗几多嘢入去你都唔知啦即插即用真系爽到不得了有兴趣可以睇睇啦",
+        "text": "而且第一次打开部机呢就帮你装咗，好多app入去添真系佢，装咗几多嘢入去，你都唔知啦，即插即用，真系爽到不得了，有兴趣可以睇睇啦。",
+        "english": {
+          "reference": [
+            "app"
+          ],
+          "hypothesis": [
+            "app"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001397213",
+        "reference": "即系其实呢两间都系成*同埋就系偏僻少少啰食任小魔米系嚟啊let's go",
+        "raw_text": "即系其实呢两间都系成开门同埋就系偏僻少少咯食饮小锅米系嚟啊 let's go",
+        "text": "即系，其实呢两间都系成开门同埋，就系偏僻，少少咯，食饮小锅米系嚟啊，let's go。",
+        "english": {
+          "reference": [
+            "let's",
+            "go"
+          ],
+          "hypothesis": [
+            "let's",
+            "go"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0001418275",
+        "reference": "𠮶个spy啊个表面抗原咧",
+        "raw_text": "这个 spider这个表面抗原呢",
+        "text": "这个spider这个表面抗原呢？",
+        "english": {
+          "reference": [
+            "spy"
+          ],
+          "hypothesis": [
+            "spider"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001418756",
+        "reference": "ACT一个价值观嘅概念",
+        "raw_text": "act一个价值观嘅概念",
+        "text": "act一个价值观嘅概念。",
+        "english": {
+          "reference": [
+            "act"
+          ],
+          "hypothesis": [
+            "act"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001419368",
+        "reference": "佢哋未有AI之前即",
+        "raw_text": "佢哋未有 ai之前即",
+        "text": "佢哋未有ai之前即。",
+        "english": {
+          "reference": [
+            "ai"
+          ],
+          "hypothesis": [
+            "ai"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001450200",
+        "reference": "你哋又会唔会买呢欢迎留言话俾我哋知我哋好快会有新片同大家见面记得subscribe我哋嘅channel同今埋隔离个钟啦拜拜",
+        "raw_text": "你哋又会唔会买呢欢迎留言话俾我哋知我哋好快会有新片同大家见面记得 subscribe我哋嘅 channel同埋隔离个钟啦拜拜",
+        "text": "你哋又会唔会买呢，欢迎留言话，俾我哋知我哋好快会有新片同大家见面，记得subscribe，我哋嘅channel同埋隔离个钟啦，拜拜。",
+        "english": {
+          "reference": [
+            "subscribe",
+            "channel"
+          ],
+          "hypothesis": [
+            "subscribe",
+            "channel"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0001451347",
+        "reference": "钟意嘅话希望你哋可以俾个like持下同埋记得订阅埋我嘅channel我哋下集英国睇楼之旅再见拜拜",
+        "raw_text": "钟意嘅话希望你哋可以畀个 like支持下同埋记得订阅埋我嘅 channel我哋下集英国睇楼之旅再见拜拜",
+        "text": "钟意嘅话希望你哋可以畀个like支持下同埋，记得订阅埋我嘅channel。我哋下集英国睇楼之旅，再见，拜拜。",
+        "english": {
+          "reference": [
+            "like",
+            "channel"
+          ],
+          "hypothesis": [
+            "like",
+            "channel"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0001468705",
+        "reference": "讲真呢个composer玩落都真系",
+        "raw_text": "讲真呢个 composer玩落都真系",
+        "text": "讲真呢个composer玩落都真系。",
+        "english": {
+          "reference": [
+            "composer"
+          ],
+          "hypothesis": [
+            "composer"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001468706",
+        "reference": "当年同上一代一样 gui interface",
+        "raw_text": "当年和上一代一样 grief interface",
+        "text": "当年和上一代一样，grief interface。",
+        "english": {
+          "reference": [
+            "gui",
+            "interface"
+          ],
+          "hypothesis": [
+            "grief",
+            "interface"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001470674",
+        "reference": "嚟到通话方面我哋连接咗iphone 14",
+        "raw_text": "来到通话方面我们连接 iphone十四",
+        "text": "来到通话方面，我们连接iphone十四。",
+        "english": {
+          "reference": [
+            "iphone"
+          ],
+          "hypothesis": [
+            "iphone"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001471550",
+        "reference": "之后要介绍 jlab audio go",
+        "raw_text": "之后要介绍的是 jlapaudio",
+        "text": "之后要介绍的是jlapaudio。",
+        "english": {
+          "reference": [
+            "jlab",
+            "audio",
+            "go"
+          ],
+          "hypothesis": [
+            "jlapaudio"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001471772",
+        "reference": "佢say sorry因为我我冇驳",
+        "raw_text": "佢 say sorry因为我冇搏",
+        "text": "佢say sorry，因为我冇搏。",
+        "english": {
+          "reference": [
+            "say",
+            "sorry"
+          ],
+          "hypothesis": [
+            "say",
+            "sorry"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0001472161",
+        "reference": "买呢一个real estate啦",
+        "raw_text": "买呢一个 realestate啦",
+        "text": "买呢一个realestate啦。",
+        "english": {
+          "reference": [
+            "real",
+            "estate"
+          ],
+          "hypothesis": [
+            "realestate"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001473414",
+        "reference": "除咗用嚟拍片*APP入面仲",
+        "raw_text": "除咗用嚟拍片 motif app入面仲",
+        "text": "除咗用嚟拍片motif app入面仲。",
+        "english": {
+          "reference": [
+            "app"
+          ],
+          "hypothesis": [
+            "motif",
+            "app"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001473830",
+        "reference": "hello大家好我系tiffany啊欢迎大",
+        "raw_text": "hello大家好我是 tiffany欢迎大",
+        "text": "hello，大家好，我是tiffany，欢迎大。",
+        "english": {
+          "reference": [
+            "hello",
+            "tiffany"
+          ],
+          "hypothesis": [
+            "hello",
+            "tiffany"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0001474383",
+        "reference": "同埋大家亦都唔可以assume我",
+        "raw_text": "同埋大家亦都唔可以 assume",
+        "text": "同埋大家亦都唔，可以assume。",
+        "english": {
+          "reference": [
+            "assume"
+          ],
+          "hypothesis": [
+            "assume"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001474969",
+        "reference": "能够将大家个incentive提",
+        "raw_text": "能够将大家的",
+        "text": "能够将大家的。",
+        "english": {
+          "reference": [
+            "incentive"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001475127",
+        "reference": "每一部车都原装配备咗burn",
+        "raw_text": "每一部车都原装配备了",
+        "text": "每一部车都原装配备了。",
+        "english": {
+          "reference": [
+            "burn"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001475720",
+        "reference": "去到今日holo呢个字系一个熟*",
+        "raw_text": "去到今天 hollow这个字是一个缩写",
+        "text": "去到今天hollow这个字是一个缩写。",
+        "english": {
+          "reference": [
+            "holo"
+          ],
+          "hypothesis": [
+            "hollow"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001476771",
+        "reference": "跟住咧系Tesla 嘅消息咁早",
+        "raw_text": "跟住咧系 tesla嘅消息咁就好似",
+        "text": "跟住咧系tesla嘅消息咁就好似。",
+        "english": {
+          "reference": [
+            "tesla"
+          ],
+          "hypothesis": [
+            "tesla"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001477206",
+        "reference": "咁我个mortgage如果唔*",
+        "raw_text": "咁我个 mortgage如果唔批",
+        "text": "咁我个mortgage，如果唔批。",
+        "english": {
+          "reference": [
+            "mortgage"
+          ],
+          "hypothesis": [
+            "mortgage"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001478997",
+        "reference": "而最近呢大家都开始关注咧Apple",
+        "raw_text": "最近大家都开始关注 apple",
+        "text": "最近大家都开始关注apple。",
+        "english": {
+          "reference": [
+            "apple"
+          ],
+          "hypothesis": [
+            "apple"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001479082",
+        "reference": "有好几次我拍tickat片呢",
+        "raw_text": "有好几次我拍出 check片呢",
+        "text": "有好几次我拍出check片呢。",
+        "english": {
+          "reference": [
+            "tickat"
+          ],
+          "hypothesis": [
+            "check"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001480678",
+        "reference": "感觉入便嘅item好似好少啊但系*",
+        "raw_text": "感觉里面的 item好像好少啊",
+        "text": "感觉里面的item好像好少啊。",
+        "english": {
+          "reference": [
+            "item"
+          ],
+          "hypothesis": [
+            "item"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001481538",
+        "reference": "虽然个federal reserve个联储局",
+        "raw_text": "虽然个 federal reserve个联处局",
+        "text": "虽然个federal reserve个联处局。",
+        "english": {
+          "reference": [
+            "federal",
+            "reserve"
+          ],
+          "hypothesis": [
+            "federal",
+            "reserve"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_0001483620",
+        "reference": "咁至于ovity就冇以上嘅",
+        "raw_text": "咁至于 oriki就冇以上嘅",
+        "text": "咁至于oriki就冇以上嘅。",
+        "english": {
+          "reference": [
+            "ovity"
+          ],
+          "hypothesis": [
+            "oriki"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001484428",
+        "reference": "咁但系呢一种style 咧似",
+        "raw_text": "但系呢一种 style呢",
+        "text": "但系呢一种style呢。",
+        "english": {
+          "reference": [
+            "style"
+          ],
+          "hypothesis": [
+            "style"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001485529",
+        "reference": "啱啱用就系呢支日货utu",
+        "raw_text": "啱啱用就系呢啲啦 for you to",
+        "text": "啱啱用就系呢啲啦for you to。",
+        "english": {
+          "reference": [
+            "utu"
+          ],
+          "hypothesis": [
+            "for",
+            "you",
+            "to"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_0001486466",
+        "reference": "我哋加入个infection",
+        "raw_text": "我而家有个 infection",
+        "text": "我而家有个infection。",
+        "english": {
+          "reference": [
+            "infection"
+          ],
+          "hypothesis": [
+            "infection"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_0001488268",
+        "reference": "fresh coffee you fresh coff",
+        "raw_text": "fresh coffee以 fresh coffee",
+        "text": "fresh coffee以fresh coffee。",
+        "english": {
+          "reference": [
+            "fresh",
+            "coffee",
+            "you",
+            "fresh",
+            "coff"
+          ],
+          "hypothesis": [
+            "fresh",
+            "coffee",
+            "fresh",
+            "coffee"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "spont_0001489609",
+        "reference": "咁喺今个video里边咧同大家咧",
+        "raw_text": "咁喺今个 video里边呢同大家咧",
+        "text": "咁喺今个video里边呢同大家咧。",
+        "english": {
+          "reference": [
+            "video"
+          ],
+          "hypothesis": [
+            "video"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0000301_327000_336820",
+        "reference": "咁其实置身其中你会俾无限咁多嘅电影poster包围住啦同埋好多电影嘅书籍系十分之气味浓郁好有文艺气息嘅一间餐厅嚟嘅",
+        "raw_text": "咁其实置身其中你会俾无限咁多嘅电影 poster包围住啦同埋好多电影嘅书籍系十分之气味浓郁好有文艺气息嘅一间餐厅嚟嘅",
+        "text": "咁其实置身其中，你会俾无限咁多嘅电影poster包围住啦，同埋好多电影嘅书籍系，十分之气味浓郁，好，有文艺气息嘅一间餐厅嚟嘅。",
+        "english": {
+          "reference": [
+            "poster"
+          ],
+          "hypothesis": [
+            "poster"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0004755_1200260_1207180",
+        "reference": "umm alright O K馅饼guys搞掂咗未啊搞掂咗啦搞掂咗好好roman leaves罗马生菜叶",
+        "raw_text": "ok饼搞掂咗未啊搞掂咗啦搞掂咗好好罗马生菜叶",
+        "text": "ok饼搞掂咗未啊，搞掂咗啦，搞掂咗，好好罗马生菜叶。",
+        "english": {
+          "reference": [
+            "umm",
+            "alright",
+            "guys",
+            "roman",
+            "leaves"
+          ],
+          "hypothesis": [
+            "ok"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_gd0004760_2115380_2119000",
+        "reference": "today跟住我要刨啲金笋片放入啲肉度*",
+        "raw_text": "跟住我要刨啲甘笋片放入啲肉度",
+        "text": "跟住我要刨啲甘笋片放入啲肉度。",
+        "english": {
+          "reference": [
+            "today"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_gd0004885_233840_238270",
+        "reference": "I will drop some用少少香葱我觉得佢同薯蓉最夹",
+        "raw_text": "用少少香葱我觉得佢同薯蓉最夹",
+        "text": "用少少香葱，我觉得佢同薯蓉最夹。",
+        "english": {
+          "reference": [
+            "will",
+            "drop",
+            "some"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_gd0007100_1279370_1286290",
+        "reference": "（so)我哋要将佢混合到变成好似细沙咁样趁罗美娜搞紧我就分开啲蛋",
+        "raw_text": "我哋要将佢混合到变成好似细沙咁样趁罗美娜搞紧我就分开啲蛋",
+        "text": "我哋要将佢混合到变成好似细沙咁样，趁罗美娜搞紧，我就分开啲蛋。",
+        "english": {
+          "reference": [
+            "so"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_gd0007710_579430_585950",
+        "reference": "即系唞一唞啊好喇咁我哋呢就摆过嚟呢边oi好好等佢rest佢一阵再同大家讲",
+        "raw_text": "即系唞一唞啊好啦咁我哋咧就摆过嚟呢边系好好等佢 rest佢一阵再同大家讲",
+        "text": "即系唞一唞啊，好啦，咁我哋咧就摆过嚟呢边系，好好，等佢rest佢一阵再同大家讲。",
+        "english": {
+          "reference": [
+            "oi",
+            "rest"
+          ],
+          "hypothesis": [
+            "rest"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0008118_599120_603360",
+        "reference": "（真系要 OK啦）好而家拎过嚟啦已经得啦拎过嚟上啦",
+        "raw_text": "真系要 ok啦好啦而家拎过嚟啦已经得啦拎过嚟上啦",
+        "text": "真系要ok啦。好啦，而家拎过嚟啦，已经得啦，拎过嚟上啦。",
+        "english": {
+          "reference": [
+            "ok"
+          ],
+          "hypothesis": [
+            "ok"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0008199_421610_430680",
+        "reference": "咁就ok啦至于咸淡嘅就视乎你本身个汤包咁啊你揾个水走去自己调教下咯",
+        "raw_text": "咁就 ok啦至于咸淡嘅就视乎你本身个汤包咁啊你揾个水走去自己调教下咯",
+        "text": "咁就ok啦，至于咸淡嘅就视乎你本身个汤包咁啊，你揾个水走去，自己调教下咯。",
+        "english": {
+          "reference": [
+            "ok"
+          ],
+          "hypothesis": [
+            "ok"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0010241_634370_636980",
+        "reference": "超好feel嘅又好风又唔热",
+        "raw_text": "超好 feel嘅有好风又唔热",
+        "text": "超好feel嘅有好风又唔热。",
+        "english": {
+          "reference": [
+            "feel"
+          ],
+          "hypothesis": [
+            "feel"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0025843_420370_423170",
+        "reference": "地下室嘅入口就系一个locker嚟",
+        "raw_text": "地下室嘅入口就系一个 lock头嚟",
+        "text": "地下室嘅入口就系一个lock头嚟。",
+        "english": {
+          "reference": [
+            "locker"
+          ],
+          "hypothesis": [
+            "lock"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_gd0033896_103290_106790",
+        "reference": "(哈哈哈）其实好多my my darling啊都系果啲亲戚嚟噶",
+        "raw_text": "其实好多卖卖 darling啊都系佢啲亲戚嚟嘅",
+        "text": "其实好多卖卖darling啊，都系佢啲亲戚嚟嘅。",
+        "english": {
+          "reference": [
+            "my",
+            "my",
+            "darling"
+          ],
+          "hypothesis": [
+            "darling"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0036711_200_7310",
+        "reference": "hello大家好我系多多啊咁我而家呢喺兰桂坊你哋觉得我去紧边度呢",
+        "raw_text": "hello大家好我系多多啊咁我而家呢喺兰桂坊你哋觉得我去紧边度呢",
+        "text": "hello，大家好，我系多多啊。咁我而家呢喺兰桂坊，你哋觉得我去紧边度呢。",
+        "english": {
+          "reference": [
+            "hello"
+          ],
+          "hypothesis": [
+            "hello"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0040173_64570_71730",
+        "reference": "但系对于可能成为佢初恋情人嘅candy佢始终有一份憧憬",
+        "raw_text": "但系对于可能成为佢初恋情人嘅 candy佢始终有一份憧憬",
+        "text": "但系对于可能成为佢初恋情人嘅candy佢始终有一份憧憬。",
+        "english": {
+          "reference": [
+            "candy"
+          ],
+          "hypothesis": [
+            "candy"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0040225_230390_232560",
+        "reference": "我见到Michel签名嘅时候",
+        "raw_text": "我见到 michael签名嘅时候",
+        "text": "我见到michael签名嘅时候。",
+        "english": {
+          "reference": [
+            "michel"
+          ],
+          "hypothesis": [
+            "michael"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_gd0045049_120250_127900",
+        "reference": "都要配合下大家嘅schedule噶就好似你平时要约男朋友咁互相打下电话睇下边个得闲咁先至约噶嘛",
+        "raw_text": "嗱都要配合下大家嘅 schedule噶就好似你平时要约男朋友咁互相打下电话睇下边个得闲咁先至约噶嘛",
+        "text": "嗱都要配合下大家嘅schedule噶就好似你。平时要约男朋友咁互相打下电话，睇下边个得闲咁先至约噶嘛。",
+        "english": {
+          "reference": [
+            "schedule"
+          ],
+          "hypothesis": [
+            "schedule"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0046120_764740_769630",
+        "reference": "咩㖞啖阿Jo打得嚟啖即系冇嘢啦",
+        "raw_text": "咩咁话租打得嚟咁真系冇嘢啦",
+        "text": "咩咁话租打得嚟咁真系冇嘢啦。",
+        "english": {
+          "reference": [
+            "jo"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_gd0046176_412400_420720",
+        "reference": "Kinky你谂咩谂到入晒神啊（做紧嘢啊）吓你真系几得噶噃你",
+        "raw_text": "kki你谂咩谂到入晒神啊做紧嘢啊吓你真系几得噶噃你",
+        "text": "kki你谂咩谂到入晒神啊，做紧嘢啊，吓你真系几得噶。噃你。",
+        "english": {
+          "reference": [
+            "kinky"
+          ],
+          "hypothesis": [
+            "kki"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_gd0048474_939350_947050",
+        "reference": "哦话请到李嘉蕾同埋导师廉嚟参加我christmas party嘻呢次我叻返阵喇咁点得嘅啫",
+        "raw_text": "话请到李嘉雷同埋杜思廉嚟参加我 christmas party呢次我叻翻阵啦咁点得嘅啫",
+        "text": "话请到李嘉雷同埋杜思廉嚟参加我christmas party呢次我叻翻阵啦，咁点得嘅啫。",
+        "english": {
+          "reference": [
+            "christmas",
+            "party"
+          ],
+          "hypothesis": [
+            "christmas",
+            "party"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_gd0050791_4733510_4740310",
+        "reference": "有啲紧张添有冇机会终于有得久违了嘅奖励声带呢听下佢嘅standard几多为之合格",
+        "raw_text": "有啲紧张有冇机会终于有咗久违了嘅奖励声但系咧听下佢嘅 standard几多或者合格",
+        "text": "有啲紧张，有冇机会，终于有咗久违了嘅奖励声，但系咧听下佢嘅standard几多或者合格。",
+        "english": {
+          "reference": [
+            "standard"
+          ],
+          "hypothesis": [
+            "standard"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_gd0051135_3361810_3364380",
+        "reference": "咁啦咁啦wendy",
+        "raw_text": "咁啦咁啦 windy",
+        "text": "咁啦咁啦，windy。",
+        "english": {
+          "reference": [
+            "wendy"
+          ],
+          "hypothesis": [
+            "windy"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_gd0053248_528670_538420",
+        "reference": "嘿可能呢个女仔真系好好氹阿leon讲得两句佢哋两个人又再次紧紧咁揽翻埋一齐",
+        "raw_text": "系可能呢个女仔真系好好氹阿 leon讲得两句佢哋两个人又再次紧紧咁揽翻埋一齐",
+        "text": "系可能呢个女仔真系好好氹阿leon讲得两句佢哋，两个人又再次紧紧咁揽翻埋一齐。",
+        "english": {
+          "reference": [
+            "leon"
+          ],
+          "hypothesis": [
+            "leon"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xg0001203_1031650_1037650",
+        "reference": "如果你想一个好顺畅嘅旅程最紧要就系bb要食好饭可好事扫好风",
+        "raw_text": "如果你想一个好顺畅嘅旅程最紧要就系 bb要食好饭屙好事扫好风",
+        "text": "如果你想一个好顺畅嘅旅程，最紧要就系bb要食好饭，屙好事、扫好风。",
+        "english": {
+          "reference": [
+            "bb"
+          ],
+          "hypothesis": [
+            "bb"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xg0001260_349760_356100",
+        "reference": "基本上佢系将呢个韩国同埋日本merch埋一齐而最有趣系咩",
+        "raw_text": "基本上佢系将呢个韩国同埋日本 merge埋一齐而最有趣系咩",
+        "text": "基本上佢系将呢个韩国同埋日本merge埋一齐，而最有趣系咩。",
+        "english": {
+          "reference": [
+            "merch"
+          ],
+          "hypothesis": [
+            "merge"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xg0001791_620_10400",
+        "reference": "嚟到元朗呢有一间coffee shop咧会令我心思思到不得了久唔久就会真系唔介意*",
+        "raw_text": "嚟到元朗咧有一间 coffee shop咧会令我心思思到不得了久唔久就会真系唔介意直情系",
+        "text": "嚟到元朗咧，有一间coffee shop咧，会令我心思思到不得了，久唔久就会真系唔介意直情系。",
+        "english": {
+          "reference": [
+            "coffee",
+            "shop"
+          ],
+          "hypothesis": [
+            "coffee",
+            "shop"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_xg0002002_513960_518990",
+        "reference": "呢边系差on咗嘅恨得到呢边有啲白色嘅肉肉啊",
+        "raw_text": "嗱呢边系太 line咗嘅喷得到呢边有啲白色嘅肉肉啊",
+        "text": "嗱呢边系太line咗嘅喷得到呢边有啲白色嘅肉肉啊。",
+        "english": {
+          "reference": [
+            "on"
+          ],
+          "hypothesis": [
+            "line"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xg0002234_493650_497080",
+        "reference": "我识佢咁多年咁佢已经transpport到",
+        "raw_text": "我识佢咁多年咁佢已经 transform到",
+        "text": "我识佢咁多年，咁佢已经transform到。",
+        "english": {
+          "reference": [
+            "transpport"
+          ],
+          "hypothesis": [
+            "transform"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xg0002470_160420_170090",
+        "reference": "诶谂啲方法又令到佢可以enjoy佢嘅酒又可以enjoy佢嘅人生又可以延长啲嘅生命",
+        "raw_text": "诶谂啲方法又令到佢可以 enjoy佢嘅酒又可以 enjoy佢嘅人生又可以延长啲嘅生命",
+        "text": "诶，谂啲方法又令到佢，可以enjoy佢嘅酒，又可以enjoy佢嘅人生，又可以延长啲嘅生命。",
+        "english": {
+          "reference": [
+            "enjoy",
+            "enjoy"
+          ],
+          "hypothesis": [
+            "enjoy",
+            "enjoy"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_xg0002515_302290_305120",
+        "reference": "就系佢中国制cspan",
+        "raw_text": "就系佢中国制师 stand咁",
+        "text": "就系佢中国制师stand咁。",
+        "english": {
+          "reference": [
+            "cspan"
+          ],
+          "hypothesis": [
+            "stand"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xg0002538_118570_128190",
+        "reference": "有钱责任性四十九岁嘅jackle玩咗象真遥控船廿年有多住独立屋仲喺个车房整咗一个小型嘅造船工场",
+        "raw_text": "有钱责任性四十九岁嘅 jackie玩咗象真遥控船廿年有多住独立屋仲喺个车房整咗一个小型嘅造船工场",
+        "text": "有钱责任性，四十九岁嘅jackie玩咗象真遥控船廿年有多住独立屋，仲喺个车房，整咗一个小型嘅造船工场。",
+        "english": {
+          "reference": [
+            "jackle"
+          ],
+          "hypothesis": [
+            "jackie"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xg0003193_289450_293550",
+        "reference": "咁大约就系咁样噶啦因为反正样谂好咗系食playstingmenu",
+        "raw_text": "咁大约就系咁样嘅啦因为反正都谂好咗系食 tasting menu",
+        "text": "咁大约就系咁样嘅啦，因为反正都谂好咗系食tasting menu。",
+        "english": {
+          "reference": [
+            "playstingmenu"
+          ],
+          "hypothesis": [
+            "tasting",
+            "menu"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xg0008589_276490_284680",
+        "reference": "喺一个都不能少嘅决定之下呢三姊妹喺妈妈肚入边住咗廿七周就出世啦系早产BB",
+        "raw_text": "喺一个都不能少嘅决定之下呢三姊妹喺妈妈肚入边住咗廿七周就出世啦系早产 bb",
+        "text": "喺一个都不能少嘅决定之下呢，三姊妹喺妈妈肚入边住咗，廿七周就出世啦，系早产bb。",
+        "english": {
+          "reference": [
+            "bb"
+          ],
+          "hypothesis": [
+            "bb"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xg0009043_948000_951630",
+        "reference": "呢一次佢就去咗朋友阿Ken嘅面包厂参观",
+        "raw_text": "呢一次佢就去咗朋友阿 k嘅面包厂参观",
+        "text": "呢一次佢就去咗朋友阿k嘅面包厂参观。",
+        "english": {
+          "reference": [
+            "ken"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xg0009055_769920_779950",
+        "reference": "咁如果best before呢我哋尽量要喺日其实之前早就尽快处理佢啦你越close呢咁样其实呢系讲紧都话()系唔好嘅嘢嚟嘅",
+        "raw_text": "咁如果 best before呢我哋尽量要喺日其实之前早就尽快处理佢啦你越 close呢咁样其实呢系讲紧都话系唔好嘅嘢嚟噶啦",
+        "text": "咁如果best before呢，我哋尽量要喺日，其实之前早就尽快处理佢啦。你越close呢咁样，其实呢系讲紧都话系唔好嘅嘢嚟噶啦。",
+        "english": {
+          "reference": [
+            "best",
+            "before",
+            "close"
+          ],
+          "hypothesis": [
+            "best",
+            "before",
+            "close"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "spont_xg0009087_617100_624540",
+        "reference": "从根源改善*酸痛健康神经健康体魄neblo来落变案",
+        "raw_text": "从根源改善赤鼻酸同健康神经健康体魄 neurobiology内络变案",
+        "text": "从根源改善赤鼻酸，同健康、神经健康体魄，neurobiology内络变案。",
+        "english": {
+          "reference": [
+            "neblo"
+          ],
+          "hypothesis": [
+            "neurobiology"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xg0009261_46090_49140",
+        "reference": "佢带俾我嘅系宁静同埋relax",
+        "raw_text": "佢带俾我嘅系宁静同埋 relax",
+        "text": "佢带俾我嘅系宁静同埋relax。",
+        "english": {
+          "reference": [
+            "relax"
+          ],
+          "hypothesis": [
+            "relax"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xg0012293_478860_486430",
+        "reference": "希望各位朋友仔多多支持两条channel都要subscribe晒仲要多啲睇同埋share小弟啲片啊",
+        "raw_text": "希望各位朋友仔多多支持两条 channel都要 subscribe晒仲要多啲睇同埋 share小弟啲片啊",
+        "text": "希望各位朋友仔多多支持两条channel都要subscribe晒仲要多啲睇同埋share小弟啲片啊。",
+        "english": {
+          "reference": [
+            "channel",
+            "subscribe",
+            "share"
+          ],
+          "hypothesis": [
+            "channel",
+            "subscribe",
+            "share"
+          ],
+          "hits": 3
+        }
+      },
+      {
+        "id": "spont_xg0012334_0_9540",
+        "reference": "头先切落去个质感呢都几似咧切紧一块猪扒嘅而切开咗之后呢望入去呢入面啲testure呢都有少少似嘅",
+        "raw_text": "头先切落去个质感呢都几似呢切紧一块猪扒嘅而切开咗之后呢望入去呢入面啲 texture呢都有少少似嘅",
+        "text": "头先切落去个质感呢都几似呢切紧1元猪扒嘅。而切开咗之后呢，望入去呢入面啲texture呢都有少少似嘅。",
+        "english": {
+          "reference": [
+            "testure"
+          ],
+          "hypothesis": [
+            "texture"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xg0051968_388800_393890",
+        "reference": "呢位系陈伟俊系marketing嘅新同事嚟（你哋好）",
+        "raw_text": "呢位系陈伟俊系 marketing嘅新同事嚟嘅你哋好",
+        "text": "呢位系陈伟俊，系marketing嘅新同事，嚟嘅你哋好。",
+        "english": {
+          "reference": [
+            "marketing"
+          ],
+          "hypothesis": [
+            "marketing"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xg0053159_44240_48640",
+        "reference": "let's go咁而家我哋就将所有嘅评论放落个袋度",
+        "raw_text": "let's go咁而家我哋就将所有嘅评论放入呢个袋度",
+        "text": "let's go咁而家，我哋就将所有嘅评论放入呢个袋度。",
+        "english": {
+          "reference": [
+            "let's",
+            "go"
+          ],
+          "hypothesis": [
+            "let's",
+            "go"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_xg0053268_267830_273080",
+        "reference": "我日日由朝到晚同你倾偈我嘅头像都要load你点解释",
+        "raw_text": "我日日由朝到晚同你倾偈我嘅头像都要捞你点解释",
+        "text": "我日日由朝到晚同你倾偈，我嘅头像都要捞，你点解释。",
+        "english": {
+          "reference": [
+            "load"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xq0014125_1072160_1082050",
+        "reference": "仲可以去到我哋专登开设嘅网站都会有村民嘅membership啊而每年只系收取二百一十八蚊美金",
+        "raw_text": "仲可以去到我哋专登开设嘅网站都会有村民嘅 membership啊而每年只系收取二百一十八蚊美金",
+        "text": "仲可以去到我哋专登开设嘅网站，都会有村民嘅membership啊，而每年只系收取二百一十八蚊美金。",
+        "english": {
+          "reference": [
+            "membership"
+          ],
+          "hypothesis": [
+            "membership"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0014439_456600_462720",
+        "reference": "海洋制作有限公司董事长miss may wor有请四位",
+        "raw_text": "海洋制作有限公司董事长 miss may wall有请四位",
+        "text": "海洋制作有限公司董事长miss may wall，有请四位。",
+        "english": {
+          "reference": [
+            "miss",
+            "may",
+            "wor"
+          ],
+          "hypothesis": [
+            "miss",
+            "may",
+            "wall"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_xq0015242_283190_291740",
+        "reference": "而super chat大家就可以自由选择一个金额去留言同村长或者其他人讲无论系问题定系打气嘅说话都得噶",
+        "raw_text": "而 super chatt大家就可以自由选择一个金额去留言同村长或者其他人讲无论系问题定系打气嘅说话都得噶",
+        "text": "而super chatt大家就可以自由选择一个金额去留言，同村长或者其他人讲，无论系问题，定系打气嘅说话都得噶。",
+        "english": {
+          "reference": [
+            "super",
+            "chat"
+          ],
+          "hypothesis": [
+            "super",
+            "chatt"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0015832_7887860_7894900",
+        "reference": "大家都听咗大家争风须一个星期啦如果想支持我哋嘅话其实每朝早可以喺个life入面",
+        "raw_text": "大家都听咗大家争锋骚一个星期啦如果想支持我哋嘅话其实每朝早可以喺个 life入面",
+        "text": "大家都听咗，大家争锋骚一个星期啦。如果想支持我哋嘅话，其实每朝早可以喺个life入面。",
+        "english": {
+          "reference": [
+            "life"
+          ],
+          "hypothesis": [
+            "life"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0016050_739710_743460",
+        "reference": "嗯ok你觉得你自己系唔系一个闷嘅人啊",
+        "raw_text": "你觉得你自己系唔系一个闷嘅人啊",
+        "text": "你觉得你自己系唔系一个闷嘅人啊。",
+        "english": {
+          "reference": [
+            "ok"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xq0016407_3660920_3665540",
+        "reference": "hello大家好啊我系村长梁思浩啊",
+        "raw_text": "hello大家好啊我系村长梁思浩啊",
+        "text": "hello，大家好啊，我系村长梁思浩啊。",
+        "english": {
+          "reference": [
+            "hello"
+          ],
+          "hypothesis": [
+            "hello"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0016597_17520_23580",
+        "reference": "今日想同大家分享下究竟点样可以听到大家真风show",
+        "raw_text": "今日想同大家分享下究竟点样可以听到大家真风 show",
+        "text": "今日想同大家分享下究竟点样，可以听到大家真风。show。",
+        "english": {
+          "reference": [
+            "show"
+          ],
+          "hypothesis": [
+            "show"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0016643_284870_288950",
+        "reference": "ok公布啊佢系全世界",
+        "raw_text": "ok公布下佢系全世界",
+        "text": "ok公布下佢系全世界。",
+        "english": {
+          "reference": [
+            "ok"
+          ],
+          "hypothesis": [
+            "ok"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0016676_1967210_1976380",
+        "reference": "*如果你喺国内发生可能其实已经变咗另一回事咯（咁样解释都fair嘅因为原本真系你创出嚟嘅呢样嘢）",
+        "raw_text": "如果你喺国内发生可能其实已经变咗另一回事咯咁样解释都 fair嘅因为原本真系你创出嚟嘅呢样嘢",
+        "text": "如果你喺国内发生，可能其实已经变咗另一回事咯。咁样解释都fair嘅，因为原本真系，你创出嚟嘅呢样嘢。",
+        "english": {
+          "reference": [
+            "fair"
+          ],
+          "hypothesis": [
+            "fair"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0017078_485020_492930",
+        "reference": "cash优惠平台呈现二零二二年度叱咤乐坛流行榜颁奖典礼流行定流行",
+        "raw_text": "catch优惠平台呈现二零二二年度叱咤乐坛流行榜颁奖典礼流行定流行",
+        "text": "catch优惠平台，呈现2022年度叱咤乐坛流行榜颁奖典礼流行定流行。",
+        "english": {
+          "reference": [
+            "cash"
+          ],
+          "hypothesis": [
+            "catch"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xq0017598_3744180_3749580",
+        "reference": "记得分享埋呢条whatsapp信息俾其他老友等大家都可以继续支持村长啦",
+        "raw_text": "记得分享埋呢条 whatsapp信息俾其他老友等大家都可以继续支持村长啦",
+        "text": "记得分享埋呢条whatsapp信息，俾其他老友等大家都可以继续支持村长啦。",
+        "english": {
+          "reference": [
+            "whatsapp"
+          ],
+          "hypothesis": [
+            "whatsapp"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0017934_1416040_1421890",
+        "reference": "系希望方便海外未能听到youtube live嘅听众同埋收费会比较便",
+        "raw_text": "系希望方便海外未能听到 youtube live嘅听众同埋收费会比较便",
+        "text": "系希望方便海外未能听到youtube live嘅听众同埋收费会比较便。",
+        "english": {
+          "reference": [
+            "youtube",
+            "live"
+          ],
+          "hypothesis": [
+            "youtube",
+            "live"
+          ],
+          "hits": 2
+        }
+      },
+      {
+        "id": "spont_xq0018101_20300_23380",
+        "reference": "宣布结果同埋为我哋颁奖有请Rita",
+        "raw_text": "宣布结果同埋为我哋颁奖有声 rita",
+        "text": "宣布结果同埋为我哋颁奖有声rita。",
+        "english": {
+          "reference": [
+            "rita"
+          ],
+          "hypothesis": [
+            "rita"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0018617_208630_214680",
+        "reference": "今日想同大家分享下究竟点样可以听到大家争风show",
+        "raw_text": "今日想同大家分享下究竟点样可以听到大家真风 show",
+        "text": "今日想同大家分享下究竟点样，可以听到大家真风。show。",
+        "english": {
+          "reference": [
+            "show"
+          ],
+          "hypothesis": [
+            "show"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0018623_1977680_1987490",
+        "reference": "多谢各位咁支持大家真风show其实喺每一条直播或者短片入面都好想见到你哋每一位可以留言支持我哋",
+        "raw_text": "多谢各位咁支持大家真风骚其实喺每一条直播或者短片入面都好想见到你哋每一位可以留言支持我哋",
+        "text": "多谢各位咁支持大家真风骚。其实，喺每一条直播或者短片入面都好想见到你哋每一位可以留言支持我哋。",
+        "english": {
+          "reference": [
+            "show"
+          ],
+          "hypothesis": [],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xq0018625_1286070_1296430",
+        "reference": "咩诶除咗methings之外咧就系happynewyears开开心心过新年啦继续支持大家争风骚有机会嘅话就再见啦",
+        "raw_text": "咩诶除咗 merry christmas之外咧就系 happy new year开开心心过新年啦继续支持大家争风骚有机会嘅话就再见啦",
+        "text": "咩诶，除咗merry christmas之外咧，就系happy new year，开开心心过新年啦，继续支持大家争风骚，有机会嘅话就再见啦。",
+        "english": {
+          "reference": [
+            "methings",
+            "happynewyears"
+          ],
+          "hypothesis": [
+            "merry",
+            "christmas",
+            "happy",
+            "new",
+            "year"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xq0018955_216050_219950",
+        "reference": "对号入座啖样啖就whatsapp我就话",
+        "raw_text": "对号入座咁样咁就 whatsapp我我就话",
+        "text": "对号入座咁样咁就whatsapp，我我就话。",
+        "english": {
+          "reference": [
+            "whatsapp"
+          ],
+          "hypothesis": [
+            "whatsapp"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0020170_174980_178820",
+        "reference": "golf嘅一点四引擎冇人会踩佢话唔够力",
+        "raw_text": "gof嘅一点四引擎冇人会踩佢话唔够力",
+        "text": "gof嘅一点四引擎冇人会踩佢话唔够力。",
+        "english": {
+          "reference": [
+            "golf"
+          ],
+          "hypothesis": [
+            "gof"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xq0026736_25680_34640",
+        "reference": "我哋今日就联络到身在医院嘅apple姐了解情况有传麦德罗因为七月十号出席咗一个音乐会出事系咪呢",
+        "raw_text": "我哋今日就联络到身在医院嘅 apple姐了解情况有传麦德罗因为七月十号出席咗一个音乐会出事系咪呢",
+        "text": "我哋今日就联络到身在医院嘅apple姐了解情况，有传麦德罗。因为7月10日，出席咗一个音乐会出事系咪呢。",
+        "english": {
+          "reference": [
+            "apple"
+          ],
+          "hypothesis": [
+            "apple"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0027456_0_4460",
+        "reference": "星岛娱乐嘅读者大家好(我系rock)我系ach冼成风",
+        "raw_text": "青岛娱乐嘅读者大家好我系 rock我系 arch善成风",
+        "text": "青岛娱乐嘅读者大家好，我系rock，我系arch善成风。",
+        "english": {
+          "reference": [
+            "rock",
+            "ach"
+          ],
+          "hypothesis": [
+            "rock",
+            "arch"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0038884_509610_511840",
+        "reference": "你对我系点我ifeel到噶",
+        "raw_text": "你对我系点样 feel到噶",
+        "text": "你对我系点样feel到噶。",
+        "english": {
+          "reference": [
+            "ifeel"
+          ],
+          "hypothesis": [
+            "feel"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xq0039068_23360_28270",
+        "reference": "诶我要个早餐啲转通粉热啡少奶唔该(ok冇问题)嗯",
+        "raw_text": "诶我要个早餐啲转通粉热啡小奶唔该 ok k冇问题嗯",
+        "text": "诶，我要个早餐啲转通粉热啡小奶唔该ok k冇问题嗯。",
+        "english": {
+          "reference": [
+            "ok"
+          ],
+          "hypothesis": [
+            "ok"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0041633_205850_208210",
+        "reference": "啱嘅唔该你啊忠sir",
+        "raw_text": "啱嘅唔该你钟 sir",
+        "text": "啱嘅唔，该你钟sir。",
+        "english": {
+          "reference": [
+            "sir"
+          ],
+          "hypothesis": [
+            "sir"
+          ],
+          "hits": 1
+        }
+      },
+      {
+        "id": "spont_xq0043777_561700_566470",
+        "reference": "叫咗一个草莓多芙里另外叫咗一个telemiss",
+        "raw_text": "叫咗一个士多啤梨多芙梨另外叫咗一个 telemisu",
+        "text": "叫咗一个士多啤梨，多芙梨，另外叫咗一个telemisu。",
+        "english": {
+          "reference": [
+            "telemiss"
+          ],
+          "hypothesis": [
+            "telemisu"
+          ],
+          "hits": 0
+        }
+      },
+      {
+        "id": "spont_xq0044341_32210_39260",
+        "reference": "要成为一个真正嘅K O L就要影出有quality嘅相啦今集我哋就会去到深圳影你相",
+        "raw_text": "要成为一个真正嘅 kol就要影出有 quality嘅相啦今集我哋就会去到深圳影靓相",
+        "text": "要成为一个真正嘅kol，就要影出有quality嘅相啦。今集我哋就会去到深圳影靓相。",
+        "english": {
+          "reference": [
+            "quality"
+          ],
+          "hypothesis": [
+            "kol",
+            "quality"
+          ],
+          "hits": 1
+        }
+      }
+    ],
+    "metric": "English term F1",
+    "metrics": {
+      "english_precision": 0.7292576419213974,
+      "english_recall": 0.6816326530612244,
+      "english_f1": 0.7046413502109705,
+      "mixed_cer": 0.10241523455643288
+    },
+    "hits": 167,
+    "terms": 245,
+    "hyp_terms": 229,
+    "rate": 0.6816326530612244
+  }
+]
